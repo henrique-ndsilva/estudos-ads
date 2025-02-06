@@ -1,4 +1,5 @@
-# estudos-ads
-Estudos resumidos para minha graduação em ADS, qualquer crítica ou sugestão, vá até "Discussions".
+# Estudos de ADS
+Este repositório contém o código-fonte de um website desenvolvido com HTML e CSS, onde compartilho resumos detalhados de todo o conteúdo abordado na minha graduação de Tecnologia em Análise e Desenvolvimento de Sistemas.
 
-Criado exclusivamente com HTML e CSS. Tudo que aprendi, foi no canal Curso em Vídeo, do Professor Gustavo Guanabara.
+O objetivo deste projeto é servir como um material de apoio para meus estudos e também ajudar outros estudantes que estejam cursando a mesma área.
+Sinta-se à vontade para explorar, contribuir ou sugerir melhorias! 🚀
