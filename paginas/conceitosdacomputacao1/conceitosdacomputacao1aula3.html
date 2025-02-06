@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 3 - CdC</title>
+</head>
+<body>
+    <hr>
+
+    <h1>Sistemas de Numeração - Decimal, Binário e Hexadecimal</h1>
+
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "16px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+
+    <h2>1. Introdução</h2>
+    <p>Este capítulo apresenta os principais <strong>sistemas de numeração utilizados na computação</strong>, explicando suas bases matemáticas, aplicações e conversões entre diferentes sistemas. São abordados o <strong>sistema decimal (base 10), sistema binário (base 2) e sistema hexadecimal (base 16)</strong>, além de aplicações práticas como a codificação <strong>BCD</strong> e o padrão <strong>ASCII</strong>.</p>
+
+    <hr>
+
+    <h2>2. Origens e Evolução dos Sistemas Numéricos</h2>
+    <ul>
+        <li>Os primeiros registros numéricos datam de <strong>3500 a.C.</strong>, com os <strong>egípcios e babilônios</strong>.</li>
+        <li>Sistemas primitivos usavam <strong>traços e marcas</strong> para contar e medir.</li>
+        <li>O <strong>sistema decimal</strong> foi amplamente utilizado pelos <strong>romanos e gregos</strong> e é a base da numeração moderna.</li>
+        <li>O sistema binário tornou-se essencial na computação por representar eletricamente <strong>corrente (1) e ausência de corrente (0)</strong>.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Sistema Decimal (Base 10)</h2>
+    <ul>
+        <li>Utiliza <strong>dez símbolos</strong>: {0,1,2,3,4,5,6,7,8,9}.</li>
+        <li>ada posição representa uma <strong>potência de 10</strong>.</li>
+        <li>Exemplo:</li>
+        <ul>
+            <li>O número <strong>234</strong> pode ser representado como:</li>
+            <ul>
+                <li>2 x 10<sup>2</sup> + 3 x 10<sup>1</sup> + 4 x 10<sup>0</sup></li>
+            </ul>
+        </ul>
+        <li>É o sistema mais intuitivo, pois reflete a forma como os humanos contam naturalmente.</li>
+    </ul>
+
+    <hr>
+
+    <h2>4. Sistema Binário (Base 2)</h2>
+    <ul>
+        <li>Usa apenas dois símbolos: <strong>0 e 1</strong>.</li>
+        <li>Cada posição representa uma <strong>potência de 2</strong>.</li>
+        <li>Exemplo de conversão decimal para binário:</li>
+        <ul>
+            <li><strong>5 (decimal)</strong> &rarr; <strong>101 (binário)</strong></li>
+            <li><strong>9 (decimal)</strong> &rarr; <strong>1001 (binário)</strong></li>
+        </ul>
+        <li>Unidades de armazenamento:</li>
+        <ul>
+            <li><strong>1 bit</strong>: menor unidade de dado (0 ou 1).</li>
+            <li><strong>4 bits</strong>: <strong>nibble</strong>.</li>
+            <li><strong>8 bits</strong>: <strong>byte</strong> (representa caracteres, números, etc.).</li>
+            <li><strong>16, 32 e 64 bits</strong>: unidades maiores usadas em processadores modernos.</li>
+        </ul>
+        <li><strong>Vantagens do sistema binário:</strong></li>
+        <ul>
+            <li>Fácil processamento digital.</li>
+            <li>Mais resistente a ruídos na transmissão de dados.</li>
+        </ul>
+    </ul>
+
+    <hr>
+
+    <h2>5. Sistema Hexadecimal (Base 16)</h2>
+    <ul>
+        <li>Utiliza <strong>16 símbolos</strong>: {0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F}.</li>
+        <li>Cada posição representa uma <strong>potência de 16</strong>.</li>
+        <li><strong>Fácil conversão</strong> entre <strong>hexadecimal e binário</strong>, pois 1 dígito hexadecimal equivale a <strong>4 bits</strong>.</li>
+        <li>Exemplo de conversão:</li>
+        <ul>
+            <li><strong>(210)<sub>16</sub> &rarr; 2 x 16<sup>2</sup> + 1 x 16<sup>1</sup> + 0 x 16<sup>0</sup> = 528 (decimal)</strong></li>
+        </ul>
+        <li><strong>Aplicações práticas</strong>:</li>
+        <ul>
+            <li>Representação de <strong>endereços de memória</strong> e <strong>códigos de cores RGB</strong> (ex.: #FF00CC).</li>
+            <li><strong>MAC address</strong>: identificadores de dispositivos de rede.</li>
+        </ul>
+    </ul>
+
+    <hr>
+
+    <h2>6. Conversões entre Sistemas</h2>
+    <h3>6.1 Decimal &rarr; Binário</h3>
+    <ol>
+        <li>Divida o número decimal por <strong>2</strong>, anotando os restos.</li>
+        <li>Leia os restos na <strong>ordem inversa</strong>.</li>
+        <ul>
+            <li>Exemplo: <strong>(13)<sub>10</sub> &rarr; (1101)<sub>2</sub></strong>.</li>
+        </ul>
+    </ol>
+    <h3>Binário &rarr; Decimal</h3>
+    <ol>
+        <li>Multiplique cada bit pela potência de 2 correspondente.</li>
+        <ul>
+            <li>Exemplo: <strong>(1101)<sub>2</sub> &rarr; 1 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 0 x 2<sup>1</sup> + 1 x 2<sup>0</sup> = (13)<sub>10</sub></strong>.</li>
+        </ul>
+    </ol>
+    <h3>Decimal &rarr; Hexadecimal</h3>
+    <ol>
+        <li>Divida o número decimal por <strong>16</strong>, anotando os restos.</li>
+        <li>Leia os restos na <strong>ordem inversa</strong>.</li>
+        <ul>
+            <li>Exemplo: <strong>(255)<sub>10</sub> &rarr; (FF)<sub>16</sub></strong>.</li>
+        </ul>
+    </ol>
+    <h3>6.4 Hexadecimal &rarr; Decimal</h3>
+    <ol>
+        <li>Multiplique cada dígito pela potência de 16 correspondente.</li>
+        <ul>
+            <li>Exemplo: <strong>(2A)<sub>16</sub> &rarr; 2 x 16<sup>1</sup> + A(10) x 16<sup>0</sup> = (42)<sub>10</sub></strong>.</li>
+        </ul>
+    </ol>
+    <h3>Binário &rarr; Hexadecimal</h3>
+    <ol>
+        <li>Agrupe os bits em grupos de <strong>4</strong>, da direita para a esquerda.</li>
+        <li>Converta cada grupo para seu equivalente hexadecimal.</li>
+        <ul>
+            <li>Exemplo: <strong>(10111111)<sub>2</sub> &rarr; (BF)<sub>16</sub></strong>.</li>
+        </ul>
+    </ol>
+    <p>Saiba mais sobre <strong>Conversões entre Sistemas</strong> aqui: <a href="https://www.youtube.com/watch?v=Vctnbk0RWVY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+    <hr>
+
+    <h2>7. Aplicações Práticas</h2>
+    <h3>7.1 Codificação BCD (Binary-Coded Decimal)</h3>
+    <ul>
+        <li>Método de representar números decimais em <strong>binário</strong>, onde cada <strong>dígito decimal</strong> equivale a <strong>4 bits</strong>.</li>
+        <li>Exemplo:</li>
+        <ul>
+            <li><strong>(953)<sub>10</sub> &rarr; (1001 0101 0011) (BCD)</strong>.</li>
+        </ul>
+        <li><strong>Vantagens</strong>:</li>
+        <ul>
+            <li>Fácil conversão para decimal.</li>
+        </ul>
+        <li><strong>Desvantagem</strong>:</li>
+        <ul>
+            <li>Ocupa mais espaço que a conversão binária tradicional.</li>
+        </ul>
+    </ul>
+    <h3>7.2 Código ASCII</h3>
+    <ul>
+        <li><strong>Tabela de caracteres</strong> que associa <strong>números binários</strong> a letras e símbolos.</li>
+        <li>Cada caractere ocupa <strong>1 byte (8 bits)</strong>.</li>
+        <li>Exemplo:</li>
+        <ul>
+            <li><strong>A &rarr; 01000001 (binário) &rarr; 65 (decimal)</strong>.</li>
+        </ul>
+        <li>Usado para transferência de dados e comunicação entre sistemas.</li>
+    </ul>
+
+    <hr>
+
+    <h2>8. Conclusão</h2>
+    <ul>
+        <li>Os <strong>sistemas de numeração</strong> são essenciais na computação, influenciando desde o armazenamento de dados até a programação de softwares.</li>
+        <li><strong>O sistema binário é a base da computação</strong>, enquanto o <strong>decimal</strong> é usado pelos humanos e o <strong>hexadecimal</strong> facilita representações compactas de dados.</li>
+        <li><strong>Conversões entre sistemas são fundamentais para a manipulação eficiente da informação</strong>.</li>
+    </ul>
+
+    <hr>
+    <div class="navigator">
+        <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula3.html" class="navigator" target="_self" rel="next">Próxima aula</a>
+    </div>
