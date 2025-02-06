@@ -37,3 +37,12 @@ hr {
     color: rgb(0, 204, 255);
     text-align: center;
 }
+
+
+.buttonfont {
+    margin-top: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+    background-color: #333333;
+    color: whitesmoke;
+}

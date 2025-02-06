@@ -21,11 +21,3 @@ img {
 hr {
     border-color: #2b2b2b;
 }
-
-.buttonfont {
-    margin-top: 10px;
-    padding: 10px 10px;
-    cursor: pointer;
-    background-color: #333333;
-    color: whitesmoke;
-}
