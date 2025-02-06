@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body {
+    background-color: #121212;
+    text-align: center;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+img {
+    width: 10%;
+}
+
+@media (max-width: 650px) {
+    img {
+        width: 20%;
+    }
+}
+
+hr {
+    border-color: #2b2b2b;
+}
