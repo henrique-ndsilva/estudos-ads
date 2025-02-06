@@ -4,13 +4,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Aula 2</title>
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 2 - CdC</title>
 </head>
 <body>
-    <h1>Em criação. Completo até 6/02/2025 - 22:00</h1>
+    <hr>
+
+    <h1>A Transformação do Dado à Criação do Conhecimento.</h1>
+
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "16px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+
+    <h2>1. Introdução</h2>
+    <p>Este capítulo aborda os conceitos fundamentais de <strong>dado, informação e conhecimento</strong>, destacando sua importância na gestão organizacional e na tomada de decisões estratégicas. Também são discutidos a <strong>evolução da gestão de dados</strong> e as <strong>plataformas modernas utilizadas por empresas</strong> para otimizar processos e melhorar a competitividade.</p>
+
+    <hr>
+
+    <h2>2. Conceitos Fundamentais</h2>
+    <h3>2.1 Dado</h3>
+    <ul>
+        <li>Representação bruta de fatos, números ou estatísticas sem um significado específico.</li>
+        <li>Exemplo: nome de um bairro, idade de uma pessoa, quantidade vendida de um produto.</li>
+        <li>Classificação dos dados:</li>
+        <ul>
+            <li><strong>Por tipo</strong>: Numérico (inteiros ou decimais) e Texto (alfanumérico).</li>
+            <li><strong>Por natureza</strong>:</li>
+            <ul>
+                <li><strong>Qualitativos</strong>: Descrevem características (ex.: “bom”, “ruim”).</li>
+                <li><strong>Quantitativos</strong>: Medem quantidades (ex.: “50 unidades vendidas”).</li>
+            </ul>
+            <li><strong>Por formato</strong>:</li>
+            <ul>
+                <li><strong>Contínuos</strong>: Intervalos numéricos (ex.: peso, tempo).</li>
+                <li><strong>De contagem</strong>: Valores inteiros (ex.: número de produtos com defeito).</li>
+                <li><strong>De classificação</strong>: Categorizam elementos (ex.: tipo A ou B).</li>
+            </ul>
+        </ul>
+    </ul>
+    <h3>2.2 Informação</h3>
+    <ul>
+        <li>Conjunto de dados processados e organizados para um contexto específico.</li>
+        <li>Características:</li>
+        <ul>
+            <li>Responsável por organização, interpretação e disseminação de conhecimento.</li>
+            <li>Exemplo: uma tabela com vendas de um produto ao longo do tempo.</li>
+        </ul>
+        <li>O <strong>processo de transformação de dado em informação</strong> envolve a aplicação de conhecimento para selecionar, organizar e manipular os dados.</li>
+    </ul>
+    <h3>2.3 Conhecimento</h3>
+    <ul>
+        <li>Informação contextualizada e relevante para tomada de decisões.</li>
+        <li><strong>Tipos de conhecimento</strong>:</li>
+        <ul>
+            <li><strong>Tácito</strong>: Baseado em experiência e difícil de ser formalizado.</li>
+            <li><strong>Explícito</strong>: Formalizado e documentado, podendo ser facilmente transmitido.</li>
+        </ul>
+        <li>A <strong>ciência da informação</strong> evoluiu da <strong>biblioteconomia</strong>, passando pela documentação até chegar à era digital, onde a informação é acessada rapidamente.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Evolução da Gestão de Dados e Plataformas Modernas</h2>
+    <h3>3.1 Importância da Gestão de Dados</h3>
+    <ul>
+        <li>O grande volume de dados exige ferramentas para armazenamento, análise e interpretação.</li>
+        <li>A evolução da tecnologia resultou em novas formas de gerenciamento, como o <strong>Big Data</strong>.</li>
+        <li><strong>Big Data</strong>: Conjunto de dados complexos e volumosos que não podem ser processados por sistemas tradicionais.</li>
+    </ul>
+    <h3>3.2 Inteligência Competitiva</h3>
+    <ul>
+        <li>Processos internos utilizados pelas empresas para coletar e analisar dados estratégicos.</li>
+        <li>Benefícios da inteligência competitiva:</li>
+        <ul>
+            <li><strong>Aumento da agilidade e eficiência na gestão</strong>.</li>
+            <li><strong>Identificação de oportunidades de mercado</strong>.</li>
+            <li><strong>Previsão de riscos e antecipação de problemas</strong>.</li>
+        </ul>
+    </ul>
+    <p>Saiba mais sobre Big Data aqui: <a href="https://www.youtube.com/watch?v=LW081QSjJNo" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+    <hr>
+
+    <h2>4. Estudos de Caso: Aplicação da Gestão de Dados</h2>
+    <h3>4.1 Caso eCourier (Empresa de Entrega)</h3>
+    <ul>
+        <li>A empresa utilizou <strong>tecnologia de geolocalização (GPS)</strong> para rastrear entregas e distribuir pedidos de forma eficiente.</li>
+        <li>Estratégias:</li>
+        <ul>
+            <li>Treinamento técnico de funcionários.</li>
+            <li>Integração eletrônica entre setores.</li>
+            <li>Uso de algoritmos para prever rotas com base no tráfego e clima.</li>
+        </ul>
+        <li>Resultado: Redução de custos operacionais e aumento da eficiência das entregas.</li>
+    </ul>
+    <h3>4.2 Caso Lands’ End (Moda e Varejo)</h3>
+    <ul>
+        <li>Implementação de <strong>customização em massa</strong>, permitindo que clientes personalizem produtos online.</li>
+        <li>Processo:</li>
+        <ol>
+            <li>O cliente informa suas medidas no site.</li>
+            <li>O sistema cria um <strong>molde digital personalizado</strong>.</li>
+            <li>A fábrica utiliza esses moldes para produção sob demanda.</li>
+        </ol>
+        <li>Benefícios: Redução de estoques e desperdícios, além de maior satisfação do cliente.</li>
+    </ul>
+    <h3>4.3 Caso Dell Computer Corporation</h3>
+    <ul>
+        <li>Uso de produção sob demanda: computadores são montados somente após a compra.</li>
+        <li>O sistema de informação permite que a Dell:</li>
+        <ul>
+            <li>Analise os padrões de compra dos clientes.</li>
+            <li>Personalize as ofertas e campanhas de marketing.</li>
+            <li>Otimize a gestão do estoque e produção.</li>
+        </ul>
+    </ul>
+
+    <hr>
+
+    <h2>5. Plataformas Atuais de Gestão de Informação</h2>
+    <p>As empresas utilizam <strong>sistemas de informação baseados em computadores (CBIS)</strong>, que combinam <strong>hardware, software, bancos de dados e telecomunicações</strong> para processar informações.</p>
+    <ul>
+        <li><strong>Banco de Dados (DBMS - Database Management System)</strong>: Armazena e gerencia grandes volumes de dados.</li>
+        <li><strong>Sistemas de Modelagem (MMS - Model Management System)</strong>: Permite a análise e a interpretação dos dados.</li>
+        <li><strong>Computação em Nuvem</strong>: Reduz custos operacionais e aumenta a flexibilidade das empresas.</li>
+        <li><strong>Softwares Colaborativos</strong>:</li>
+        <ul>
+            <li><strong>Trello</strong>: Gerenciamento de projetos e tarefas.</li>
+            <li><strong>Microsoft Teams</strong>: Plataforma de comunicação integrada para equipes.</li>
+        </ul>
+    </ul>
+
+    <hr>
+
+    <h2>6. Conclusão</h2>
+    <p>A correta gestão de dados e informações possibilita que as empresas:</p>
+    <ul>
+        <li>Tomem <strong>decisões mais estratégicas e assertivas</strong>.</li>
+        <li>Aumentem a <strong>eficiência e produtividade.</strong></li>
+        <li>Se tornem mais <strong>competitivas no mercado</strong>.</li>
+    </ul>
+    <p>A adoção de tecnologias avançadas, como <strong>Big Data, computação em nuvem e inteligência artificial</strong>, está revolucionando a forma como empresas lidam com informações, tornando o conhecimento um dos <strong>recursos mais valiosos da atualidade</strong>.</p>
+    <hr>
     <div class="navigator">
-        <a href="../../index.html" class="navigator" target="_blank" rel="prev">Voltar para o menu</a>
+        <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula2.html" class="navigator" target="_self" rel="next">Próxima aula</a>
     </div>
-</body>
-</html>
