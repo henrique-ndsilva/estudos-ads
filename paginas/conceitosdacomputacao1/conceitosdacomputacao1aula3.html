@@ -103,45 +103,44 @@
     <hr>
 
     <h2>6. Conversões entre Sistemas</h2>
-    <h3>6.1 Decimal &rarr; Binário</h3>
+    <p><p>As conversões entre os sistemas numéricos podem ser feitas seguindo regras específicas. Abaixo estão os métodos mais comuns:</p></p>
+    <p><mark>Atenção!</mark>: é recomendado que siga a ordem Decimal &rarr; Binário &rarr; Hexadecimal &rarr; Binário &rarr; Decimal.</p>
+    <h3>Decimal &rarr; Binário</h3>
     <ol>
-        <li>Divida o número decimal por <strong>2</strong>, anotando os restos.</li>
+        <li>Divida o número decimal por <strong>2</strong>, até chegar a 0, anotando os restos.</li>
         <li>Leia os restos na <strong>ordem inversa</strong>.</li>
         <ul>
-            <li>Exemplo: <strong>(13)<sub>10</sub> &rarr; (1101)<sub>2</sub></strong>.</li>
+            <li>Exemplo: <strong>(340)<sub>10</sub> &rarr; (101010100)<sub>2</sub></strong>.</li>
         </ul>
     </ol>
+    <h3>Binário &rarr; Hexadecimal</h3>
+    <ol>
+        <li>Agrupe os bits em grupos de <strong>4</strong>, da direita para a esquerda.</li>
+        <li>Caso um número vá ficar sozinho, exemplo, ficaria: <strong>"xxx1 0101 0100"</strong>;</li>
+        <ul>
+            <li>Você deve trocar os <strong>"x"</strong> por <strong>"0"</strong>.</li>
+        </ul>
+        <li>Converta cada grupo para seu equivalente hexadecimal.</li>
+        <ul>
+            <li>Exemplo: <strong>(0001 0101 0100)<sub>2</sub> &rarr; (154)<sub>16</sub></strong>.</li>
+        </ul>
+    </ol>
+    <h3>Hexadecimal &rarr; Binário</h3>
+<ol>
+    <li>Substitua cada dígito hexadecimal pelo seu equivalente em 4 bits.</li>
+    <li>Junte os grupos para formar o número binário.</li>
+    <ul>
+        <li>Exemplo: <strong>(154)<sub>16</sub> &rarr; (0001 0101 0100)<sub>2</sub></strong>.</li>
+    </ul>
+</ol>
     <h3>Binário &rarr; Decimal</h3>
     <ol>
         <li>Multiplique cada bit pela potência de 2 correspondente.</li>
         <ul>
             <li>Exemplo: <strong>(1101)<sub>2</sub> &rarr; 1 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 0 x 2<sup>1</sup> + 1 x 2<sup>0</sup> = (13)<sub>10</sub></strong>.</li>
         </ul>
-    </ol>
-    <h3>Decimal &rarr; Hexadecimal</h3>
-    <ol>
-        <li>Divida o número decimal por <strong>16</strong>, anotando os restos.</li>
-        <li>Leia os restos na <strong>ordem inversa</strong>.</li>
-        <ul>
-            <li>Exemplo: <strong>(255)<sub>10</sub> &rarr; (FF)<sub>16</sub></strong>.</li>
-        </ul>
-    </ol>
-    <h3>6.4 Hexadecimal &rarr; Decimal</h3>
-    <ol>
-        <li>Multiplique cada dígito pela potência de 16 correspondente.</li>
-        <ul>
-            <li>Exemplo: <strong>(2A)<sub>16</sub> &rarr; 2 x 16<sup>1</sup> + A(10) x 16<sup>0</sup> = (42)<sub>10</sub></strong>.</li>
-        </ul>
-    </ol>
-    <h3>Binário &rarr; Hexadecimal</h3>
-    <ol>
-        <li>Agrupe os bits em grupos de <strong>4</strong>, da direita para a esquerda.</li>
-        <li>Converta cada grupo para seu equivalente hexadecimal.</li>
-        <ul>
-            <li>Exemplo: <strong>(10111111)<sub>2</sub> &rarr; (BF)<sub>16</sub></strong>.</li>
-        </ul>
-    </ol>
-    <p>Saiba mais sobre <strong>Conversões entre Sistemas</strong> aqui: <a href="https://www.youtube.com/watch?v=Vctnbk0RWVY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    </ol>    
+    <p>Não entendeu? Saiba mais sobre <strong>Conversões entre Sistemas</strong> aqui: <a href="https://www.youtube.com/watch?v=Vctnbk0RWVY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
 
     <hr>
 
