@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Conversão de Bases - CdC</title>
+    <style>
+        code { background: #1f1f1f; padding: 2px 4px; }
+    </style>
+</head>
+<body>
+    <hr>
+
+    <h1>Conversão de Bases Numéricas.</h1>
+
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "16px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+
+    <p>Estou fazendo esta página apenas para mostrar como eu aprendi a converter bases númericas do jeito mais fácil possível.</p>
+    <p>
+        <code>8421</code> (Decimal) <br>
+        <code>1111</code> (Binário)
+    </p>
+    <p>Okay, está vendo esses números? Eles são basicamente tudo que você precisa para converter entre <strong>Decimal, Binário e Hexadecimal.</strong> Para isso, basta você comparar os dois, vamos a alguns exemplo:</p>
+    <p>Decimal &rarr; Binário</p>
+    <p><code>8<sub>10</sub></code>. Aqui temos 8 em <strong>Decimal</strong>, o número 1 é positivo, e o 0 é negativo, ou seja, <code>8<sub>10</sub></code> equivale a <code>1000</code>, basta olhar na "colinha", e pode ver que o <code>8</code> está exatamente encima do <code>1</code> que está na versão binária, e é exatamente assim que se deve converter, vamos para mais um exemplo.</p>
+    <p>Binário &rarr; Decimal</p>
+    <p><code>0111<sub>2</sub></code> = <code>7<sub>10</sub></code>. Caso você esteja em dúvida, agora temos 3 positivos no nosso número binário, ou seja, 111. Para converter, você deve ver o número acima deles na tabela, e somar da esquerda para a direita, sendo assim, fica: <code>4 + 2 + 1 = 7</code> logo, <code>0111<sub>2</sub></code> = <code>7</code>. </p>
+    <p>Binário &rarr; Hexadecimal</p>
+    <p>Este é idêntico ao exercício anterior, afinal Hexadecimal é igual ao Decimal, porém na base 16. Vejamos então: se temos <code>10011100<sub>2</sub></code> em Binário, Como é em Hexadecimal?</p>
+    <ul>
+        <li><strong>Resposta</strong>: <code>9C</code></li>
+        <ul>
+            <li><strong>Explicação</strong>: Começaremos pelo primeiro grupo de 4bits, da esquerda para direita. Quais números estão acima dos 1's deste grupo? (1001). A resposta é 8 e 1. Logo, 8+1 = 9. Agora o segundo grupo, quais números estão acima dos 1's? (1100). A resposta é 12. e como sabemos, a partir do 9, em hexadecimal, temos letras (A, B, C, D, E, F), que vão até o 15 (F). Logo a resposta correta é <code>9C<sub>16</sub>.</code></li>
+        </ul>
+    </ul>
+    <p>Conseguiu entender? Basta seguir essa "colinha" e consegue fazer tudo. Caso você esteja se perguntando como faz para números binários com mais de 4 dígitos (Ex: 10110...) Você deve continuar a lista, ela é feita dobrando o próximo número a cada dígito, ou seja, para converter esse Binário que mencionei ali encima em Decimal, você usaria esta "colinha":</p>
+    <p>
+        <code>16 8421</code> (Decimal) <br>
+        <code>1  0110</code> (Binário) <br>
+        Veja bem, que de números "positivos" (com 1 embaixo) temos, da esquerda para a direita: (16, 4 e 2.)
+    </p>
+    <p>Logo, a resposta seria: <code>22<sub>10</sub></code> (16 + 4 + 2).</p>
+    <p>Não se esqueça, é sempre bom separar os números em 4bits (Grupos de 4) para entender melhor. o número que acabamos de converter seria: <code>0001 0110<sub>2</sub></code>, invés de <code>10110<sub>2</sub></code></p>
+    <p>Exemplo de "colinha" já formada.</p>
+    <p>
+        <code>16 8421</code> (Decimal) <br>
+        <code>1  0110</code> (Binário)
+    </p>
+    <hr>
+  <div class="navigator">
+    <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula4.html" class="navigator" target="_self" rel="next">Voltar para a aula</a>
+  </div>
+</body>
+</html>
