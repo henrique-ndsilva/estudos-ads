@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 3 - CdC</title>
+  <style>
+    code { background: #1f1f1f; padding: 2px 4px; }
+    table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+    table, th, td { border: 1px solid #ccc; }
+    th, td { padding: 8px; text-align: center; }
+    .example { background: #1f1f1f; padding: 8px; margin: 1em 0; }
+  </style>
+</head>
+<body>
+    <hr>
+  <h1>Operações Numéricas e Conversões de Base</h1>
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "16px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+
+  <p>
+    Este capítulo aborda as principais operações aritméticas utilizadas em sistemas digitais e os métodos para conversão entre diferentes bases numéricas – decimal, binária e hexadecimal. São apresentados exemplos práticos, tabelas e diagramas que ilustram os conceitos fundamentais para a compreensão dos processos internos dos dispositivos digitais.
+  </p>
+  
+  <h2>1. Introdução</h2>
+  <p>
+    Os computadores são denominados “digitais” porque operam com o sistema binário, o qual utiliza apenas dois níveis (0 e 1). Isso ocorre porque é mais simples e econômico construir dispositivos eletrônicos que distinguem entre dois níveis de tensão do que dispositivos com múltiplos níveis (0 a 9, por exemplo).
+  </p>
+  <p>
+    O capítulo explora não apenas as operações aritméticas em bases 2 e 16, mas também as conversões entre sistemas numéricos, permitindo ao aluno compreender como os dispositivos digitais realizam operações lógicas e aritméticas.
+  </p>
+
+  <hr>
+  
+  <h2>2. Representação dos Sinais Digitais</h2>
+  <p>
+    Em um sistema digital, os dois estados lógicos são representados por diferentes níveis de tensão. Por exemplo, pode-se ter:
+  </p>
+  <ul>
+    <li><strong>Nível alto (Bit 1):</strong> Tensão entre 2V e 5V.</li>
+    <li><strong>Nível baixo (Bit 0):</strong> Tensão entre 0V e 0,8V.</li>
+    <li><strong>Tensões inválidas:</strong> Intervalo de 0,8V a 2V, não utilizado.</li>
+  </ul>
+  <p>
+    Ao utilizar N bits, o sistema pode representar <code>2<sup>N</sup></code> possibilidades, que correspondem aos números de 0 até <code>2<sup>N</sup> - 1</code> em decimal. Por exemplo, com 4 bits, os números vão de 0000<sub>2</sub> (0<sub>10</sub>) até 1111<sub>2</sub> (15<sub>10</sub>).
+  </p>
+
+  <hr>
+  
+  <h2>3. Operações Numéricas</h2>
+  
+  <h3>3.1. Operação de Soma</h3>
+  <p>
+    A operação de soma é realizada de forma similar em todos os sistemas numéricos, mas cada base possui suas particularidades:
+  </p>
+  <h4>Soma no Sistema Decimal</h4>
+  <p>
+    Nos algarismos decimais (0 a 9), “somar” pode ser entendido como deslocar à direita na sequência. Por exemplo, 4 + 3 = 7. Entretanto, quando o resultado excede 9, ocorre o chamado <em>estouro</em> e é realizado o <strong>vai 1</strong> (ou transporte), por exemplo:
+  </p>
+  <div class="example">
+    <p><strong>Exemplo:</strong> 7 + 7 &rarr; resulta em 4 com transporte (7 + 7 = 14). <br>
+    Ou seja, 4 com transporte você faz o "vai 1", colocando o 4 seguido do 1 na casa à frente. (x4 &rarr; 14)</p>
+  </div>
+  
+  <h4>Soma no Sistema Binário</h4>
+  <p>
+    No sistema binário (base 2), os únicos algarismos são 0 e 1. As regras básicas da soma são:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Operação</th>
+        <th>Resultado</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>0 + 0</td>
+        <td>0</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>0 + 1</td>
+        <td>1</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>1 + 0</td>
+        <td>1</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>1 + 1</td>
+        <td>0 (com transporte 1)</td>
+        <td>Vai 1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Exemplo:</strong> Somar 137<sub>10</sub> e 72<sub>10</sub> convertendo para binário:
+  </p>
+  <ul>
+    <li>137<sub>10</sub> = 10001001<sub>2</sub></li>
+    <li>72<sub>10</sub> = 01001000<sub>2</sub></li>
+    <li>Soma = 11010001<sub>2</sub>, que corresponde a 209<sub>10</sub></li>
+  </ul>
+
+  <p>Aqui um exemplo de como faz, da para alinhar os números verticalmente para facilitar.</p>
+  <div class="example">
+    <pre>
+1 + 0       = 1
+0 + 0       = 0
+0 + 0       = 0
+1 + 1       = 0 (Caso passe de 1, ele vira 0 e o próximo ganha +1)
+0 + 0 (+ 1) = 1
+0 + 0       = 0
+0 + 1       = 1
+1 + 0       = 1
+
+Agora monte de baixo para cima.
+Resultado: 11010001<sub>2</sub></pre>
+  </div>
+  
+  <h4>Soma no Sistema Hexadecimal</h4>
+  <p>
+    O sistema hexadecimal (base 16) utiliza os dígitos 0-9 e as letras A-F (onde A = 10, B = 11, ..., F = 15). A técnica de soma é similar à decimal, levando em conta os deslocamentos e o “vai 1”.
+  </p>
+  <p>
+    <strong>Exemplo 1:</strong> Somar <code>8</code> com <code>A</code> em hexadecimal:
+  </p>
+  <ul>
+    <li>A sequência hexadecimal: 0 1 2 3 4 5 6 7 8 9 A B C D E F</li>
+    <li>Contando a partir de 8 e somando A (10 unidades), obtém-se 12<sub>16</sub>, que equivale a 18<sub>10</sub>.</li>
+  </ul>
+  <p>
+    <strong>Exemplo 2:</strong> Somar <code>531<sub>16</sub></code> com <code>19C<sub>16</sub></code>:
+  </p>
+  <ul>
+    <li>Soma da coluna menos significativa: 1 + C (12) &rarr; deslocamento resulta em D</li>
+    <li>Próxima coluna: 3 + 9 = C</li>
+    <li>Coluna seguinte: 5 + 1 = 6</li>
+  </ul>
+  <p>
+    Resultado: <code>6CD<sub>16</sub></code>.
+  </p>
+  
+  <h3>3.2. Subtração Binária</h3>
+  <p>
+    A subtração binária é similar à decimal, mas com apenas quatro casos:
+  </p>
+  <ul>
+    <li>0 – 0 = 0</li>
+    <li>1 – 1 = 0</li>
+    <li>1 – 0 = 1</li>
+    <li>0 – 1 = 1, desde que seja tomado emprestado da coluna seguinte</li>
+  </ul>
+  <p>
+    <strong>Exemplo:</strong> Subtrair <code>1000<sub>2</sub></code> de <code>10011<sub>2</sub></code>:
+  </p>
+  <ul>
+    <li><code>10011<sub>2</sub> - 1000<sub>2</sub> = 1011<sub>2</sub></code></li>
+    <li>Que equivale a 19<sub>10</sub> - 8<sub>10</sub> = 11<sub>10</sub></li>
+  </ul>
+
+  <hr>
+  
+  <h2>4. Conversões de Base</h2>
+  
+  <h3>4.1. Conversão de Decimal para Binário</h3>
+  <p>
+    Existem dois métodos comuns para converter um número decimal para binário:
+  </p>
+  <ol> 
+    <li><strong>Método dos Pesos:</strong> Determine quais potências de 2 somadas formam o número decimal.</li>
+    <li><strong>Método das Divisões Sucessivas:</strong> Divida o número por 2 repetidamente e anote os restos (o primeiro resto é o LSB e o último, o MSB).</li>
+  </ol>
+  <p><strong>Exemplo (Divisão Sucessiva):</strong> Converter 30<sub>10</sub> para binário:</p>
+  <div class="example">
+    <pre>
+30 ÷ 2 = 15   | Resto: 0  (LSB)
+15 ÷ 2 = 7    | Resto: 1
+ 7 ÷ 2 = 3    | Resto: 1
+ 3 ÷ 2 = 1    | Resto: 1
+ 1 ÷ 2 = 0    | Resto: 1  (MSB)
+
+Lendo os restos de baixo para cima: 11110<sub>2</sub>
+    </pre>
+  </div>
+
+  <h3>4.2. Conversão de Binário para Hexadecimal</h3>
+    <p>
+        Para converter um número binário para hexadecimal, o método mais simples é agrupar os bits em grupos de 4, iniciando da direita para a esquerda. Se o número de bits não for múltiplo de 4, adicione zeros à esquerda para completar o grupo.
+    </p>
+    <p><strong>Exemplo:</strong> Converter o número binário <code>1011011<sub>2</sub></code> para hexadecimal.</p>
+    <p>
+        <strong>Passo 1:</strong> Adicione um zero à esquerda para obter 8 bits (se necessário): <code>1011011<sub>2</sub> → 01011011<sub>2</sub></code>.
+    </p>
+    <p>
+        <strong>Passo 2:</strong> Divida o número em grupos de 4 bits:
+    </p>
+    <ul>
+        <li><code>0101<sub>2</sub></code></li>
+        <li><code>1011<sub>2</sub></code></li>
+    </ul>
+    <p>
+        <strong>Passo 3:</strong> Converta cada grupo para hexadecimal:
+    </p>
+    <ul>
+        <li><code>0101<sub>2</sub> = 5<sub>10</sub> = 5<sub>16</sub></code></li>
+        <li><code>1011<sub>2</sub> = 11<sub>10</sub> = B<sub>16</sub></code></li>
+    </ul>
+    <p>
+        Portanto, <code>1011011<sub>2</sub> = 5B<sub>16</sub></code>.
+    </p>
+    
+  <h3>4.3. Conversão de Binário para Decimal</h3>
+  <p>
+    Para converter um número binário para decimal, multiplique cada bit pela potência de 2 correspondente à sua posição (contando da direita para a esquerda, onde o LSB tem peso 2<sup>0</sup>).
+  </p>
+  <p>
+    <strong>Exemplo:</strong> Converter <code>10011<sub>2</sub></code> para decimal:
+  </p>
+  <ul>
+    <li>10011<sub>2</sub> = 1×2<sup>4</sup> + 0×2<sup>3</sup> + 0×2<sup>2</sup> + 1×2<sup>1</sup> + 1×2<sup>0</sup> = 16 + 0 + 0 + 2 + 1 = 19<sub>10</sub></li>
+  </ul>
+  
+  <h3>4.4. Conversão de Decimal para Hexadecimal</h3>
+  <p>
+    A conversão de decimal para hexadecimal utiliza divisões sucessivas por 16, com os restos formando o número hexadecimal (lidos de trás para frente).
+  </p>
+  <p>
+    <strong>Exemplo 1:</strong> Converter 373<sub>10</sub>:
+  </p>
+  <div class="example">
+    <pre>
+373 ÷ 16 = 23  | Resto: 5   (LSB)
+ 23 ÷ 16 = 1   | Resto: 7
+  1 ÷ 16 = 0   | Resto: 1   (MSB)
+
+Resultado: 175<sub>16</sub>
+    </pre>
+  </div>
+  <p>
+    <strong>Exemplo 2:</strong> Converter 231<sub>10</sub>:
+  </p>
+  <div class="example">
+    <pre>
+231 ÷ 16 = 14  | Resto: 7   (LSB)
+ 14 ÷ 16 = 0   | Resto: 14  (MSB; 14 corresponde a E)
+
+Resultado: E7<sub>16</sub>
+    </pre>
+  </div>
+  
+  <h3>4.5. Conversão de Hexadecimal para Decimal</h3>
+  <p>
+    Para converter um número hexadecimal para decimal, multiplique cada dígito pelo valor de 16 elevado à potência da sua posição (contando da direita para a esquerda, iniciando com 16<sup>0</sup>).
+  </p>
+  <p>
+    <strong>Exemplo 1:</strong> Converter <code>356<sub>16</sub></code>:
+  </p>
+  <ul>
+    <li>356<sub>16</sub> = 3×16<sup>2</sup> + 5×16<sup>1</sup> + 6×16<sup>0</sup> = 768 + 80 + 6 = 854<sub>10</sub></li>
+  </ul>
+  <p>
+    <strong>Exemplo 2:</strong> Converter <code>2AF<sub>16</sub></code>:
+  </p>
+  <ul>
+    <li>2AF<sub>16</sub> = 2×16<sup>2</sup> + 10×16<sup>1</sup> + 15×16<sup>0</sup> = 512 + 160 + 15 = 687<sub>10</sub></li>
+  </ul>
+  
+  <h3>4.6. Conversão de Hexadecimal para Binário</h3>
+  <p>
+    Cada dígito hexadecimal equivale a 4 dígitos binários (já que 2<sup>4</sup> = 16). Assim, a conversão é feita convertendo cada dígito individualmente e, em seguida, concatenando os resultados.
+  </p>
+  <p>
+    <strong>Exemplo:</strong> Converter <code>5B<sub>16</sub></code> para binário:
+  </p>
+  <ul>
+    <li>O dígito 5 em hexadecimal &rarr; 5<sub>10</sub> = 101<sub>2</sub> (ou 0101, se usar 4 dígitos)</li>
+    <li>O dígito B em hexadecimal (que representa 11<sub>10</sub>) &rarr; 1011<sub>2</sub></li>
+    <li>Concatenando: 5B<sub>16</sub> = 1011011<sub>2</sub></li>
+  </ul>
+  <p>
+    Outro exemplo mencionado é a conversão do hexadecimal <code>3AB<sub>16</sub></code> para binário, que resulta em <code>1110101011<sub>2</sub></code> após a conversão e concatenação de cada dígito.
+  </p>
+
+  <hr>
+  
+  <h2>5. Conceitos Importantes: MSB e LSB</h2>
+  <p>
+    Nos sistemas numéricos, principalmente na representação binária:
+  </p>
+  <ul>
+    <li><strong>MSB (Most Significant Bit):</strong> é o bit mais à esquerda, que possui o maior peso (por exemplo, 2<sup>n</sup>, onde n é a posição mais alta).</li>
+    <li><strong>LSB (Least Significant Bit):</strong> é o bit mais à direita, com o menor peso (2<sup>0</sup>).</li>
+  </ul>
+  <p>
+    Estes conceitos são fundamentais para compreender os métodos de conversão, pois o posicionamento dos dígitos determina o valor total do número.
+  </p>
+  
+  <hr>
+  
+  <h2>6. Considerações Finais</h2>
+  <p>
+    O capítulo demonstrou como realizar operações aritméticas – como soma e subtração – em diferentes bases (binário e hexadecimal), bem como os métodos para converter números entre os sistemas decimal, binário e hexadecimal. O entendimento desses processos é essencial para a compreensão do funcionamento interno dos sistemas digitais, e para a aplicação prática em circuitos, microprocessadores e softwares.
+  </p>
+  <p>
+    Ainda que muitas dessas operações e conversões possam ser automatizadas por calculadoras online, o domínio manual desses conceitos permite ao aluno compreender as operações lógicas e a estrutura dos dispositivos digitais.
+  </p>
+  <hr>
+  <div class="navigator">
+    <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula4.html" class="navigator" target="_self" rel="next">Próxima aula</a>
+  </div>
+</body>
+</html>

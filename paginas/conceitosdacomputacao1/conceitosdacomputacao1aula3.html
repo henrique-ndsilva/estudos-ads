@@ -10,7 +10,7 @@
 <body>
     <hr>
 
-    <h1>Sistemas de Numeração - Decimal, Binário e Hexadecimal.</h1>
+    <h1>Decimal, binário e hexadecimal.</h1>
 
     <hr>
 
@@ -27,162 +27,190 @@
             }
         }
     </script>
+  <p>
+    Este resumo apresenta, de forma detalhada e organizada, os principais sistemas de numeração utilizados na computação – o sistema decimal, binário e hexadecimal –, além das codificações, unidades de armazenamento e dos conceitos históricos que fundamentam o desenvolvimento e a aplicação desses sistemas.
+  </p>
 
-    <h2>1. Introdução</h2>
-    <p>Este capítulo apresenta os principais <strong>sistemas de numeração utilizados na computação</strong>, explicando suas bases matemáticas, aplicações e conversões entre diferentes sistemas. São abordados o <strong>sistema decimal (base 10), sistema binário (base 2) e sistema hexadecimal (base 16)</strong>, além de aplicações práticas como a codificação <strong>BCD</strong> e o padrão <strong>ASCII</strong>.</p>
+  <h2>1. Introdução e Contexto Histórico</h2>
+  <p>
+    Desde os tempos mais remotos, a humanidade utilizou sistemas de numeração para registrar informações como a contagem de animais e bens. Os primeiros métodos de registro empregavam marcas ou traços em paus, pedras e outros materiais, baseando-se na <em>correspondência biunívoca</em> – ou seja, associando cada símbolo a um valor específico.
+  </p>
+  <p>
+    No Egito antigo, por exemplo, as medidas eram realizadas com base em partes do corpo, como:
+  </p>
+  <ul>
+    <li><strong>Dígito:</strong> largura de um dedo.</li>
+    <li><strong>Palmo:</strong> largura de quatro dedos.</li>
+    <li><strong>Cúbito:</strong> distância do cotovelo à ponta do dedo médio.</li>
+  </ul>
+  <p>
+    Evidências sugerem que os egípcios utilizavam um sistema decimal há cerca de 5 mil anos. O sistema de numeração romano também é decimal, mas organizado de forma diferente dos números arábicos que usamos atualmente. Os gregos, especialmente os pitagóricos, estudaram os números profundamente, acreditando que o universo era constituído por eles.
+  </p>
+  <p>
+    Importantes contribuições históricas incluem as reflexões de Descartes, que introduziu o conceito de <em>números reais</em> ao tratar das raízes de equações, e os trabalhos de Gauss, que aprimoraram as ideias de números reais e imaginários. A famosa frase de Kronecker – “<em>Deus criou os números inteiros; tudo o mais é obra do homem</em>” – sintetiza bem essa evolução do pensamento matemático.
+  </p>
+  <p>
+    Além disso, a representação dos números na reta real (IR) demonstra como os números inteiros, negativos, fracionários e irracionais se distribuem de forma contínua, sendo cada ponto da reta um número real.
+  </p>
 
-    <hr>
+  <hr>
 
-    <h2>2. Origens e Evolução dos Sistemas Numéricos</h2>
-    <ul>
-        <li>Os primeiros registros numéricos datam de <strong>3500 a.C.</strong>, com os <strong>egípcios e babilônios</strong>.</li>
-        <li>Sistemas primitivos usavam <strong>traços e marcas</strong> para contar e medir.</li>
-        <li>O <strong>sistema decimal</strong> foi amplamente utilizado pelos <strong>romanos e gregos</strong> e é a base da numeração moderna.</li>
-        <li>O sistema binário tornou-se essencial na computação por representar eletricamente <strong>corrente (1) e ausência de corrente (0)</strong>.</li>
-    </ul>
+  <h2>2. Representação Digital vs. Representação Analógica</h2>
+  <p>
+    A representação digital utiliza sinais discretos, normalmente 0 e 1, que correspondem à ausência ou presença de corrente elétrica em circuitos eletrônicos. Em contraste, a representação analógica é contínua, podendo gerar interpretações variadas, como ocorre na medição de temperatura em um termômetro de mercúrio.
+  </p>
+  <p>
+    Por exemplo, enquanto um relógio digital exibe as horas por meio de dígitos que mudam de forma discreta, um relógio de ponteiros indica a passagem do tempo de maneira contínua.
+  </p>
 
-    <hr>
+  <hr>
 
-    <h2>3. Sistema Decimal (Base 10)</h2>
-    <ul>
-        <li>Utiliza <strong>dez símbolos</strong>: {0,1,2,3,4,5,6,7,8,9}.</li>
-        <li>Cada posição representa uma <strong>potência de 10</strong>.</li>
-        <li>Exemplo:</li>
-        <ul>
-            <li>O número <strong>234</strong> pode ser representado como:</li>
-            <ul>
-                <li>2 x 10<sup>2</sup> + 3 x 10<sup>1</sup> + 4 x 10<sup>0</sup></li>
-            </ul>
-        </ul>
-        <li>É o sistema mais intuitivo, pois reflete a forma como os humanos contam naturalmente.</li>
-    </ul>
+  <h2>3. Sistemas Numéricos</h2>
+  
+  <h3>3.1. Sistema Decimal</h3>
+  <p>
+    O sistema decimal é o mais utilizado historicamente e baseia-se na <strong>base 10</strong>. Ele utiliza os dígitos <strong>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}</strong> e cada posição de um número corresponde a uma potência de 10, como unidade, dezena, centena, milhar, etc.
+  </p>
+  <p>
+    <strong>Exemplo:</strong> (234)<sub>10</sub> = 2 × 10<sup>2</sup> + 3 × 10<sup>1</sup> + 4 × 10<sup>0</sup>.
+  </p>
+  <p>
+    Neste contexto, destacam-se os conceitos de <strong>MSD (Most Significant Digit)</strong> e <strong>LSD (Least Significant Digit)</strong>:
+  </p>
+  <ul>
+    <li><strong>MSD:</strong> O dígito mais à esquerda, que possui o maior peso na determinação do valor total do número.</li>
+    <li><strong>LSD:</strong> O dígito mais à direita, que possui o menor peso.</li>
+  </ul>
+  <p>
+    Por exemplo, no número 234, o dígito 2 é o MSD e o dígito 4 é o LSD.
+  </p>
+  
+  <h3>3.2. Sistema Binário</h3>
+  <p>
+    O sistema binário utiliza a <strong>base 2</strong> e é composto pelos dígitos <strong>{0, 1}</strong>. Essa forma de numeração é a linguagem natural dos computadores, pois os circuitos eletrônicos distinguem apenas dois estados: ligado (1) e desligado (0).
+  </p>
+  <p>
+    Cada dígito binário é chamado de <strong>bit</strong>. Para aumentar a capacidade de representação, os bits são agrupados:
+  </p>
+  <ul>
+    <li><strong>Nibble:</strong> 4 bits.</li>
+    <li><strong>Byte:</strong> 8 bits.</li>
+    <li><strong>Word:</strong> 16 bits.</li>
+    <li><strong>Double Word:</strong> 32 bits.</li>
+    <li><strong>Quad Word:</strong> 64 bits.</li>
+  </ul>
+  <p>
+    Assim como no sistema decimal cada posição corresponde a uma potência de 10, no sistema binário cada posição corresponde a uma potência de 2. Por exemplo:
+  </p>
+  <ul>
+    <li>0<sub>10</sub> → 0<sub>2</sub></li>
+    <li>1<sub>10</sub> → 1<sub>2</sub></li>
+    <li>2<sub>10</sub> → 10<sub>2</sub></li>
+    <li>9<sub>10</sub> → 1001<sub>2</sub></li>
+  </ul>
+  <p>
+    Nos computadores, a transferência de dados ocorre em grupos de bits (8, 16 ou 32 bits). Por exemplo, microprocessadores como o Intel 8080 operavam com 8 bits, enquanto outros, como o Intel 80386 e Pentium, operavam com 32 bits, mesmo que permitissem instruções de 8 ou 16 bits.
+  </p>
+  
+  <h3>3.3. Sistema Hexadecimal</h3>
+  <p>
+    O sistema hexadecimal é baseado na <strong>base 16</strong> e utiliza os dígitos <strong>0 a 9</strong> e as letras <strong>A, B, C, D, E e F</strong> (representando os valores 10 a 15). Cada dígito hexadecimal equivale a 4 bits, o que permite representar um byte (8 bits) com apenas 2 dígitos.
+  </p>
+  <p>
+    Esse sistema é bastante utilizado para representar endereços de memória, códigos de cores (como na notação RGB, por exemplo, <code>#FF00CC</code>) e endereços MAC, pois oferece uma forma compacta de exibir dados binários.
+  </p>
+  <p>
+    <strong>Exemplo de conversão:</strong> (210)<sub>16</sub> = 2 × 16<sup>2</sup> + 1 × 16<sup>1</sup> + 0 × 16<sup>0</sup> = 528<sub>10</sub>.
+  </p>
 
-    <hr>
+  <hr>
+  
+  <h2>4. Codificações e Representações em Computação</h2>
+  
+  <h3>4.1. Codificação BCD (Binary-Coded Decimal)</h3>
+  <p>
+    A codificação BCD converte cada dígito de um número decimal em seu equivalente binário de 4 bits, processando-o dígito a dígito. Embora o resultado seja um número representado em binário, não se trata de uma conversão completa do número, mas sim de uma representação de cada dígito.
+  </p>
+  <p>
+    <strong>Exemplo:</strong> Para codificar o número <code>953</code> em BCD:
+  </p>
+  <ul>
+    <li>9 → <code>1001</code></li>
+    <li>5 → <code>0101</code></li>
+    <li>3 → <code>0011</code></li>
+  </ul>
+  <p>
+    Para decodificar um código BCD, os bits devem ser agrupados em conjuntos de 4. Assim, o código <code>1001 0011 1000 0001</code> é interpretado como os dígitos 9, 3, 8 e 1, respectivamente.
+  </p>
+  
+  <h3>4.2. Código ASCII</h3>
+  <p>
+    O <strong>ASCII</strong> (American Standard Code for Information Interchange) é o padrão para codificação de caracteres e funções encontradas em teclados. Originalmente, o ASCII utiliza 7 bits, permitindo 128 combinações, embora frequentemente seja armazenado em 1 byte (8 bits).
+  </p>
+  <p>
+    Cada caractere, seja uma letra, número ou símbolo, é representado por um código numérico. Por exemplo, a letra “A” é representada por <code>01000001</code> em ASCII. Essa codificação é fundamental para a comunicação entre computadores, impressoras e para o armazenamento interno de dados.
+  </p>
 
-    <h2>4. Sistema Binário (Base 2)</h2>
-    <ul>
-        <li>Usa apenas dois símbolos: <strong>0 e 1</strong>.</li>
-        <li>Cada posição representa uma <strong>potência de 2</strong>.</li>
-        <li>Exemplo de conversão decimal para binário:</li>
-        <ul>
-            <li><strong>5 (decimal)</strong> &rarr; <strong>101 (binário)</strong></li>
-            <li><strong>9 (decimal)</strong> &rarr; <strong>1001 (binário)</strong></li>
-        </ul>
-        <li>Unidades de armazenamento:</li>
-        <ul>
-            <li><strong>1 bit</strong>: menor unidade de dado (0 ou 1).</li>
-            <li><strong>4 bits</strong>: <strong>nibble</strong>.</li>
-            <li><strong>8 bits</strong>: <strong>byte</strong> (representa caracteres, números, etc.).</li>
-            <li><strong>16, 32 e 64 bits</strong>: unidades maiores usadas em processadores modernos.</li>
-        </ul>
-        <li><strong>Vantagens do sistema binário:</strong></li>
-        <ul>
-            <li>Fácil processamento digital.</li>
-            <li>Mais resistente a ruídos na transmissão de dados.</li>
-        </ul>
-    </ul>
+  <hr>
+  
+  <h2>5. Unidades de Armazenamento e Transferência de Dados</h2>
+  <p>
+    Os dados em sistemas computacionais são medidos e transferidos em diferentes unidades, conforme a quantidade de bits envolvidos:
+  </p>
+  <ul>
+    <li><strong>Bit:</strong> A menor unidade de informação, representando 0 ou 1.</li>
+    <li><strong>Byte:</strong> Conjunto de 8 bits, podendo representar valores de 0 a 255 ou um caractere.</li>
+    <li><strong>Kilobyte (KB):</strong> Frequentemente considerado como 1.000 bytes, porém na prática 1 KB equivale a 1.024 bytes, devido à facilidade na representação binária.</li>
+    <li><strong>Megabyte (MB):</strong> Aproximadamente 1.000.000 de bytes.</li>
+    <li><strong>Gigabyte (GB):</strong> Aproximadamente 1.000.000.000 de bytes.</li>
+  </ul>
+  <p>
+    Essas unidades são essenciais para compreender como os dados são armazenados, processados e transmitidos em sistemas modernos.
+  </p>
 
-    <hr>
-
-    <h2>5. Sistema Hexadecimal (Base 16)</h2>
-    <ul>
-        <li>Utiliza <strong>16 símbolos</strong>: {0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F}.</li>
-        <li>Cada posição representa uma <strong>potência de 16</strong>.</li>
-        <li><strong>Fácil conversão</strong> entre <strong>hexadecimal e binário</strong>, pois 1 dígito hexadecimal equivale a <strong>4 bits</strong>.</li>
-        <li>Exemplo de conversão:</li>
-        <ul>
-            <li><strong>(210)<sub>16</sub> &rarr; 2 x 16<sup>2</sup> + 1 x 16<sup>1</sup> + 0 x 16<sup>0</sup> = 528 (decimal)</strong></li>
-        </ul>
-        <li><strong>Aplicações práticas</strong>:</li>
-        <ul>
-            <li>Representação de <strong>endereços de memória</strong> e <strong>códigos de cores RGB</strong> (ex.: #FF00CC).</li>
-            <li><strong>MAC address</strong>: identificadores de dispositivos de rede.</li>
-        </ul>
-    </ul>
-
-    <hr>
-
-    <h2>6. Conversões entre Sistemas</h2>
-    <p><p>As conversões entre os sistemas numéricos podem ser feitas seguindo regras específicas. Abaixo estão os métodos mais comuns:</p></p>
-    <p><mark>Atenção!</mark>: é recomendado que siga a ordem Decimal &rarr; Binário &rarr; Hexadecimal &rarr; Binário &rarr; Decimal.</p>
-    <h3>Decimal &rarr; Binário</h3>
-    <ol>
-        <li>Divida o número decimal por <strong>2</strong>, até chegar a 0, anotando os restos.</li>
-        <li>Leia os restos na <strong>ordem inversa</strong>.</li>
-        <ul>
-            <li>Exemplo: <strong>(340)<sub>10</sub> &rarr; (101010100)<sub>2</sub></strong>.</li>
-        </ul>
-    </ol>
-    <h3>Binário &rarr; Hexadecimal</h3>
-    <ol>
-        <li>Agrupe os bits em grupos de <strong>4</strong>, da direita para a esquerda.</li>
-        <li>Caso um número vá ficar sozinho, exemplo, ficaria: <strong>"xxx1 0101 0100"</strong>;</li>
-        <ul>
-            <li>Você deve trocar os <strong>"x"</strong> por <strong>"0"</strong>.</li>
-        </ul>
-        <li>Converta cada grupo para seu equivalente hexadecimal.</li>
-        <ul>
-            <li>Exemplo: <strong>(0001 0101 0100)<sub>2</sub> &rarr; (154)<sub>16</sub></strong>.</li>
-        </ul>
-    </ol>
-    <h3>Hexadecimal &rarr; Binário</h3>
-<ol>
-    <li>Substitua cada dígito hexadecimal pelo seu equivalente em 4 bits.</li>
-    <li>Junte os grupos para formar o número binário.</li>
-    <ul>
-        <li>Exemplo: <strong>(154)<sub>16</sub> &rarr; (0001 0101 0100)<sub>2</sub></strong>.</li>
-    </ul>
-</ol>
-    <h3>Binário &rarr; Decimal</h3>
-    <ol>
-        <li>Multiplique cada bit pela potência de 2 correspondente.</li>
-        <ul>
-            <li>Exemplo: <strong>(1101)<sub>2</sub> &rarr; 1 x 2<sup>3</sup> + 1 x 2<sup>2</sup> + 0 x 2<sup>1</sup> + 1 x 2<sup>0</sup> = (13)<sub>10</sub></strong>.</li>
-        </ul>
-    </ol>    
-    <p>Não entendeu? Saiba mais sobre <strong>Conversões entre Sistemas</strong> aqui: <a href="https://www.youtube.com/watch?v=Vctnbk0RWVY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
-
-    <hr>
-
-    <h2>7. Aplicações Práticas</h2>
-    <h3>7.1 Codificação BCD (Binary-Coded Decimal)</h3>
-    <ul>
-        <li>Método de representar números decimais em <strong>binário</strong>, onde cada <strong>dígito decimal</strong> equivale a <strong>4 bits</strong>.</li>
-        <li>Exemplo:</li>
-        <ul>
-            <li><strong>(953)<sub>10</sub> &rarr; (1001 0101 0011) (BCD)</strong>.</li>
-        </ul>
-        <li><strong>Vantagens</strong>:</li>
-        <ul>
-            <li>Fácil conversão para decimal.</li>
-        </ul>
-        <li><strong>Desvantagem</strong>:</li>
-        <ul>
-            <li>Ocupa mais espaço que a conversão binária tradicional.</li>
-        </ul>
-    </ul>
-    <h3>7.2 Código ASCII</h3>
-    <ul>
-        <li><strong>Tabela de caracteres</strong> que associa <strong>números binários</strong> a letras e símbolos.</li>
-        <li>Cada caractere ocupa <strong>1 byte (8 bits)</strong>.</li>
-        <li>Exemplo:</li>
-        <ul>
-            <li><strong>A &rarr; 01000001 (binário) &rarr; 65 (decimal)</strong>.</li>
-        </ul>
-        <li>Usado para transferência de dados e comunicação entre sistemas.</li>
-    </ul>
-
-    <hr>
-
-    <h2>8. Conclusão</h2>
-    <ul>
-        <li>Os <strong>sistemas de numeração</strong> são essenciais na computação, influenciando desde o armazenamento de dados até a programação de softwares.</li>
-        <li><strong>O sistema binário é a base da computação</strong>, enquanto o <strong>decimal</strong> é usado pelos humanos e o <strong>hexadecimal</strong> facilita representações compactas de dados.</li>
-        <li><strong>Conversões entre sistemas são fundamentais para a manipulação eficiente da informação</strong>.</li>
-    </ul>
-    <hr>
-    <div class="navigator">
-        <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula3.html" class="navigator" target="_self" rel="next">Próxima aula</a>
-    </div>
+  <hr>
+  
+  <h2>6. Considerações Finais e Importância Histórica</h2>
+  <p>
+    O capítulo evidencia a evolução dos sistemas numéricos e sua relevância tanto histórica quanto prática:
+  </p>
+  <ul>
+    <li>
+      <strong>Evolução Histórica:</strong> 
+      <ul>
+        <li>Os primeiros sistemas de numeração surgiram com marcas em paus e pedras, evoluindo para os sistemas decimais usados pelos egípcios e romanos.</li>
+        <li>A utilização de medidas baseadas em partes do corpo (dígito, palmo, cúbito) no Egito antigo exemplifica essa evolução.</li>
+        <li>Os gregos e pitagóricos exploraram os números de forma profunda, influenciando o pensamento matemático por séculos.</li>
+        <li>Descartes, Gauss e Kronecker contribuíram para o desenvolvimento dos conceitos de números reais, imaginários e irracionais, estruturando a base da matemática moderna.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Representação Digital:</strong> 
+      <ul>
+        <li>A utilização de sistemas binário e hexadecimal reflete a necessidade de representar e processar informações de forma eficiente nos computadores.</li>
+        <li>O conceito de MSD (dígito mais significativo) e LSD (dígito menos significativo) é fundamental para entender a importância do posicionamento dos dígitos em qualquer sistema numérico.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Codificações:</strong>
+      <ul>
+        <li>O BCD facilita a conversão entre representações decimal e binária, sendo útil em aplicações digitais.</li>
+        <li>O código ASCII padroniza a representação de caracteres, sendo crucial para a comunicação entre dispositivos.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Armazenamento e Transferência:</strong>
+      <ul>
+        <li>A definição das unidades de medida (bit, byte, KB, MB, GB) possibilita o entendimento da capacidade e velocidade dos sistemas computacionais.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>
+    Em suma, a compreensão dos sistemas de numeração e suas codificações é essencial para a área de computação, possibilitando a manipulação, armazenamento e transmissão precisa de dados.
+  </p>
+  <hr>
+  <div class="navigator">
+    <a href="../../index.html" class="navigator" target="_self" rel="prev">Voltar para o menu</a> &VerticalLine; <a href="conceitosdacomputacao1aula4.html" class="navigator" target="_self" rel="next">Próxima aula</a>
+</div>
 </body>
 </html>
