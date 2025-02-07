@@ -10,8 +10,11 @@
     code { background: #1f1f1f; padding: 2px 4px; }
     table { border-collapse: collapse; margin: 1em 0; width: 100%; }
     table, th, td { border: 1px solid #ccc; }
+    table {
+      width: 90%;
+    }
     th, td { padding: 8px; text-align: center; }
-    .example { background: #1f1f1f; padding: 8px; margin: 1em 0; }
+    .example { background: #1f1f1f; padding: 5px; margin: 1em 0; }
   </style>
 </head>
 <body>
@@ -127,7 +130,7 @@
 1 + 0       = 1
 0 + 0       = 0
 0 + 0       = 0
-1 + 1       = 0 (Caso passe de 1, ele vira 0 e o próximo ganha +1)
+1 + 1       = 0 <small>(resultado > 1: = 0 e próximo ganha +1)</small>
 0 + 0 (+ 1) = 1
 0 + 0       = 0
 0 + 1       = 1
@@ -172,8 +175,22 @@ Resultado: 11010001<sub>2</sub></pre>
   </ul>
   <p>
     <strong>Exemplo:</strong> Subtrair <code>1000<sub>2</sub></code> de <code>10011<sub>2</sub></code>:
-  </p>
-  <ul>
+<p>Como o <code>1000<sub>2</sub></code> não tem 5 dígitos, nós adicionamos um 0 na esquerda, ficando: <code>01000<sub>2</sub></code></p>
+<p>Montamos eles da direita para a esquerda:</p>
+<div class="example">
+<pre>
+1 - 0       = 1
+1 - 0       = 1
+0 - 0       = 0
+0 - 1       = 1 <small>(resultado < 1: = 1 e próximo ganha -1)</small>
+1 - 0 (- 1) = 0
+
+Agora monte de baixo para cima, removendo os zeros adicionados.
+Resultado: 1011<sub>2</sub>
+</pre>
+</div>
+</p>
+<ul>
     <li><code>10011<sub>2</sub> - 1000<sub>2</sub> = 1011<sub>2</sub></code></li>
     <li>Que equivale a 19<sub>10</sub> - 8<sub>10</sub> = 11<sub>10</sub></li>
   </ul>
