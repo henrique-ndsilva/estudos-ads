@@ -36,3 +36,9 @@ hr {
     background-color: #333333;
     color: rgba(245, 245, 245, 0.95);
 }
+
+@media (max-width: 751px) {
+    .niveisorganizacionais {
+        width: 100%;
+    }
+}
