@@ -21,3 +21,9 @@ img {
 hr {
     border-color: #14141485;
 }
+
+.navmain {
+    a {
+        background-color: limegreen;
+    }
+}

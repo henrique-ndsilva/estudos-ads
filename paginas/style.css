@@ -12,11 +12,11 @@ h1 {
     color: whitesmoke;
 }
 
-h2, h3, h4, h5 {
+h2, h3, h4, h5, h6 {
     color: rgba(245, 245, 245, 0.95);
 }
 
-h2, h3, h4, h5, p, ul, ol, li {
+h2, h3, h4, h5, h6, p, ul, ol, li {
     text-align: justify;
 }
 
@@ -24,9 +24,14 @@ hr {
     border-color: #14141485;
 }
 
-.navigator {
-    color: rgb(0, 204, 255);
+.navlink {
     text-align: center;
+    a {
+        color: rgb(0, 204, 255);
+    }
+    span {
+        color: #5a5a5a;
+    }
 }
 
 .buttonfont {
