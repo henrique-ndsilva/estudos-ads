@@ -47,3 +47,52 @@ hr {
         width: 100%;
     }
 }
+
+code {
+    background: #1f1f1f;
+    padding: 2px 4px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1em 0;
+    width: 95%;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+.tabelabooleana {
+    width: 80%;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .tabelabooleana {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .tabelabooleana {
+        width: 70%;
+    }
+}
+
+@media (min-width: 900px) {
+    .tabelabooleana {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .tabelabooleana {
+        width: 40%;
+    }
+}
