@@ -37,19 +37,71 @@
     </script>
 
     <p>Estou fazendo esta página apenas para mostrar como eu aprendi a converter bases númericas do jeito mais fácil possível.</p>
-    <p>
-        <code>8421</code> (Decimal) <br>
-        <code>1111</code> (Binário)
-    </p>
-    <p>Okay, está vendo esses números? Eles são tipo uma colinha que você pode usar para converter entre <strong>Decimal, Binário e Hexadecimal.</strong> Para isso, basta você comparar os números embaixo com os de cima, por exemplo, se termos <code>1000</code> em <strong>Binário</strong>, vemos que na colinha apenas o <strong>8</strong> teria o número <strong>1</strong> embaixo dele, logo <code>1000<sub>2</sub> = 8<sub>10</sub></code>, nesse momento, você teria realizado uma conversão de <strong>Binário para Decimal</strong>. Vamos a alguns exemplo:</p>
+        <table border="1" style="display: inline-table; width: auto; font-size: 12px; text-align: center;">
+            <tr>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </table>
+    <p>Okay, está vendo esta tabela? você pode usar ela para converter entre <strong>Decimal, Binário e Hexadecimal.</strong> Para isso, basta você comparar os números embaixo com os de cima, por exemplo, se termos <code>1000</code> em <strong>Binário</strong>, vemos que na tabela apenas o <strong>8</strong> teria o número <strong>1</strong> embaixo dele, logo <code>1000<sub>2</sub> = 8<sub>10</sub></code></p>
+        <table border="1" style="display: inline-table; width: auto; font-size: 12px; text-align: center;">
+            <tr>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
     <p>Decimal &rarr; Binário</p>
     <p>
-        <code>10<sub>10</sub></code>. Aqui temos 10 em <strong>Decimal</strong>, o número 1 é positivo, e o 0 é negativo, ou seja, <code>10<sub>10</sub></code> equivale a <code>1010</code>, basta olhar na "colinha", e pode ver que o <code>8</code> e o <code>2</code> estão exatamente em cima do <code>1</code> que está na versão binária, logo basta somar <code>8 + 2 = 10<sub>10</sub></code>.
+        <code>10<sub>10</sub></code>. Aqui temos 10 em <strong>Decimal</strong>, o número 1 é positivo, e o 0 é negativo, ou seja, <code>10<sub>10</sub></code> equivale a <code>1010</code>, basta olhar na "tabela", e pode ver que o <code>8</code> e o <code>2</code> estão exatamente em cima do <code>1</code> que está na versão binária, logo basta somar <code>8 + 2 = 10<sub>10</sub></code>.
     </p>
+        <table border="1" style="display: inline-table; width: auto; font-size: 12px; text-align: center;">
+            <tr>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
     <p>Binário &rarr; Decimal</p>
     <p>
-        <code>0111<sub>2</sub> = 7<sub>10</sub></code>. Caso você esteja em dúvida, agora temos 3 positivos no nosso número binário, ou seja, <code>111 (0111)</code>. Para converter, você deve ver o número acima deles na "colinha", e somar da esquerda para a direita, sendo assim, fica: <code>4 + 2 + 1 = 7</code> logo, <code>0111<sub>2</sub> = 7<sub>10</sub></code>.
+        <code>0111<sub>2</sub> = 7<sub>10</sub></code>. Caso você esteja em dúvida, agora temos 3 positivos no nosso número binário, ou seja, <code>111 (0111)</code>. Para converter, você deve ver o número acima deles na "tabela", e somar da esquerda para a direita, sendo assim, fica: <code>4 + 2 + 1 = 7</code> logo, <code>0111<sub>2</sub> = 7<sub>10</sub></code>.
     </p>
+        <table border="1" style="display: inline-table; width: auto; font-size: 12px; text-align: center;">
+            <tr>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </table>
     <p>Binário &rarr; Hexadecimal</p>
     <p>Este é idêntico ao exercício anterior, afinal Hexadecimal é igual ao Decimal, porém na base 16. Vejamos então: se temos <code>10011100<sub>2</sub></code> em Binário, como é em Hexadecimal?</p>
     <ul>
@@ -58,11 +110,23 @@
             <li><strong>Explicação</strong>: Começaremos pelo primeiro grupo de <strong>4bits</strong>, da esquerda para direita. Quais números estão acima dos <strong>1's</strong> deste grupo? (<code>1001</code>). A resposta é <strong>8 e 1</strong>. Logo, <code>8 + 1 = 9</code>. Agora o segundo grupo, quais números estão acima dos <strong>1's</strong>? (<code>1100</code>). A resposta é <strong>8 e 4</strong>, <code>8 + 4 = 12</code> e como sabemos, a partir do <strong>9</strong>, em hexadecimal, temos letras (A, B, C, D, E, F), que vão até o 15 (F). Logo a resposta correta é <code>9C<sub>16</sub>.</code></li>
         </ul>
     </ul>
-    <p>Conseguiu entender? Basta seguir essa "colinha" e consegue fazer tudo. Caso você esteja se perguntando como faz para números <strong>binários</strong> com mais de 4 dígitos (Ex: 10110...) Você deve continuar a colinha para a esquerda, ela é feita dobrando o próximo número a cada dígito, uma forma fácil de saber até qual número você deve ir, é ir até o número mais próximo possível do número que vai converter, ou seja, se você foi converter de <strong>Decimal</strong> <code>34<sub>10</sub></code> para <strong>Binário</strong> <code>00110010<sub>2</sub></code>, você iria até no máximo o número 32 na colinha, pois, a ordem é: {1, 2, 4, 8, 16, 32, 64, 128...} e o 32 é o número mais próximo que não passa do nosso número <strong>Decimal</strong>, que é 34. ou seja, para converter esse <strong>Binário</strong> que mencionei ali nos parênteses (10110) em <strong><strong>Decimal</strong></strong>, você usaria essa "colinha":</p>
-    <ul style="list-style-type: none;">
-        <li><code>16 8421</code> (Decimal)</li>
-        <li><code>1 &nbsp;0110</code> (Binário)</li>
-    </ul>
+    <p>Conseguiu entender? Basta seguir essa tabela e consegue fazer tudo. Caso você esteja se perguntando como faz para números <strong>binários</strong> com mais de 4 dígitos (Ex: 10110...) Você deve continuar a tabela para a esquerda, ela é feita dobrando o próximo número a cada dígito, uma forma fácil de saber até qual número você deve ir, é ir até o número mais próximo possível do número que vai converter, ou seja, se você foi converter de <strong>Decimal</strong> <code>34<sub>10</sub></code> para <strong>Binário</strong> <code>00110010<sub>2</sub></code>, você iria até no máximo o número 32 na tabela, pois, a ordem é: {1, 2, 4, 8, 16, 32, 64, 128...} e o 32 é o número mais próximo que não passa do nosso número <strong>Decimal</strong>, que é 34. ou seja, para converter esse <strong>Binário</strong> que mencionei ali nos parênteses (10110) em <strong><strong>Decimal</strong></strong>, você usaria essa tabela:</p>
+        <table border="1" style="display: inline-table; width: auto; font-size: 12px; text-align: center;">
+            <tr>
+                <td>16</td>
+                <td>8</td>
+                <td>4</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+        </table>
     <p>Veja bem, que de números "positivos" (com 1 embaixo) temos, da esquerda para a direita: (16, 4 e 2).</p>
     <p>Logo, a resposta seria: <code>22<sub>10</sub></code> (16 + 4 + 2).</p>
     <p>
