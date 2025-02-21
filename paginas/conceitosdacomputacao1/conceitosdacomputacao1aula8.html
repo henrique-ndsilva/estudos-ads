@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 8 - CdC</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Arquitetura de Computador – Software</h1>
+    
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+      function trocarFonte() {
+        let body = document.body;
+        let tamanhoAtual = window.getComputedStyle(body).fontSize;
+
+        if (tamanhoAtual === "12px") {
+          body.style.fontSize = "14px";
+        } else {
+          body.style.fontSize = "12px";
+        }
+      }
+    </script>
+    
+    <h2>Introdução</h2>
+    <p>
+      Este capítulo aborda a arquitetura de computadores sob a perspectiva do software, explicando como a camada de software “dá vida” ao hardware. Enquanto o hardware compreende os componentes físicos (CPU, memória, dispositivos de E/S etc.), o software, em especial o sistema operacional (SO), abstrai os detalhes complexos do hardware e gerencia seus recursos, tornando a utilização do computador mais simples e eficiente para o usuário.
+    </p>
+    
+    <h2>1. Infraestrutura de Software</h2>
+    <p>
+      Um sistema de computação é composto por hardware e software. O software existe para que o hardware execute as funções determinadas pelo usuário, fazendo a abstração dos detalhes técnicos. Dessa forma, o sistema operacional é a peça central que:
+    </p>
+    <ul>
+      <li><strong>Oculta os detalhes de hardware do usuário;</strong></li>
+      <li>
+        <strong>Fornece uma interface gráfica (GUI) ou por linha de comando (shell),</strong> 
+        ocultando detalhes como interrupções, organização do disco rígido e demais aspectos técnicos;
+      </li>
+      <li><strong>Gerencia os recursos de memória, processamento e armazenamento.</strong></li>
+    </ul>
+    
+    <p>
+      Os principais componentes de um sistema operacional de baixo para cima:
+    </p>
+    <ul>
+      <li>Hardware (base do sistema);</li>
+      <li>Sistema Operacional;</li>
+      <li>Utilitários;</li>
+      <li>Programas de Aplicação.</li>
+    </ul>
+    
+    <p>
+      A figura abaixo mostra a organização dos componentes, destacando a separação entre o <strong>modo núcleo</strong> (ou supervisor), onde o SO tem acesso completo ao hardware, e o <strong>modo usuário</strong>, onde apenas um subconjunto de instruções é permitido. Essa separação garante que operações sensíveis, como acessos a dispositivos de E/S, sejam executadas com segurança.
+    </p>
+
+    <img src="../../imagens/aula8figura1.png" alt="Organização dos principais componentes de um computador" class="tabelabooleana">
+    <p><strong>Organização dos principais componentes de um computador &uparrow;</strong><br> Fonte: adaptado de Tanenbaum e Bos (2016, p. 15).</p>
+    
+    <h3>Multiplexação de Recursos</h3>
+    <p>
+      Para gerenciar eficientemente os recursos do hardware, o sistema operacional utiliza dois tipos de multiplexação:
+    </p>
+    <ul>
+      <li>
+        <strong>Multiplexação no tempo:</strong> 
+        <span>Diferentes programas ou usuários se revezam no uso de um recurso. Exemplo: uma única CPU compartilhada entre vários programas, onde cada um tem sua vez de execução.</span>
+      </li>
+      <li>
+        <strong>Multiplexação no espaço:</strong>
+        <span>Cada programa recebe uma parte do recurso, como a divisão da memória entre vários programas para evitar desperdício, ou o compartilhamento do disco entre diversos usuários.</span>
+      </li>
+    </ul>
+
+    <hr>
+    
+    <h2>2. Tipos de Sistemas Operacionais</h2>
+    <p>
+      O capítulo apresenta a diversidade de sistemas operacionais, classificados conforme o tipo de hardware e as necessidades dos usuários:
+    </p>
+    
+    <ul>
+      <li>
+        <strong>2.1. Sistemas operacionais de computadores de grande porte:</strong>
+        <ul>
+          <li>
+            Usados em mainframes e servidores de alta capacidade, com enormes recursos de E/S.
+          </li>
+          <li>
+            Suportam serviços como:
+            <ul>
+              <li><strong>Processamento em lote (batch):</strong> Tarefas executadas sem interação direta do usuário;</li>
+              <li><strong>Processamento de transações:</strong> Lida com milhares de pequenos pedidos por segundo;</li>
+              <li><strong>Tempo compartilhado (timesharing):</strong> Permite que múltiplos usuários acessem o sistema simultaneamente.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>2.2. Sistemas operacionais de servidores:</strong>
+        <ul>
+          <li>
+            Projetados para atender múltiplos usuários em rede, fornecendo serviços de impressão, arquivo e web.
+          </li>
+          <li>
+            Exemplos: Solaris, FreeBSD, Linux e Windows Server.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>2.3. Sistemas operacionais de multiprocessadores:</strong>
+        <ul>
+          <li>
+            Utilizam múltiplas CPUs para aumentar a potência computacional.
+          </li>
+          <li>
+            Exigem mecanismos especiais para comunicação e consistência de dados.
+          </li>
+          <li>
+            Exemplos: Windows e Linux em sistemas multiprocessados.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>2.4. Sistemas operacionais de computadores portáteis:</strong>
+        <ul>
+          <li>
+            Projetados para dispositivos móveis, como tablets e smartphones.
+          </li>
+          <li>
+            Geralmente utilizam sistemas como Android ou iOS e suportam recursos como GPS, câmeras e sensores.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>2.5. Sistemas operacionais embarcados:</strong>
+        <ul>
+          <li>
+            Executados em dispositivos que controlam equipamentos não tradicionalmente vistos como computadores (ex.: fornos, TVs, carros, telefones tradicionais, MP3 players).
+          </li>
+          <li>
+            Não permitem a instalação de aplicativos pelo usuário, pois todo o software necessário já vem pré-instalado na memória ROM.
+          </li>
+          <li>
+            Exemplos: Embedded Linux, QNX, VxWorks.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <strong>2.6. Sistemas operacionais de tempo real (RTOS):</strong>
+        <ul>
+          <li>
+            Projetados para garantir respostas em intervalos de tempo precisos.
+          </li>
+          <li>
+            <strong>Tempo real crítico:</strong> Onde atrasos podem causar falhas graves (ex.: controle industrial, montagem de veículos).
+          </li>
+          <li>
+            <strong>Tempo real não crítico:</strong> Em que pequenas variações temporais são aceitáveis (ex.: multimídia, áudio digital, smartphones).
+          </li>
+          <li>
+            Exemplos: eCos – um sistema operacional embarcado configurável para aplicações com requisitos de tempo real e pouca memória.
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <hr>
+    
+    <h2>3. Processos</h2>
+    <p>
+      Um processo é um programa em execução, atuando como um contêiner que reúne todas as informações necessárias para a sua execução. Isso inclui o código executável, dados, pilha e registradores.
+    </p>
+    <ul>
+      <li>
+        <strong>Criação de Processos:</strong> Ocorre por meio de quatro eventos principais:
+        <ul>
+          <li>Inicialização do sistema;</li>
+          <li>Execução de uma chamada de sistema de criação de processo por um processo em execução;</li>
+          <li>Solicitação de um usuário para criar um novo processo;</li>
+          <li>Início de uma tarefa em lote.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Estados de um Processo:</strong> Conforme definido por Tanenbaum e Bos (2016), os estados são:
+        <ul>
+          <li><strong>Em execução:</strong> O processo está efetivamente utilizando a CPU.</li>
+          <li><strong>Pronto:</strong> O processo aguarda na fila para ser executado.</li>
+          <li><strong>Bloqueado:</strong> O processo não pode ser executado até que ocorra algum evento externo (como a disponibilidade de um recurso).</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Tabela de Processos:</strong> É um arranjo de estruturas que armazena informações de cada processo ativo, como conteúdos dos registradores, lista de arquivos abertos, alarmes e outros dados necessários para retomar sua execução.
+      </li>
+      <li>
+        <strong>Árvore de Processos:</strong> Representa a relação hierárquica entre processos, mostrando como processos pais geram processos filhos.
+      </li>
+      <li>
+        <strong>Escalonador de Processos:</strong> Componente responsável por determinar qual processo em estado “pronto” deverá receber tempo de CPU, utilizando algoritmos de escalonamento.
+      </li>
+    </ul>
+    <img src="../../imagens/aula8figura2.png" alt="Estados de um processo" class="tabelabooleana">
+    <p><strong>Estados de um processo &uparrow;</strong> <br> Fonte: adaptado de Tanenbaum e Bos (2016, p. 64).</p>
+    <img src="../../imagens/aula8figura3.png" alt="Árvore de processos" class="tabelabooleana">
+    <p><strong>Árvore de processos &uparrow;</strong> <br> Fonte: adaptado de Tanenbaum e Bos (2016, p. 28).</p>
+    
+    <hr>
+
+    <h2>4. Threads</h2>
+    <p>
+      Threads são linhas de controle dentro de um processo. Ao contrário dos processos, que possuem espaços de endereçamento isolados, as threads compartilham o mesmo espaço de memória, o que as torna muito mais leves e rápidas de criar e destruir – podendo ser até cem vezes mais rápidas que a criação de um novo processo.
+    </p>
+    <ul>
+      <li>
+        <strong>Vantagens das Threads:</strong>
+        <ul>
+          <li>Redução do overhead na criação e destruição de processos;</li>
+          <li>Facilidade na implementação de execução paralela, melhorando o desempenho, como no caso do carregamento simultâneo de múltiplos recursos em um navegador web.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Modelos:</strong>
+        <ul>
+          <li>
+            <em>Processos tradicionais:</em> Cada processo possui seu próprio espaço de endereçamento e uma única thread de controle.
+          </li>
+          <li>
+            <em>Processo multithread:</em> Múltiplas threads compartilham o mesmo espaço de endereçamento, possibilitando uma execução mais concorrente em sistemas com CPU única.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <img src="../../imagens/aula8figura4.jpg" alt="Árvore de processos" class="tabelabooleana">
+    <p><strong>Threads &uparrow;</strong> <br> Fonte: adaptado de Tanenbaum e Bos (2016, p. 71).</p>
+    <img src="../../imagens/aula8figura5.jpg" alt="Árvore de processos" class="tabelabooleana">
+    <p><strong>Multithreads &uparrow;</strong> <br> Fonte: adaptado de Tanenbaum e Bos (2016, p. 71).</p>
+
+    <hr>
+    
+    <h2>5. Aplicativos e Utilitários</h2>
+    <p>
+      Além do sistema operacional, o software de um computador é composto por:
+    </p>
+    <ul>
+      <li>
+        <strong>Aplicativos:</strong> Programas que atendem a necessidades práticas do usuário, como editores de texto, planilhas, navegadores e players de vídeo. Eles interagem diretamente com as abstrações fornecidas pelo sistema operacional.
+      </li>
+      <li>
+        <strong>Utilitários:</strong> Programas que auxiliam na manutenção e otimização do sistema operacional, como compactadores de arquivos (WinRAR, WinZip), antivírus (Avast, Norton), desfragmentadores e ferramentas de sincronização de relógio e backup.
+      </li>
+      <li>
+        <strong>Observação:</strong> Embora importantes, editores, compiladores, montadores, linkers e interpretadores de comandos não são considerados parte do núcleo do sistema operacional.
+      </li>
+    </ul>
+
+    <hr>
+    
+    <h2>6. Considerações Finais</h2>
+    <p>
+      O capítulo evidencia que o software é a camada inteligente que opera sobre o hardware, tornando-o utilizável sem que o usuário precise conhecer os detalhes técnicos. O sistema operacional gerencia os recursos do sistema por meio de técnicas como multiplexação no tempo e no espaço, e possibilita a execução de múltiplos processos e threads para simular paralelismo – mesmo em sistemas com uma única CPU. Além disso, a distinção entre aplicativos e utilitários reforça como diferentes níveis de software colaboram para oferecer uma experiência completa e funcional.
+    </p>
+    
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+    </nav>
+</body>
+
+</html>
