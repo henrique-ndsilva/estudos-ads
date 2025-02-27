@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 4 - FdA</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Economia e finanças.</h1>
+    
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "14px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+        
+    <p>
+        Este capítulo aborda a gestão financeira e sua importância para o funcionamento e a sustentabilidade das organizações. São apresentadas as principais demonstrações financeiras que fornecem uma visão clara da saúde financeira da empresa e suportam a tomada de decisão estratégica.
+    </p>
+
+    <h2>1. Gestão Financeira</h2>
+    <p>Para que uma empresa opere de forma eficaz, é necessário dispor de recursos financeiros que possibilitem o pagamento de despesas como aluguel, equipamentos, salários e matérias-primas. A gestão financeira foca em dois aspectos fundamentais:</p>
+    <ul>
+        <li><strong>Rentabilidade:</strong> Maximizar o retorno sobre os investimentos realizados.</li>
+        <li><strong>Liquidez:</strong> Garantir a rápida conversão de ativos em dinheiro para atender às obrigações financeiras.</li>
+    </ul>
+    <p>O gerenciamento financeiro envolve decisões constantes, desde a compra de equipamentos até o controle de estoques, apoiando a empresa tanto na gestão interna quanto na apresentação de informações para investidores e instituições financeiras.</p>
+
+    <hr>
+
+    <h2>2. Demonstrações Financeiras</h2>
+    <p>As demonstrações financeiras são relatórios que organizam e quantificam as contas da empresa, permitindo avaliar sua situação financeira e operacional. Neste capítulo, o foco é dado à Demonstração do Resultado do Exercício (DRE) e à Demonstração do Fluxo de Caixa.</p>
+
+    <h3>2.1 Demonstração do Resultado do Exercício (DRE)</h3>
+    <p>A DRE apresenta de forma detalhada as receitas, custos e despesas de um determinado período, mostrando se a empresa obteve lucro ou prejuízo e como esse resultado foi alcançado. Para um controle eficaz, os custos e despesas são classificados em duas grandes categorias:</p>
+    <ul>
+        <li>
+            <strong>Custos e Despesas Fixas:</strong>
+            <ul>
+                <li><strong>Custos Fixos (CF):</strong> Gastos que não variam com o volume de produção ou vendas (ex.: aluguel, salários fixos, contas de energia, depreciação).</li>
+                <li><strong>Despesas Fixas (DF):</strong> Gastos relacionados à administração e operações gerais que também permanecem constantes (ex.: IPTU, honorários, material de escritório).</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Custos e Despesas Variáveis:</strong>
+            <ul>
+                <li><strong>Custos Variáveis (CV):</strong> Despesas que variam conforme o volume de produção ou vendas (ex.: matéria-prima, embalagens, energia utilizada na produção).</li>
+                <li><strong>Custo Variável Unitário (CVu):</strong> Custo associado à produção de uma unidade do produto.</li>
+                <li><strong>Despesas Variáveis (DV):</strong> Gastos que flutuam conforme o volume de negócios (ex.: frete, comissões, ICMS).</li>
+                <li><strong>Despesa Variável Unitária (DVu):</strong> Despesa que incide por unidade produzida ou vendida.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Além dessas classificações, a DRE considera:</p>
+    <ul>
+        <li>
+            <strong>Receitas (R):</strong> Entradas de recursos provenientes da venda de produtos ou prestação de serviços.
+        </li>
+        <li>
+            <strong>Margem de Contribuição (MC):</strong> Diferença entre a receita total e a soma dos custos e despesas variáveis. Essa margem deve ser suficiente para cobrir os custos e despesas fixas.
+        </li>
+        <li>
+            <strong>Lucro ou Prejuízo:</strong> Resultado final obtido subtraindo os custos e despesas fixas da margem de contribuição.
+        </li>
+        <li>
+            <strong>Margem de Contribuição Unitária (MCu):</strong> Diferença entre o preço de venda unitário e a soma do custo variável unitário e da despesa variável unitária.
+        </li>
+        <li>
+            <strong>Ponto de Equilíbrio (PE):</strong> Quantidade mínima que deve ser vendida para que a empresa cubra todos os seus custos e despesas fixas. Calculado dividindo o total dos custos e despesas fixas pela margem de contribuição unitária.
+        </li>
+    </ul>
+    <p>A seguir, um exemplo simplificado de DRE:</p>
+
+    <table>
+        <tr>
+            <th>Descrição</th>
+            <th>Valor (R$)</th>
+        </tr>
+        <tr>
+            <td>Receitas Totais</td>
+            <td>60.000,00</td>
+        </tr>
+        <tr>
+            <td>Custos Variáveis</td>
+            <td>(15.000,00)</td>
+        </tr>
+        <tr>
+            <td>Despesas Variáveis</td>
+            <td>(10.000,00)</td>
+        </tr>
+        <tr>
+            <td>Margem de Contribuição</td>
+            <td>35.000,00</td>
+        </tr>
+        <tr>
+            <td>Custos Fixos</td>
+            <td>(28.000,00)</td>
+        </tr>
+        <tr>
+            <td>Despesas Fixas</td>
+            <td>(1.800,00)</td>
+        </tr>
+        <tr>
+            <td>Lucro/Prejuízo</td>
+            <td>5.200,00</td>
+        </tr>
+    </table>
+
+    <h3>2.2 Fluxo de Caixa</h3>
+    <p>
+        O fluxo de caixa é uma ferramenta que monitora as entradas e saídas de dinheiro, permitindo o planejamento financeiro e o gerenciamento dos pagamentos, especialmente em compras a prazo. Essa demonstração ajuda a prever a situação financeira futura da empresa e a tomar decisões mais acertadas.
+    </p>
+    <p>Um modelo simplificado de fluxo de caixa mensal pode ser organizado na seguinte tabela:</p>
+
+    <table>
+        <tr>
+            <th>Mês</th>
+            <th>Saldo Inicial</th>
+            <th>Recebimentos</th>
+            <th>Pagamentos</th>
+            <th>Saldo Final</th>
+        </tr>
+        <tr>
+            <td>Janeiro</td>
+            <td>[Valor]</td>
+            <td>[Valor]</td>
+            <td>[Valor]</td>
+            <td>[Valor]</td>
+        </tr>
+        <tr>
+            <td>Fevereiro</td>
+            <td>[Saldo Final de Janeiro]</td>
+            <td>[Valor]</td>
+            <td>[Valor]</td>
+            <td>[Valor]</td>
+        </tr>
+    <!-- Continue para os demais meses -->
+    </table>
+
+    <p>A fórmula básica aplicada para cada mês é:</p>
+    <ul>
+        <li><strong>Saldo Final = Saldo Inicial + Total de Recebimentos – Total de Pagamentos</strong></li>
+        <li>O saldo final de um mês se torna o saldo inicial do mês seguinte.</li>
+    </ul>
+
+    <hr>
+
+    <h2>3. Considerações Finais</h2>
+    <p>
+        O capítulo demonstra a importância da gestão financeira para a sustentabilidade das empresas. Através das demonstrações financeiras – especialmente a DRE e o fluxo de caixa – os gestores podem avaliar a rentabilidade, controlar os custos e planejar as operações de forma estratégica. Essas ferramentas permitem identificar oportunidades de redução de despesas, definir o ponto de equilíbrio e, consequentemente, tomar decisões que garantam a saúde financeira e o crescimento sustentável da organização.
+    </p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="fundamentosdaadministracaoaula5.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

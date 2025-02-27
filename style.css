@@ -3,7 +3,7 @@
 body {
     background-color: #121212;
     text-align: center;
-    color: whitesmoke;
+    color: #C8C3BC;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
 }
@@ -33,7 +33,7 @@ hr {
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         background-color: #282828;
-        color: #bcbcbc;
+        color: #C8C3BC;
         padding: 10px 15px;
         border-radius: 7px;
         box-shadow: 1px 1px 5px rgb(129, 129, 129);
