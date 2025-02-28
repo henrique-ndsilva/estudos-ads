@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Dicas - P.T.S</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Dicas para a PTI de Pesquisa, Tecnologia e Sociedade.</h1>
+    
+    <hr>
+
+    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
+    <script>
+        function trocarFonte() {
+            let body = document.body;
+            let tamanhoAtual = window.getComputedStyle(body).fontSize;
+            
+            if (tamanhoAtual === "12px") {
+                body.style.fontSize = "14px";
+            } else {
+                body.style.fontSize = "12px";
+            }
+        }
+    </script>
+
+    <h2>1. Formatação</h2>
+    <ul>
+        <li>Entrelinhas</li>
+        <ul>
+            <li>Texto: 1,5.</li>
+            <li>Referências: 1.0 (Simples).</li>
+        </ul>
+        <li>Alinhamento</li>
+        <ul>
+            <li>Texto: Justificado.</li>
+            <li>Referências: À esquerda.</li>
+        </ul>
+        <li>Fonte e Tamanho</li>
+        <ul>
+            <li>Fonte: Times New Roman.</li>
+            <li>Tamanho: 12.</li>
+        </ul>
+    </ul>
+
+    <h2>2. Regras</h2>
+    <ol>
+        <li>Mínimo 15 linhas e máximo 30 linhas.</li>
+        <li>Informar fontes utilizadas nas referências.</li>
+        <li>Não é necessário colocar o enunciado e capa de trabalho.</li>
+        <li>No máximo 30% do texto pode ser citações, o restante deve ser suas próprias palavras.</li>
+    </ol>
+
+    <p>Obs: Não é uma redação!</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../mainptis.html" target="_self" rel="prev">Voltar para o menu</a>
+    </nav>
+</body>
+
+</html>
