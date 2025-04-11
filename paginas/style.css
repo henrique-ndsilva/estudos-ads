@@ -86,26 +86,32 @@ th, td {
     text-align: center;
 }
 
-@media (max-width: 650px) {
-    .tabelabooleana {
-        width: 90%;
-    }
-}
-
-@media (max-width: 800px) {
+@media (min-width: 650px) {
     .tabelabooleana {
         width: 70%;
     }
 }
 
+@media (min-width: 700px) {
+    .tabelabooleana {
+        width: 55%;
+    }
+}
+
+@media (min-width: 800px) {
+    .tabelabooleana {
+        width: 50%;
+    }
+}
+
 @media (min-width: 900px) {
     .tabelabooleana {
-        width: 60%;
+        width: 40%;
     }
 }
 
 @media (min-width: 1000px) {
     .tabelabooleana {
-        width: 40%;
+        width: 30%;
     }
 }
