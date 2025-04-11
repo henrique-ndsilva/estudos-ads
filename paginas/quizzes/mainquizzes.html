@@ -11,41 +11,42 @@
 
 <body>
     <hr>
-    <nav class="buttonsmain">
-        <a href="mainquizzes.html" target="_self" rel="next"><button title="Ver quizzes" style="color: white;">Quizzes</button></a>
-        &nbsp;
-        <a href="../../index.html" target="_self" rel="next"><button title="Ir para as aulas">Aulas</button></a>
-        &nbsp;
-        <a href="../ptis/mainptis.html" target="_self" rel="next"><button title="Ver PTIs" style="padding: 10px 25px;">PTIs</button></a>
-    </nav>
-    <hr>
 
-    <h1>Conceitos da Computação I</h1>
-
-    <nav class="navmain">
-        <a href="paginas/cdc1quiz.html" target="_self" rel="next"><img src="../../imagens/quiz.png" alt="Quiz de Conceitos da Computação I" title="Ver quiz"></a>
-        <a href="paginas/cdc1prova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Conceitos da Computação I" title="Ver prova"></a>
+    <nav class="buttonnav">
+        <a href="mainquizzes.html" class="buttonmain activebutton" title="Ver quizzes">Quizzes</a>
+        <a href="../../index.html" class="buttonmain" title="Ir para as aulas">Aulas</a>
+        <a href="../ptis/mainptis.html" class="buttonmain" title="Ver PTIs">PTIs</a>
     </nav>
 
-    <hr>
+    <hr> <!-- Início do 1º Trimestre -->
+
+    <div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button></div>
     
-    <h1>Fundamentos da Administração</h1>
+    <section id="trimestre1" aria-label="Avaliações do 1º Trimestre">
+        <h1>Conceitos da Computação I</h1>
+        <nav class="navmain" aria-label="Quiz e Prova do 1º Trimestre">
+            <a href="paginas/cdc1quiz.html" target="_self" rel="next"><img src="../../imagens/quiz.png" alt="Quiz de Conceitos da Computação I" title="Ver quiz"></a>
+            <a href="paginas/cdc1prova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Conceitos da Computação I" title="Ver prova"></a>
+        </nav>
+        <hr>
+        
+        <h1>Fundamentos da Administração</h1>
+        <nav class="navmain" aria-label="Quiz e Prova do 1º Trimestre">
+            <a href="paginas/fdaquiz.html" target="_self" rel="next" ><img src="../../imagens/quiz.png" alt="Quiz de Fundamentos da Administração" title="Ver quiz"></a>
+            <a href="paginas/fdaprova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Fundamentos da Administração" title="Ver prova"></a>
+        </nav>
+        <hr>
+        
+        <h1>Pesquisa, Tecnologia e Sociedade</h1>
+        <nav class="navmain" aria-label="Quiz e Prova do 1º Trimestre">
+            <a href="paginas/ptsquiz.html" target="_self" rel="next"><img src="../../imagens/quiz.png" alt="Quiz de Pesquisa, Tecnologia e Sociedade" title="Ver quiz"></a>
+            <a href="paginas/ptsprova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Pesquisa, Tecnologia e Sociedade" title="Ver prova"></a>
+        </nav>
+    </section>
 
-    <nav class="navmain">
-        <a href="paginas/fdaquiz.html" target="_self" rel="next" ><img src="../../imagens/quiz.png" alt="Quiz de Fundamentos da Administração" title="Ver quiz"></a>
-        <a href="paginas/fdaprova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Fundamentos da Administração" title="Ver prova"></a>
-    </nav>
+    <script src="../../js/toggleTrimestres.js"></script>
 
-    <hr>
-    
-    <h1>Pesquisa, Tecnologia e Sociedade</h1>
-
-    <nav class="navmain">
-        <a href="paginas/ptsquiz.html" target="_self" rel="next"><img src="../../imagens/quiz.png" alt="Quiz de Pesquisa, Tecnologia e Sociedade" title="Ver quiz"></a>
-        <a href="paginas/ptsprova.html" target="_self" rel="next"><img src="../../imagens/prova.png" alt="Prova de Pesquisa, Tecnologia e Sociedade" title="Ver prova"></a>
-    </nav>
-
-    <hr>
+    <hr> <!-- Fim do 1º Trimestre -->
 </body>
 
 </html>

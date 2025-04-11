@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../../js/toggleFontSize.js"></script>
 
     <p>Nesta PTI, você só precisa fazer o curso da Cisco e depois enviar uma print da sua "Badge" que comprova a conclusão do mesmo.</p>
     <p>O link para fazer o curso pode ser encontrado na máteria de Conceitos da Computação I, no menu da esquerda, lá no Ambiente Virtual de Aprendizagem (AVA).</p>

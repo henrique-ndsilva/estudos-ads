@@ -16,19 +16,9 @@
 
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+    
     <p>Este resumo apresenta, de forma detalhada e organizada, os principais sistemas de numeração utilizados na computação – o sistema decimal, binário e hexadecimal –, além das codificações, unidades de armazenamento e dos conceitos históricos que fundamentam o desenvolvimento e a aplicação desses sistemas.</p>
 
     <h2>1. Introdução e Contexto Histórico</h2>

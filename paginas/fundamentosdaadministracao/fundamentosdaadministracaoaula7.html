@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Este capítulo destaca a importância das operações para o funcionamento eficiente das organizações. As operações englobam desde a produção de produtos e serviços até os processos internos que asseguram a criação de valor, a qualidade e a competitividade. Além disso, apresenta uma abordagem estratégica por meio do Business Process Management (BPM), que visa otimizar e melhorar continuamente os processos organizacionais.

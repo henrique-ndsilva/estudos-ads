@@ -28,14 +28,63 @@ hr {
     }
 }
 
-.buttonsmain {
-    button {
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #282828;
-        color: #C8C3BC;
-        padding: 10px 15px;
-        border-radius: 7px;
-        box-shadow: 1px 1px 5px rgb(129, 129, 129);
-    }
+.buttonnav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px auto;
+}
+
+.buttonmain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 7px;
+    background-color: #282828;
+    color: #C8C3BC;
+    box-shadow: 1px 1px 5px rgb(129, 129, 129);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.buttonmain:hover {
+    background-color: #383838;
+}
+
+.activebutton {
+    color: white;
+}
+
+.button-trimestres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+#btn-trimestre1, #btn-trimestre2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: #282828;
+    color: #C8C3BC;
+    box-shadow: 1px 1px 5px rgb(129, 129, 129);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+#btn-trimestre1:hover, #btn-trimestre2:hover {
+    background-color: #383838;
+    cursor: pointer;
 }

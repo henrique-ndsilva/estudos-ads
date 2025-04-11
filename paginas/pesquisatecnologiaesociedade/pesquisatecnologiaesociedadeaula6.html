@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
       Este capítulo enfatiza a importância de estruturar de forma organizada um projeto de pesquisa acadêmica, que serve para comunicar de maneira clara e precisa os objetivos, métodos e intenções do pesquisador. A elaboração do projeto é fruto de um processo que parte do interesse pessoal e da experiência do sujeito cognoscente, transformando um tema de curiosidade em um problema de pesquisa a ser investigado de maneira sistemática.

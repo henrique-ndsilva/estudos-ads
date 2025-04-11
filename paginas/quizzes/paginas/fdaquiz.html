@@ -16,19 +16,8 @@
 
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../../js/toggleFontSize.js"></script>
     
     <p><strong>1.</strong> Conforme Chiavenato (2015), a administração envolve planejamento, organização, direção e controle. A função de "direção" traduz o planejamento e a organização em ações práticas, utilizando liderança, comunicação e motivação para orientar e inspirar os colaboradores a alcançar os objetivos da organização.</p>
     <p>Fonte:  CHIAVENATO, Idalberto. Administração para não administradores: a gestão de negócios ao alcance de todos. [S. l.]: Editora Manole, 2015.</p>

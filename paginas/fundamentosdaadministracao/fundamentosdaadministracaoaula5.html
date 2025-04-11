@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>A gestão de pessoas é um dos pilares estratégicos para o sucesso organizacional. Em um ambiente competitivo, atrair, desenvolver e reter talentos é fundamental para potencializar as habilidades individuais e promover um clima que estimule a inovação, a colaboração e o crescimento contínuo.</p>
     

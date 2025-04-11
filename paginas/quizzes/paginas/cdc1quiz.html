@@ -16,19 +16,8 @@
 
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../../js/toggleFontSize.js"></script>
     
     <p><strong>1.</strong> Um estudante de computação está em um projeto e precisa armazenar, em memória, números de 0 até 1 milhão. Sendo assim, quantos bits ele terá que reservar?</p>
     <p><strong>Resposta Selecionada:</strong> 20 bits.</p>

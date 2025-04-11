@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Governança corporativa é o conjunto de práticas, regras e estruturas que orienta e controla a gestão de uma empresa. Seu objetivo é equilibrar os interesses dos diversos stakeholders – acionistas, gestores, colaboradores, clientes e a sociedade – de maneira ética, transparente e responsável. Essa abordagem não foca apenas no lucro imediato, mas na criação de valor sustentável a longo prazo, integrando aspectos sociais, ambientais e de responsabilidade empresarial.

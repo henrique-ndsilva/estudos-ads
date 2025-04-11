@@ -16,19 +16,8 @@
 
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <h2>1. Funções Administrativas</h2>
     <p>A administração de uma organização exige a aplicação das quatro funções administrativas para coordenar atividades e otimizar recursos. Essas funções são interdependentes e essenciais para transformar os objetivos organizacionais em resultados concretos.</p>

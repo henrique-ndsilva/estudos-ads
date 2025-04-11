@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Este capítulo explora o método científico como o percurso fundamental para a elaboração de pesquisas. Nele, são discutidas as relações entre a metodologia e a produção do conhecimento, bem como o vínculo dinâmico entre o pesquisador e o objeto de estudo. O texto ressalta que, para produzir conhecimento confiável, é indispensável um método sistemático – que evoluiu ao longo dos séculos, acompanhando as transformações históricas e culturais.

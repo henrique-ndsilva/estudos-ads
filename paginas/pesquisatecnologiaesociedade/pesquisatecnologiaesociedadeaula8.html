@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>Este capítulo final da série aborda como os sujeitos do conhecimento, ou seja, os autores, podem produzir obras científicas de maneira criativa e autoral. O texto discute os processos de cognição, linguagem, escrita e a construção de discursos que, em conjunto, resultam em produções autorais inovadoras e reflexivas na pesquisa científica.</p>
     

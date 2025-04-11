@@ -16,19 +16,8 @@
 
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-            
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <h2>1. Introdução</h2>
     <p>Este capítulo aborda os conceitos fundamentais de <strong>dado, informação e conhecimento</strong>, destacando sua importância na gestão organizacional e na tomada de decisões estratégicas. Também são discutidos a <strong>evolução da gestão de dados</strong> e as <strong>plataformas modernas utilizadas por empresas</strong> para otimizar processos e melhorar a competitividade.</p>

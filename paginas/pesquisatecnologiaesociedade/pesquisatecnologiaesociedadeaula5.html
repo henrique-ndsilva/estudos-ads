@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Este capítulo explora como o conhecimento se materializa na sociedade contemporânea por meio da pesquisa acadêmica. São examinadas as diferenças entre dados, informação e conhecimento, além de discutir a importância da articulação e análise crítica desses elementos. O texto também aborda o papel da linguagem na comunicação do saber e apresenta exemplos práticos – como a análise de dados em redes sociais e do Sistema Nacional de Adoção – para ilustrar a transformação dos dados em informação e, posteriormente, em conhecimento.

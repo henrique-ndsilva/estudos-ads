@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Este capítulo apresenta a importância da definição da metodologia para a realização de uma pesquisa acadêmica. Após a escolha do objeto de estudo, torna-se fundamental delinear de forma clara e precisa os procedimentos para coletar, organizar e analisar os dados, a fim de transformar a investigação em conhecimento científico. O capítulo explora as inúmeras abordagens metodológicas, detalhando tanto aspectos históricos quanto os instrumentos técnicos disponíveis para a pesquisa.

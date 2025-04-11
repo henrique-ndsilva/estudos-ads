@@ -16,19 +16,8 @@
     
     <hr>
 
-    <button onclick="trocarFonte()" class="buttonfont">Aumentar Fonte</button>
-    <script>
-        function trocarFonte() {
-            let body = document.body;
-            let tamanhoAtual = window.getComputedStyle(body).fontSize;
-
-            if (tamanhoAtual === "12px") {
-                body.style.fontSize = "14px";
-            } else {
-                body.style.fontSize = "12px";
-            }
-        }
-    </script>
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
 
     <p>
         Este capítulo aborda a relação intrínseca entre pesquisa e escrita, demonstrando como a produção de textos acadêmicos é fundamental para o desenvolvimento de um diálogo crítico com a comunidade científica. O objetivo é identificar as diferentes formas de elaboração de trabalhos – cada qual com suas funções e características – e mostrar que a escrita não é um ato espontâneo, mas um processo que exige conhecimento, planejamento e múltiplas reescritas.

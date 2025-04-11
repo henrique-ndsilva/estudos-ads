@@ -11,59 +11,90 @@
 
 <body>
     <hr>
-    <nav class="buttonsmain">
-        <a href="paginas/quizzes/mainquizzes.html" target="_self" rel="next"><button title="Ver quizzes">Quizzes</button></a>
-        &nbsp;
-        <a href="index.html" target="_self" rel="next"><button title="Ir para as aulas" style="color: white;">Aulas</button></a>
-        &nbsp;
-        <a href="paginas/ptis/mainptis.html" target="_self" rel="next"><button title="Ver PTIs" style="padding: 10px 25px;">PTIs</button></a>
-    </nav>
-    <hr>
 
-    <h1>Conceitos da Computação I</h1>
-
-    <nav class="navmain">
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula1.html" target="_self" rel="next"><img src="imagens/aula1.png" alt="Botão da aula 1"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula2.html" target="_self" rel="next"><img src="imagens/aula2.png" alt="Botão da aula 2"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula3.html" target="_self" rel="next"><img src="imagens/aula3.png" alt="Botão da aula 3"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula4.html" target="_self" rel="next"><img src="imagens/aula4.png" alt="Botão da aula 4"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula5.html" target="_self" rel="next"><img src="imagens/aula5.png" alt="Botão da aula 5"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula6.html" target="_self" rel="next"><img src="imagens/aula6.png" alt="Botão da aula 6"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula7.html" target="_self" rel="next"><img src="imagens/aula7.png" alt="Botão da aula 7"></a>
-        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula8.html" target="_self" rel="next"><img src="imagens/aula8.png" alt="Botão da aula 8"></a>
+    <nav class="buttonnav">
+        <a href="paginas/quizzes/mainquizzes.html" class="buttonmain" target="_self" title="Ver quizzes">Quizzes</a>
+        <a href="index.html" class="buttonmain activebutton" target="_self" title="Ir para as aulas">Aulas</a>
+        <a href="paginas/ptis/mainptis.html" class="buttonmain" target="_self" title="Ver PTIs">PTIs</a>
     </nav>
 
-    <hr>
-    
-    <h1>Fundamentos da Administração</h1>
+    <hr> <!-- Início do 1º Trimestre -->
 
-    <nav class="navmain">
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula1.html" target="_self" rel="next" ><img src="imagens/aula1.png" alt="Botão da aula 1"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula2.html" target="_self" rel="next" ><img src="imagens/aula2.png" alt="Botão da aula 2"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula3.html" target="_self" rel="next" ><img src="imagens/aula3.png" alt="Botão da aula 3"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula4.html" target="_self" rel="next" ><img src="imagens/aula4.png" alt="Botão da aula 4"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula5.html" target="_self" rel="next" ><img src="imagens/aula5.png" alt="Botão da aula 5"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula6.html" target="_self" rel="next" ><img src="imagens/aula6.png" alt="Botão da aula 6"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula7.html" target="_self" rel="next" ><img src="imagens/aula7.png" alt="Botão da aula 7"></a>
-        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula8.html" target="_self" rel="next" ><img src="imagens/aula8.png" alt="Botão da aula 8"></a>
-    </nav>
+    <div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button></div>
 
-    <hr>
-    
-    <h1>Pesquisa, Tecnologia e Sociedade</h1>
+    <section id="trimestre1" aria-label="Conteúdo do 1º Trimestre">
+        <h1>Conceitos da Computação I</h1>
+        <nav class="navmain" aria-label="Aulas do 1º Trimestre">
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula1.html" target="_self"><img src="imagens/aula1.png" alt="Ir para a aula 1"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula2.html" target="_self"><img src="imagens/aula2.png" alt="Ir para a aula 2"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula3.html" target="_self"><img src="imagens/aula3.png" alt="Ir para a aula 3"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula4.html" target="_self"><img src="imagens/aula4.png" alt="Ir para a aula 4"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula5.html" target="_self"><img src="imagens/aula5.png" alt="Ir para a aula 5"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula6.html" target="_self"><img src="imagens/aula6.png" alt="Ir para a aula 6"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula7.html" target="_self"><img src="imagens/aula7.png" alt="Ir para a aula 7"></a>
+            <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula8.html" target="_self"><img src="imagens/aula8.png" alt="Ir para a aula 8"></a>
+        </nav>
+        <hr>
+        
+        <h1>Fundamentos da Administração</h1>
+        <nav class="navmain" aria-label="Aulas do 1º Trimestre">
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula1.html" target="_self" ><img src="imagens/aula1.png" alt="Ir para a aula 1"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula2.html" target="_self" ><img src="imagens/aula2.png" alt="Ir para a aula 2"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula3.html" target="_self" ><img src="imagens/aula3.png" alt="Ir para a aula 3"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula4.html" target="_self" ><img src="imagens/aula4.png" alt="Ir para a aula 4"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula5.html" target="_self" ><img src="imagens/aula5.png" alt="Ir para a aula 5"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula6.html" target="_self" ><img src="imagens/aula6.png" alt="Ir para a aula 6"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula7.html" target="_self" ><img src="imagens/aula7.png" alt="Ir para a aula 7"></a>
+            <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula8.html" target="_self" ><img src="imagens/aula8.png" alt="Ir para a aula 8"></a>
+        </nav>
+        <hr>
+        
+        <h1>Pesquisa, Tecnologia e Sociedade</h1>
+        <nav class="navmain" aria-label="Aulas do 1º Trimestre">
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula1.html" target="_self"><img src="imagens/aula1.png" alt="Ir para a aula 1"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula2.html" target="_self"><img src="imagens/aula2.png" alt="Ir para a aula 2"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula3.html" target="_self"><img src="imagens/aula3.png" alt="Ir para a aula 3"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula4.html" target="_self"><img src="imagens/aula4.png" alt="Ir para a aula 4"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula5.html" target="_self"><img src="imagens/aula5.png" alt="Ir para a aula 5"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula6.html" target="_self"><img src="imagens/aula6.png" alt="Ir para a aula 6"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula7.html" target="_self"><img src="imagens/aula7.png" alt="Ir para a aula 7"></a>
+            <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula8.html" target="_self"><img src="imagens/aula8.png" alt="Ir para a aula 8"></a>
+        </nav>
+    </section>
 
-    <nav class="navmain">
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula1.html" target="_self" rel="next"><img src="imagens/aula1.png" alt="Botão da aula 1"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula2.html" target="_self" rel="next"><img src="imagens/aula2.png" alt="Botão da aula 2"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula3.html" target="_self" rel="next"><img src="imagens/aula3.png" alt="Botão da aula 3"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula4.html" target="_self" rel="next"><img src="imagens/aula4.png" alt="Botão da aula 4"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula5.html" target="_self" rel="next"><img src="imagens/aula5.png" alt="Botão da aula 5"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula6.html" target="_self" rel="next"><img src="imagens/aula6.png" alt="Botão da aula 6"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula7.html" target="_self" rel="next"><img src="imagens/aula7.png" alt="Botão da aula 7"></a>
-        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula8.html" target="_self" rel="next"><img src="imagens/aula8.png" alt="Botão da aula 8"></a>
-    </nav>
+    <hr> <!-- Fim do 1º Trimestre e Início do 2º Trimestre -->
 
-    <hr>
+    <div class="button-trimestres"><button id="btn-trimestre2" data-label="2º Trimestre">Mostrar 2º Trimestre</button></div>
+
+    <section id="trimestre2" aria-label="Conteúdo do 2º Trimestre">
+        <h1>Algoritmos e Programação I</h1>
+        <nav class="navmain" aria-label="Aulas do 2º Trimestre">
+            <img src="imagens/aula1.png" alt="Ir para a aula 1">
+            <img src="imagens/aula2.png" alt="Ir para a aula 2">
+            <img src="imagens/aula3.png" alt="Ir para a aula 3">
+            <img src="imagens/aula4.png" alt="Ir para a aula 4">
+            <img src="imagens/aula5.png" alt="Ir para a aula 5">
+            <img src="imagens/aula6.png" alt="Ir para a aula 6">
+            <img src="imagens/aula7.png" alt="Ir para a aula 7">
+            <img src="imagens/aula8.png" alt="Ir para a aula 8">
+        </nav>
+        <hr>
+        <h1>Infraestrutura na Tecnologia da Informação</h1>
+        <nav class="navmain" aria-label="Aulas do 2º Trimestre">
+            <img src="imagens/aula1.png" alt="Ir para a aula 1">
+            <img src="imagens/aula2.png" alt="Ir para a aula 2">
+            <img src="imagens/aula3.png" alt="Ir para a aula 3">
+            <img src="imagens/aula4.png" alt="Ir para a aula 4">
+            <img src="imagens/aula5.png" alt="Ir para a aula 5">
+            <img src="imagens/aula6.png" alt="Ir para a aula 6">
+            <img src="imagens/aula7.png" alt="Ir para a aula 7">
+            <img src="imagens/aula8.png" alt="Ir para a aula 8">
+        </nav>
+    </section>
+
+    <script src="js/toggleTrimestres.js"></script>
+
+    <hr> <!-- Fim do 2º Trimestre -->
 </body>
 
 </html>

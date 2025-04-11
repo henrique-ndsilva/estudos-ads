@@ -33,12 +33,26 @@ hr {
     }
 }
 
-.buttonfont {
-    margin-top: 10px;
-    padding: 10px 10px;
-    cursor: pointer;
+#fontbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
     background-color: #282828;
-    color: #E8E6E3;
+    color: #C8C3BC;
+    box-shadow: 1px 1px 5px rgb(129, 129, 129);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+#fontbutton:hover {
+    background-color: #383838;
+    cursor: pointer;
 }
 
 @media (max-width: 751px) {

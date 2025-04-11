@@ -11,43 +11,41 @@
 
 <body>
     <hr>
-    <nav class="buttonsmain">
-        <a href="../quizzes/mainquizzes.html" target="_self" rel="next"><button title="Ver quizzes">Quizzes</button></a>
-        &nbsp;
-        <a href="../../index.html" target="_self" rel="next"><button title="Ir para as aulas">Aulas</button></a>
-        &nbsp;
-        <a href="mainptis.html" target="_self" rel="next"><button title="Ver PTIs" style="padding: 10px 25px; color: white;">PTIs</button></a>
-    </nav>
-    <hr>
 
-    <h1>Conceitos da Computação I</h1>
-
-    <nav class="navmain">
-        <a href="pdfs/Certificado - Cisco Packet Tracer.pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Conceitos da Computação I" title="Ver PTI"></a>
-        <a href="paginas/dicascdc1.html" target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Conceitos da Computação I" title="Ver dicas"></a>
+    <nav class="buttonnav">
+        <a href="../quizzes/mainquizzes.html" class="buttonmain" title="Ver quizzes">Quizzes</a>
+        <a href="../../index.html" class="buttonmain" title="Ir para as aulas">Aulas</a>
+        <a href="mainptis.html" class="buttonmain activebutton" title="Ver PTIs">PTIs</a>
     </nav>
 
-    <hr>
-    
-    <h1>Fundamentos da Administração</h1>
+    <hr> <!-- Início do 1º Trimestre -->
 
-    <nav class="navmain">
-        <a href="pdfs/PTI - Fundamentos da Administração..pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Fundamentos da Administração" title="Ver PTI"></a>
-        <a href="paginas/dicasfda.html"  target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Fundamentos da Administração" title="Ver dicas"></a>
-    </nav>
+    <div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button></div>
 
-    <hr>
-    
-    <h1>Pesquisa, Tecnologia e Sociedade</h1>
+    <section id="trimestre1" aria-label="Conteúdo do 1º Trimestre">
+        <h1>Conceitos da Computação I</h1>
+        <nav class="navmain"aria-label="PTI do 1º Trimestre">
+            <a href="pdfs/Certificado - Cisco Packet Tracer.pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Conceitos da Computação I" title="Ver PTI"></a>
+            <a href="paginas/dicascdc1.html" target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Conceitos da Computação I" title="Ver dicas"></a>
+        </nav>
+        <hr>
+        
+        <h1>Fundamentos da Administração</h1>
+        <nav class="navmain" aria-label="PTI do 1º Trimestre">
+            <a href="pdfs/PTI - Fundamentos da Administração..pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Fundamentos da Administração" title="Ver PTI"></a>
+            <a href="paginas/dicasfda.html"  target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Fundamentos da Administração" title="Ver dicas"></a>
+        </nav>
+        <hr>
+        <h1>Pesquisa, Tecnologia e Sociedade</h1>
+        <nav class="navmain"aria-label="PTI do 1º Trimestre">
+            <a href="pdfs/PTI - Pesquisa, Tecnologia e Sociedade.pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Pesquisa, Tecnologia e Sociedade" title="Ver PTI"></a>
+            <a href="paginas/dicaspts.html" target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Pesquisa, Tecnologia e Sociedade" title="Ver dicas"></a>
+        </nav>
+    </section>
 
-    <nav class="navmain">
-        <a href="pdfs/PTI - Pesquisa, Tecnologia e Sociedade.pdf" target="_blank" rel="external"><img src="../../imagens/pti.png" alt="PTI de Pesquisa, Tecnologia e Sociedade" title="Ver PTI"></a>
-        <a href="paginas/dicaspts.html" target="_self" rel="next"><img src="../../imagens/dicas.png" alt="Dicas para a PTI de Pesquisa, Tecnologia e Sociedade" title="Ver dicas"></a>
-    </nav>
+    <script src="../../js/toggleTrimestres.js"></script>
 
-    <hr>
-
-    <p style="text-align: center; font-size: 20px; color: rgb(185, 0, 0); text-decoration: underline;">As PTIs são as que eu fiz e enviei, não copie.</p>
+    <hr> <!-- Fim do 1º Trimestre -->
 </body>
 
 </html>
