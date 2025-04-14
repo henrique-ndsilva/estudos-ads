@@ -81,37 +81,77 @@ th, td {
     text-align: center;
 }
 
-.tabelabooleana {
+.imagens {
     width: 80%;
     text-align: center;
 }
 
 @media (min-width: 650px) {
-    .tabelabooleana {
+    .imagens {
         width: 70%;
     }
 }
 
 @media (min-width: 700px) {
-    .tabelabooleana {
+    .imagens {
         width: 55%;
     }
 }
 
 @media (min-width: 800px) {
-    .tabelabooleana {
+    .imagens {
         width: 50%;
     }
 }
 
 @media (min-width: 900px) {
-    .tabelabooleana {
+    .imagens {
         width: 40%;
     }
 }
 
 @media (min-width: 1000px) {
-    .tabelabooleana {
+    .imagens {
         width: 30%;
+    }
+}
+
+.algoritmosequencial {
+    width: 50%;
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+    .algoritmosequencial
+ {
+        width: 35%;
+    }
+}
+
+@media (min-width: 700px) {
+    .algoritmosequencial
+ {
+        width: 30%;
+    }
+}
+
+@media (min-width: 800px) {
+    .algoritmosequencial
+ {
+        width: 25%;
+    }
+}
+
+@media (min-width: 900px) {
+    .algoritmosequencial
+ {
+        width: 20%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .algoritmosequencial
+ {
+        width: 15%;
     }
 }
