@@ -55,22 +55,32 @@ hr {
     cursor: pointer;
 }
 
-@media (max-width: 751px) {
-    .niveisorganizacionais {
-        width: 100%;
-    }
-}
-
 code {
-    background: #1f1f1f;
-    padding: 2px 4px;
+    background: #292929;
 }
 
 table {
     border-collapse: collapse;
     margin: 1em 0;
-    width: 95%;
+    width: 100%;
 }
+
+.niveisorganizacionais {
+    width: 100%;
+}
+
+@media (min-width: 750px) {
+    table, .niveisorganizacionais {
+        width: 70%;
+    }
+}
+
+@media (min-width: 950px) {
+    table, .niveisorganizacionais {
+        width: 50%;
+    }
+}
+    
 
 table, th, td {
     border: 1px solid #ccc;
@@ -106,13 +116,11 @@ th, td {
 
 @media (min-width: 900px) {
     .imagens {
-        width: 40%;
+        width: inherit;
     }
-}
 
-@media (min-width: 1000px) {
-    .imagens {
-        width: 30%;
+    #imagemmenor {
+        width: 45%;
     }
 }
 
@@ -154,4 +162,13 @@ th, td {
  {
         width: 15%;
     }
+}
+
+.code {
+    background-color: #292929;
+    box-sizing: border-box;
+    overflow-x: auto;
+    display: inline-block;
+    padding: 10px;
+    max-width: 100%;
 }

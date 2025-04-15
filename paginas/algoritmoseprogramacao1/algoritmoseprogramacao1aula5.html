@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 5 - AeP</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Linguagem de Programação Imperativa.</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Paradigmas de programação</h2>
+    <p>Uma linguagem de programação é uma notação formal que permite ao programador descrever algoritmos com precisão. Os algoritmos são pensados como soluções lógicas que resolvem problemas computacionais. Quanto mais simples e estruturado o algoritmo, mais fácil será sua tradução em código.</p>
+    <p>As linguagens podem ser classificadas quanto ao seu nível de abstração:</p>
+    <ul>
+        <li><strong>Alto nível:</strong> são próximas da linguagem humana e mais fáceis de escrever e entender, como C#, Java, Python.</li>
+        <li><strong>Baixo nível:</strong> mais próximas da linguagem de máquina (binário), exigem maior conhecimento técnico.</li>
+    </ul>
+    <p>Além disso, as linguagens seguem diferentes paradigmas de programação — estilos distintos de estruturar e organizar soluções. Os dois principais são o <strong>imperativo</strong> e o <strong>declarativo</strong>.</p>
+    <img src="../../imagens/paradigmas.png" alt="Paradigmas de linguagem de programação" class="imagens">
+    
+    <h3>1.1 Paradigmas imperativos</h3>
+    <p>O paradigma imperativo foca na descrição passo a passo de como uma tarefa deve ser executada. O programador determina as instruções exatas que o computador deve seguir, em uma sequência bem definida. Esse paradigma trabalha com a manipulação direta do estado do programa por meio de variáveis, comandos, estruturas de controle e repetições.</p>
+    <p>Dentro do paradigma imperativo, existem subparadigmas que diferenciam as abordagens utilizadas:</p>
+    <ul>
+        <li>
+            <strong>Procedural:</strong> baseado na ideia de procedimentos (funções), ou seja, blocos de código que realizam tarefas específicas. Cada função pode ser reutilizada em diferentes partes do programa. Exemplo: para preparar um macarrão, temos uma função para o molho e outra para cozinhar o macarrão. Linguagens que seguem essa abordagem incluem C, C++, C#, Java e Pascal.
+        </li>
+        <li>
+            <strong>Orientado a objetos:</strong> estrutura o programa em objetos que representam entidades do mundo real. Cada objeto possui atributos (características) e métodos (ações). Essa abordagem favorece a reutilização de código e a organização. Linguagens: C++, C#, Java e Python.
+        </li>
+        <li>
+            <strong>Processamento paralelo:</strong> divide uma tarefa em partes menores que podem ser executadas simultaneamente por diferentes núcleos do processador. Um exemplo seria várias pessoas cozinhando diferentes partes de uma refeição ao mesmo tempo. Linguagens: C, C++ e NESL.
+        </li>
+    </ul>
+    
+    <h3>1.2 Paradigmas declarativos</h3>
+    <p>
+        No paradigma declarativo, o programador especifica o que deseja que seja feito, sem indicar como a tarefa será realizada. A execução e otimização ficam a cargo do interpretador ou compilador da linguagem. Esse paradigma foca no resultado e não no processo.
+    </p>
+    <ul>
+        <li>
+            <strong>Lógico:</strong> baseado em declarações de fatos e regras. A linguagem deduz novas informações a partir das regras fornecidas. Exemplo clássico: “Todos os homens são mortais. Sócrates é homem. Logo, Sócrates é mortal.” Linguagens: Prolog, Absys, Alice e Ciao.
+        </li>
+        <li>
+            <strong>Funcional:</strong> inspirado na matemática, utiliza funções puras que não causam efeitos colaterais. Não há variáveis mutáveis nem laços tradicionais; a recursão é usada no lugar. Linguagens: Haskell e Scala.
+        </li>
+        <li>
+            <strong>Database:</strong> foca na manipulação de dados, geralmente em bancos relacionais. Utiliza comandos declarativos para inserir, consultar, atualizar e excluir dados. Linguagem mais conhecida: SQL.
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>2. Variáveis e constantes</h2>
+    <p>Uma variável é um espaço de memória identificado por um nome e destinado a armazenar um valor durante a execução do programa. Em C#, a declaração segue o modelo:</p>
+    <code>tipo nome;</code>
+    <p>Exemplo:</p>
+    <code>int saldo;</code>
+    <p>As variáveis podem ser:</p>
+    <ul>
+        <li><strong>Locais:</strong> declaradas dentro de métodos.</li>
+        <li><strong>Globais:</strong> acessíveis em todo o programa.</li>
+        <li><strong>Estáticas:</strong> mantêm valor entre execuções com <code>static</code>.</li>
+    </ul>
+    <p>Constantes armazenam valores que não mudam durante a execução. Devem ser inicializadas na declaração. Exemplo:</p>
+    <code>
+        const double PI = 3.1415;
+    </code>
+    
+    <h3>2.1 Tipos de dados</h3>
+    <table>
+        <thead>
+            <tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>int</td><td>Inteiro 32 bits</td><td>int idade = 48;</td></tr>
+            <tr><td>long</td><td>Inteiro 64 bits</td><td>long valor = 45L;</td></tr>
+            <tr><td>float</td><td>Decimal 32 bits</td><td>float altura = 1.98F;</td></tr>
+            <tr><td>double</td><td>Decimal 64 bits</td><td>double peso = 0.85;</td></tr>
+            <tr><td>string</td><td>Texto</td><td>string nome = "Ana";</td></tr>
+            <tr><td>bool</td><td>Lógico</td><td>bool ativo = true;</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+    
+    <h2>3. Entrada e saída de dados</h2>
+    <p>As saídas no console são realizadas pelos métodos <code>Console.Write()</code> e <code>Console.WriteLine()</code>. A diferença é que <code>WriteLine()</code> adiciona uma quebra de linha.</p>
+    <pre class="code">
+    1  Console.Write("Nome: ");
+    2  Console.WriteLine("João");
+    </pre>
+    <p>Exibição com variáveis:</p>
+    <pre class="code">
+    1  int idade = 20;
+    2  Console.WriteLine("Idade: " + idade);
+    3  Console.WriteLine("Idade: {0}", idade);
+    </pre>
+    <p>Para entrada de dados, usa-se:</p>
+    <ul>
+      <li><code>Console.ReadLine()</code>: lê a entrada como string.</li>
+      <li><code>Console.Read()</code>: lê próximo caractere como inteiro (ASCII).</li>
+      <li><code>Console.ReadKey()</code>: aguarda uma tecla ser pressionada.</li>
+    </ul>
+    <p>Como <code>ReadLine()</code> retorna string, é necessário converter para outros tipos:</p>
+    <pre class="code">
+    1  int idade = Convert.ToInt32(Console.ReadLine());
+    2  double altura = Convert.ToDouble(Console.ReadLine());
+    </pre>
+    
+    <h3>3.1 Formas de entrada e saída em C#</h3>
+    <p>As principais instruções para entrada e saída de dados em C# são:</p>
+    <ul>
+        <li><code>Console.Write()</code>: exibe um texto no console, mantendo o cursor na mesma linha.</li>
+        <li><code>Console.WriteLine()</code>: exibe um texto e avança para a próxima linha.</li>
+        <li><code>Console.ReadLine()</code>: lê uma linha de texto digitada pelo usuário.</li>
+        <li><code>Console.Read()</code>: lê o próximo caractere digitado e retorna seu valor inteiro (código ASCII).</li>
+        <li><code>Console.ReadKey()</code>: espera o usuário pressionar uma tecla antes de continuar a execução.</li>
+        <li><code>Convert.ToInt32()</code>: converte o valor lido (string) para um número inteiro.</li>
+        <li><code>Convert.ToDouble()</code>: converte o valor lido para um número decimal (double).</li>
+    </ul>
+    <p>Essas instruções são essenciais para a comunicação entre o programa e o usuário, e permitem construir sistemas interativos por meio do console.</p>
+    <p>Exemplo completo:</p>
+    <pre class="code">
+    1  Console.WriteLine("Digite seu nome:");
+    2  string nome = Console.ReadLine();
+    3  Console.WriteLine("Olá, {0}!", nome);
+    4
+    5  Console.Write("Digite sua idade: ");
+    6  int idade = Convert.ToInt32(Console.ReadLine());
+    7  Console.WriteLine("Idade: {0}", idade);
+    8
+    9  Console.WriteLine("Pressione uma tecla para sair.");
+    10 Console.ReadKey();
+    </pre>
+    <p><strong>Neste código temos:</strong></p>
+    <ul>
+        <li>Uso de <code>WriteLine</code> e <code>Write</code> para exibir mensagens.</li>
+        <li>Leitura de dados com <code>ReadLine()</code>.</li>
+        <li>Conversão de texto digitado em número com <code>Convert.ToInt32()</code>.</li>
+        <li>Espera pela ação do usuário com <code>ReadKey()</code>.</li>
+    </ul>
+
+    <p>Veja o seguinte vídeo e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/d5Pl0NNrxcA" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+    <hr>
+
+    <h2>4. Considerações finais</h2>
+    <p>O capítulo abordou os principais fundamentos do paradigma imperativo, a organização de dados com variáveis e constantes, os principais tipos de dados em C# e a interação com o usuário por meio de entrada e saída no console.</p>
+    <p>Praticar os exemplos propostos permitirá ao estudante desenvolver uma base sólida para a criação de programas simples e estruturados.</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="algoritmoseprogramacao1aula6.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

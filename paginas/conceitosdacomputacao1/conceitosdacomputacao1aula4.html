@@ -7,13 +7,6 @@
   <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../style.css">
   <title>Aula 4 - CdC</title>
-  <style>
-    .example {
-      background: #1f1f1f;
-      padding: 5px;
-      margin: 1em 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -57,7 +50,7 @@
     <p>A operação de soma é realizada de forma similar em todos os sistemas numéricos, mas cada base possui suas particularidades: </p>
     <h4>Soma no Sistema Decimal</h4>
     <p>Nos algarismos decimais (0 a 9), “somar” pode ser entendido como deslocar à direita na sequência. Por exemplo, 4 + 3 = 7. Entretanto, quando o resultado excede 9, ocorre o chamado <em>estouro</em> e é realizado o <strong>vai 1</strong> (ou transporte), por exemplo: </p>
-    <div class="example">
+    <div class="code">
       <p><strong>Exemplo:</strong> 7 + 7 &rarr; resulta em 4 com transporte (7 + 7 = 14). <br> Ou seja, 4 com transporte você faz o "vai 1", colocando o 4 seguido do 1 na casa à frente. (x4 &rarr; 14)</p>
     </div>
 
@@ -101,7 +94,7 @@
       <li>Soma = 11010001<sub>2</sub>, que corresponde a 209<sub>10</sub></li>
     </ul>
     <p>Aqui um exemplo de como faz, da para alinhar os números verticalmente para facilitar.</p>
-    <div class="example">
+    <div class="code">
     <pre>
     1 + 0       = 1
     0 + 0       = 0
@@ -168,7 +161,7 @@
     <p><strong>Exemplo:</strong> Subtrair <code>1000<sub>2</sub></code> de <code>10011<sub>2</sub></code>:</p>
     <p>Como o <code>1000<sub>2</sub></code> não tem 5 dígitos, nós adicionamos um 0 na esquerda, ficando: <code>01000<sub>2</sub></code></p>
     <p>Montamos eles da direita para a esquerda:</p>
-    <div class="example">
+    <div class="code">
     <pre>
     1 - 0       = 1
     1 - 0       = 1
@@ -198,7 +191,7 @@
       <li><strong>Método das Divisões Sucessivas:</strong> Divida o número por 2 repetidamente e anote os restos (o primeiro resto é o LSB e o último, o MSB).</li>
     </ol>
     <p><strong>Exemplo (Divisão Sucessiva):</strong> Converter 30<sub>10</sub> para binário:</p>
-    <div class="example">
+    <div class="code">
     <pre>
     30 ÷ 2 = 15   | Resto: 0 (LSB)
     15 ÷ 2 = 7    | Resto: 1
@@ -243,7 +236,7 @@
     <h3>4.4. Conversão de Decimal para Hexadecimal</h3>
     <p>A conversão de decimal para hexadecimal utiliza divisões sucessivas por 16, com os restos formando o número hexadecimal (lidos de trás para frente).</p>
     <p><strong>Exemplo 1:</strong> Converter 373<sub>10</sub>:</p>
-    <div class="example">
+    <div class="code">
     <pre>
     373 ÷ 16 = 23 | Resto: 5 (LSB)
      23 ÷ 16 = 1  | Resto: 7
@@ -254,7 +247,7 @@
     </div>
 
     <p><strong>Exemplo 2:</strong> Converter 231<sub>10</sub>:</p>
-    <div class="example">
+    <div class="code">
     <pre>
     231 ÷ 16 = 14 | Resto: 7  (LSB)
      14 ÷ 16 = 0  | Resto: 14 (MSB; 14 corresponde a E)
