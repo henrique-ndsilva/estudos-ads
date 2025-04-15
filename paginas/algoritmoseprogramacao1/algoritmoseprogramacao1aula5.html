@@ -98,15 +98,13 @@
     <h2>3. Entrada e saída de dados</h2>
     <p>As saídas no console são realizadas pelos métodos <code>Console.Write()</code> e <code>Console.WriteLine()</code>. A diferença é que <code>WriteLine()</code> adiciona uma quebra de linha.</p>
     <pre class="code">
-    1  Console.Write("Nome: ");
-    2  Console.WriteLine("João");
-    </pre>
+1  Console.Write("Nome: ");
+2  Console.WriteLine("João");</pre>
     <p>Exibição com variáveis:</p>
     <pre class="code">
-    1  int idade = 20;
-    2  Console.WriteLine("Idade: " + idade);
-    3  Console.WriteLine("Idade: {0}", idade);
-    </pre>
+1  int idade = 20;
+2  Console.WriteLine("Idade: " + idade);
+3  Console.WriteLine("Idade: {0}", idade);</pre>
     <p>Para entrada de dados, usa-se:</p>
     <ul>
       <li><code>Console.ReadLine()</code>: lê a entrada como string.</li>
@@ -115,9 +113,8 @@
     </ul>
     <p>Como <code>ReadLine()</code> retorna string, é necessário converter para outros tipos:</p>
     <pre class="code">
-    1  int idade = Convert.ToInt32(Console.ReadLine());
-    2  double altura = Convert.ToDouble(Console.ReadLine());
-    </pre>
+1  int idade = Convert.ToInt32(Console.ReadLine());
+2  double altura = Convert.ToDouble(Console.ReadLine());</pre>
     
     <h3>3.1 Formas de entrada e saída em C#</h3>
     <p>As principais instruções para entrada e saída de dados em C# são:</p>
@@ -133,17 +130,16 @@
     <p>Essas instruções são essenciais para a comunicação entre o programa e o usuário, e permitem construir sistemas interativos por meio do console.</p>
     <p>Exemplo completo:</p>
     <pre class="code">
-    1  Console.WriteLine("Digite seu nome:");
-    2  string nome = Console.ReadLine();
-    3  Console.WriteLine("Olá, {0}!", nome);
-    4
-    5  Console.Write("Digite sua idade: ");
-    6  int idade = Convert.ToInt32(Console.ReadLine());
-    7  Console.WriteLine("Idade: {0}", idade);
-    8
-    9  Console.WriteLine("Pressione uma tecla para sair.");
-    10 Console.ReadKey();
-    </pre>
+1  Console.WriteLine("Digite seu nome:");
+2  string nome = Console.ReadLine();
+3  Console.WriteLine("Olá, {0}!", nome);
+4
+5  Console.Write("Digite sua idade: ");
+6  int idade = Convert.ToInt32(Console.ReadLine());
+7  Console.WriteLine("Idade: {0}", idade);
+8
+9  Console.WriteLine("Pressione uma tecla para sair.");
+10 Console.ReadKey();</pre>
     <p><strong>Neste código temos:</strong></p>
     <ul>
         <li>Uso de <code>WriteLine</code> e <code>Write</code> para exibir mensagens.</li>
