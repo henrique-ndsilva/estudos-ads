@@ -63,6 +63,7 @@ table {
     border-collapse: collapse;
     margin: 1em 0;
     width: 100%;
+    text-align: center;
 }
 
 .niveisorganizacionais {
@@ -77,7 +78,7 @@ table {
 
 @media (min-width: 950px) {
     table, .niveisorganizacionais {
-        width: 50%;
+        width: 60%;
     }
 }
     
@@ -130,37 +131,52 @@ th, td {
 }
 
 @media (min-width: 650px) {
-    .algoritmosequencial
- {
+    .algoritmosequencial {
         width: 35%;
+    }
+    
+    #imagemmenor2 {
+        width: 40%;
     }
 }
 
 @media (min-width: 700px) {
-    .algoritmosequencial
- {
+    .algoritmosequencial {
         width: 30%;
+    }
+    
+    #imagemmenor2 {
+        width: 35%;
     }
 }
 
 @media (min-width: 800px) {
-    .algoritmosequencial
- {
+    .algoritmosequencial {
         width: 25%;
+    }
+    
+    #imagemmenor2 {
+        width: 30%;
     }
 }
 
 @media (min-width: 900px) {
-    .algoritmosequencial
- {
+    .algoritmosequencial {
         width: 20%;
+    }
+    
+    #imagemmenor2 {
+        width: 25%;
     }
 }
 
 @media (min-width: 1000px) {
-    .algoritmosequencial
- {
+    .algoritmosequencial {
         width: 15%;
+    }
+
+    #imagemmenor2 {
+        width: 20%;
     }
 }
 
