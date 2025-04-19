@@ -5,6 +5,7 @@ body {
     color: #E8E6E3;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    line-height: 1.5;
 }
 
 h1 {
@@ -25,12 +26,14 @@ hr {
 
 .navlink {
     text-align: center;
-    a {
-        color: rgb(0, 204, 255);
-    }
-    span {
-        color: #5a5a5a;
-    }
+}
+
+.navlink a {
+    color: rgb(0, 204, 255);
+}
+
+.navlink span {
+    color: #5a5a5a;
 }
 
 #fontbutton {
@@ -48,15 +51,23 @@ hr {
     text-decoration: none;
     transition: background-color 0.3s;
     border: none;
+    cursor: pointer;
 }
 
 #fontbutton:hover {
     background-color: #383838;
-    cursor: pointer;
 }
 
-code {
+code, .code {
     background: #292929;
+}
+
+.code {
+    box-sizing: border-box;
+    overflow-x: auto;
+    display: inline-block;
+    padding: 10px;
+    max-width: 100%;
 }
 
 table {
@@ -65,23 +76,6 @@ table {
     width: 100%;
     text-align: center;
 }
-
-.niveisorganizacionais {
-    width: 100%;
-}
-
-@media (min-width: 750px) {
-    table, .niveisorganizacionais {
-        width: 70%;
-    }
-}
-
-@media (min-width: 950px) {
-    table, .niveisorganizacionais {
-        width: 60%;
-    }
-}
-    
 
 table, th, td {
     border: 1px solid #ccc;
@@ -92,99 +86,58 @@ th, td {
     text-align: center;
 }
 
+.niveisorganizacionais {
+    width: 100%;
+}
+
 .imagens {
     width: 80%;
-    text-align: center;
-}
-
-@media (min-width: 650px) {
-    .imagens {
-        width: 70%;
-    }
-}
-
-@media (min-width: 700px) {
-    .imagens {
-        width: 55%;
-    }
-}
-
-@media (min-width: 800px) {
-    .imagens {
-        width: 50%;
-    }
-}
-
-@media (min-width: 900px) {
-    .imagens {
-        width: inherit;
-    }
-
-    #imagemmenor {
-        width: 45%;
-    }
 }
 
 .algoritmosequencial {
     width: 50%;
-    text-align: center;
 }
 
+#imagemmenor {
+    width: 100%;
+}
+
+#imagemmenor2 {
+    width: 50%;
+}
+
+/* Media Queries */
+
 @media (min-width: 650px) {
-    .algoritmosequencial {
-        width: 35%;
-    }
-    
-    #imagemmenor2 {
-        width: 40%;
-    }
+    .imagens { width: 70%; }
+    .algoritmosequencial { width: 35%; }
+    #imagemmenor2 { width: 40%; }
 }
 
 @media (min-width: 700px) {
-    .algoritmosequencial {
-        width: 30%;
-    }
-    
-    #imagemmenor2 {
-        width: 35%;
-    }
+    .imagens { width: 55%; }
+    .algoritmosequencial { width: 30%; }
+    #imagemmenor2 { width: 35%; }
+}
+
+@media (min-width: 750px) {
+    table, .niveisorganizacionais { width: 70%; }
 }
 
 @media (min-width: 800px) {
-    .algoritmosequencial {
-        width: 25%;
-    }
-    
-    #imagemmenor2 {
-        width: 30%;
-    }
+    .imagens { width: 50%; }
+    .algoritmosequencial { width: 25%; }
+    #imagemmenor2 { width: 30%; }
 }
 
 @media (min-width: 900px) {
-    .algoritmosequencial {
-        width: 20%;
-    }
-    
-    #imagemmenor2 {
-        width: 25%;
-    }
+    .imagens { width: inherit; }
+    .algoritmosequencial { width: 20%; }
+    #imagemmenor { width: 45%; }
+    #imagemmenor2 { width: 25%; }
 }
 
 @media (min-width: 1000px) {
-    .algoritmosequencial {
-        width: 15%;
-    }
-
-    #imagemmenor2 {
-        width: 20%;
-    }
-}
-
-.code {
-    background-color: #292929;
-    box-sizing: border-box;
-    overflow-x: auto;
-    display: inline-block;
-    padding: 10px;
-    max-width: 100%;
+    .algoritmosequencial { width: 15%; }
+    #imagemmenor2 { width: 20%; }
 }
