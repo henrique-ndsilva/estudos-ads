@@ -78,6 +78,10 @@ table {
     text-align: center;
 }
 
+.table-overflow {
+    overflow-x: auto;
+}
+
 table, th, td {
     border: 1px solid #ccc;
 }
