@@ -68,6 +68,7 @@ code, .code {
     display: inline-block;
     padding: 10px;
     max-width: 100%;
+    border: 1px solid #3d3d3d;
 }
 
 table {

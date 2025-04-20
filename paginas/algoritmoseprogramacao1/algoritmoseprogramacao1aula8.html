@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 8 - AeP</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Programação Estruturada e Funções em C#</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <p>Este capítulo aprofunda os princípios da programação estruturada em C#, com ênfase na criação e uso de funções para modularização de código. Aborda desde fundamentos teóricos até técnicas avançadas de passagem de parâmetros, ilustradas com exemplos práticos e comparações detalhadas.</p>
+
+    <hr>
+    
+    <h2>1. Paradigma Estruturado: Pilares Fundamentais</h2>
+    <p>Baseia-se em três estruturas de controle para organização lógica do código:</p>
+    <ul>
+        <li><strong>Sequência:</strong> Execução linear (ex: cálculos matemáticos).</li>
+        <li><strong>Seleção:</strong> Decisões condicionais (<code>if/else</code>, <code>switch</code>).</li>
+        <li><strong>Iteração:</strong> Repetição controlada (<code>for</code>, <code>while</code>).</li>
+    </ul>
+
+
+    <h3>Quadro 1 – Estrutura de uma Função em C#</h3>
+    <pre class="code">
+1  &lt;modificadores_de_acesso&gt; &lt;tipo_retorno&gt; &lt;nome_função&gt; (&lt;parâmetros&gt;)
+2  {
+3      &lt;código_da_função&gt;
+4      &lt;retorno&gt;
+5  }</pre>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Componente</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Modificador de Acesso</strong></td>
+                <td>Define visibilidade (<code>public</code>, <code>private</code>, <code>protected</code>)</td>
+                <td><code>public</code></td>
+            </tr>
+            <tr>
+                <td><strong>Tipo de Retorno</strong></td>
+                <td>Especifica o tipo do resultado (<code>int</code>, <code>string</code>, <code>void</code>)</td>
+                <td><code>double</code></td>
+            </tr>
+            <tr>
+                <td><strong>Parâmetros</strong></td>
+                <td>Variáveis de entrada tipadas, separadas por vírgulas</td>
+                <td><code>(int largura, int altura)</code></td>
+            </tr>
+            <tr>
+                <td><strong>Corpo</strong></td>
+                <td>Lógica de processamento e operações</td>
+                <td><code>return largura * altura;</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    
+    <h2>2. Biblioteca Math: Funções Matemáticas Essenciais</h2>
+
+    <h3>Quadro 2 – Funções da Classe Math</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Função</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>Math.PI</code></td>
+                <td>Constante π (pi)</td>
+                <td><code>Math.PI</code></td>
+                <td>3.14159265358979</td>
+            </tr>
+            <tr>
+                <td><code>Math.Pow(b, e)</code></td>
+                <td>Potência (b<sup>e</sup>)</td>
+                <td><code>Math.Pow(2, 8)</code></td>
+                <td>256</td>
+            </tr>
+            <tr>
+                <td><code>Math.Sqrt(x)</code></td>
+                <td>Raiz quadrada</td>
+                <td><code>Math.Sqrt(144)</code></td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td><code>Math.Sin(x)</code></td>
+                <td>Seno (radianos)</td>
+                <td><code>Math.Sin(Math.PI/2)</code></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><code>Math.Cos(x)</code></td>
+                <td>Cosseno (radianos)</td>
+                <td><code>Math.Cos(0)</code></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><code>Math.Tan(x)</code></td>
+                <td>Tangente (radianos)</td>
+                <td><code>Math.Tan(Math.PI/4)</code></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><code>Math.Max(a, b)</code></td>
+                <td>Maior valor</td>
+                <td><code>Math.Max(-5, 10)</code></td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    
+    <h2>3. Passagem de Parâmetros: Mecanismos Avançados</h2>
+    
+    <h3>3.1 Por Valor (Padrão)</h3>
+    <pre class="code">
+1  void AlterarCopia(int valor) {
+2      valor += 50; // Modifica apenas a cópia local
+3  }
+4  
+5  int numero = 100;
+6  AlterarCopia(numero);
+7  Console.WriteLine(numero); // 100 (inalterado)</pre>
+
+    <h3>3.2 Por Referência (<code>ref</code>)</h3>
+    <pre class="code">
+1  void AlterarOriginal(ref int valor) {
+2      valor += 50; // Modifica a variável externa
+3  }
+4  
+5  int saldo = 200;
+6  AlterarOriginal(ref saldo);
+7  Console.WriteLine(saldo); // 250</pre>
+
+    <h3>Comparação Técnica</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Aspecto</th>
+                <th>Por Valor</th>
+                <th>Por Referência</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alocação de Memória</td>
+                <td>Cria cópia</td>
+                <td>Trabalha com endereço</td>
+            </tr>
+            <tr>
+                <td>Desempenho</td>
+                <td>Ideal para tipos simples</td>
+                <td>Eficiente para objetos grandes</td>
+            </tr>
+            <tr>
+                <td>Segurança</td>
+                <td>Protege dados originais</td>
+                <td>Permite alterações globais</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    
+    <h2>4. Caso Prático: Sistema de Cálculo Geométrico</h2>
+    <pre class="code">
+1  public class CalculadoraGeometrica {
+2      // Função modularizada
+3      public static double CalcularAreaCirculo(double raio) {
+4          return Math.PI * Math.Pow(raio, 2);
+5      }
+6  
+7      // Chamada de função com retorno
+8      public static void Main() {
+9          double raio = 5.0;
+10         double area = CalcularAreaCirculo(raio);
+11         Console.WriteLine($"Área: {area:F2}"); // 78.54
+12     }
+13 }</pre>
+
+    <h3>Benefícios da Modularização</h3>
+    <ul>
+        <li><strong>Reusabilidade:</strong> A função pode ser usada em múltiplos projetos</li>
+        <li><strong>Legibilidade:</strong> Nome descritivo explica a funcionalidade</li>
+        <li><strong>Manutenção:</strong> Atualizações centralizadas</li>
+    </ul>
+
+    <p>Veja os seguintes vídeos e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/Jr_sXg_ewD8" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link1</a> e <a href="https://youtu.be/KfuVe-r_3tc" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link2</a></p>
+
+    <hr>
+    
+    <h2>5. Considerações Finais</h2>
+    <p>Para dominar funções em C#:</p>
+    <ul>
+        <li><strong>Projete funções coesas:</strong> Cada função deve ter uma única responsabilidade</li>
+        <li><strong>Teste casos extremos:</strong> Valide com valores limítrofes (ex: zero, negativos)</li>
+    </ul>
+    <p>A programação estruturada, quando bem aplicada, reduz complexidade e facilita a escalabilidade. Pratique a criação de bibliotecas personalizadas para operações frequentes em seus projetos.</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+    </nav>
+</body>
+
+</html>

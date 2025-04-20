@@ -52,10 +52,6 @@ body {
     .divmain { max-width: 65%; }
 }
 
-@media (min-width: 1950px) {
-    .divmain { max-width: 65%; }
-}
-
 @media (min-width: 2099px) {
     .divmain { max-width: 60%; }
 }
