@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 3 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Servidor</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. O que é um servidor</h2>
+    <p>Servidor é um computador com sistema operacional específico e componentes dedicados para armazenar, gerenciar e compartilhar arquivos, dados, sistemas e recursos de hardware e software com outros computadores de uma rede. Ele centraliza serviços e melhora o desempenho, segurança, integridade e organização da infraestrutura de TI.</p>
+    <img src="../../imagens/infradeTI/aula3/servidor.png" alt="Servidor compartilhando pastas de arquivos com os usuários da rede" class="imagens">
+    
+    <p>Algumas tarefas ou características a serem consideradas pela equipe de TI ao definir o uso de servidores na empresa são:</p>
+    <ul>
+        <li><strong>Compartilhamento e gerenciamento de arquivos:</strong> garante o acesso controlado a arquivos centralizados, reduzindo redundância e melhorando a organização.</li>
+        <li><strong>Serviço de domínio:</strong> permite gerenciar autenticações, senhas, e-mails, permissões e grupos de usuários de forma centralizada.</li>
+        <li><strong>Backup e armazenamento de dados:</strong> oferece cópias de segurança programadas, protegendo informações críticas contra falhas.</li>
+        <li><strong>Acesso remoto:</strong> viabiliza o trabalho fora da empresa com segurança e praticidade.</li>
+        <li><strong>Compartilhamento de aplicações:</strong> centraliza o uso de softwares como ERPs e CRMs, otimizando licenças e manutenção.</li>
+        <li><strong>Gerenciamento de impressoras:</strong> organiza a fila de impressão e permite o controle de uso por usuário.</li>
+        <li><strong>Redução de custos operacionais:</strong> diminui a necessidade de múltiplos computadores com software duplicado.</li>
+        <li><strong>Redução de custos com manutenção:</strong> centraliza atualizações e suporte, simplificando a administração técnica.</li>
+        <li><strong>Possibilita a virtualização:</strong> permite a execução de vários sistemas em um único hardware, otimizando recursos.</li>
+    </ul>
+    
+    
+    <h2>2. Tipos de servidor</h2>
+    <ul>
+        <li><strong>Servidor de arquivos:</strong> armazena e compartilha documentos e arquivos, permitindo acesso simultâneo e controlado por permissões. Ideal para centralizar dados de trabalho.</li>
+        <li><strong>Servidor de banco de dados:</strong> armazena grandes volumes de dados estruturados, como registros de clientes, vendas e produtos, com acesso rápido e seguro.</li>
+        <li><strong>Servidor de e-mail:</strong> gerencia o envio e recebimento de mensagens com domínios próprios, usando protocolos como SMTP, POP3 e IMAP, garantindo comunicação eficiente.</li>
+        <li><strong>Servidor de impressão:</strong> conecta e gerencia impressoras em rede, otimizando o uso, controle e manutenção desses periféricos.</li>
+        <li><strong>Servidor web:</strong> hospeda páginas HTML e sistemas web, respondendo a requisições HTTP de navegadores dos clientes.</li>
+        <li><strong>Servidor de aplicação:</strong> executa sistemas corporativos como ERP, CRM e outros aplicativos de missão crítica, garantindo segurança e disponibilidade.</li>
+        <li><strong>Servidor DNS:</strong> traduz nomes de domínio (como www.exemplo.com) para endereços IP, permitindo que usuários acessem recursos da internet facilmente.</li>
+        <li><strong>Servidor proxy:</strong> atua como intermediário entre os usuários e a internet, filtrando conteúdos e cacheando páginas para melhorar desempenho e segurança.</li>
+        <li><strong>Servidor FTP:</strong> gerencia o envio e recebimento de arquivos entre máquinas pela rede, com autenticação e controle de permissões.</li>
+    </ul>
+    
+    <h2>3. Componentes de um servidor</h2>
+    <img src="../../imagens/infradeTI/aula3/componentesservidor.png" alt="Componentes de um servidor" class="imagens">
+    <ul>
+        <li><strong>Placa-mãe:</strong> principal circuito que conecta todos os componentes internos, como processador, memória e discos.</li>
+        <li><strong>Placa de rede:</strong> permite a comunicação do servidor com a rede, podendo ser de alta velocidade e redundante.</li>
+        <li><strong>Processador (CPU):</strong> responsável por executar instruções. Pode ser multicore e com suporte a múltiplas threads.</li>
+        <li><strong>Memória RAM:</strong> armazena dados temporários para uso imediato, quanto maior sua capacidade, maior a eficiência.</li>
+        <li><strong>Disco rígido (HD/SSD):</strong> armazena os dados permanentemente. Sistemas RAID são comuns para redundância e desempenho.</li>
+    </ul>
+    
+    <h2>4. Classificação de servidores</h2>
+    <p>A forma de instalação e montagem física define as principais classificações de servidores:</p>
+    
+    <h3>4.1 Servidor torre</h3>
+    <img src="../../imagens/infradeTI/aula3/torre.png" alt="Imagem de um servidor torre" class="imagens">
+    <ul>
+        <li>Formato similar ao de computadores desktop.</li>
+        <li>Fácil instalação, baixo ruído e consumo de energia.</li>
+        <li>Indicado para pequenas empresas ou escritórios.</li>
+        <li>Permite uso individual, sem necessidade de infraestrutura especializada.</li>
+        <li>Boa opção para ambientes com poucos usuários e sistemas simples.</li>
+    </ul>
+    
+    <h3>4.2 Servidor rack</h3>
+    <img src="../../imagens/infradeTI/aula3/rack.png" alt="Vista traseira de um rack para servidores" class="imagens">
+    <ul>
+        <li>Projetado para ser montado em racks padronizados.</li>
+        <li>Permite melhor aproveitamento de espaço e organização.</li>
+        <li>Ideal para data centers e ambientes com múltiplos servidores.</li>
+        <li>Suporta maior número de discos e placas de expansão.</li>
+        <li>Necessita ambiente com controle de temperatura, ventilação e acesso restrito.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula3/rackadm.png" alt="Administração de servidores montados em rack" class="imagens">
+    
+    <h3>4.3 Servidor blade</h3>
+    <img src="../../imagens/infradeTI/aula3/blade.png" alt="Montagem de servidor blade" class="imagens">
+    <ul>
+        <li>Formato compacto em módulos que se encaixam em chassi blade.</li>
+        <li>Alta densidade e eficiência energética.</li>
+        <li>Ideal para empresas que precisam de alto desempenho em pouco espaço.</li>
+        <li>Oferece alta escalabilidade e centralização da refrigeração.</li>
+        <li>Demanda ambiente técnico controlado, com suporte à infraestrutura de energia e rede dedicada.</li>
+    </ul>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/uZGTvXn9XBY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    
+    <h2>5. Considerações finais</h2>
+    <p>O servidor é um dos elementos mais importantes da infraestrutura de TI. Ele centraliza, protege e distribui os recursos e informações essenciais para o funcionamento da empresa.</p>
+    <p>A escolha do servidor deve considerar fatores como volume de dados, número de usuários, aplicações envolvidas e ambiente físico disponível. Com o crescimento das empresas, a tendência é a migração de servidores torre para rack ou blade, e posteriormente, a adoção de soluções em nuvem e virtualizadas.</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula3.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>
