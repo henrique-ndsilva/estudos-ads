@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 4 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Armazenamento de dados e data center</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Conceitos sobre armazenamento</h2>
+    <p>Com o avanço da tecnologia e a adoção massiva de sistemas computacionais nas organizações, o armazenamento de dados se tornou um componente fundamental da infraestrutura de TI. Tudo aquilo que é processado digitalmente, ou seja, convertido em uma sequência de 0s e 1s, precisa ser armazenado de forma segura, acessível e permanente.</p>
+    <p>Inicialmente, os dados eram armazenados em memórias voláteis, como a memória RAM, que perdem seu conteúdo ao serem desligadas. No entanto, para garantir persistência, foram desenvolvidos meios de armazenamento não voláteis, como os discos rígidos (HDs) e os SSDs.</p>
+    <img src="../../imagens/infradeTI/aula4/tiposinfo.png" alt="Tipos de informações e a transformação em dados" class="imagens">
+    
+    <h3>Disco Rígido (HD)</h3>
+    <p>É uma mídia de armazenamento mecânica amplamente utilizada, com capacidade para grandes volumes de dados e acesso relativamente rápido. Internamente, funciona com discos giratórios e cabeças de leitura/gravação.</p>
+    <img src="../../imagens/infradeTI/aula4/discorigido.png" alt="Parte mecânica de um disco rígido" class="imagens">
+    
+    <h3>Disco de Estado Sólido (SSD)</h3>
+    <p>Os SSDs não possuem partes móveis, o que garante maior velocidade de acesso, resistência a choques, menor consumo de energia e menor peso. Por isso, são muito utilizados em notebooks, tablets e smartphones.</p>
+    <img src="../../imagens/infradeTI/aula4/ssd.png" alt="Disco de estado sólido SSD" class="imagens">
+    
+    <h3>Outros dispositivos de armazenamento</h3>
+    <ul>
+        <li><strong>CD-ROM:</strong> disco apenas de leitura.</li>
+        <li><strong>CD-RW:</strong> disco regravável usado para grandes volumes de dados.</li>
+        <li><strong>DVD:</strong> utilizado para vídeos e dados como textos, áudios e imagens.</li>
+        <li><strong>Fita magnética:</strong> armazena grandes quantidades de dados, porém com acesso mais lento.</li>
+    </ul>
+
+    <hr>
+    
+    <h2>2. Armazenamento – Storage</h2>
+    <p>"Storage" é um repositório centralizado de dados da organização, funcionando como servidor de arquivos, backup ou área de compartilhamento. Ele pode ser classificado em:</p>
+    <ul>
+        <li><strong>DAS (Direct Attached Storage):</strong> conectado diretamente ao computador ou servidor, como um disco externo.</li>
+        <li><strong>NAS (Network Attached Storage):</strong> conectado à rede local, possui sistema operacional e gerencia arquivos como um servidor.</li>
+        <li><strong>SAN (Storage Area Network):</strong> rede dedicada ao armazenamento, composta por servidores e dispositivos de armazenamento de alto desempenho e segurança.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula4/redesan.png" alt="Rede SAN com os diversos tipos de armazenamento" class="imagens">
+    <p>As redes SAN utilizam tecnologias como RAID para garantir redundância e integridade dos dados. Elas permitem o compartilhamento eficiente de dados entre vários usuários e sistemas, inclusive remotamente.</p>
+
+    <hr>
+    
+    <h2>3. Armazenamento – Backup</h2>
+    <p>Backup é a cópia de dados feita para garantir segurança e continuidade dos negócios em caso de falhas ou perdas. Ele pode ser realizado em mídias ópticas (CD, DVD, Blu-Ray), magnéticas (HD) e eletrônicas (SSD, pen drive, cartão SD).</p>
+    <p>Existem três tipos principais de backup:</p>
+    <ul>
+        <li><strong>Completo:</strong> copia todos os dados, independentemente de terem sido alterados.</li>
+        <li><strong>Incremental:</strong> copia apenas os dados modificados desde o último backup.</li>
+        <li><strong>Diferencial:</strong> copia todos os dados modificados desde o último backup completo.</li>
+    </ul>
+
+    <hr>
+    
+    <h2>4. Papel do Data Center</h2>
+    <p>O data center é o ambiente físico que abriga os servidores, storages, equipamentos de rede e sistemas que mantêm os dados e aplicações funcionando. Ele oferece infraestrutura segura, escalável e de alto desempenho para as empresas.</p>
+    <img src="../../imagens/infradeTI/aula4/datacenter.png" alt="Instalações de um data center" class="imagens">
+    <p>Seus principais componentes são:</p>
+    <ul>
+        <li><strong>Instalações físicas:</strong> energia, refrigeração e segurança.</li>
+        <li><strong>TI:</strong> servidores, storages, roteadores, switches e outros ativos de rede.</li>
+        <li><strong>Gerenciamento:</strong> monitoramento e controle de todos os sistemas 24x7.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula4/componentesDC.png" alt="Componentes de um data center" class="imagens">
+    <p>Serviços comuns oferecidos por um data center:</p>
+    <ul>
+        <li><strong>Rede:</strong> garante que os computadores e sistemas possam se comunicar, conectando usuários aos servidores internos e à internet com segurança e rapidez.</li>
+        <li><strong>Segurança:</strong> protege os dados e equipamentos por meio de controle de acesso físico, senhas, vigilância, e restrições de entrada e saída.</li>
+        <li><strong>Processamento:</strong> é a capacidade dos servidores de realizar tarefas, executar sistemas e responder aos usuários com eficiência.</li>
+        <li><strong>Armazenamento:</strong> espaço onde os dados são guardados, podendo incluir discos rígidos, SSDs e outros dispositivos que mantêm informações acessíveis.</li>
+        <li><strong>Virtualização:</strong> técnica que permite que um único servidor físico funcione como se fossem vários, otimizando o uso dos equipamentos.</li>
+        <li><strong>Aplicações:</strong> são os programas e sistemas utilizados pelas empresas, que podem ser executados diretamente nos servidores do data center.</li>
+        <li><strong>Alta disponibilidade:</strong> capacidade de manter os sistemas funcionando mesmo em caso de falhas, com sistemas de backup e energia redundante.</li>
+        <li><strong>Gerenciamento:</strong> supervisão constante dos equipamentos e serviços, garantindo que tudo funcione corretamente com manutenção e suporte adequados.</li>
+    </ul>
+
+    <hr>
+    
+    <h2>5. Tipos de Data Center</h2>
+    <p>Existem diferentes tipos de data center, de acordo com o espaço físico, recursos disponíveis e necessidades da organização. Além disso, todo data center deve possuir dois níveis essenciais de proteção:</p>
+    <ul>
+        <li><strong>Portas corta-fogo:</strong> utilizadas para proteger o ambiente físico contra incêndios e calor excessivo, impedindo a propagação das chamas para áreas críticas do data center.</li>
+        <li><strong>Sala-cofre:</strong> estrutura reforçada e isolada dentro do data center que garante segurança contra incêndios, inundações, furtos e acesso indevido. Ideal para ambientes com exigência de alto nível de proteção física e lógica dos equipamentos.</li>
+    </ul>
+    
+    <h3>5.1 Em prédios de missão crítica</h3>
+    <p>Esses data centers são construídos especificamente para suportar operações críticas, com salas dedicadas, ambientes controlados e estruturas que garantem redundância, escalabilidade e segurança física e lógica. São ideais para grandes empresas que dependem da continuidade dos serviços.</p>
+    
+    <h3>5.2 Em edifícios multidisciplinares</h3>
+    <p>São ambientes adaptados dentro de prédios que abrigam diferentes empresas ou funções. Por isso, estão mais sujeitos a riscos como incêndios ou acessos não autorizados. Para operar com segurança, precisam adotar soluções como sala-cofre, monitoramento rigoroso e controle de acesso físico.</p>
+    
+    <h3>5.3 Modulares em contêiner</h3>
+    <p>Trata-se de data centers compactos e móveis, construídos em módulos que podem ser facilmente transportados e instalados em locais de difícil acesso ou com espaço limitado. São ideais para projetos emergenciais, operações temporárias ou regiões remotas. Possuem estrutura interna completa com climatização, segurança e conectividade.</p>
+
+    <p><mark>Recomenda-se que veja a aula narrada na aula 4 da unidade 1.</mark></p>
+
+    <hr>
+    
+    <h2>6. Considerações finais</h2>
+    <p>Com o crescimento do volume de dados e das aplicações, o armazenamento se torna essencial. As empresas iniciam com soluções locais e, conforme crescem, passam a investir em data centers próprios ou compartilhados, com soluções escaláveis, seguras e eficientes.</p>
+    <p>O mercado de data centers está em expansão e, cada vez mais, as empresas fornecem não apenas armazenamento, mas também serviços de infraestrutura, plataforma e software na nuvem.</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula4.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>
