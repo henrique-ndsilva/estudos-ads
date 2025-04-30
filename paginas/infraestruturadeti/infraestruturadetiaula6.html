@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 6 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Sistema Operacional – Tipos</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Principais tipos de sistema operacional</h2>
+    <p>Os sistemas operacionais são responsáveis por controlar o funcionamento dos computadores, e podem ser classificados em:</p>
+    <ul>
+        <li><strong>Monoprogramáveis ou monotarefas:</strong> permitem apenas um usuário e uma tarefa por vez. Enquanto o programa espera, por exemplo, uma entrada do teclado, o processador fica ocioso.</li>
+        <li><strong>Multiprogramáveis ou multitarefas:</strong> permitem que vários programas sejam executados simultaneamente, aproveitando melhor a CPU e a memória. O sistema distribui os recursos entre os processos.</li>
+    </ul>
+    <p>Nos sistemas multitarefa com múltiplos usuários (multiusuário), o conceito de <strong>tempo compartilhado</strong> (time-sharing) é usado para alocar o tempo de CPU, memória e dispositivos entre diferentes tarefas, otimizando o uso do processador.</p>
+    
+    <h3>1.1 Sistema operacional para computadores de grande porte</h3>
+    <p>Utilizado em mainframes, que processam grandes volumes de dados com muitas tarefas simultâneas (jobs). Suportam processamento em lote (batch), transações e tempo compartilhado. Exemplo: z/OS da IBM.</p>
+    
+    <h3>1.2 Sistema operacional de servidores</h3>
+    <p>Projetado para permitir que múltiplos usuários acessem recursos compartilhados, como arquivos, impressoras e serviços de rede. Exemplos: Unix, Windows Server e distribuições do Linux.</p>
+    
+    <h3>1.3 Sistema operacional de multiprocessadores</h3>
+    <p>Utiliza múltiplas CPUs em um único sistema para aumentar o poder de processamento. Suporta <strong>clusters</strong> (conjunto de computadores interligados) em três categorias:</p>
+    <ul>
+        <li><strong>Alta disponibilidade:</strong> mantém os serviços funcionando continuamente.</li>
+        <li><strong>Alto desempenho:</strong> para tarefas com alta demanda de processamento.</li>
+        <li><strong>Balanceamento de carga:</strong> distribui as tarefas de forma equilibrada entre os processadores.</li>
+    </ul>
+    <p>Exemplos de sistemas com suporte a cluster: Windows Failover Cluster, VMware ESXi e Heartbeat (Linux).</p>
+    
+    <h3>1.4 Sistema operacional para computadores pessoais</h3>
+    <p>Usado em desktops e estações de trabalho. Exemplos: Windows, MacOS e distribuições Linux.</p>
+    
+    <h3>1.5 Sistema operacional para dispositivos portáteis</h3>
+    <p>Usado em celulares, smartphones, iPods, entre outros. Exemplos: iOS (Apple), Android (Google/Linux), Windows Phone.</p>
+    
+    <h3>1.6 Sistema operacional de tempo real (RTOS)</h3>
+    <p>Projetado para executar tarefas com precisão e prioridade em tempo mínimo. Ideal para controle de tráfego aéreo, processos industriais, robôs, sistemas médicos. A execução de tarefas ocorre de forma especializada e rápida.</p>
+    
+    <h3>1.7 Sistema operacional embarcado</h3>
+    <p>Utilizado em dispositivos com funções limitadas, como eletrodomésticos e receptores de TV digital. Trabalha com restrições de tamanho, memória e consumo de energia.</p>
+    
+    <h3>1.8 Sistema operacional de cartões inteligentes</h3>
+    <p>Presente em smart cards, como cartões de acesso, bilhetes e cartões de pagamento. São simples, com foco em segurança, consumo reduzido de energia e memória limitada.</p>
+    
+    <hr>
+
+    <h2>2. Categorias de uso do sistema operacional</h2>
+    <p>Os sistemas operacionais são projetados para diferentes tipos de equipamentos e divididos em:</p>
+    <ul>
+        <li>mainframes;</li>
+        <li>desktops;</li>
+        <li>servidores;</li>
+        <li>dispositivos móveis.</li>
+    </ul>
+    <p>Com o uso de memória subdividida e processadores potentes, computadores podem comportar várias aplicações simultaneamente como máquinas virtuais. Exemplos de sistemas operacionais para usuários: Windows, MacOS e Linux.</p>
+    
+    <h3>2.1 Sistemas operacionais Windows para desktop</h3>
+    <p>Desde 1995, a Microsoft passou a oferecer o Windows com interface gráfica e suporte a multitarefa, como o Windows 95. Vieram depois o Windows 98, Me, XP, 7, 8, 8.1 e 10, cada um com avanços em estabilidade, velocidade, segurança e interface.</p>
+    
+    <h3>2.2 Sistemas operacionais Windows para servidores</h3>
+    <p>Os sistemas operacionais da família Windows para servidores foram desenvolvidos para atender ambientes corporativos que exigem segurança, escalabilidade, controle de usuários e recursos de rede. Desde sua primeira versão, o Windows Server evoluiu para integrar funcionalidades de virtualização, nuvem e gerenciamento centralizado.</p>
+    <ul>
+        <li><strong>Windows NT (1995):</strong> primeira versão com foco em redes e segurança para ambientes corporativos.</li>
+        <li><strong>Windows 2000:</strong> trouxe melhorias em estabilidade, suporte a sistemas de arquivos avançados e maior integração em redes.</li>
+        <li><strong>Windows Server 2003 e R2:</strong> incluiu recursos de controle de acesso e gerenciamento centralizado.</li>
+        <li><strong>Windows Server 2008:</strong> lançado com quatro edições: Standard, Enterprise, Datacenter e Web, oferecendo recursos escaláveis para diferentes necessidades empresariais.</li>
+        <li><strong>Windows Server 2012 e 2012 R2:</strong> acrescentaram suporte à virtualização com Hyper-V, integração com nuvem e ferramentas avançadas de administração.</li>
+    </ul>
+    
+    <h3>2.3 Sistema operacional Unix</h3>
+    <p>O Unix é um sistema operacional clássico e robusto, desenvolvido na década de 1970, com foco em estabilidade, segurança e flexibilidade. Ele é amplamente utilizado em servidores, estações de trabalho e sistemas embarcados. Por sua estrutura modular e capacidade multiusuário, tornou-se base para muitos outros sistemas.</p>
+    <ul>
+        <li><strong>Multitarefa:</strong> permite executar vários processos ao mesmo tempo.</li>
+        <li><strong>Multiusuário:</strong> diversos usuários podem usar o sistema simultaneamente.</li>
+        <li><strong>Portabilidade:</strong> pode ser adaptado para diferentes tipos de hardware.</li>
+        <li><strong>Variantes:</strong> gerou sistemas como AIX (IBM), Sun Solaris, HP-UX, Ultrix, Unixware e Unix SCO.</li>
+        <li><strong>Uso:</strong> é empregado em servidores, estações de trabalho e sistemas embarcados, com foco em estabilidade e segurança.</li>
+        <li><strong>Recursos:</strong> possui ferramentas robustas para desenvolvimento de software e administração de redes.</li>
+    </ul>
+    
+    <h3>2.4 Sistema operacional Linux</h3>
+    <p>Inspirado no Unix e baseado no Minix, o Linux é de código aberto e livre, com diversas distribuições (Ubuntu, Fedora, Debian etc.). É amplamente usado em servidores e ambientes corporativos devido ao seu desempenho, segurança e constante evolução colaborativa.</p>
+    
+    <h3>2.5 Sistema operacional Mac OS X</h3>
+    <p>Desenvolvido pela Apple para os iMacs. Interface gráfica avançada, multitarefa, multiusuário, com ferramentas integradas para web, multimídia e desenvolvimento. É estável, seguro e permite execução simultânea de aplicativos sem conflitos.</p>
+    
+    <h3>2.6 Sistemas operacionais para dispositivos móveis</h3>
+    <ul>
+        <li><strong>Android:</strong> baseado em Linux, com suporte a bluetooth, wi-fi, 3G e 4G. Possui código aberto e permite instalação de apps via Play Store.</li>
+        <li><strong>iOS:</strong> desenvolvido pela Apple, com foco em toque e multimídia. Os aplicativos são acessados pela Apple Store.</li>
+        <li><strong>Symbian:</strong> usado por Nokia, Motorola e outros, é simples, acessível e com bom desempenho.</li>
+        <li><strong>Windows Phone:</strong> baseado no Windows CE, com integração aos aplicativos da Microsoft.</li>
+    </ul>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/hOVBrIgRIgQ" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    
+    <hr>
+
+    <h2>3. Considerações finais</h2>
+    <p>O capítulo apresentou os diversos tipos de sistemas operacionais, sua evolução, aplicações e as diferenças entre ambientes desktop, servidores e dispositivos móveis. Também discutiu conceitos como código aberto, software livre e o futuro promissor com demandas em IoT, Big Data e segurança.</p>    
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula7.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

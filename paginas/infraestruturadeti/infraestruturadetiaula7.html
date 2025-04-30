@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 7 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Protocolos e comunicações</h1>
+    
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Regras de comunicação de dados</h2>
+    <p>A comunicação de dados funciona de maneira semelhante à comunicação humana: requer um transmissor, um receptor, um meio de comunicação e um protocolo. O transmissor envia uma mensagem ao receptor, utilizando um meio (físico ou lógico) e respeitando um conjunto de regras (protocolo).</p>
+    <img src="../../imagens/infradeTI/aula7/modelobasico.png" alt="Modelo básico de comunicação" class="imagens">
+    <p>Para que a comunicação seja compreendida, é necessário um acordo sobre a linguagem utilizada.</p>
+    <img src="../../imagens/infradeTI/aula7/acordo.png" alt="Acordo de comunicação entre duas pessoas" class="imagens">
+    <p>A comunicação de dados é baseada nesses mesmos princípios, mas aplicada à troca de informações entre dispositivos. Pode ocorrer de várias formas:</p>
+    <img src="../../imagens/infradeTI/aula7/formascomunicacao.png" alt="Exemplos de formas de comunicação entre as pessoas" class="imagens">
+    <ul>
+      <li><strong>Mensagem:</strong> informação transmitida (texto, números, figuras, áudio ou vídeo).</li>
+      <li><strong>Transmissor (TX):</strong> dispositivo que envia a mensagem (computador, telefone, câmera, etc.).</li>
+      <li><strong>Receptor (RX):</strong> dispositivo que recebe a mensagem.</li>
+      <li><strong>Meio de transmissão:</strong> caminho físico por onde a mensagem é transmitida.</li>
+      <li><strong>Protocolo:</strong> conjunto de regras acordadas entre os dispositivos para garantir a comunicação.</li>
+    </ul>
+    
+    <hr>
+
+    <h2>2. Transferência de dados na rede</h2>
+    <h3>Sentido da transmissão</h3>
+    <ul>
+      <li><strong>Simplex:</strong> comunicação unidirecional (ex: TV, rádio).</li>
+      <li><strong>Half-duplex:</strong> dispositivos transmitem e recebem, mas não ao mesmo tempo (ex: rádios comunicadores).</li>
+      <li><strong>Full-duplex:</strong> transmissão e recepção simultânea (ex: celulares).</li>
+    </ul>
+    
+    <h3>Modo de transmissão</h3>
+    <ul>
+      <li><strong>Modo paralelo:</strong> bits enviados simultaneamente por várias linhas (ex: cabo paralelo).</li>
+      <li><strong>Modo série:</strong> bits enviados um a um (ex: USB, comunicação serial).</li>
+    </ul>
+    
+    <h3>Sincronização</h3>
+    <ul>
+      <li><strong>Assíncrona:</strong> dados enviados um a um com bits de início (START) e fim (STOP). Fácil de implementar, mas de baixa velocidade.</li>
+      <li><strong>Síncrona:</strong> dados enviados em blocos com sincronismo. Alta confiabilidade, ideal para multimídia.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula7/etapascomunicacao.png" alt="Etapas de comunicação entre transmissor e receptor" class="imagens">
+    <br>
+    <img src="../../imagens/infradeTI/aula7/multiplexacao.png" alt="Multiplexação das informações em uma linha de transmissão" class="imagens">
+    
+    <hr>
+
+    <h2>3. Camadas de rede</h2>
+    <p>O modelo OSI foi criado pela ISO para padronizar a comunicação entre dispositivos, dividindo-a em 7 camadas. Cada camada tem uma função específica e protocolos próprios, o que permite modularidade e interoperabilidade entre fabricantes.</p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Camada</th>
+          <th>Descrição da funcionalidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7 – Aplicação</td>
+          <td>É a camada mais próxima do usuário e fornece serviços diretamente às aplicações. Nela estão os protocolos que permitem o acesso à internet, envio de e-mails, transferência de arquivos e outras funções, como HTTP, SMTP, FTP e DNS.</td>
+        </tr>
+        <tr>
+          <td>6 – Apresentação</td>
+          <td>Responsável por formatar os dados para a camada de aplicação. Cuida da codificação, compressão e criptografia das informações, garantindo que dados de diferentes sistemas possam ser compreendidos.</td>
+        </tr>
+        <tr>
+          <td>5 – Sessão</td>
+          <td>Gerencia a comunicação entre dois dispositivos, estabelecendo, mantendo e encerrando sessões. Também identifica fluxos de dados e os organiza para garantir que informações simultâneas não se misturem.</td>
+        </tr>
+        <tr>
+          <td>4 – Transporte</td>
+          <td>Controla a confiabilidade da comunicação, segmentando e remontando dados. Estabelece conexões fim a fim entre os dispositivos, controla a ordem e a integridade da entrega por meio de protocolos como o TCP e UDP.</td>
+        </tr>
+        <tr>
+          <td>3 – Rede</td>
+          <td>Gerencia o roteamento dos pacotes entre os dispositivos da origem ao destino. Define endereços lógicos (como os IPs) e escolhe os melhores caminhos para que os dados cheguem corretamente ao destinatário.</td>
+        </tr>
+        <tr>
+          <td>2 – Enlace</td>
+          <td>Garante a entrega livre de erros entre dois dispositivos diretamente conectados. Divide os dados em quadros, detecta e corrige erros, controla o fluxo e regula o acesso ao meio físico de transmissão.</td>
+        </tr>
+        <tr>
+          <td>1 – Física</td>
+          <td>Define os aspectos físicos da transmissão, como cabos, conectores, sinais elétricos e ópticos. Determina os padrões mecânicos e elétricos para enviar bits de forma confiável pelo meio físico.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p>Antes do modelo TCP/IP, muitos protocolos eram proprietários, impedindo a comunicação entre dispositivos de diferentes fabricantes. O TCP/IP, desenvolvido pela DARPA, tornou-se padrão universal.</p>
+    <p>O protocolo TCP (Transmission Control Protocol) controla a conexão, a sequência e a retransmissão de pacotes. Já o IP (Internet Protocol), localizado abaixo do TCP, cuida do roteamento e da entrega dos pacotes.</p>
+    <img src="../../imagens/infradeTI/aula7/modeloOSImodeloTCP.png" alt="Modelo OSI e modelo TCP/IP" class="imagens">
+    
+    <h3>Encapsulamento</h3>
+    <p>No modelo TCP/IP, o encapsulamento ocorre quando uma mensagem passa por cada camada da pilha de protocolos, recebendo um cabeçalho que será lido por seu correspondente no destino. O processo segue até que a mensagem seja transmitida fisicamente em sinais elétricos ou ópticos.</p>
+    <img src="../../imagens/infradeTI/aula7/encapsulamento.png" alt="Encapsulamento de uma transmissão de dados de e-mail em uma pilha de protocolos TCP/IP" class="imagens">
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/_lkKBCcplVg" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    
+    <hr>
+
+    <h2>4. Considerações finais</h2>
+    <p>O capítulo abordou os fundamentos da comunicação de dados, a estrutura da transmissão, os modelos OSI e TCP/IP, e o processo de encapsulamento. Com isso, compreendemos como dispositivos trocam informações em rede de forma padronizada, organizada e eficiente.</p>    
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula8.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>
