@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 10 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Camada de Aplicação</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Protocolos da camada de aplicação</h2>
+    <p>A camada de aplicação é a camada mais próxima do usuário na arquitetura TCP/IP. É ela quem possibilita a comunicação entre programas de computador em diferentes dispositivos conectados à rede. Nessa camada estão os protocolos que viabilizam o uso da internet e de serviços em rede como web, e-mail, resolução de nomes e atribuição de endereços.</p>
+    <p>Na comunicação entre processos, o processo cliente inicia a troca de mensagens e o processo servidor aguarda por conexões. A troca é feita via <strong>socket</strong>, que serve como ponto de contato entre a aplicação e a rede.</p>
+    <img src="../../imagens/infradeTI/aula10/figura1.png" alt="Processos de aplicação, sockets e protocolos de transporte" class="imagens">
+    <p>A escolha do protocolo de transporte (TCP ou UDP) depende das necessidades da aplicação. O TCP garante entrega ordenada e confiável dos dados, enquanto o UDP é mais leve e rápido, porém não garante a entrega.</p>
+    <img src="../../imagens/infradeTI/aula10/figura2.png" alt="Protocolo de transporte: TCP e UDP" class="imagens">
+    
+    <h3>1.1 Servidor web</h3>
+    <p>O protocolo HTTP (Hypertext Transfer Protocol) é o mais comum na web. Ele opera na porta 80 e permite que o cliente (navegador) solicite páginas ao servidor. Para uma navegação segura, utiliza-se o HTTPS, que acrescenta criptografia por meio do protocolo SSL/TLS e opera na porta 443.</p>
+    <img src="../../imagens/infradeTI/aula10/figura3.png" alt="Cliente acessando um servidor web por meio do protocolo HTTP" class="imagens">
+    <br>
+    <img src="../../imagens/infradeTI/aula10/figura4.png" alt="O navegador interpreta o código HTML e exibe uma página web" class="imagens">
+    
+    <h3>1.2 Servidor de e-mail</h3>
+    <p>O envio e recebimento de e-mails envolve três componentes principais:</p>
+    <ul>
+        <li><strong>Agentes de usuário (UA):</strong> permitem ao usuário redigir, enviar, ler e responder mensagens.</li>
+        <li><strong>Servidores de correio:</strong> armazenam e encaminham os e-mails.</li>
+        <li><strong>Protocolo SMTP (porta 25):</strong> realiza o envio das mensagens entre os servidores.</li>
+    </ul>
+    <p>Para leitura, utilizam-se os protocolos:</p>
+    <ul>
+        <li><strong>POP3 (porta 110):</strong> transfere os e-mails para o computador local, apagando do servidor.</li>
+        <li><strong>IMAP (porta 143):</strong> permite ler os e-mails diretamente no servidor, mantendo uma cópia online.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula10/figura5.png" alt="Serviço de e-mail com os diversos agentes" class="imagens">
+    <br>
+    <img src="../../imagens/infradeTI/aula10/figura6.png" alt="Serviço de e-mail e protocolos SMTP e POP3" class="imagens">
+    
+    <hr>
+    
+    <h2>2. Serviços de rede (DNS/DHCP)</h2>
+    
+    <h3>2.1 Servidor DNS – Domain Name System</h3>
+    <p>O DNS converte nomes como www.exemplo.com em endereços IP, tornando a navegação mais amigável ao usuário. Sua estrutura é hierárquica:</p>
+    <ul>
+        <li><strong>Servidores raiz:</strong> localizam os servidores TLD.</li>
+        <li><strong>Servidores TLD (Top Level Domain):</strong> armazenam domínios de primeiro nível como .com, .br, .org.</li>
+        <li><strong>Servidores autorizativos:</strong> mantêm os registros finais que associam domínios a IPs.</li>
+    </ul>
+    <p>Empresas podem manter servidores DNS internos para facilitar a navegação em suas redes privadas.</p>
+    <img src="../../imagens/infradeTI/aula10/figura7.png" alt="Serviço de rede DNS" class="imagens">
+    
+    <h3>2.2 Servidor DHCP – Dynamic Host Configuration Protocol</h3>
+    <p>O DHCP automatiza a configuração de endereços IP, máscara de rede, gateway e DNS. Isso evita a necessidade de configurar manualmente cada máquina em uma rede.</p>
+    <p>Tipos de alocação:</p>
+    <ul>
+        <li><strong>Manual:</strong> vincula um IP fixo ao endereço MAC de um dispositivo.</li>
+        <li><strong>Automática:</strong> o servidor atribui um IP de forma permanente.</li>
+        <li><strong>Dinâmica:</strong> o IP é atribuído por tempo limitado (leasing).</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula10/figura8.png" alt="Cenário de uma infraestrutura com DHCP" class="imagens">
+    
+    <hr>
+    
+    <h2>3. Testes de funcionamento dos serviços de rede</h2>
+    <p>Durante os testes de funcionamento, configura-se um ambiente com:</p>
+    <ul>
+        <li>Servidor web e DNS com IP fixo.</li>
+        <li>Clientes obtendo IP automaticamente via DHCP.</li>
+        <li>Teste de resolução de nomes e acesso a páginas da web pelo nome e pelo IP.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula10/figura9.png" alt="Cenário de testes de servidores e aplicações" class="imagens">
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/7gRRpJ5OqFQ" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    
+    <hr>
+    
+    <h2>4. Considerações finais</h2>
+    <p>Este capítulo abordou os principais protocolos e serviços da camada de aplicação, fundamentais para a operação da internet e redes corporativas. Compreender o funcionamento de HTTP, SMTP, DNS e DHCP é essencial para quem administra ou utiliza redes, pois garante comunicação eficiente, organizada e segura entre os dispositivos.</p>    
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula11.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

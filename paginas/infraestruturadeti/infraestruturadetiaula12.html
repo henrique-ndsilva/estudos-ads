@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 12 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Virtualização de Servidores: funcionamento</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Funcionamento da virtualização de servidor</h2>
+    <p>A virtualização de servidores utiliza monitores de máquinas virtuais, também chamados de <strong>hypervisores</strong>, que atuam como uma camada de software entre o sistema operacional e o hardware físico. Essa camada permite que múltiplas máquinas virtuais (VMs) operem sobre o mesmo hardware, cada uma com seus próprios recursos isolados.</p>
+    
+    <p>Existem três categorias de virtualização:</p>
+    <ul>
+        <li><strong>Hardware:</strong> camada de virtualização instalada diretamente sobre o hardware físico. Ex: VMware ESX, XEN, Hyper-V.</li>
+        <li><strong>Sistema operacional:</strong> particiona logicamente o sistema para múltiplas instâncias. Ex: Jails, Solaris Zones, KVM, VirtualBox.</li>
+        <li><strong>Linguagem de programação:</strong> cria uma máquina abstrata para execução de aplicações. Ex: Java Virtual Machine (JVM).</li>
+    </ul>
+    
+    <h3>1.1 Tipos de hypervisores</h3>
+    <ul>
+        <li><strong>Tipo I (bare-metal):</strong> executados diretamente no hardware. Têm maior desempenho e segurança. Ex: VMware ESXi, Microsoft Hyper-V.</li>
+        <li><strong>Tipo II:</strong> funcionam sobre um sistema operacional já instalado. São mais fáceis de instalar, mas com desempenho inferior. Ex: VirtualBox, VMware Workstation.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula12/figura1.png" alt="Tipos de hypervisores" class="imagens">
+    
+    <p>Os principais benefícios são: redução de servidores físicos, menor consumo de energia, menos emissão de poluentes e menor produção de lixo eletrônico. Além disso, otimiza os tempos ociosos da CPU, reduz gastos com upgrades e possibilita alta escalabilidade.</p>
+    
+    <h3>1.2 Conceito de instância</h3>
+    <p>Instância é a configuração de uma máquina virtual que pode ser transferida entre servidores físicos. Permite backup, recuperação de desastres, migração e balanceamento de carga.</p>
+    
+    <h3>1.3 Tipos de virtualização x86</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Definição</th>
+          <th>Desvantagens</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Virtualização completa:</strong> não altera o sistema operacional guest. Alta segurança e portabilidade.</td>
+          <td>Menor desempenho por causa do monitoramento constante do hypervisor.</td>
+        </tr>
+        <tr>
+          <td><strong>Paravirtualização:</strong> o sistema guest é adaptado para interagir diretamente com o hypervisor. Melhor desempenho.</td>
+          <td>Necessita acesso ao código-fonte para modificar o sistema guest.</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>1.4 Cenários da virtualização</h3>
+    <ul>
+        <li><strong>Consolidação de servidores:</strong> múltiplas VMs em um servidor físico, reduzindo espaço, energia e manutenção.</li>
+        <li><strong>Virtualização de desktops:</strong> uso de thin clients com diferentes sistemas operacionais hospedados nas VMs.</li>
+        <li><strong>Hospedagem de sistemas legados:</strong> execução de sistemas e bibliotecas antigas de forma isolada.</li>
+        <li><strong>Data center dinâmico:</strong> infraestrutura ágil com realocação de VMs sem impacto aos usuários.</li>
+    </ul>
+    
+    <h3>1.5 Licenciamento</h3>
+    <p>O licenciamento varia conforme os fabricantes. Pode ser por <strong>socket</strong> (núcleo físico) ou por instância de VM. A adoção de Linux pode reduzir custos, mas versões gratuitas não são recomendadas para produção devido à ausência de suporte.</p>
+    
+    <h3>1.6 Limites da virtualização</h3>
+    <ul>
+        <li><strong>Carga excessiva:</strong> certos aplicativos exigem muito desempenho e podem ser prejudicados pela sobrecarga do hypervisor.</li>
+        <li><strong>Licenciamento:</strong> controle rigoroso é necessário para evitar uso indevido de software.</li>
+        <li><strong>Capacitação da equipe:</strong> é essencial treinamento contínuo para administrar o ambiente virtualizado.</li>
+    </ul>
+    
+    <hr>
+    
+    <h2>2. Exercício básico de virtualização</h2>
+    <p>O exercício propõe um projeto completo, com fases que incluem planejamento, testes e implementação. As etapas são:</p>
+    <img src="../../imagens/infradeTI/aula12/figura2.png" alt="Etapas do projeto de virtualização" class="imagens">
+    
+    <h3>2.1 Planejamento da capacidade</h3>
+    <ul>
+        <li><strong>Coleta:</strong> inventário de servidores, uso de memória, CPU, banda, disco etc.</li>
+        <li><strong>Análise:</strong> avaliação de desempenho e definição dos recursos necessários.</li>
+        <li><strong>Prova de conceito (POC):</strong> instalação, configuração e testes por equipe especializada.</li>
+    <ul>
+        <li><strong>Fase I – levantamento:</strong> definição das características e planejamento do escopo do projeto.</li>
+        <li><strong>Fase II – planejamento:</strong> detalhes da solução, definição do período de execução e do plano de testes.</li>
+        <li><strong>Fase III – construção:</strong> instalação, configuração e realização dos testes da estrutura virtualizada.</li>
+        <li><strong>Fase IV – gerenciamento:</strong> verificação dos objetivos, reavaliação da solução e próximos passos. Ao final dessa fase, já se tem ideia da capacidade de uso da virtualização e dos valores financeiros.</li>
+    </ul>
+        <li>Verificação de compatibilidade com a infraestrutura existente.</li>
+        <li>Avaliação de desempenho das máquinas virtuais e dos recursos alocados.</li>
+        <li>Testes de integração com sistemas legados e aplicações críticas.</li>
+    </ul>
+        <li><strong>Avaliação de disponibilidade (VRA):</strong> relatório com impactos, custos e retorno sobre investimento (ROI).</li>
+    </ul>
+    
+    <h3>2.2 Escolha do fornecedor</h3>
+    <p>Deve considerar critérios como: preço, desempenho, disponibilidade, segurança, base instalada e funcionalidades.</p>
+    
+    <h3>2.3 Projeto</h3>
+    <ul>
+        <li><strong>Especificações do sistema:</strong> requisitos de software, backup, rede e armazenamento.</li>
+        <li><strong>Plano de implementação:</strong> cronograma, etapas de migração e verificação de recursos.</li>
+    </ul>
+    
+    <h3>2.4 Implementação</h3>
+    <ul>
+        <li><strong>Servidores:</strong> utilizar equipamentos homologados, definir licenciamento, cuidar do projeto de migração.</li>
+        <li><strong>Armazenamento:</strong> definir rede, backup, failover e balanceamento de carga.</li>
+    </ul>
+    
+    <h3>2.5 Gerenciamento</h3>
+    <p>Ferramentas do fabricante do hypervisor são usadas para monitoramento, relatórios e controle de desempenho das VMs.</p>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/gyYTWqq4YSQ" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p> 
+    
+    <hr>
+    
+    <h2>3. Considerações finais</h2>
+    <p>A virtualização de servidores permite maior eficiência e flexibilidade, possibilitando economia e escalabilidade. Um projeto bem estruturado garante alta disponibilidade, menor custo e prepara o ambiente para a migração para a nuvem.</p>    
+    
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula12.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 9 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Estrutura de Rede IP</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Segmentação de redes</h2>
+    <p>Com o crescimento das redes e do número de aplicações, surgem problemas como lentidão e propagação excessiva de pacotes de broadcast. O uso de VLANs (Redes Locais Virtuais) ajuda a resolver esses problemas ao criar domínios de broadcast separados, melhorando o desempenho e a segurança.</p>
+    <img src="../../imagens/infradeTI/aula9/figura1.png" alt="Cenário de uma rede LAN com a utilização de HUB" class="imagens">
+    <p><strong>Características dos equipamentos:</strong></p>
+    <ul>
+        <li><strong>Hub:</strong> atua na camada física. Encaminha pacotes para todos os computadores da rede, o que gera colisões e lentidão.</li>
+        <li><strong>Switch:</strong> atua na camada de enlace. Encaminha pacotes com base no endereço MAC apenas ao destino correto, diminuindo colisões.</li>
+        <li><strong>Roteador:</strong> atua na camada de rede. Interliga diferentes redes e escolhe a melhor rota para os pacotes.</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula9/figura2.png" alt="Cenário de uma rede local em uma empresa" class="imagens">
+    <br>
+    <img src="../../imagens/infradeTI/aula9/figura3.png" alt="Propostas de rede local com switch e roteador – separação de domínio de broadcast" class="imagens">
+    <p>A utilização de redes locais virtuais, as VLAN, aumenta muito a performance da rede, pois separa grandes domínios de broadcast em domínios menores e oferece características importantes como:</p>
+    <ul>
+        <li><strong>Segurança:</strong> os grupos de usuários que possuem informações confidenciais são colocados em redes separadas, diminuindo os riscos de acesso não autorizado.</li>
+        <li><strong>Aumento do desempenho:</strong> com a rede dividida em grupos de trabalho de forma lógica, reduz-se o tráfego desnecessário e aumenta-se o desempenho.</li>
+        <li><strong>Redução de custo:</strong> há menor necessidade de atualizações na rede e uso mais eficiente da largura de banda.</li>
+        <li><strong>Diminuição da tempestade de broadcast:</strong> com a divisão da rede em VLANs, diminui-se o número de equipamentos afetados por excesso de tráfego de broadcast.</li>
+        <li><strong>Eficiência da equipe:</strong> com nomes adequados para cada VLAN, o gerenciamento da rede se torna mais fácil.</li>
+        <li><strong>Gerenciamento de aplicativo:</strong> facilita o controle de como os aplicativos são disponibilizados aos usuários.</li>
+    </ul>
+    
+    <p><strong>Importante:</strong> O gateway é o responsável por encaminhar pacotes destinados a redes externas à sua própria.</p>
+    <img src="../../imagens/infradeTI/aula9/figura4.png" alt="Diagrama representando a atuação do roteador na comunicação entre redes diferentes" class="imagens">
+    
+    <h3>1.1 Tipos de VLANs</h2>
+    <p>As VLANs podem ser configuradas com base em diferentes critérios de agrupamento dos computadores:</p>
+    
+    <h3>1.1.1 VLAN com agrupamento por portas – camada 1</h3>
+    <p>Configuração simples baseada na porta do switch. Se o computador mudar de porta, será necessário reconfigurar a VLAN.</p>
+    <img src="../../imagens/infradeTI/aula9/figura5.png" alt="Rede local com VLAN agrupada por porta do switch" class="imagens">
+    
+    <h3>1.1.2 VLAN com agrupamento por endereço MAC – camada 2</h3>
+    <p>Baseia-se no endereço MAC. A tabela a seguir ilustra o agrupamento:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Endereço MAC</th>
+          <th>VLAN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>00-60-3E-A2-B0-5B</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>00-E0-B0-DB-6B-A6</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>00-60-5C-4A-18-BB</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>1.1.3 VLAN com agrupamento por endereço IP – camada 3</h3>
+    <p>Baseia-se no endereço IP do dispositivo. A tabela a seguir ilustra o agrupamento:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Endereço IP</th>
+          <th>VLAN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>172.33.12.14</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>172.33.20.40</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>172.145.34.30</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Para comunicação entre VLANs, é necessária uma porta trunk ou o uso de um roteador.</p>
+    
+    <hr>
+
+    <h2>2. Esquemas de endereçamento</h2>
+    <p>O endereço IP define o agrupamento das VLANs. Exemplo:</p>
+    <ul>
+        <li>VLAN10: 192.168.10.0/24</li>
+        <li>VLAN20: 192.168.20.0/24</li>
+    </ul>
+    <img src="../../imagens/infradeTI/aula9/figura6.png" alt="Cenário para endereçamento de redes VLAN" class="imagens">
+    <p><strong>Quadro 1 – Comandos para configuração de VLAN e das portas associadas:</strong></p>
+    <pre class="code">
+Switch> enable
+Switch# configure terminal
+Switch(config)# vlan 10
+Switch(config-vlan)# name engenharia
+Switch(config)# vlan 20
+Switch(config-vlan)# name financas
+Switch(config)# interface fastEthernet 0/2
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 10
+Switch(config)# interface fastEthernet 0/3
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20
+Switch(config)# interface fastEthernet 0/4
+Switch(config-if)# switchport mode access
+Switch(config-if)# switchport access vlan 20</pre>
+    
+    <p><strong>Importante:</strong> Para comunicação entre switches, configure as portas trunk:</p>
+    <pre class="code">
+SwitchENGENHARIA(config)# interface fastEthernet 0/1
+SwitchENGENHARIA(config-if)# switchport mode trunk
+SwitchFINANCAS(config)# interface fastEthernet 0/1
+SwitchFINANCAS(config-if)# switchport mode trunk</pre>
+    
+    <hr>
+
+    <h2>3. Testes adicionais de funcionamento de redes</h2>
+    <p><strong>Quadro 2 – Endereços de computadores e VLANs associadas:</strong></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Computador</th>
+          <th>Endereço IP</th>
+          <th>VLAN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PC 0</td><td>192.168.10.2</td><td>VLAN 10</td></tr>
+        <tr><td>PC 1</td><td>192.168.10.3</td><td>VLAN 10</td></tr>
+        <tr><td>PC 2</td><td>192.168.20.3</td><td>VLAN 20</td></tr>
+        <tr><td>PC 3</td><td>192.168.10.4</td><td>VLAN 10</td></tr>
+        <tr><td>PC 4</td><td>192.168.20.4</td><td>VLAN 20</td></tr>
+        <tr><td>PC 5</td><td>192.168.20.5</td><td>VLAN 20</td></tr>
+      </tbody>
+    </table>
+    
+    <h3>3.1 Testes realizados entre computadores</h3>
+    <p>Os testes com comando <code>ping</code> entre computadores foram organizados da seguinte forma:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Origem</th>
+          <th>Destino</th>
+          <th>Local</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PC 0 – VLAN 10</td><td>PC 1 – VLAN 10</td><td>No mesmo switch</td></tr>
+        <tr><td>PC 0 – VLAN 10</td><td>PC 3 – VLAN 10</td><td>Em outro switch</td></tr>
+        <tr><td>PC 2 – VLAN 20</td><td>PC 4 – VLAN 20</td><td>Em outro switch</td></tr>
+        <tr><td>PC 4 – VLAN 10</td><td>PC 5 – VLAN 20</td><td>Em outro switch</td></tr>
+      </tbody>
+    </table>
+    <img src="../../imagens/infradeTI/aula9/figura7.png" alt="Resultados dos testes de comunicação entre computadores da mesma VLAN" class="imagens">
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/Y6AVNlA_2WM" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    
+    <hr>
+
+    <h2>4. Considerações finais</h2>
+    <p>O capítulo apresentou os conceitos e vantagens da segmentação de redes por VLANs, abordando os tipos de agrupamentos, a configuração dos switches e os testes de comunicação. Essa organização melhora o desempenho, a segurança e o gerenciamento da infraestrutura de rede.</p> 
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula10.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

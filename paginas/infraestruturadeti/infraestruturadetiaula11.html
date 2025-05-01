@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 11 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Virtualização de Servidores</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Virtualização – conceitos</h2>
+    <p>A virtualização permite que diversos servidores lógicos (máquinas virtuais) sejam executados em um único servidor físico por meio de softwares específicos. Isso reduz a ociosidade do hardware, melhora o uso dos recursos e diminui custos de infraestrutura.</p>
+    <img src="../../imagens/infradeTI/aula11/figura1.png" alt="Servidores e exemplo de carga de capacidade" class="imagens">
+    <p>Ao consolidar serviços de diferentes servidores físicos em um só, o tempo de ociosidade é reduzido. Com isso, a economia de hardware, energia e espaço físico se torna evidente.</p>
+    <img src="../../imagens/infradeTI/aula11/figura2.png" alt="Serviços e ociosidade em computadores" class="imagens">
+    <p>As máquinas virtuais (VMs) surgem como camadas de abstração entre o hardware e o software, isolando os sistemas operacionais dos recursos físicos. O <strong>hypervisor</strong> ou <strong>Virtual Machine Monitor (VMM)</strong> é o software responsável por criar, gerenciar e distribuir os recursos entre as VMs.</p>
+    <p>O servidor físico é chamado de <strong>host</strong>, e cada máquina virtual que é criada é chamada de <strong>guest</strong>. O sistema operacional guest interage como se estivesse em uma máquina física, mas suas operações, como gravação em disco, são feitas em arquivos gerenciados pelo host.</p>
+    <img src="../../imagens/infradeTI/aula11/figura3.png" alt="Servidores virtualizados" class="imagens">
+    
+    <h3>1.1 Softwares de virtualização</h3>
+    <ul>
+        <li>Microsoft Hyper-V</li>
+        <li>VMware Workstation, Player e vSphere</li>
+        <li>RedHat KVM</li>
+        <li>Oracle VirtualBox</li>
+    </ul>
+    
+    <h3>1.2 Tipos de virtualização</h3>
+    <ul>
+        <li><strong>Virtualização de servidores:</strong> concentra diversos servidores em poucos equipamentos físicos, otimizando recursos e reduzindo custos.</li>
+        <li><strong>Virtualização de desktop:</strong> permite a execução de diferentes sistemas operacionais em um único computador para testes e desenvolvimento.</li>
+        <li><strong>Virtualização de sistemas operacionais:</strong> executa múltiplos sistemas operacionais sobre o mesmo kernel, reduzindo custos com licenças e aumentando a segurança.</li>
+        <li><strong>Virtualização de funções de rede:</strong> distribui serviços como DHCP, DNS e arquivos, reduzindo a dependência de hardware e infraestrutura física.</li>
+        <li><strong>Virtualização de dados:</strong> consolida dados dispersos em um só ponto de acesso, oferecendo segurança, consistência e economia.</li>
+        <li><strong>Virtualização de storage:</strong> centraliza o armazenamento, permitindo o acesso remoto como se fosse local, ideal para data centers.</li>
+    </ul>
+    
+    <hr>
+    
+    <h2>2. Virtualização – componentes</h2>
+    <p>A virtualização depende de um servidor físico com recursos como CPU, memória e armazenamento suficientes. Instala-se um sistema operacional com suporte a hypervisor para criação das VMs. O hypervisor cria, aloca e gerencia os recursos entre as máquinas virtuais.</p>
+    <img src="../../imagens/infradeTI/aula11/figura4.png" alt="Máquinas virtuais criadas com o hypervisor" class="imagens">
+    <p>As máquinas virtuais podem usar mais recursos do que o disponível fisicamente, uma técnica chamada <strong>over provisioning</strong>. Em caso de disputa, o hypervisor prioriza as VMs conforme a configuração.</p>
+    
+    <hr>
+    
+    <h2>3. Motivos para a virtualização</h2>
+    <ul>
+        <li><strong>Disponibilidade e confiabilidade:</strong> menor interrupção dos serviços e maior robustez do sistema.</li>
+        <li><strong>Redução de custos:</strong> menos hardware físico significa economia com aquisição, manutenção e energia elétrica.</li>
+        <li><strong>Automatização de processos:</strong> ferramentas de virtualização permitem criar modelos de VMs facilmente replicáveis.</li>
+        <li><strong>Recuperação de desastres:</strong> mais ágil e eficiente, com backups de imagens completas de VMs.</li>
+        <li><strong>Sustentabilidade (TI verde):</strong> menor consumo de energia e redução de descarte de equipamentos.</li>
+        <li><strong>Provisionamento rápido:</strong> novos serviços e aplicações podem ser ativados rapidamente.</li>
+        <li><strong>Migração para computação em nuvem:</strong> facilita a transição para a nuvem com suporte à infraestrutura como serviço (IaaS).</li>
+    </ul>
+    
+    <h3>Benefícios imediatos</h3>
+    <ul>
+        <li><strong>Aproveitamento da infraestrutura existente:</strong> reaproveitamento de servidores e equipamentos já instalados, sem necessidade de novas aquisições imediatas.</li>
+        <li><strong>Diminuição do parque de máquinas:</strong> redução no número de servidores físicos, diminuindo espaço ocupado e custo operacional.</li>
+        <li><strong>Centralização do gerenciamento:</strong> controle unificado dos recursos e servidores por meio de um único painel de administração.</li>
+        <li><strong>Implementação rápida de aplicações:</strong> novos serviços podem ser criados e configurados com agilidade e praticidade.</li>
+        <li><strong>Variedade de plataformas:</strong> suporte a diferentes sistemas operacionais e ambientes, de forma simultânea e isolada.</li>
+        <li><strong>Criação de ambiente de testes:</strong> permite simular ambientes de produção para testar aplicações antes da implementação real.</li>
+        <li><strong>Segurança e confiabilidade:</strong> isolamento entre sistemas e facilidade para realização de backups e restaurações.</li>
+        <li><strong>Migração e atualização mais fácil:</strong> facilidade na transferência de sistemas entre servidores e atualização controlada de versões.</li>
+    </ul>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/mQZCNXopPkg" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p> 
+    
+    <hr>
+    
+    <h2>4. Considerações finais</h2>
+    <p>Este capítulo apresentou os principais conceitos de virtualização, incluindo os tipos, componentes e benefícios. A virtualização melhora o aproveitamento de recursos, permite a criação de ambientes flexíveis e seguros, reduz custos e prepara o ambiente para a adoção da computação em nuvem. Entender a virtualização é fundamental para administradores de TI que buscam eficiência, escalabilidade e modernização da infraestrutura tecnológica.</p>      
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula12.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>
