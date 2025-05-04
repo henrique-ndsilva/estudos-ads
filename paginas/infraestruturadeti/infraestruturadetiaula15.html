@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 15 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Computação em Nuvem – PaaS (Plataforma como Serviço)</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Definição de PaaS (plataforma como serviço)</h2>
+    <p>Modelo que fornece um ambiente completo para desenvolvimento de aplicações, incluindo (Chess & Franklin, 2013):</p>
+    
+    <img src="../../imagens/infradeTI/aula15/figura1.png" alt="Comparação entre TI tradicional e PaaS: camadas gerenciadas pelo usuário vs. provedor" class="imagens">
+    
+    <ul>
+        <li><strong>Infraestrutura gerenciada:</strong>
+            <ul>
+                <li>Servidores virtuais</li>
+                <li>Armazenamento em nuvem</li>
+                <li>Redes configuráveis</li>
+            </ul>
+        </li>
+        <li><strong>Software pré-instalado:</strong>
+            <ul>
+                <li>Sistemas operacionais (Windows/Linux)</li>
+                <li>Middleware (Apache, IIS)</li>
+                <li>Ambientes de runtime (.NET, Java)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>2. Componentes de PaaS</h2>
+    <img src="../../imagens/infradeTI/aula15/figura2.png" alt="Componentes PaaS: infraestrutura, SO, middleware e runtime gerenciados pelo provedor" class="imagens">
+    
+    <h3>2.1 Estrutura Básica</h3>
+    <ul>
+        <li>Infraestrutura de IaaS + Sistema Operacional</li>
+        <li>Middleware e Runtime (ambiente de execução)</li>
+        <li>Arquitetura multi-tenant: instância única para múltiplos usuários</li>
+    </ul>
+
+    <h3>2.2 Microsoft Azure PaaS</h3>
+    <h4>Características Principais (Microsoft, 2019):</h4>
+    <ul>
+        <li><strong>Desenvolvimento de Alta Produtividade:</strong>
+            <ul>
+                <li>Linguagens: .NET, Java, Node.js, PHP, Python, Ruby, Docker</li>
+                <li>Integração com Visual Studio e Azure Marketplace</li>
+                <li>Templates pré-configurados para implantação</li>
+            </ul>
+        </li>
+        
+        <li><strong>Plataforma Gerenciada:</strong>
+            <ul>
+                <li>Balanceamento de carga automático</li>
+                <li>Domínios personalizados e certificados SSL</li>
+                <li>Monitoramento via Application Insights</li>
+            </ul>
+        </li>
+
+        <li><strong>Aplicativos Corporativos:</strong>
+            <ul>
+                <li>Conexão segura a SAP, Oracle e SharePoint</li>
+                <li>Azure Active Directory para autenticação</li>
+                <li>Implantação em ambientes isolados</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>Serviços Azure App Services:</h4>
+    <ul>
+        <li><strong>Aplicativos Web:</strong>
+            <ul>
+                <li>CI/CD integrado com repositórios Git</li>
+                <li>Escalonamento global baseado em demanda</li>
+                <li>Analytics de desempenho em tempo real</li>
+            </ul>
+        </li>
+        
+        <li><strong>Aplicativos para Contêineres:</strong>
+            <ul>
+                <li>Implantação via Docker Hub ou registros privados</li>
+                <li>Atualizações automáticas sem downtime</li>
+                <li>Sincronização offline para apps móveis</li>
+            </ul>
+        </li>
+        
+        <li><strong>Integração Híbrida:</strong>
+            <ul>
+                <li>Conexão VPN a datacenters locais</li>
+                <li>Hubs de notificação para milhões de dispositivos</li>
+                <li>Dimensionamento automático inteligente</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.3 AWS Elastic Beanstalk</h3>
+    <ul>
+        <li><strong>Implantação Automatizada:</strong>
+            <ul>
+                <li>Suporte a .NET, PHP, Java, Python, Ruby</li>
+                <li>Integração com AWS CodePipeline</li>
+            </ul>
+        </li>
+        
+        <li><strong>Escalabilidade:</strong>
+            <ul>
+                <li>Auto Scaling com métricas personalizáveis</li>
+                <li>Computação serverless com AWS Lambda</li>
+            </ul>
+        </li>
+        
+        <li><strong>Casos de Uso:</strong>
+            <ul>
+                <li>IoT com AWS IoT Core</li>
+                <li>Big Data com Amazon Redshift</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>3. Uso de PaaS</h2>
+    
+    <h3>3.1 Benefícios Estratégicos</h3>
+    <ul>
+        <li><strong>Redução de Custos:</strong>
+            <ul>
+                <li>Elimina licenças de software locais</li>
+                <li>Modelo pay-per-use</li>
+            </ul>
+        </li>
+        
+        <li><strong>Inovação Acelerada:</strong>
+            <ul>
+                <li>Prototipação rápida</li>
+                <li>Integração com AI/ML</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3.2 AWS Elastic Beanstalk</h3>
+    <ul>
+        <li><strong>Recursos Principais:</strong>
+            <ul>
+                <li>Implantação em 5 linguagens</li>
+                <li>Auto Scaling integrado</li>
+                <li>Monitoramento CloudWatch</li>
+            </ul>
+        </li>
+        <li><strong>Caso de Uso:</strong>
+            <ul>
+                <li>Aplicações serverless com Lambda</li>
+                <li>IoT com AWS IoT Core</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>4. Considerações para Adoção</h2>
+    <ul>
+        <li><strong>Gestão de Riscos:</strong>
+            <ul>
+                <li>Backup cross-region</li>
+                <li>Plano de disaster recovery</li>
+            </ul>
+        </li>
+        
+        <li><strong>Integração Híbrida:</strong>
+            <ul>
+                <li>Conexão VPN com datacenters locais</li>
+                <li>API Gateway para sistemas legados</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/zN6hwaTBtEY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+    <hr>
+    
+    <h2>5. Considerações Finais</h2>
+    <ul>
+        <li><strong>Para PMEs:</strong> Acesso a infraestrutura enterprise</li>
+        <li><strong>Para Grandes Empresas:</strong> Complemento à infraestrutura existente</li>
+        <li><strong>Tendências:</strong> PaaS + Serverless + Edge Computing</li>
+    </ul>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula16.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

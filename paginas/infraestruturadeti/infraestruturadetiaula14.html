@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 14 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Computação em Nuvem – IaaS (Infraestrutura como Serviço)</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Definição de IaaS</h2>
+    <p>O modelo de Infraestrutura como Serviço (IaaS) fornece componentes fundamentais de TI virtualizados através da nuvem, conforme Chess e Franklin Jr. (2013):</p>
+    
+    <blockquote>
+        "Oferece aos usuários espaço virtual em servidores, conexões de rede, largura de banda, endereços IP e balanceadores de carga, distribuídos geograficamente para segurança e disponibilidade."
+    </blockquote>
+    
+    <img src="../../imagens/infradeTI/aula14/figura1.png" alt="Comparação entre TI tradicional e modelo IaaS mostrando camadas gerenciadas pelo usuário vs. provedor" class="imagens">
+    
+    <h3>1.1 Benefícios Chave</h3>
+    <ul>
+        <li><strong>Terceirização completa:</strong> O provedor gerencia aquisição, configuração, atualização e manutenção do hardware</li>
+        <li><strong>Flexibilidade:</strong> Provisionamento via catálogo de hardware virtual (CPU, memória, armazenamento)</li>
+        <li><strong>Exemplos de provedores:</strong> Amazon EC2, Microsoft Azure, Google Compute Engine, IBM Cloud</li>
+    </ul>
+
+    <hr>
+    
+    <h2>2. Serviços Oferecidos pelos Provedores IaaS</h2>
+    <img src="../../imagens/infradeTI/aula14/figura2.png" alt="Diagrama completo dos serviços IaaS incluindo armazenamento, corretor de nuvem, recursos de hardware, gerenciamento, backup e CDN" class="imagens">
+    
+    <h3>2.1 Descrição Detalhada dos Serviços</h3>
+    <ul>
+        <li><strong>Armazenamento (Storage):</strong>
+            <ul>
+                <li>Capacidade escalável em disco para aplicativos</li>
+                <li>Suporte a backups e arquivamento de dados</li>
+                <li>Opções de desempenho variáveis (HDD, SSD)</li>
+            </ul>
+        </li>
+        
+        <li><strong>Corretor de Nuvem (Cloud Broker):</strong>
+            <ul>
+                <li>Gerencia serviços em múltiplas plataformas de nuvem</li>
+                <li>Suporte a configurações híbridas (pública-privada)</li>
+                <li>Facilita migração entre provedores</li>
+            </ul>
+        </li>
+
+        <li><strong>Recursos de Hardware (Compute):</strong>
+            <ul>
+                <li>Servidores virtuais com CPU, RAM e rede configuráveis</li>
+                <li>Tipos: Máquinas virtuais, contêineres, bare-metal</li>
+                <li>Escalonamento automático conforme demanda</li>
+            </ul>
+        </li>
+
+        <li><strong>Gerenciamento de Serviços:</strong>
+            <ul>
+                <li>Console único para administração</li>
+                <li>APIs para integração com outras ferramentas</li>
+                <li>Monitoramento de desempenho e uso</li>
+            </ul>
+        </li>
+
+        <li><strong>Backup/Recuperação:</strong>
+            <ul>
+                <li>Snapshots automáticos em intervalos regulares</li>
+                <li>Recuperação pontual (point-in-time recovery)</li>
+                <li>Replicação geográfica para disaster recovery</li>
+            </ul>
+        </li>
+
+        <li><strong>Redes de Entrega de Conteúdo (CDN):</strong>
+            <ul>
+                <li>Otimização de desempenho para aplicações web</li>
+                <li>Cache distribuído globalmente</li>
+                <li>Redução de latência para usuários finais</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>3. Componentes Técnicos da IaaS</h2>
+    <p>Conforme Vacca (2016), a infraestrutura como serviço é composta por cinco componentes principais:</p>
+    
+    <h3>3.1 Compute (Processamento)</h3>
+    <ul>
+        <li><strong>Implementação:</strong> Hypervisors (VMware ESXi, Hyper-V), contêineres (Docker), servidores bare-metal</li>
+        <li><strong>Funcionamento:</strong> Cada instância possui CPU virtualizada, memória dedicada e recursos isolados</li>
+        <li><strong>Segurança:</strong>
+            <ul>
+                <li>Isolamento rigoroso entre máquinas virtuais</li>
+                <li>Proteção contra "vazamento" entre VMs</li>
+                <li>Controle de consumo excessivo de recursos</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3.2 Network (Rede)</h3>
+    <ul>
+        <li><strong>Elementos:</strong> VLANs virtuais, balanceadores de carga, firewalls</li>
+        <li><strong>Tecnologias:</strong> Redes Definidas por Software (SDN), comutação virtual</li>
+        <li><strong>Segurança:</strong>
+            <ul>
+                <li>Isolamento de tráfego entre tenants</li>
+                <li>Proteção contra acesso não autorizado</li>
+                <li>Segmentação de rede rigorosa</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>3.3 Storage (Armazenamento)</h3>
+    <ul>
+        <li><strong>Tipos:</strong> Bloco, arquivo e objeto</li>
+        <li><strong>Recursos:</strong> Snapshots, versionamento, replicação</li>
+        <li><strong>Segurança:</strong>
+            <ul>
+                <li>Criptografia em repouso e em trânsito</li>
+                <li>Controle de acesso granular</li>
+                <li>Isolamento completo entre clientes</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+    
+    <h2>4. Vantagens para Empresas</h2>
+    <ul>
+        <li><strong>Redução de Custos:</strong>
+            <ul>
+                <li>Elimina investimento inicial em hardware</li>
+                <li>Modelo pay-as-you-go (pague pelo uso)</li>
+                <li>Não há custos com depreciação de equipamentos</li>
+            </ul>
+        </li>
+        
+        <li><strong>Agilidade Operacional:</strong>
+            <ul>
+                <li>Provisionamento em minutos (vs. semanas/meses)</li>
+                <li>Escalonamento automático conforme demanda</li>
+                <li>Experiência de autoatendimento via portal</li>
+            </ul>
+        </li>
+
+        <li><strong>Resiliência:</strong>
+            <ul>
+                <li>Alta disponibilidade incorporada</li>
+                <li>Recuperação de desastres simplificada</li>
+                <li>Redundância geográfica</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/lDm4fAGt0zY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p> 
+
+    <hr>
+    
+    <h2>5. Considerações Finais</h2>
+    <p>A adoção de IaaS representa uma transformação na gestão de TI:</p>
+    <ul>
+        <li><strong>Para pequenas/médias empresas:</strong> Acesso a infraestrutura de classe empresarial sem investimento inicial</li>
+        <li><strong>Para grandes empresas:</strong> Complemento à infraestrutura física existente</li>
+        <li><strong>Desafios:</strong> Segurança de dados, conformidade regulatória, lock-in com provedores</li>
+    </ul>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula15.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>

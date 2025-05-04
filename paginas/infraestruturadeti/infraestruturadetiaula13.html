@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <title>Aula 13 - InfraTI</title>
+</head>
+
+<body>
+    <hr>
+
+    <h1>Computação em Nuvem: Conceitos</h1>
+
+    <hr>
+
+    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+    <script src="../../js/toggleFontSize.js"></script>
+
+    <h2>1. Definição de Computação em Nuvem</h2>
+    <p>Modelo computacional onde capacidade de processamento, armazenamento, software e serviços são obtidos de recursos virtualizados através de rede, geralmente a Internet. Segundo Laudon e Laudon (2013):</p>
+    <blockquote>
+        "É um modelo computacional no qual a capacidade de processamento, armazenamento, software e outros serviços são obtidos de um agrupamento de recursos virtualizados por meio de uma rede, geralmente a Internet."
+    </blockquote>
+    <p>Conforme o NIST (2013):</p>
+    <blockquote>
+        "Computação em nuvem é um modelo que possibilita o acesso, de modo conveniente e sob demanda, a um conjunto de recursos computacionais que são configuráveis e que podem ser rapidamente adquiridos e liberados com mínimo esforço gerencial."
+    </blockquote>
+    
+    <p style="background-color: #282828; border-radius: 20px; display: inline-block; padding: 5px;"><strong>Mainframes &rarr; Cliente-servidor &rarr; Data center &rarr; Virtualização</strong></p>
+    <br>
+    <img src="../../imagens/infradeTI/aula13/figura2.png" alt="Exemplo de plataforma de computação em nuvem com serviços de infraestrutura, plataforma e aplicações" class="imagens">
+
+    <hr>
+    
+    <h2>2. Características Essenciais</h2>
+    <img src="../../imagens/infradeTI/aula13/figura3.png" alt="Componentes da computação em nuvem: características essenciais, modelos de serviços e modelos de desenvolvimento" class="imagens">
+    
+    <h3>2.1 Self-service sob demanda (On-demand self-service)</h3>
+    <p>Os serviços computacionais podem ser acessados sob demanda, dependendo da necessidade do usuário, e podem ser selecionados sem a necessidade de intervenção do fornecedor.</p>
+
+    <h3>2.2 Acesso pela rede (Broad network access)</h3>
+    <p>Os recursos são disponibilizados através de rede e acessados por diversos tipos de dispositivos, como computadores, smartphones e tablets.</p>
+
+    <h3>2.3 Medição de serviços (Measured service)</h3>
+    <p>Os serviços em nuvem são cobrados dependendo da quantidade utilizada.</p>
+
+    <h3>2.4 Elasticidade rápida (Rapid elasticity)</h3>
+    <p>Os recursos podem ser provisionados pelos provedores de serviços de nuvem de forma elástica, isto é, podem ser alocados em qualquer quantidade e a qualquer momento.</p>
+
+    <h3>2.5 Oferta de recursos (Resource pooling)</h3>
+    <p>Os recursos computacionais são fornecidos pelo provedor de serviços de forma compartilhada com diversos usuários, quer sejam físicos, quer sejam virtuais, e são atribuídos dinamicamente aos usuários.</p>
+
+    <hr>
+    
+    <h2>3. Modelos de Serviços</h2>
+    <img src="../../imagens/infradeTI/aula13/figura4.png" alt="Modelos de serviços em nuvem: IaaS, PaaS, SaaS" class="imagens">
+    
+    <h3>3.1 Infraestrutura como Serviço (IaaS)</h3>
+    <p>Fornece a infraestrutura virtual de servidores, dispositivos de rede, armazenamento e outros recursos para construir um ambiente que possa ser acessado sob demanda.</p>
+    <ul>
+        <li>Permite provisionar recursos de hardware conforme demanda</li>
+        <li>Baseado em técnicas de virtualização</li>
+        <li>Exemplos: Máquinas virtuais, armazenamento em nuvem</li>
+    </ul>
+
+    <h3>3.2 Plataforma como Serviço (PaaS)</h3>
+    <p>Possibilita aos usuários projetar seus sistemas de software, fornecendo um ambiente com sistema operacional, linguagens de desenvolvimento e ambiente necessário para construção de aplicações.</p>
+    <ul>
+        <li>Ambientes escaláveis conforme demanda</li>
+        <li>Usuário controla apenas as aplicações</li>
+        <li>Exemplo: Ambientes de desenvolvimento</li>
+    </ul>
+
+    <h3>3.3 Software como Serviço (SaaS)</h3>
+    <p>Possibilita que os usuários utilizem aplicações instaladas na infraestrutura do provedor, acessadas via navegador web.</p>
+    <ul>
+        <li>Elimina necessidade de instalação local</li>
+        <li>Provedor responsável por manutenção e atualizações</li>
+        <li>Exemplos: E-mail corporativo, sistemas de gestão</li>
+    </ul>
+
+    <hr>
+    
+    <h2>4. Modelos de Desenvolvimento</h2>
+    
+    <h3>4.1 Nuvem Pública</h3>
+    <p>Infraestrutura disponibilizada para o público em geral ou para um conjunto de empresas, gerenciada por provedor terceirizado.</p>
+    <ul>
+        <li>Exemplos: Amazon AWS, Google Cloud</li>
+        <li>Características: Fácil uso, baixo custo, sem SLA robusto</li>
+    </ul>
+
+    <h3>4.2 Nuvem Privada</h3>
+    <p>Infraestrutura operada exclusivamente para uma organização, podendo ser gerenciada internamente ou por terceiros.</p>
+    <ul>
+        <li>Exemplos: Data centers corporativos</li>
+        <li>Características: Maior segurança e controle</li>
+    </ul>
+
+    <h3>4.3 Nuvem Híbrida</h3>
+    <p>Combinação de duas ou mais nuvens (públicas, privadas ou comunitárias) que permanecem como entidades únicas mas são interligadas.</p>
+    <ul>
+        <li>Exemplos: Dados críticos em nuvem privada + aplicações em nuvem pública</li>
+        <li>Características: Balanceamento entre custo e segurança</li>
+    </ul>
+
+    <h3>4.4 Nuvem Comunitária</h3>
+    <p>Infraestrutura compartilhada por organizações com interesses comuns (ex: setor saúde, governo).</p>
+    <ul>
+        <li>Exemplos: Plataformas setoriais</li>
+        <li>Características: Requisitos específicos compartilhados</li>
+    </ul>
+
+    <hr>
+    
+    <h2>5. Aplicações Práticas</h2>
+    
+    <h3>5.1 No Cotidiano</h3>
+    <ul>
+        <li>Serviços de e-mail (Gmail, Yahoo Mail)</li>
+        <li>Mídias sociais (Facebook, Instagram)</li>
+        <li>Drives virtuais (Google Drive, Dropbox)</li>
+        <li>Internet banking</li>
+        <li>Serviços públicos (Detran, INSS)</li>
+    </ul>
+
+    <h3>5.2 Nas Organizações</h3>
+    <ul>
+        <li>Colaboração e comunicação (Microsoft Teams)</li>
+        <li>Backup e recuperação de desastres</li>
+        <li>Desenvolvimento e teste de aplicações</li>
+        <li>Sistemas de gestão empresarial</li>
+    </ul>
+
+    <p><mark>Recomenda-se que veja a aula narrada na aula 13 da unidade 4.</mark></p>
+
+    <hr>
+    
+    <h2>6. Considerações Finais</h2>
+    <p>A computação em nuvem transforma a infraestrutura de TI, oferecendo flexibilidade, redução de custos e escalabilidade. Sua adoção permite que empresas e usuários acessem recursos sob demanda, adaptando-se rapidamente às necessidades do mercado.</p>
+
+    <hr>
+
+    <nav class="navlink">
+        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+        <span>|</span>
+        <a href="infraestruturadetiaula14.html" target="_self" rel="next">Próxima aula</a>
+    </nav>
+</body>
+
+</html>
