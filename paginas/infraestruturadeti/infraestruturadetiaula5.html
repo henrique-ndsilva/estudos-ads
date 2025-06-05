@@ -2,115 +2,139 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 5 - InfraTI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css">
+  <title>Aula 5 - InfraTI</title>
 </head>
 
 <body>
-    <hr>
+  <hr>
 
-    <h1>Sistema Operacional – Conceitos</h1>
-    
-    <hr>
+  <h1>Sistema Operacional – Conceitos</h1>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+  <hr>
 
-    <h2>1. Conceitos sobre sistema operacional</h2>
-    <p>O sistema operacional é o principal software do computador. Ele é responsável por controlar o hardware e permitir que o usuário interaja com o computador por meio de aplicativos. Ele também gerencia tarefas, escalona processos, controla a memória e mantém a integridade do sistema.</p>
-    <p>Um computador é composto por diversos componentes físicos (hardware), como processador, memória, discos, teclado, monitor, impressoras, etc. Para que esses componentes funcionem corretamente e em conjunto, é necessário o uso de um sistema operacional.</p>
-    
-    <h3>1.1 Processo</h3>
-    <p>Um processo é um programa em execução. Cada processo possui um espaço de memória, com instruções do programa, dados e pilha. Os processos podem estar em três estados:</p>
-    <ul>
-        <li><strong>Em execução:</strong> o processo está usando a CPU no momento.</li>
-        <li><strong>Pronto:</strong> pode ser executado, mas está aguardando sua vez.</li>
-        <li><strong>Bloqueado:</strong> está aguardando um evento externo, como uma leitura de disco.</li>
-    </ul>
-    <p>O sistema operacional realiza transições entre esses estados usando o escalonador de processos, que define qual processo será executado em seguida.</p>
-    <img src="../../imagens/infradeTI/aula5/transicaoprocessos.png" alt="Transição de estados de um processo" class="imagens">
-    
-    <h3>1.2 Interface com o hardware</h3>
-    <p>O sistema operacional permite que os aplicativos acessem os recursos do hardware sem que o programador precise entender os detalhes de cada dispositivo. Isso é feito por meio de drivers – pequenos programas que comunicam o sistema com os dispositivos (como impressoras, mouses, etc.).</p>
-    
-    <h3>1.3 Tipos de software de sistema</h3>
-    <ul>
-        <li><strong>Programas de gerenciamento do sistema:</strong> gerenciam hardware, software, rede e dados. Exemplo: o próprio sistema operacional.</li>
-        <li><strong>Programas de desenvolvimento:</strong> ajudam a criar novos softwares, como editores de código e compiladores.</li>
-    </ul>
-    
-    <img src="../../imagens/infradeTI/aula5/sistemacomputador.png" alt="Sistema de computador: hardware, programas de sistema e aplicações" class="imagens">
-    
-    <hr>
+  <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
+  <script src="../../js/toggleFontSize.js"></script>
 
-    <h2>2. Componentes de um sistema operacional</h2>
-    <p>O sistema operacional é dividido em dois componentes principais:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>KERNEL (NÚCLEO)</th>
-          <th>SHELL (AMBIENTE OPERACIONAL)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <ul>
-                <li>Núcleo do sistema operacional.</li>
-                <li>Reside permanentemente na memória.</li>
-                <li>Gerencia memória, processos e tarefas.</li>
-                <li>Realiza comunicação entre processos.</li>
-                <li>Controla interrupções e execuções.</li>
-            </ul>
-          </td>
-          <td>
-            <ul>
-                <li>Conhecido como "interpretador de comandos"</li>
-                <li>Interface entre usuário e sistema.</li>
-                <li>Interpreta comandos do usuário.</li>
-                <li>Executa as instruções solicitadas.</li>
-                <li>Facilita o uso de programas e funções.</li>
-            </ul>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
-    <p>O kernel é o coração do sistema operacional, responsável por iniciar o sistema, gerenciar memória, processador e armazenamento. Já o shell é o ambiente em que o usuário interage com o sistema, seja via linha de comando ou interface gráfica.</p>
+  <h2>1. Conceitos sobre sistema operacional</h2>
+  <p>O sistema operacional é o principal software do computador. Ele é responsável por controlar o hardware e permitir
+    que o usuário interaja com o computador por meio de aplicativos. Ele também gerencia tarefas, escalona processos,
+    controla a memória e mantém a integridade do sistema.</p>
+  <p>Um computador é composto por diversos componentes físicos (hardware), como processador, memória, discos, teclado,
+    monitor, impressoras, etc. Para que esses componentes funcionem corretamente e em conjunto, é necessário o uso de um
+    sistema operacional.</p>
 
-    <hr>
+  <h3>1.1 Processo</h3>
+  <p>Um processo é um programa em execução. Cada processo possui um espaço de memória, com instruções do programa, dados
+    e pilha. Os processos podem estar em três estados:</p>
+  <ul>
+    <li><strong>Em execução:</strong> o processo está usando a CPU no momento.</li>
+    <li><strong>Pronto:</strong> pode ser executado, mas está aguardando sua vez.</li>
+    <li><strong>Bloqueado:</strong> está aguardando um evento externo, como uma leitura de disco.</li>
+  </ul>
+  <p>O sistema operacional realiza transições entre esses estados usando o escalonador de processos, que define qual
+    processo será executado em seguida.</p>
+  <img src="../../imagens/infradeTI/aula5/transicaoprocessos.png" alt="Transição de estados de um processo"
+    class="imagens">
 
-    <h2>3. Funcionamento do sistema operacional</h2>
-    <p>O sistema operacional realiza cinco funções básicas:</p>
-    <ul>
-        <li><strong>Interface do usuário:</strong> permite que o usuário interaja com o sistema, utilizando comandos, menus ou interfaces gráficas.</li>
-        <li><strong>Gerenciamento de recursos:</strong> organiza e distribui os recursos do computador, como CPU, memória e dispositivos.</li>
-        <li><strong>Gerenciamento de tarefas:</strong> controla os processos em execução, definindo a ordem e o tempo de uso da CPU.</li>
-        <li><strong>Gerenciamento de arquivos:</strong> organiza, armazena e permite o acesso a arquivos e diretórios no sistema.</li>
-        <li><strong>Serviços de suporte:</strong> oferece utilitários e rotinas de apoio ao funcionamento geral do sistema e aplicativos.</li>
-    </ul>
-    
-    <img src="../../imagens/infradeTI/aula5/funcoesSO.png" alt="Funções do sistema operacional" class="imagens">
-    <br>
-    <img src="../../imagens/infradeTI/aula5/funcoeshardware.png" alt="Funções do sistema operacional relacionadas aos dispositivos de hardware do computador" class="imagens">
+  <h3>1.2 Interface com o hardware</h3>
+  <p>O sistema operacional permite que os aplicativos acessem os recursos do hardware sem que o programador precise
+    entender os detalhes de cada dispositivo. Isso é feito por meio de drivers – pequenos programas que comunicam o
+    sistema com os dispositivos (como impressoras, mouses, etc.).</p>
 
-    <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/ea231joq-jM" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
-    
-    <hr>
+  <h3>1.3 Tipos de software de sistema</h3>
+  <ul>
+    <li><strong>Programas de gerenciamento do sistema:</strong> gerenciam hardware, software, rede e dados. Exemplo: o
+      próprio sistema operacional.</li>
+    <li><strong>Programas de desenvolvimento:</strong> ajudam a criar novos softwares, como editores de código e
+      compiladores.</li>
+  </ul>
 
-    <h2>4. Considerações finais</h2>
-    <p>O sistema operacional é essencial para o funcionamento de qualquer computador. Ele realiza o controle dos recursos e oferece uma interface para que o usuário possa utilizar os programas de forma prática e segura. Também vimos que os componentes kernel e shell organizam suas funções e que o sistema é o responsável pelo funcionamento harmonioso entre hardware e software.</p>    
+  <img src="../../imagens/infradeTI/aula5/sistemacomputador.png"
+    alt="Sistema de computador: hardware, programas de sistema e aplicações" class="imagens">
 
-    <hr>
+  <hr>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="infraestruturadetiaula6.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
+  <h2>2. Componentes de um sistema operacional</h2>
+  <p>O sistema operacional é dividido em dois componentes principais:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>KERNEL (NÚCLEO)</th>
+        <th>SHELL (AMBIENTE OPERACIONAL)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul>
+            <li>Núcleo do sistema operacional.</li>
+            <li>Reside permanentemente na memória.</li>
+            <li>Gerencia memória, processos e tarefas.</li>
+            <li>Realiza comunicação entre processos.</li>
+            <li>Controla interrupções e execuções.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Conhecido como "interpretador de comandos"</li>
+            <li>Interface entre usuário e sistema.</li>
+            <li>Interpreta comandos do usuário.</li>
+            <li>Executa as instruções solicitadas.</li>
+            <li>Facilita o uso de programas e funções.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>O kernel é o coração do sistema operacional, responsável por iniciar o sistema, gerenciar memória, processador e
+    armazenamento. Já o shell é o ambiente em que o usuário interage com o sistema, seja via linha de comando ou
+    interface gráfica.</p>
+
+  <hr>
+
+  <h2>3. Funcionamento do sistema operacional</h2>
+  <p>O sistema operacional realiza cinco funções básicas:</p>
+  <ul>
+    <li><strong>Interface do usuário:</strong> permite que o usuário interaja com o sistema, utilizando comandos, menus
+      ou interfaces gráficas.</li>
+    <li><strong>Gerenciamento de recursos:</strong> organiza e distribui os recursos do computador, como CPU, memória e
+      dispositivos.</li>
+    <li><strong>Gerenciamento de tarefas:</strong> controla os processos em execução, definindo a ordem e o tempo de uso
+      da CPU.</li>
+    <li><strong>Gerenciamento de arquivos:</strong> organiza, armazena e permite o acesso a arquivos e diretórios no
+      sistema.</li>
+    <li><strong>Serviços de suporte:</strong> oferece utilitários e rotinas de apoio ao funcionamento geral do sistema e
+      aplicativos.</li>
+  </ul>
+
+  <img src="../../imagens/infradeTI/aula5/funcoesSO.png" alt="Funções do sistema operacional" class="imagens">
+  <br>
+  <img src="../../imagens/infradeTI/aula5/funcoeshardware.png"
+    alt="Funções do sistema operacional relacionadas aos dispositivos de hardware do computador" class="imagens">
+
+  <p>Veja o seguinte vídeo para melhor entendimento: <a href="https://youtu.be/ea231joq-jM" target="_blank"
+      rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+  <hr>
+
+  <h2>4. Considerações finais</h2>
+  <p>O sistema operacional é essencial para o funcionamento de qualquer computador. Ele realiza o controle dos recursos
+    e oferece uma interface para que o usuário possa utilizar os programas de forma prática e segura. Também vimos que
+    os componentes kernel e shell organizam suas funções e que o sistema é o responsável pelo funcionamento harmonioso
+    entre hardware e software.</p>
+
+  <hr>
+
+  <nav class="navlink">
+    <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
+    <span>|</span>
+    <a href="infraestruturadetiaula6.html" target="_self" rel="next">Próxima aula</a>
+  </nav>
 </body>
 
 </html>

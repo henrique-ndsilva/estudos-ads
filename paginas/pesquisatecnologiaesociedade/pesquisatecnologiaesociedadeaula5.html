@@ -1,164 +1,180 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 5 - P.T.S.</title>
-</head>
+{% include head-aula.html page-title="Aula 5 - PTS" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="A pesquisa na área acadêmica: dados, informação e conhecimento." %}
 
-    <h1>A pesquisa na área acadêmica: dados, informação e conhecimento.</h1>
-    
-    <hr>
+<p>
+  Este capítulo explora como o conhecimento se materializa na sociedade contemporânea por meio da pesquisa acadêmica.
+  São examinadas as diferenças entre dados, informação e conhecimento, além de discutir a importância da articulação e
+  análise crítica desses elementos. O texto também aborda o papel da linguagem na comunicação do saber e apresenta
+  exemplos práticos – como a análise de dados em redes sociais e do Sistema Nacional de Adoção – para ilustrar a
+  transformação dos dados em informação e, posteriormente, em conhecimento.
+</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+<h2>1. Modos de Conhecer e o Sujeito Cognoscente</h2>
+<p>A pesquisa acadêmica parte do pressuposto de que o ser humano é um sujeito cognoscente, dotado da capacidade de
+  conhecer, interpretar e construir conhecimento. Essa habilidade não depende apenas da experiência sensorial, mas
+  também da reflexão crítica e da razão. </p>
+<p>Um exemplo clássico é o <strong>Mito da Caverna</strong> de Platão, que ilustra como os prisioneiros confinados
+  percebem a realidade apenas por meio das sombras projetadas, tendo um conhecimento superficial. Apenas ao sair da
+  caverna e confrontar o mundo real, o indivíduo pode adquirir um conhecimento mais profundo e verdadeiro.</p>
 
-    <p>
-        Este capítulo explora como o conhecimento se materializa na sociedade contemporânea por meio da pesquisa acadêmica. São examinadas as diferenças entre dados, informação e conhecimento, além de discutir a importância da articulação e análise crítica desses elementos. O texto também aborda o papel da linguagem na comunicação do saber e apresenta exemplos práticos – como a análise de dados em redes sociais e do Sistema Nacional de Adoção – para ilustrar a transformação dos dados em informação e, posteriormente, em conhecimento.
-    </p>
-    
-    <h2>1. Modos de Conhecer e o Sujeito Cognoscente</h2>
-    <p>A pesquisa acadêmica parte do pressuposto de que o ser humano é um sujeito cognoscente, dotado da capacidade de conhecer, interpretar e construir conhecimento. Essa habilidade não depende apenas da experiência sensorial, mas também da reflexão crítica e da razão. </p>
-    <p>Um exemplo clássico é o <strong>Mito da Caverna</strong> de Platão, que ilustra como os prisioneiros confinados percebem a realidade apenas por meio das sombras projetadas, tendo um conhecimento superficial. Apenas ao sair da caverna e confrontar o mundo real, o indivíduo pode adquirir um conhecimento mais profundo e verdadeiro.</p>
+<hr>
 
-    <hr>
-    
-    <h2>2. Dados, Informação e Conhecimento</h2>
-    <p>Este tópico diferencia três níveis essenciais no processo de construção do saber:</p>
-    <ul>
-      <li>
-        <strong>Dados:</strong> São as unidades brutas e isoladas (como números, estatísticas ou registros) que, sem contexto, não possuem significado pleno. Por exemplo, o dado “76% dos brasileiros usam redes sociais para pesquisar produtos” precisa ser interpretado.
-      </li>
-      <li>
-        <strong>Informação:</strong> Surge quando os dados são organizados, comparados e contextualizados com outros indicadores, permitindo revelar padrões e tendências. A partir do dado mencionado, por exemplo, pode-se determinar quais redes sociais são mais efetivas para a pesquisa e quais para a efetivação de compras.
-      </li>
-      <li>
-        <strong>Conhecimento:</strong> É o resultado final da interpretação e articulação crítica das informações. Quando os dados e informações são analisados em conjunto, considerando variáveis como perfil socioeconômico, faixa etária e região, forma-se um conhecimento robusto que pode orientar decisões e políticas.
-      </li>
-    </ul>
-    <p>
-        Um exemplo prático é a análise dos dados do Sistema Nacional de Adoção (SNA) do CNJ, que mostra que, apesar de 59.902 crianças e adolescentes estarem cadastrados, a maioria está em acolhimento institucional e apenas uma fração está disponível para adoção. Além disso, os dados dos pretendentes evidenciam que 93,8% deles não estão vinculados a nenhuma criança, demonstrando a importância de articular múltiplos conjuntos de dados para uma análise abrangente.
-    </p>
+<h2>2. Dados, Informação e Conhecimento</h2>
+<p>Este tópico diferencia três níveis essenciais no processo de construção do saber:</p>
+<ul>
+  <li>
+    <strong>Dados:</strong> São as unidades brutas e isoladas (como números, estatísticas ou registros) que, sem
+    contexto, não possuem significado pleno. Por exemplo, o dado “76% dos brasileiros usam redes sociais para pesquisar
+    produtos” precisa ser interpretado.
+  </li>
+  <li>
+    <strong>Informação:</strong> Surge quando os dados são organizados, comparados e contextualizados com outros
+    indicadores, permitindo revelar padrões e tendências. A partir do dado mencionado, por exemplo, pode-se determinar
+    quais redes sociais são mais efetivas para a pesquisa e quais para a efetivação de compras.
+  </li>
+  <li>
+    <strong>Conhecimento:</strong> É o resultado final da interpretação e articulação crítica das informações. Quando os
+    dados e informações são analisados em conjunto, considerando variáveis como perfil socioeconômico, faixa etária e
+    região, forma-se um conhecimento robusto que pode orientar decisões e políticas.
+  </li>
+</ul>
+<p>
+  Um exemplo prático é a análise dos dados do Sistema Nacional de Adoção (SNA) do CNJ, que mostra que, apesar de 59.902
+  crianças e adolescentes estarem cadastrados, a maioria está em acolhimento institucional e apenas uma fração está
+  disponível para adoção. Além disso, os dados dos pretendentes evidenciam que 93,8% deles não estão vinculados a
+  nenhuma criança, demonstrando a importância de articular múltiplos conjuntos de dados para uma análise abrangente.
+</p>
 
-    <hr>
-    
-    <h2>3. Linguagem e Construção do Conhecimento</h2>
-    <p>A linguagem é o meio fundamental pelo qual os seres humanos comunicam e constroem o conhecimento. Ela organiza dados e informações em discursos que estruturam nossa compreensão do mundo. Baseando-se no modelo de Roman Jakobson, o capítulo destaca os elementos essenciais da comunicação:</p>
-    <ul>
-      <li><strong>Emissor:</strong> Quem gera a mensagem.</li>
-      <li><strong>Receptor:</strong> Quem recebe e interpreta a mensagem.</li>
-      <li><strong>Mensagem:</strong> O conteúdo a ser comunicado.</li>
-      <li><strong>Canal:</strong> O meio pelo qual a mensagem é transmitida (ex.: papel, digital).</li>
-      <li><strong>Código:</strong> O sistema de signos utilizado (como a língua portuguesa).</li>
-      <li><strong>Referente/Contexto:</strong> O assunto ou situação ao qual a mensagem se refere.</li>
-    </ul>
-    
-    <h3>Exemplo Prático: A Nota de Léo para seu Pai</h3>
-    <p>Para ilustrar os elementos da comunicação, o capítulo apresenta um bilhete deixado por um adolescente, Léo, para seu pai:</p>
-    <p><em>"Bom dia, pai!<br>
-       Precisei sair mais cedo hoje.<br>
-       Não esquece de me buscar às 18h na casa da Amanda!<br>
-       Bjus, Léo."</em></p>
-    <p>Esse bilhete pode ser decomposto da seguinte forma:</p>
-    <table>
-      <tr>
-        <th>Elemento</th>
-        <th>Descrição</th>
-      </tr>
-      <tr>
-        <td><strong>Emissor</strong></td>
-        <td>Léo, que escreve a mensagem.</td>
-      </tr>
-      <tr>
-        <td><strong>Receptor</strong></td>
-        <td>Pai, que recebe e interpreta a mensagem.</td>
-      </tr>
-      <tr>
-        <td><strong>Mensagem</strong></td>
-        <td>O aviso de que Léo precisou sair mais cedo e o pedido para ser buscado às 18h.</td>
-      </tr>
-      <tr>
-        <td><strong>Canal</strong></td>
-        <td>O bilhete em papel.</td>
-      </tr>
-      <tr>
-        <td><strong>Código</strong></td>
-        <td>Língua portuguesa.</td>
-      </tr>
-      <tr>
-        <td><strong>Referente/Contexto</strong></td>
-        <td>O horário de saída de Léo e o compromisso do pai de buscá-lo.</td>
-      </tr>
-    </table>
+<hr>
 
-    <hr>
-    
-    <h2>4. Tipos de Conhecimento</h2>
-    <p>O capítulo diferencia os diversos tipos de conhecimento e destaca como cada um se manifesta na prática:</p>
-    <ul>
-      <li>
-        <strong>Conhecimento Filosófico:</strong> Relacionado à epistemologia, ética e lógica, este tipo de saber investiga a natureza, as fontes e os limites do conhecimento.
-      </li>
-      <li>
-        <strong>Conhecimento Teológico ou Religioso:</strong> Baseado em narrativas e mitologias, este saber explica fenômenos a partir de uma perspectiva religiosa ou mítica.
-      </li>
-      <li>
-        <strong>Senso Comum:</strong> É o conhecimento adquirido no cotidiano, baseado em experiências pessoais e compartilhadas pela cultura, mas que carece do rigor científico.
-      </li>
-      <li>
-        <strong>Conhecimento Empírico:</strong> Derivado da experiência sensorial, este tipo de conhecimento utiliza a observação e a experimentação para formular hipóteses, distinguindo-se do senso comum pela sua abordagem sistemática.
-      </li>
-    </ul>
-    <h3>4.1 Conhecimento Científico</h3>
-    <p>O conhecimento científico é produzido por meio de uma metodologia rigorosa e pode ser dividido em:</p>
-    <ul>
-      <li>
-        <strong>Conhecimento Tácito:</strong> Conhecimento adquirido pela prática e experiência, muitas vezes não formalizado, mas essencial para a solução de problemas cotidianos.
-      </li>
-      <li>
-        <strong>Conhecimento Explícito:</strong> Conhecimento formalizado e registrado em manuais, livros e artigos, que pode ser comunicado de forma clara e sistemática.
-      </li>
-    </ul>
+<h2>3. Linguagem e Construção do Conhecimento</h2>
+<p>A linguagem é o meio fundamental pelo qual os seres humanos comunicam e constroem o conhecimento. Ela organiza dados
+  e informações em discursos que estruturam nossa compreensão do mundo. Baseando-se no modelo de Roman Jakobson, o
+  capítulo destaca os elementos essenciais da comunicação:</p>
+<ul>
+  <li><strong>Emissor:</strong> Quem gera a mensagem.</li>
+  <li><strong>Receptor:</strong> Quem recebe e interpreta a mensagem.</li>
+  <li><strong>Mensagem:</strong> O conteúdo a ser comunicado.</li>
+  <li><strong>Canal:</strong> O meio pelo qual a mensagem é transmitida (ex.: papel, digital).</li>
+  <li><strong>Código:</strong> O sistema de signos utilizado (como a língua portuguesa).</li>
+  <li><strong>Referente/Contexto:</strong> O assunto ou situação ao qual a mensagem se refere.</li>
+</ul>
 
-    <hr>
-    
-    <h2>5. Desenvolvimento Científico, Tecnologia e Inovação</h2>
-    <p>O avanço das tecnologias da informação e comunicação ampliou significativamente o volume de dados disponíveis. Essa abundância de dados, porém, também gera desafios, como a disseminação de fake news – informações falsas que se propagam rapidamente. </p>
-    <p>
-        Por isso, o capítulo enfatiza a importância da verificação e validação das informações por meio de ferramentas de checagem, como a Agência Lupa, que ajudam a confirmar a veracidade dos dados antes de serem utilizados na construção do conhecimento. Esse ambiente de constante inovação exige que os pesquisadores estejam atentos à qualidade e à confiabilidade das informações, articulando dados com outros indicadores contextuais para formar um conhecimento robusto.
-    </p>
+<h3>Exemplo Prático: A Nota de Léo para seu Pai</h3>
+<p>Para ilustrar os elementos da comunicação, o capítulo apresenta um bilhete deixado por um adolescente, Léo, para seu
+  pai:</p>
+<p><em>"Bom dia, pai!<br>
+    Precisei sair mais cedo hoje.<br>
+    Não esquece de me buscar às 18h na casa da Amanda!<br>
+    Bjus, Léo."</em></p>
+<p>Esse bilhete pode ser decomposto da seguinte forma:</p>
+<table>
+  <tr>
+    <th>Elemento</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td><strong>Emissor</strong></td>
+    <td>Léo, que escreve a mensagem.</td>
+  </tr>
+  <tr>
+    <td><strong>Receptor</strong></td>
+    <td>Pai, que recebe e interpreta a mensagem.</td>
+  </tr>
+  <tr>
+    <td><strong>Mensagem</strong></td>
+    <td>O aviso de que Léo precisou sair mais cedo e o pedido para ser buscado às 18h.</td>
+  </tr>
+  <tr>
+    <td><strong>Canal</strong></td>
+    <td>O bilhete em papel.</td>
+  </tr>
+  <tr>
+    <td><strong>Código</strong></td>
+    <td>Língua portuguesa.</td>
+  </tr>
+  <tr>
+    <td><strong>Referente/Contexto</strong></td>
+    <td>O horário de saída de Léo e o compromisso do pai de buscá-lo.</td>
+  </tr>
+</table>
 
-    <hr>
-    
-    <h2>6. Integração e Complexidade na Construção do Saber</h2>
-    <p>A pesquisa acadêmica é um processo complexo que integra a coleta de dados, a organização das informações e sua interpretação crítica. Dados isolados ganham significado quando articulados em conjunto e analisados à luz de múltiplos contextos – seja no caso das redes sociais ou dos sistemas de adoção.</p>
-    <p>Essa articulação permite a transformação dos dados em informação e, por fim, em conhecimento, que pode orientar decisões, políticas e práticas acadêmicas e sociais.</p>
+<hr>
 
-    <hr>
-    
-    <h2>7. Considerações Finais</h2>
-    <p>Em suma, o capítulo demonstra que o conhecimento na pesquisa acadêmica é construído por meio de um processo multifacetado que envolve:</p>
-    <ul>
-      <li>A coleta e a interpretação de dados brutos;</li>
-      <li>A organização desses dados em informação relevante por meio da análise contextual;</li>
-      <li>A construção de conhecimento fundamentado na articulação crítica e na verificação empírica;</li>
-      <li>E o uso da linguagem como ferramenta para comunicar e estruturar esse saber.</li>
-    </ul>
-    <p>Compreender essa dinâmica é essencial para a produção de pesquisas científicas robustas que respondam de maneira eficaz às demandas e desafios da sociedade contemporânea.</p>
+<h2>4. Tipos de Conhecimento</h2>
+<p>O capítulo diferencia os diversos tipos de conhecimento e destaca como cada um se manifesta na prática:</p>
+<ul>
+  <li>
+    <strong>Conhecimento Filosófico:</strong> Relacionado à epistemologia, ética e lógica, este tipo de saber investiga
+    a natureza, as fontes e os limites do conhecimento.
+  </li>
+  <li>
+    <strong>Conhecimento Teológico ou Religioso:</strong> Baseado em narrativas e mitologias, este saber explica
+    fenômenos a partir de uma perspectiva religiosa ou mítica.
+  </li>
+  <li>
+    <strong>Senso Comum:</strong> É o conhecimento adquirido no cotidiano, baseado em experiências pessoais e
+    compartilhadas pela cultura, mas que carece do rigor científico.
+  </li>
+  <li>
+    <strong>Conhecimento Empírico:</strong> Derivado da experiência sensorial, este tipo de conhecimento utiliza a
+    observação e a experimentação para formular hipóteses, distinguindo-se do senso comum pela sua abordagem
+    sistemática.
+  </li>
+</ul>
+<h3>4.1 Conhecimento Científico</h3>
+<p>O conhecimento científico é produzido por meio de uma metodologia rigorosa e pode ser dividido em:</p>
+<ul>
+  <li>
+    <strong>Conhecimento Tácito:</strong> Conhecimento adquirido pela prática e experiência, muitas vezes não
+    formalizado, mas essencial para a solução de problemas cotidianos.
+  </li>
+  <li>
+    <strong>Conhecimento Explícito:</strong> Conhecimento formalizado e registrado em manuais, livros e artigos, que
+    pode ser comunicado de forma clara e sistemática.
+  </li>
+</ul>
 
-    <hr>
+<hr>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="pesquisatecnologiaesociedadeaula6.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<h2>5. Desenvolvimento Científico, Tecnologia e Inovação</h2>
+<p>O avanço das tecnologias da informação e comunicação ampliou significativamente o volume de dados disponíveis. Essa
+  abundância de dados, porém, também gera desafios, como a disseminação de fake news – informações falsas que se
+  propagam rapidamente. </p>
+<p>
+  Por isso, o capítulo enfatiza a importância da verificação e validação das informações por meio de ferramentas de
+  checagem, como a Agência Lupa, que ajudam a confirmar a veracidade dos dados antes de serem utilizados na construção
+  do conhecimento. Esse ambiente de constante inovação exige que os pesquisadores estejam atentos à qualidade e à
+  confiabilidade das informações, articulando dados com outros indicadores contextuais para formar um conhecimento
+  robusto.
+</p>
 
-</html>
+<hr>
+
+<h2>6. Integração e Complexidade na Construção do Saber</h2>
+<p>A pesquisa acadêmica é um processo complexo que integra a coleta de dados, a organização das informações e sua
+  interpretação crítica. Dados isolados ganham significado quando articulados em conjunto e analisados à luz de
+  múltiplos contextos – seja no caso das redes sociais ou dos sistemas de adoção.</p>
+<p>Essa articulação permite a transformação dos dados em informação e, por fim, em conhecimento, que pode orientar
+  decisões, políticas e práticas acadêmicas e sociais.</p>
+
+<hr>
+
+<h2>7. Considerações Finais</h2>
+<p>Em suma, o capítulo demonstra que o conhecimento na pesquisa acadêmica é construído por meio de um processo
+  multifacetado que envolve:</p>
+<ul>
+  <li>A coleta e a interpretação de dados brutos;</li>
+  <li>A organização desses dados em informação relevante por meio da análise contextual;</li>
+  <li>A construção de conhecimento fundamentado na articulação crítica e na verificação empírica;</li>
+  <li>E o uso da linguagem como ferramenta para comunicar e estruturar esse saber.</li>
+</ul>
+<p>Compreender essa dinâmica é essencial para a produção de pesquisas científicas robustas que respondam de maneira
+  eficaz às demandas e desafios da sociedade contemporânea.</p>
+
+{% include nav-aula.html materia="pesquisatecnologiaesociedade" aula="6" %}
+{% include footer.html %}

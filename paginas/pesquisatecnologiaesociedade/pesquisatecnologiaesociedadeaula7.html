@@ -1,123 +1,154 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 7 - P.T.S.</title>
-</head>
+{% include head-aula.html page-title="Aula 7 - PTS" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Metodologia da Pesquisa." %}
 
-    <h1>Metodologia da Pesquisa.</h1>
-    
-    <hr>
+<p>
+  Este capítulo apresenta a importância da definição da metodologia para a realização de uma pesquisa acadêmica. Após
+  a escolha do objeto de estudo, torna-se fundamental delinear de forma clara e precisa os procedimentos para coletar,
+  organizar e analisar os dados, a fim de transformar a investigação em conhecimento científico. O capítulo explora as
+  inúmeras abordagens metodológicas, detalhando tanto aspectos históricos quanto os instrumentos técnicos disponíveis
+  para a pesquisa.
+</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+<h2>1. Conceito de Metodologia na Construção do Conhecimento Científico</h2>
+<p>A palavra “método” tem origem no grego <em>methodos</em>, que significa “alcançar uma meta por meio de um caminho
+  (hodos)”. A metodologia é, portanto, o passo a passo que orienta a coleta e a análise dos dados, evitando que a
+  pesquisa se resuma a improvisos que possam comprometer os resultados.</p>
+<p>Cronologicamente, o método científico evoluiu ao longo do tempo. Sua origem remonta à Grécia Antiga – onde o uso da
+  razão permitia transcender as aparências superficiais – e passou por reformulações durante a Modernidade (com o
+  surgimento do racionalismo e do empirismo) até chegar à abordagem contemporânea. Em resumo, o percurso metodológico
+  pode ser representado da seguinte forma:</p>
+<p>Definir o problema → Realizar um levantamento bibliográfico → Formular uma hipótese → Estabelecer a metodologia de
+  trabalho → Determinar o material a ser analisado → Analisar os resultados → Delinear as conclusões</p>
+<p>Essa linha do tempo reflete a sistematização necessária para que uma pesquisa seja conduzida de forma rigorosa.</p>
 
-    <p>
-        Este capítulo apresenta a importância da definição da metodologia para a realização de uma pesquisa acadêmica. Após a escolha do objeto de estudo, torna-se fundamental delinear de forma clara e precisa os procedimentos para coletar, organizar e analisar os dados, a fim de transformar a investigação em conhecimento científico. O capítulo explora as inúmeras abordagens metodológicas, detalhando tanto aspectos históricos quanto os instrumentos técnicos disponíveis para a pesquisa.
-    </p>
-    
-    <h2>1. Conceito de Metodologia na Construção do Conhecimento Científico</h2>
-    <p>A palavra “método” tem origem no grego <em>methodos</em>, que significa “alcançar uma meta por meio de um caminho (hodos)”. A metodologia é, portanto, o passo a passo que orienta a coleta e a análise dos dados, evitando que a pesquisa se resuma a improvisos que possam comprometer os resultados.</p>
-    <p>Cronologicamente, o método científico evoluiu ao longo do tempo. Sua origem remonta à Grécia Antiga – onde o uso da razão permitia transcender as aparências superficiais – e passou por reformulações durante a Modernidade (com o surgimento do racionalismo e do empirismo) até chegar à abordagem contemporânea. Em resumo, o percurso metodológico pode ser representado da seguinte forma:</p>
-    <p>Definir o problema → Realizar um levantamento bibliográfico → Formular uma hipótese → Estabelecer a metodologia de trabalho → Determinar o material a ser analisado → Analisar os resultados → Delinear as conclusões</p>
-    <p>Essa linha do tempo reflete a sistematização necessária para que uma pesquisa seja conduzida de forma rigorosa.</p>
+<hr>
 
-    <hr>
-    
-    <h2>2. Abordagens da Pesquisa</h2>
-    <p>A escolha da metodologia está diretamente relacionada aos objetivos e à natureza da pesquisa, o que define a forma de abordagem. Essa escolha impacta a forma como os dados serão coletados e analisados, e pode variar conforme o recorte teórico e a finalidade do estudo.</p>
-    
-    <h3>2.1 Pesquisa Básica vs. Pesquisa Aplicada</h3>
-    <p><strong>Pesquisa Básica:</strong> Foca na análise de conceitos e na construção do conhecimento sem uma aplicação imediata, servindo como base teórica para entender os fenômenos.</p>
-    <p><strong>Pesquisa Aplicada:</strong> Tem como objetivo a solução de problemas práticos. Por exemplo, testes para avaliar a eficácia de vacinas exigem uma abordagem aplicada, onde os resultados têm implicações diretas na saúde pública.</p>
-    
-    <h3>2.2 Natureza da Pesquisa: Exploratória, Descritiva e Explicativa</h3>
-    <p>As pesquisas podem ser classificadas de acordo com seus objetivos:</p>
-    <ul>
-      <li>
-        <strong>Pesquisa Exploratória:</strong> Destinada a investigar e levantar hipóteses sobre um fenômeno pouco estudado. Exemplo: explorar como os brasileiros se comportam nas redes sociais.
-      </li>
-      <li>
-        <strong>Pesquisa Descritiva:</strong> Foca na descrição detalhada de um fenômeno, apresentando suas características sem aprofundar suas causas.
-      </li>
-      <li>
-        <strong>Pesquisa Explicativa:</strong> Procura identificar as causas e relações entre os fenômenos, explicando por que e como eles ocorrem.
-      </li>
-    </ul>
-    
-    <h3>2.3 Abordagem Quantitativa vs. Qualitativa</h3>
-    <p><strong>Abordagem Quantitativa:</strong> Concentra-se na quantificação dos dados e na análise estatística, utilizando instrumentos como questionários para medir comportamentos, opiniões e preferências. Exemplo: pesquisas de mercado que medem o uso do Instagram com indicadores numéricos e margem de erro definida.</p>
-    <p><strong>Abordagem Qualitativa:</strong> Busca compreender a profundidade dos fenômenos através de métodos que enfatizam a experiência e a subjetividade, como entrevistas e grupos focais. Exemplo: estudos sobre a maternidade que exploram as experiências pessoais das mulheres e os significados atribuídos ao tema.</p>
+<h2>2. Abordagens da Pesquisa</h2>
+<p>A escolha da metodologia está diretamente relacionada aos objetivos e à natureza da pesquisa, o que define a forma
+  de abordagem. Essa escolha impacta a forma como os dados serão coletados e analisados, e pode variar conforme o
+  recorte teórico e a finalidade do estudo.</p>
 
-    <hr>
-    
-    <h2>3. Tipos de Instrumentos Metodológicos</h2>
-    <p>Diversos instrumentos podem ser empregados para coletar e analisar dados:</p>
-    <ul>
-      <li>
-        <strong>Pesquisa Bibliográfica:</strong> Análise de material teórico (livros, artigos, revistas) para fundamentar a pesquisa com base em estudos prévios.
-      </li>
-      <li>
-        <strong>Pesquisa Documental:</strong> Estudo de fontes primárias, como documentos históricos e registros, que fornecem informações originais para a investigação.
-      </li>
-      <li>
-        <strong>Questionário:</strong> Instrumento estruturado para a coleta de dados quantitativos, permitindo a mensuração de indicadores e opiniões. Exemplo: questionários aplicados para avaliar a satisfação do consumidor ou o comportamento nas redes sociais.
-      </li>
-      <li>
-        <strong>Entrevista:</strong> Método qualitativo que possibilita uma compreensão profunda dos fenômenos por meio de conversas estruturadas ou semiestruturadas. Exemplo: entrevistas com mães para estudar aspectos subjetivos da maternidade.
-      </li>
-      <li>
-        <strong>Observação:</strong> Pode ser direta (o pesquisador coleta dados pessoalmente no ambiente) ou indireta (análise de materiais como vídeos, fotos e documentos), útil para estudar comportamentos e contextos sem interferência ativa.
-      </li>
-    </ul>
+<h3>2.1 Pesquisa Básica vs. Pesquisa Aplicada</h3>
+<p><strong>Pesquisa Básica:</strong> Foca na análise de conceitos e na construção do conhecimento sem uma aplicação
+  imediata, servindo como base teórica para entender os fenômenos.</p>
+<p><strong>Pesquisa Aplicada:</strong> Tem como objetivo a solução de problemas práticos. Por exemplo, testes para
+  avaliar a eficácia de vacinas exigem uma abordagem aplicada, onde os resultados têm implicações diretas na saúde
+  pública.</p>
 
-    <hr>
-    
-    <h2>4. Referências Complementares e Exemplos Práticos</h2>
-    <p>O capítulo apresenta diversos exemplos práticos que ilustram a aplicação das metodologias:</p>
-    <ul>
-      <li>
-        <strong>Estudo do Perfil do Escritor Brasileiro:</strong> Uma pesquisa que analisou 692 romances de 383 autores, dividida em três períodos, para identificar características como etnia, gênero, escolaridade, profissão, região e idade. Os resultados indicaram que a maioria dos autores é homem, branco, possui ensino superior, e que o eixo Rio-São Paulo é o principal centro de produção literária. Essa análise revela como os dados podem ser articulados para formar conhecimento sobre fenômenos culturais.
-      </li>
-      <li>
-        <strong>Pesquisa Eleitoral:</strong> Demonstra a aplicação da amostragem probabilística para representar uma população. A seleção dos entrevistados deve respeitar critérios como distribuição por gênero, faixa etária e região, garantindo que os resultados reflitam a diversidade do eleitorado, embora sempre existam margens de erro.
-      </li>
-      <li>
-        <strong>Abordagem Quantitativa nas Redes Sociais:</strong> Utilização de questionários para coletar dados sobre o uso do Instagram, com indicadores que mostram, por exemplo, que 65% dos usuários o utilizam para visualizar fotos de amigos. Esses dados são obtidos a partir de amostras representativas, permitindo análises estatísticas precisas.
-      </li>
-      <li>
-        <strong>Abordagem Qualitativa em Estudos de Maternidade:</strong> Pesquisa realizada por meio de entrevistas para explorar as experiências subjetivas das mulheres em relação à maternidade, destacando temas como a pressão social e o arrependimento, e possibilitando uma análise profunda dos sentimentos e das relações interpessoais.
-      </li>
-      <li>
-        <strong>Pesquisa Documental:</strong> Análise de fontes primárias, como cartas, documentos históricos e registros, que possibilitam a reconstrução de trajetórias e a formulação de hipóteses sobre fenômenos históricos. Um exemplo clássico é o estudo da existência e dos escritos do poeta Homero, baseado em referências indiretas presentes em documentos antigos.
-      </li>
-      <li>
-        <strong>Observação Direta e Indireta:</strong> No documentário "Bebês" de Thomas Balmès, a equipe filmou o desenvolvimento infantil em diferentes partes do mundo, demonstrando como a observação pode revelar variações culturais significativas. Já a observação indireta pode ser utilizada para analisar conteúdos já existentes, como vídeos e fotos, sem que o pesquisador precise estar presente no ambiente original.
-      </li>
-    </ul>
+<h3>2.2 Natureza da Pesquisa: Exploratória, Descritiva e Explicativa</h3>
+<p>As pesquisas podem ser classificadas de acordo com seus objetivos:</p>
+<ul>
+  <li>
+    <strong>Pesquisa Exploratória:</strong> Destinada a investigar e levantar hipóteses sobre um fenômeno pouco
+    estudado. Exemplo: explorar como os brasileiros se comportam nas redes sociais.
+  </li>
+  <li>
+    <strong>Pesquisa Descritiva:</strong> Foca na descrição detalhada de um fenômeno, apresentando suas
+    características sem aprofundar suas causas.
+  </li>
+  <li>
+    <strong>Pesquisa Explicativa:</strong> Procura identificar as causas e relações entre os fenômenos, explicando por
+    que e como eles ocorrem.
+  </li>
+</ul>
 
-    <hr>
-    
-    <h2>5. Considerações Finais</h2>
-    <p>
-        O capítulo evidencia que a definição da metodologia é um elemento crucial na pesquisa acadêmica, pois determina como os dados serão coletados, organizados e analisados para se transformar em conhecimento. A escolha da abordagem – seja básica ou aplicada, exploratória, descritiva ou explicativa – e a decisão entre métodos quantitativos ou qualitativos impactam diretamente na confiabilidade e na relevância dos resultados.
-    </p>
-    <p>A integração de diversos instrumentos metodológicos – pesquisa bibliográfica, documental, questionário, entrevista e observação – permite ao pesquisador abordar o fenômeno de forma abrangente e aprofundada. Assim, a produção de conhecimento científico passa a ser fruto de um processo rigoroso e sistemático, capaz de responder de maneira eficaz às demandas da sociedade contemporânea.</p>
+<h3>2.3 Abordagem Quantitativa vs. Qualitativa</h3>
+<p><strong>Abordagem Quantitativa:</strong> Concentra-se na quantificação dos dados e na análise estatística,
+  utilizando instrumentos como questionários para medir comportamentos, opiniões e preferências. Exemplo: pesquisas de
+  mercado que medem o uso do Instagram com indicadores numéricos e margem de erro definida.</p>
+<p><strong>Abordagem Qualitativa:</strong> Busca compreender a profundidade dos fenômenos através de métodos que
+  enfatizam a experiência e a subjetividade, como entrevistas e grupos focais. Exemplo: estudos sobre a maternidade
+  que exploram as experiências pessoais das mulheres e os significados atribuídos ao tema.</p>
 
-    <hr>
+<hr>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="pesquisatecnologiaesociedadeaula8.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<h2>3. Tipos de Instrumentos Metodológicos</h2>
+<p>Diversos instrumentos podem ser empregados para coletar e analisar dados:</p>
+<ul>
+  <li>
+    <strong>Pesquisa Bibliográfica:</strong> Análise de material teórico (livros, artigos, revistas) para fundamentar
+    a pesquisa com base em estudos prévios.
+  </li>
+  <li>
+    <strong>Pesquisa Documental:</strong> Estudo de fontes primárias, como documentos históricos e registros, que
+    fornecem informações originais para a investigação.
+  </li>
+  <li>
+    <strong>Questionário:</strong> Instrumento estruturado para a coleta de dados quantitativos, permitindo a
+    mensuração de indicadores e opiniões. Exemplo: questionários aplicados para avaliar a satisfação do consumidor ou
+    o comportamento nas redes sociais.
+  </li>
+  <li>
+    <strong>Entrevista:</strong> Método qualitativo que possibilita uma compreensão profunda dos fenômenos por meio de
+    conversas estruturadas ou semiestruturadas. Exemplo: entrevistas com mães para estudar aspectos subjetivos da
+    maternidade.
+  </li>
+  <li>
+    <strong>Observação:</strong> Pode ser direta (o pesquisador coleta dados pessoalmente no ambiente) ou indireta
+    (análise de materiais como vídeos, fotos e documentos), útil para estudar comportamentos e contextos sem
+    interferência ativa.
+  </li>
+</ul>
 
-</html>
+<hr>
+
+<h2>4. Referências Complementares e Exemplos Práticos</h2>
+<p>O capítulo apresenta diversos exemplos práticos que ilustram a aplicação das metodologias:</p>
+<ul>
+  <li>
+    <strong>Estudo do Perfil do Escritor Brasileiro:</strong> Uma pesquisa que analisou 692 romances de 383 autores,
+    dividida em três períodos, para identificar características como etnia, gênero, escolaridade, profissão, região e
+    idade. Os resultados indicaram que a maioria dos autores é homem, branco, possui ensino superior, e que o eixo
+    Rio-São Paulo é o principal centro de produção literária. Essa análise revela como os dados podem ser articulados
+    para formar conhecimento sobre fenômenos culturais.
+  </li>
+  <li>
+    <strong>Pesquisa Eleitoral:</strong> Demonstra a aplicação da amostragem probabilística para representar uma
+    população. A seleção dos entrevistados deve respeitar critérios como distribuição por gênero, faixa etária e
+    região, garantindo que os resultados reflitam a diversidade do eleitorado, embora sempre existam margens de erro.
+  </li>
+  <li>
+    <strong>Abordagem Quantitativa nas Redes Sociais:</strong> Utilização de questionários para coletar dados sobre o
+    uso do Instagram, com indicadores que mostram, por exemplo, que 65% dos usuários o utilizam para visualizar fotos
+    de amigos. Esses dados são obtidos a partir de amostras representativas, permitindo análises estatísticas
+    precisas.
+  </li>
+  <li>
+    <strong>Abordagem Qualitativa em Estudos de Maternidade:</strong> Pesquisa realizada por meio de entrevistas para
+    explorar as experiências subjetivas das mulheres em relação à maternidade, destacando temas como a pressão social
+    e o arrependimento, e possibilitando uma análise profunda dos sentimentos e das relações interpessoais.
+  </li>
+  <li>
+    <strong>Pesquisa Documental:</strong> Análise de fontes primárias, como cartas, documentos históricos e registros,
+    que possibilitam a reconstrução de trajetórias e a formulação de hipóteses sobre fenômenos históricos. Um exemplo
+    clássico é o estudo da existência e dos escritos do poeta Homero, baseado em referências indiretas presentes em
+    documentos antigos.
+  </li>
+  <li>
+    <strong>Observação Direta e Indireta:</strong> No documentário "Bebês" de Thomas Balmès, a equipe filmou o
+    desenvolvimento infantil em diferentes partes do mundo, demonstrando como a observação pode revelar variações
+    culturais significativas. Já a observação indireta pode ser utilizada para analisar conteúdos já existentes, como
+    vídeos e fotos, sem que o pesquisador precise estar presente no ambiente original.
+  </li>
+</ul>
+
+<hr>
+
+<h2>5. Considerações Finais</h2>
+<p>
+  O capítulo evidencia que a definição da metodologia é um elemento crucial na pesquisa acadêmica, pois determina como
+  os dados serão coletados, organizados e analisados para se transformar em conhecimento. A escolha da abordagem –
+  seja básica ou aplicada, exploratória, descritiva ou explicativa – e a decisão entre métodos quantitativos ou
+  qualitativos impactam diretamente na confiabilidade e na relevância dos resultados.
+</p>
+<p>A integração de diversos instrumentos metodológicos – pesquisa bibliográfica, documental, questionário, entrevista
+  e observação – permite ao pesquisador abordar o fenômeno de forma abrangente e aprofundada. Assim, a produção de
+  conhecimento científico passa a ser fruto de um processo rigoroso e sistemático, capaz de responder de maneira
+  eficaz às demandas da sociedade contemporânea.</p>
+
+{% include nav-aula.html materia="pesquisatecnologiaesociedade" aula="8" %}
+{% include footer.html %}

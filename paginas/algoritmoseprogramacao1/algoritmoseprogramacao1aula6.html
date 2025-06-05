@@ -1,78 +1,72 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 6 - AeP</title>
-</head>
+{% include head-aula.html page-title="Aula 6 - AeP" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Estruturas Condicionais." %}
 
-    <h1>Estruturas Condicionais.</h1>
-    
-    <hr>
+<h2>1. Fluxo Linear e a Necessidade de Decisão</h2>
+<p>Considere o seguinte código, onde a execução é linear:</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
-
-    <p>Este capítulo explora como os programas tomam decisões durante a execução, alterando o fluxo do código de acordo com condições avaliadas. Embora o código seja lido linha por linha, estruturas condicionais permitem que o programa desvie do fluxo linear, possibilitando respostas dinâmicas a diferentes cenários, como aprovar ou reprovar um aluno.</p>
-    <p>Além da simples sequência de execução, o uso de condições possibilita que o programa execute blocos específicos conforme o resultado das comparações.</p>
-    
-    <h2>1. Fluxo Linear e a Necessidade de Decisão</h2>
-    <p>Considere o seguinte código, onde a execução é linear:</p>
-    
-    <pre class="code">
+<pre class="code">
 1  double avaliacao1, avaliacao2, media;
 2  avaliacao1 = 10;
 3  avaliacao2 = 5;
 4  media = (avaliacao1 + avaliacao2) / 2;
 5  Console.WriteLine("A média do aluno é {0}", media);</pre>
-    <p>A execução deste código ocorre da seguinte forma:</p>
-    <ul>
-        <li><strong>Em 1:</strong> Declaração de variáveis.</li>
-        <li><strong>Em 2:</strong> Atribuição do valor 10 à variável <code>avaliacao1</code>.</li>
-        <li><strong>Em 3:</strong> Atribuição do valor 5 à variável <code>avaliacao2</code>.</li>
-        <li><strong>Em 4:</strong> Cálculo da média e armazenamento do resultado (7,5) na variável <code>media</code>.</li>
-        <li><strong>Em 5:</strong> Exibição da média no console.</li>
-    </ul>
-    <p>Entretanto, se quisermos que o programa tome decisões – como indicar se o aluno está aprovado ou reprovado – precisamos que o fluxo seja alterado com uma estrutura condicional.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula6/fluxogramacondicionais.png" alt="Fluxograma com estrutura condicional" class="imagens">
-    <p>
-        Na Figura 1, o fluxograma ilustra como o programa desvia do fluxo linear. O losango indica a condição que deve ser avaliada (por exemplo, se a média for maior que 6). Se a condição for atendida, o fluxo segue para o bloco que exibe "Aluno Aprovado"; se não, segue para o bloco que exibe "Aluno Reprovado". Essa representação gráfica exemplifica como decisões podem direcionar o programa para caminhos distintos.
-    </p>
+<p>A execução deste código ocorre da seguinte forma:</p>
+<ul>
+    <li><strong>Em 1:</strong> Declaração de variáveis.</li>
+    <li><strong>Em 2:</strong> Atribuição do valor 10 à variável <code>avaliacao1</code>.</li>
+    <li><strong>Em 3:</strong> Atribuição do valor 5 à variável <code>avaliacao2</code>.</li>
+    <li><strong>Em 4:</strong> Cálculo da média e armazenamento do resultado (7,5) na variável <code>media</code>.
+    </li>
+    <li><strong>Em 5:</strong> Exibição da média no console.</li>
+</ul>
+<p>Entretanto, se quisermos que o programa tome decisões – como indicar se o aluno está aprovado ou reprovado –
+    precisamos que o fluxo seja alterado com uma estrutura condicional.</p>
+<img src="../../imagens/algoritmoseprogramacao/aula6/fluxogramacondicionais.png"
+    alt="Fluxograma com estrutura condicional" class="imagens">
+<p>
+    Na Figura 1, o fluxograma ilustra como o programa desvia do fluxo linear. O losango indica a condição que deve
+    ser avaliada (por exemplo, se a média for maior que 6). Se a condição for atendida, o fluxo segue para o bloco
+    que exibe "Aluno Aprovado"; se não, segue para o bloco que exibe "Aluno Reprovado". Essa representação gráfica
+    exemplifica como decisões podem direcionar o programa para caminhos distintos.
+</p>
 
-    <hr>
-    
-    <h2>2. Estruturas Condicionais</h2>
-    <p>Estruturas condicionais são comandos que avaliam expressões e, com base no resultado (true ou false), direcionam o fluxo para diferentes blocos de código.</p>
-    
-    <h3>2.1 Estrutura condicional: if</h3>
-    <p>A instrução <code>if</code> avalia a condição entre parênteses. Se essa condição for verdadeira, o bloco de código dentro das chaves é executado; se falsa, o bloco é ignorado.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula6/condicional_if.png" alt="Estrutura condicional if" class="imagens">
-    <br>
-    <pre class="code">
+<hr>
+
+<h2>2. Estruturas Condicionais</h2>
+<p>Estruturas condicionais são comandos que avaliam expressões e, com base no resultado (true ou false), direcionam
+    o fluxo para diferentes blocos de código.</p>
+
+<h3>2.1 Estrutura condicional: if</h3>
+<p>A instrução <code>if</code> avalia a condição entre parênteses. Se essa condição for verdadeira, o bloco de
+    código dentro das chaves é executado; se falsa, o bloco é ignorado.</p>
+<img src="../../imagens/algoritmoseprogramacao/aula6/condicional_if.png" alt="Estrutura condicional if" class="imagens">
+<br>
+<pre class="code">
 1  int saldo;
 2  saldo = 100;
 3
 4  if(saldo > 0){
 5      Console.WriteLine("Seu saldo é positivo");
 6  }</pre>
-    <p>Fluxo:</p>
-    <ul>
-        <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = 100).</li>
-        <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; como a condição é verdadeira, o bloco do <code>if</code> é executado.</li>
-        <li><strong>Linha 5:</strong> Exibe a mensagem "Seu saldo é positivo".</li>
-    </ul>
-    
-    <h3>2.2 Estrutura condicional: if/else</h3>
-    <p>A estrutura <code>if/else</code> permite definir uma ação alternativa caso a condição inicial seja falsa.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula6/condicional_ifelse.png" alt="Estrutura condicional if/else" class="imagens">
-    <br>
-    <pre class="code">
+<p>Fluxo:</p>
+<ul>
+    <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = 100).</li>
+    <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; como a condição é verdadeira, o bloco do
+        <code>if</code> é executado.
+    </li>
+    <li><strong>Linha 5:</strong> Exibe a mensagem "Seu saldo é positivo".</li>
+</ul>
+
+<h3>2.2 Estrutura condicional: if/else</h3>
+<p>A estrutura <code>if/else</code> permite definir uma ação alternativa caso a condição inicial seja falsa.</p>
+<img src="../../imagens/algoritmoseprogramacao/aula6/condicional_ifelse.png" alt="Estrutura condicional if/else"
+    class="imagens">
+<br>
+<pre class="code">
 1  int saldo;
 2  saldo = -100;
 3  
@@ -82,18 +76,22 @@
 7  else{
 8      Console.WriteLine("Seu saldo é negativo");
 9  }</pre>
-    <p>Fluxo:</p>
-    <ul>
-        <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = -100).</li>
-        <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; condição falsa.</li>
-        <li><strong>Linha 7-9:</strong> Executa o bloco do <code>else</code> e exibe "Seu saldo é negativo".</li>
-    </ul>
-    
-    <h3>2.3 Estrutura condicional: if/else if/else</h3>
-    <p>Quando há mais de duas possibilidades, utiliza-se a estrutura <code>if/else if/else</code> para testar múltiplas condições. Se a primeira condição for falsa, o programa verifica a seguinte; se todas forem falsas, o bloco <code>else</code> é executado.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula6/condicional_ifelseifelse.png" alt="Estrutura condicional if/else if/else" class="imagens">
-    <br>
-    <pre class="code">
+<p>Fluxo:</p>
+<ul>
+    <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = -100).</li>
+    <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; condição falsa.</li>
+    <li><strong>Linha 7-9:</strong> Executa o bloco do <code>else</code> e exibe "Seu saldo é negativo".</li>
+</ul>
+
+<h3>2.3 Estrutura condicional: if/else if/else</h3>
+<p>Quando há mais de duas possibilidades, utiliza-se a estrutura <code>if/else if/else</code> para testar múltiplas
+    condições. Se a primeira condição for falsa, o programa verifica a seguinte; se todas forem falsas, o bloco
+    <code>else</code> é executado.
+</p>
+<img src="../../imagens/algoritmoseprogramacao/aula6/condicional_ifelseifelse.png"
+    alt="Estrutura condicional if/else if/else" class="imagens">
+<br>
+<pre class="code">
 1  int saldo;
 2  saldo = -100;
 3  
@@ -106,131 +104,151 @@
 10 else{
 11     Console.WriteLine("Seu saldo está zerado");
 12 }</pre>
-    <p>Fluxo:</p>
-    <ul>
-        <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = -100).</li>
-        <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; condição falsa.</li>
-        <li><strong>Linha 7:</strong> Verifica se o saldo é menor que zero; condição verdadeira, logo, a linha 8 é executada e exibe "Seu saldo é negativo".</li>
-        <li>Se o saldo fosse igual a zero, o bloco <code>else</code> (linhas 10-12) seria executado, exibindo "Seu saldo está zerado".</li>
-    </ul>
+<p>Fluxo:</p>
+<ul>
+    <li><strong>Linha 1-2:</strong> Declaração e atribuição (saldo = -100).</li>
+    <li><strong>Linha 4:</strong> Verifica se o saldo é maior que zero; condição falsa.</li>
+    <li><strong>Linha 7:</strong> Verifica se o saldo é menor que zero; condição verdadeira, logo, a linha 8 é
+        executada e exibe "Seu saldo é negativo".</li>
+    <li>Se o saldo fosse igual a zero, o bloco <code>else</code> (linhas 10-12) seria executado, exibindo "Seu saldo
+        está zerado".</li>
+</ul>
 
-    <hr>
-    
-    <h2>3. Expressões Relacionais e Lógicas</h2>
-    <p>As decisões em um programa dependem da avaliação de expressões. Estas expressões podem ser:</p>
-    <ul>
-      <li><strong>Relacionais ou de comparação:</strong> Comparam valores usando operadores como <code>></code>, <code><</code>, <code>>=</code>, <code><=</code>, <code>==</code> e <code>!=</code>, e retornam <strong>true</strong> ou <strong>false</strong>.</li>
-      <li><strong>Lógicas:</strong> Combinam expressões usando <code>&amp;&amp;</code> (E), <code>||</code> (OU) e <code>!</code> (negação) para construir condições mais complexas.</li>
-    </ul>
-    <p>Exemplo de verificação de ano bissexto:</p>
-    <code>
+<hr>
+
+<h2>3. Expressões Relacionais e Lógicas</h2>
+<p>As decisões em um programa dependem da avaliação de expressões. Estas expressões podem ser:</p>
+<ul>
+    <li><strong>Relacionais ou de comparação:</strong> Comparam valores usando operadores como <code>></code>,
+        <code><</code>, <code>>=</code>, <code><=</code>, <code>==</code> e <code>!=</code>, e retornam
+        <strong>true</strong> ou <strong>false</strong>.
+    </li>
+    <li><strong>Lógicas:</strong> Combinam expressões usando <code>&amp;&amp;</code> (E), <code>||</code> (OU) e
+        <code>!</code> (negação) para construir condições mais complexas.
+    </li>
+</ul>
+<p>Exemplo de verificação de ano bissexto:</p>
+<code>
         resultado = (ano % 4 == 0) && (ano % 100 > 0) || (ano % 400 == 0);
     </code>
-    <p>Essa expressão retorna <strong>true</strong> se o ano for bissexto e <strong>false</strong> caso contrário.</p>
-    <p><strong>Quadro 1 – Operadores de comparação e lógicos</strong>:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Operador de Comparação</th>
-                <th>Operador Lógico</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>&gt; (maior)</td>
-                <td>&amp;&amp; (E)</td>
-            </tr>
-            <tr>
-                <td>&lt; (menor)</td>
-                <td>|| (OU)</td>
-            </tr>
-            <tr>
-                <td>&gt;= (maior ou igual)</td>
-                <td>! (negação)</td>
-            </tr>
-            <tr>
-                <td>&lt;= (menor ou igual)</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>== (igual)</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>!= (diferente)</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    <p><strong>Explicação do Quadro 1:</strong> 
-        Esta tabela apresenta os principais operadores de comparação e os operadores lógicos usados para compor expressões condicionais. Os operadores de comparação, como <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code> e <code>!=</code>, determinam relações entre valores, enquanto os operadores lógicos, como <code>&amp;&amp;</code> (E), <code>||</code> (OU) e <code>!</code> (negação), permitem combinar múltiplas condições para formar expressões mais complexas. Note que o operador <code>&amp;&amp;</code> retorna <code>true</code> somente se ambas as condições forem verdadeiras, e o operador <code>||</code> retorna <code>true</code> se pelo menos uma condição for verdadeira.
-    </p>
-    <p><strong>Quadro 2 – Exemplo de expressões relacionais e lógicas</strong>:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Expressão Relacional ou de Comparação</th>
-                <th>Expressão Lógica</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>a &lt; b (true)</td>
-                <td>(a &lt; b) &amp;&amp; (d &gt; c) (true)</td>
-            </tr>
-            <tr>
-                <td>d &gt; c (true)</td>
-                <td>(a &lt; b) || (d == c) (false)</td>
-            </tr>
-            <tr>
-                <td>a != d (true)</td>
-                <td>(a == b) || (a &lt; d) (false)</td>
-            </tr>
-            <tr>
-                <td>d &lt; a (false)</td>
-                <td>(a &gt; d) || (c &gt; d) || (a &lt; 99) (true)</td>
-            </tr>
-            <tr>
-                <td>c &lt;= a (false)</td>
-                <td>(a &gt; d) &amp;&amp; (c &gt; d) || (a &lt; 99) (true)</td>
-            </tr>
-            <tr>
-                <td>c == d (false)</td>
-                <td>(a &lt; c) &amp;&amp; (d == a) &amp;&amp; (a == 4) (false)</td>
-            </tr>
-        </tbody>
-    </table>
-    <p><strong>Explicação do Quadro 2:</strong>
-        Esta tabela exemplifica como expressões relacionais e lógicas podem ser combinadas. Cada linha demonstra um exemplo prático: à esquerda, uma expressão relacional que compara valores; à direita, a combinação dessa expressão com outras, usando operadores lógicos, que resulta em um valor booleano (<code>true</code> ou <code>false</code>). Esses exemplos ajudam a visualizar como pequenas operações se agrupam para formar condições que determinam o fluxo do programa.
-    </p>
-    <p>Novamente, lembre-se que: o operador <code>&amp;&amp;</code> (E) exige que todas as condições sejam verdadeiras para retornar <strong>true</strong>, e o operador <code>||</code> (OU) retorna <strong>true</strong> se pelo menos uma condição for verdadeira.</p>
+<p>Essa expressão retorna <strong>true</strong> se o ano for bissexto e <strong>false</strong> caso contrário.</p>
+<p><strong>Quadro 1 – Operadores de comparação e lógicos</strong>:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Operador de Comparação</th>
+            <th>Operador Lógico</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>&gt; (maior)</td>
+            <td>&amp;&amp; (E)</td>
+        </tr>
+        <tr>
+            <td>&lt; (menor)</td>
+            <td>|| (OU)</td>
+        </tr>
+        <tr>
+            <td>&gt;= (maior ou igual)</td>
+            <td>! (negação)</td>
+        </tr>
+        <tr>
+            <td>&lt;= (menor ou igual)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>== (igual)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>!= (diferente)</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Explicação do Quadro 1:</strong>
+    Esta tabela apresenta os principais operadores de comparação e os operadores lógicos usados para compor
+    expressões condicionais. Os operadores de comparação, como <code>&gt;</code>, <code>&lt;</code>,
+    <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code> e <code>!=</code>, determinam relações entre valores,
+    enquanto os operadores lógicos, como <code>&amp;&amp;</code> (E), <code>||</code> (OU) e <code>!</code>
+    (negação), permitem combinar múltiplas condições para formar expressões mais complexas. Note que o operador
+    <code>&amp;&amp;</code> retorna <code>true</code> somente se ambas as condições forem verdadeiras, e o operador
+    <code>||</code> retorna <code>true</code> se pelo menos uma condição for verdadeira.
+</p>
+<p><strong>Quadro 2 – Exemplo de expressões relacionais e lógicas</strong>:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Expressão Relacional ou de Comparação</th>
+            <th>Expressão Lógica</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>a &lt; b (true)</td>
+            <td>(a &lt; b) &amp;&amp; (d &gt; c) (true)</td>
+        </tr>
+        <tr>
+            <td>d &gt; c (true)</td>
+            <td>(a &lt; b) || (d == c) (false)</td>
+        </tr>
+        <tr>
+            <td>a != d (true)</td>
+            <td>(a == b) || (a &lt; d) (false)</td>
+        </tr>
+        <tr>
+            <td>d &lt; a (false)</td>
+            <td>(a &gt; d) || (c &gt; d) || (a &lt; 99) (true)</td>
+        </tr>
+        <tr>
+            <td>c &lt;= a (false)</td>
+            <td>(a &gt; d) &amp;&amp; (c &gt; d) || (a &lt; 99) (true)</td>
+        </tr>
+        <tr>
+            <td>c == d (false)</td>
+            <td>(a &lt; c) &amp;&amp; (d == a) &amp;&amp; (a == 4) (false)</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>Explicação do Quadro 2:</strong>
+    Esta tabela exemplifica como expressões relacionais e lógicas podem ser combinadas. Cada linha demonstra um
+    exemplo prático: à esquerda, uma expressão relacional que compara valores; à direita, a combinação dessa
+    expressão com outras, usando operadores lógicos, que resulta em um valor booleano (<code>true</code> ou
+    <code>false</code>). Esses exemplos ajudam a visualizar como pequenas operações se agrupam para formar condições
+    que determinam o fluxo do programa.
+</p>
+<p>Novamente, lembre-se que: o operador <code>&amp;&amp;</code> (E) exige que todas as condições sejam verdadeiras
+    para retornar <strong>true</strong>, e o operador <code>||</code> (OU) retorna <strong>true</strong> se pelo
+    menos uma condição for verdadeira.</p>
 
-    <hr>
-    
-    <h2>4. Na Prática</h2>
-    <p>É importante que todos os códigos sejam inseridos dentro do método <code>public static void Main(string[] args)</code> de uma classe, pois esse método é a porta de entrada do programa em C#. </p>
-    <p>Experimente criar um código que:</p>
-    <ul>
-        <li>Receba duas notas, calcule a média e exiba o resultado;</li>
-        <li>Utilize estruturas condicionais para informar se o aluno está aprovado (média ≥ 6), reprovado (média < 6) ou se a nota é zero.</li>
-    </ul>
+<hr>
 
-    <p>Veja o seguinte vídeo e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/mFYYOSASEHY" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+<h2>4. Na Prática</h2>
+<p>É importante que todos os códigos sejam inseridos dentro do método
+    <code>public static void Main(string[] args)</code> de uma classe, pois esse método é a porta de entrada do
+    programa em C#.
+</p>
+<p>Experimente criar um código que:</p>
+<ul>
+    <li>Receba duas notas, calcule a média e exiba o resultado;</li>
+    <li>Utilize estruturas condicionais para informar se o aluno está aprovado (média ≥ 6), reprovado (média < 6) ou se
+            a nota é zero.</li>
+</ul>
+
+<p>Veja o seguinte vídeo e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/mFYYOSASEHY"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a>
+</p>
 
 
-    <hr>
-    
-    <h2>5. Considerações finais</h2>
-    <p>Este capítulo demonstrou a importância das expressões relacionais e lógicas na tomada de decisões e no controle de fluxo dos programas. Vimos como as estruturas condicionais (if, if/else e if/else if/else) são utilizadas para desviar o fluxo de execução com base em condições avaliadas.</p>
-    <p>A prática desses conceitos, juntamente com a observação dos fluxogramas (com as figuras a serem inseridas nos locais indicados), é essencial para o domínio das técnicas de programação em C#.</p>
+<hr>
 
-    <hr>
+<h2>5. Considerações finais</h2>
+<p>Este capítulo demonstrou a importância das expressões relacionais e lógicas na tomada de decisões e no controle
+    de fluxo dos programas. Vimos como as estruturas condicionais (if, if/else e if/else if/else) são utilizadas
+    para desviar o fluxo de execução com base em condições avaliadas.</p>
+<p>A prática desses conceitos, juntamente com a observação dos fluxogramas (com as figuras a serem inseridas nos
+    locais indicados), é essencial para o domínio das técnicas de programação em C#.</p>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="algoritmoseprogramacao1aula7.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
-
-</html>
+{% include nav-aula.html materia="algoritmoseprogramacao1" aula="7" %}
+{% include footer.html %}

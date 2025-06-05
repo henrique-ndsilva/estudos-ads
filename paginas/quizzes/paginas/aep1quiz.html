@@ -1,91 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Quiz - AeP1</title>
-</head>
+{% include head-quiz.html page-title="Quiz - AeP1" %}
+{% include banner-aula.html heading="Quiz de Algoritmos e Programação I" %}
 
-<body>
-    <hr>
+<p><strong>1.</strong> Observe com atenção o código a seguir desenvolvido no Scratch.</p>
 
-    <h1>Quiz de Algoritmos e Programação I</h1>
+<img src="../../../imagens/quizzes/aep1/pergunta1aep1.png" alt="" class="imagens">
 
-    <hr>
+<p>A respeito do Scratch e de seus diversos tipos de blocos, analise as afirmativas a seguir e assinale V para a(s)
+    Verdadeira(s) e F para a(s) Falsa(s).</p>
+<ol type="I">
+    <li>Ao pressionar a tecla espaço, o personagem solicitará dez vezes que você responda qual o seu nome, apresentando
+        o resultado na tela.</li>
+    <li>O bloco laranja, também chamado de bloco de controle de fluxo, é responsável por modificar o fluxo do algoritmo.
+    </li>
+    <li>Se o usuário digitar um nome como João, o personagem repetirá por dez vezes a frase Olá, João! na tela.</li>
+    <li>Se o usuário digitar um nome como João, o personagem repetirá na tela dez vezes o nome digitado, sem aparecer a
+        mensagem Olá!</li>
+</ol>
+<p>Assinale a alternativa que apresenta a sequência correta.</p>
+<p><strong>Resposta Correta:</strong> F-V-F-V.</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../../js/toggleFontSize.js"></script>
-    
-    <p><strong>1.</strong> Observe com atenção o código a seguir desenvolvido no Scratch.</p>
-        
-    <img src="../../../imagens/quizzes/aep1/pergunta1aep1.png" alt="" class="imagens">
+<hr>
 
-    <p>A respeito do Scratch e de seus diversos tipos de blocos, analise as afirmativas a seguir e assinale V para a(s) Verdadeira(s) e F para a(s) Falsa(s).</p>
-    <ol type="I">
-        <li>Ao pressionar a tecla espaço, o personagem solicitará dez vezes que você responda qual o seu nome, apresentando o resultado na tela.</li>
-        <li>O bloco laranja, também chamado de bloco de controle de fluxo, é responsável por modificar o fluxo do algoritmo.</li>
-        <li>Se o usuário digitar um nome como João, o personagem repetirá por dez vezes a frase Olá, João! na tela.</li>
-        <li>Se o usuário digitar um nome como João, o personagem repetirá na tela dez vezes o nome digitado, sem aparecer a mensagem Olá!</li>
-    </ol>
-    <p>Assinale a alternativa que apresenta a sequência correta.</p>
-    <p><strong>Resposta Correta:</strong> F-V-F-V.</p>
+<p><strong>2.</strong> Leia o trecho a seguir sobre operadores aritméticos e precedência matemática:</p>
+<p>Os operadores de soma, subtração, divisão e multiplicação podem ser utilizados com números inteiros e reais. Se um
+    inteiro for dividido por um real, o resultado será real. A ordem de precedência é: multiplicação, divisão, soma e
+    subtração.</p>
+<p>Considerando esse contexto, avalie as seguintes asserções e a relação proposta entre elas.</p>
+<ol type="I">
+    <li>Supondo A = "Bom" e B = " Dia", podemos somar A + B, obtendo "Bom Dia".</li>
+    <p>Porque:</p>
+    <li>Quando realizamos a soma de strings, o resultado final é a concatenação das duas, similar ao símbolo &amp;.</li>
+</ol>
+<p>A respeito dessas asserções, assinale a opção correta.</p>
+<p><strong>Resposta Correta:</strong> A asserção I é uma proposição verdadeira e a II é uma proposição falsa.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>2.</strong> Leia o trecho a seguir sobre operadores aritméticos e precedência matemática:</p>
-    <p>Os operadores de soma, subtração, divisão e multiplicação podem ser utilizados com números inteiros e reais. Se um inteiro for dividido por um real, o resultado será real. A ordem de precedência é: multiplicação, divisão, soma e subtração.</p>
-    <p>Considerando esse contexto, avalie as seguintes asserções e a relação proposta entre elas.</p>
-    <ol type="I">
-        <li>Supondo A = "Bom" e B = " Dia", podemos somar A + B, obtendo "Bom Dia".</li>
-        <p>Porque:</p>
-        <li>Quando realizamos a soma de strings, o resultado final é a concatenação das duas, similar ao símbolo &amp;.</li>
-    </ol>
-    <p>A respeito dessas asserções, assinale a opção correta.</p>
-    <p><strong>Resposta Correta:</strong> A asserção I é uma proposição verdadeira e a II é uma proposição falsa.</p>
+<p><strong>3.</strong> Sobre algoritmos, podemos afirmar que:</p>
+<ol type="I">
+    <li>Cada instrução de um algoritmo deve ser executada em ordem específica para resolver um problema.</li>
+    <li>O algoritmo é uma sequência com quantidade indeterminada de instruções.</li>
+    <li>Fluxogramas ou diagramas de sequência são representações de um algoritmo.</li>
+    <li>Em embalagens de produtos, o modo de usar é um algoritmo narrativo.</li>
+    <li>Fluxogramas e diagramas de sequência são representações gráficas visuais de um algoritmo.</li>
+</ol>
+<p>As afirmativas verdadeiras são:</p>
+<p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>3.</strong> Sobre algoritmos, podemos afirmar que:</p>
-    <ol type="I">
-        <li>Cada instrução de um algoritmo deve ser executada em ordem específica para resolver um problema.</li>
-        <li>O algoritmo é uma sequência com quantidade indeterminada de instruções.</li>
-        <li>Fluxogramas ou diagramas de sequência são representações de um algoritmo.</li>
-        <li>Em embalagens de produtos, o modo de usar é um algoritmo narrativo.</li>
-        <li>Fluxogramas e diagramas de sequência são representações gráficas visuais de um algoritmo.</li>
-    </ol>
-    <p>As afirmativas verdadeiras são:</p>
-    <p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
-
-    <hr>
-
-    <p><strong>4.</strong> Em C#, podemos utilizar os operadores aritméticos para manipular os dados de variáveis, bem como, realizar cálculos assim como na matemática. Considere o código-fonte a seguir escrito em C#.</p>
-    <p>Considerando esse contexto, avalie as seguintes asserções e a relação proposta entre elas.</p>
-    <pre class="code">
+<p><strong>4.</strong> Em C#, podemos utilizar os operadores aritméticos para manipular os dados de variáveis, bem como,
+    realizar cálculos assim como na matemática. Considere o código-fonte a seguir escrito em C#.</p>
+<p>Considerando esse contexto, avalie as seguintes asserções e a relação proposta entre elas.</p>
+<pre class="code">
 int total;
 total = 5 + 4 * 18 / 3 * 3 % 3 - 1;
 Console.WriteLine(total);</pre>
-    <ol type="I">
-        <li>O valor apresentado será 4, seguindo a precedência de operadores.</li>
-        <p>PORQUE</p>
-        <li>O operador + e o de módulo têm mesma precedência, e a soma foi avaliada primeiro.</li>
-    </ol>
-    <p>A respeito dessas asserções, assinale a opção correta.</p>
-    <p><strong>Resposta Correta:</strong> A asserção I é verdadeira e a II é falsa.</p>
+<ol type="I">
+    <li>O valor apresentado será 4, seguindo a precedência de operadores.</li>
+    <p>PORQUE</p>
+    <li>O operador + e o de módulo têm mesma precedência, e a soma foi avaliada primeiro.</li>
+</ol>
+<p>A respeito dessas asserções, assinale a opção correta.</p>
+<p><strong>Resposta Correta:</strong> A asserção I é verdadeira e a II é falsa.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>5.</strong> Leia o texto a seguir com atenção:</p>
-    <p>O pensamento computacional é o processo de abordar um problema de maneira sistemática e criar uma solução que pode ser realizada por um computador.</p>
-    <p>A partir desta informação, é possível afirmar que o pensamento computacional:</p>
-    <p><strong>Resposta Correta:</strong> Ensina o uso de abstração e decomposição na solução de problemas complexos.</p>
+<p><strong>5.</strong> Leia o texto a seguir com atenção:</p>
+<p>O pensamento computacional é o processo de abordar um problema de maneira sistemática e criar uma solução que pode
+    ser realizada por um computador.</p>
+<p>A partir desta informação, é possível afirmar que o pensamento computacional:</p>
+<p><strong>Resposta Correta:</strong> Ensina o uso de abstração e decomposição na solução de problemas complexos.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>6.</strong> Analise com atenção o código a seguir, que possui algumas variáveis e realiza algumas operações sobre elas:</p>
-    <pre class="code">
+<p><strong>6.</strong> Analise com atenção o código a seguir, que possui algumas variáveis e realiza algumas operações
+    sobre elas:</p>
+<pre class="code">
 string var1;
 int var2;
 double var3;
@@ -101,117 +95,132 @@ var2 = int.Parse(var1);
 var3 = Math.Pow(var2, 2);
 
 Console.WriteLine(var3);</pre>
-    <p>Considerando essas informações, analise as afirmativas a seguir:</p>
-    <p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
+<p>Considerando essas informações, analise as afirmativas a seguir:</p>
+<p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>7.</strong> Leia e associe as duas colunas com relação aos pilares do pensamento computacional.</p>
-    <table>
-        <tr>
-            <td><strong>I. Decomposição</strong></td>
-            <td>A. Resolve problemas menores e mais fáceis de serem gerenciados obtidos a partir de um problema complexo.</td>
-        </tr>
-        <tr>
-            <td><strong>II. Abstração</strong></td>
-            <td>B. Divide um problema em passo a passo para que ele seja resolvido por meio de instruções ou regras.</td>
-        </tr>
-        <tr>
-            <td><strong>III. Algoritmo</strong></td>
-            <td>C. Separa do problema apenas as partes importantes, ignorando as partes menos importantes.</td>
-        </tr>
-    </table>
-    <p>Assinale a alternativa que traz a associação correta entre as duas colunas:</p>
-    <p><strong>Resposta Correta:</strong> I-A; II-C; III-B.</p>
+<p><strong>7.</strong> Leia e associe as duas colunas com relação aos pilares do pensamento computacional.</p>
+<table>
+    <tr>
+        <td><strong>I. Decomposição</strong></td>
+        <td>A. Resolve problemas menores e mais fáceis de serem gerenciados obtidos a partir de um problema complexo.
+        </td>
+    </tr>
+    <tr>
+        <td><strong>II. Abstração</strong></td>
+        <td>B. Divide um problema em passo a passo para que ele seja resolvido por meio de instruções ou regras.</td>
+    </tr>
+    <tr>
+        <td><strong>III. Algoritmo</strong></td>
+        <td>C. Separa do problema apenas as partes importantes, ignorando as partes menos importantes.</td>
+    </tr>
+</table>
+<p>Assinale a alternativa que traz a associação correta entre as duas colunas:</p>
+<p><strong>Resposta Correta:</strong> I-A; II-C; III-B.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>8.</strong> Observe com atenção o fluxograma a seguir.</p>
-    <img src="../../../imagens/quizzes/aep1/pergunta8aep1.png" alt="" class="imagens">
-    <p>A respeito dos componentes que fazem parte de um fluxograma, analise as afirmativas a seguir e assinale V para a(s) Verdadeira(s) e F para a(s) Falsa(s).</p>
-    <ol type="I">
-        <li>No fluxograma, observa-se uma estrutura condicional.</li>
-        <li>Se o pneu estiver furado, será necessário trocá-lo.</li>
-        <li>Independentemente do pneu estar furado, o fim será alcançado.</li>
-        <li>Serão exibidas ambas as mensagens "Não Trocar" e "Trocar".</li>
-    </ol>
-    <p><strong>Resposta Correta:</strong> V-V-V-F.</p>
+<p><strong>8.</strong> Observe com atenção o fluxograma a seguir.</p>
+<img src="../../../imagens/quizzes/aep1/pergunta8aep1.png" alt="" class="imagens">
+<p>A respeito dos componentes que fazem parte de um fluxograma, analise as afirmativas a seguir e assinale V para a(s)
+    Verdadeira(s) e F para a(s) Falsa(s).</p>
+<ol type="I">
+    <li>No fluxograma, observa-se uma estrutura condicional.</li>
+    <li>Se o pneu estiver furado, será necessário trocá-lo.</li>
+    <li>Independentemente do pneu estar furado, o fim será alcançado.</li>
+    <li>Serão exibidas ambas as mensagens "Não Trocar" e "Trocar".</li>
+</ol>
+<p><strong>Resposta Correta:</strong> V-V-V-F.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>9.</strong> Observe com atenção o código a seguir:</p>
-    <img src="../../../imagens/quizzes/aep1/pergunta9aep1.png" alt="" class="imagens" id="imagemmenor2">
-    <p>Considerando o código apresentado, assinale a opção correta.</p>
-    <p><strong>Resposta Correta:</strong> O objetivo é apresentar uma sequência ordenada dos valores, e o bloco auxiliar é essencial.</p>
+<p><strong>9.</strong> Observe com atenção o código a seguir:</p>
+<img src="../../../imagens/quizzes/aep1/pergunta9aep1.png" alt="" class="imagens" id="imagemmenor2">
+<p>Considerando o código apresentado, assinale a opção correta.</p>
+<p><strong>Resposta Correta:</strong> O objetivo é apresentar uma sequência ordenada dos valores, e o bloco auxiliar é
+    essencial.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>10.</strong> Observe com atenção o código a seguir desenvolvido no Scratch.</p>
-    <img src="../../../imagens/quizzes/aep1/pergunta10aep1.png" alt="" class="imagens">
-    <p>Considerando esse código, o significado dos blocos e suas saídas, analise as afirmativas a seguir:</p>
-    <ol type="I">
-        <li>O componente laranja é um evento que reage à tecla.</li>
-        <li>Ao clicar na seta esquerda, o gato inverte o trajeto e vai para trás.</li>
-        <li>O algoritmo faz o gato virar e andar 100 passos para trás.</li>
-        <li>Pressionando quatro vezes, o gato fará um quadrado no sentido horário.</li>
-    </ol>
-    <p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
+<p><strong>10.</strong> Observe com atenção o código a seguir desenvolvido no Scratch.</p>
+<img src="../../../imagens/quizzes/aep1/pergunta10aep1.png" alt="" class="imagens">
+<p>Considerando esse código, o significado dos blocos e suas saídas, analise as afirmativas a seguir:</p>
+<ol type="I">
+    <li>O componente laranja é um evento que reage à tecla.</li>
+    <li>Ao clicar na seta esquerda, o gato inverte o trajeto e vai para trás.</li>
+    <li>O algoritmo faz o gato virar e andar 100 passos para trás.</li>
+    <li>Pressionando quatro vezes, o gato fará um quadrado no sentido horário.</li>
+</ol>
+<p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>11.</strong> Analise com atenção o código a seguir escrito em C#.</p>
-    <pre class="code">
+<p><strong>11.</strong> Analise com atenção o código a seguir escrito em C#.</p>
+<pre class="code">
 for(int x=-15; x<14; x++)
 {
     x++;
     Console.WriteLine(x);
 }</pre>
-    <p>Assinale a alternativa que apresenta a análise correta sobre esse código.</p>
-    <p><strong>Resposta Correta:</strong> Esta estrutura de repetição apresentará todos os números pares de -14 a 14.</p>
+<p>Assinale a alternativa que apresenta a análise correta sobre esse código.</p>
+<p><strong>Resposta Correta:</strong> Esta estrutura de repetição apresentará todos os números pares de -14 a 14.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>12.</strong> Durante o desenvolvimento de programas, os operadores lógicos E e OU são usados para relacionar expressões. O resultado de uma operação lógica será VERDADEIRO ou FALSO. Ao utilizar o operador E, por exemplo, o resultado será VERDADEIRO somente se estiver entre dois operandos também VERDADEIROS.</p>
-    <p>Analise, então, as seguintes expressões:</p>
-        <p>Expressão 1: FALSO OU VERDADEIRO E FALSO E VERDADEIRO.</p>
-        <p>Expressão 2: FALSO E VERDADEIRO E FALSO OU VERDADEIRO.</p>
-    <p>Sobre as expressões 1 e 2, é corretor dizer que</p>
-    <p><strong>Resposta Correta:</strong> o operador OU resultará VERDADEIRO quando qualquer um dos operandos também for verdadeiro. Logo, o resultado da expressão 2 será VERDADEIRO.</p>
+<p><strong>12.</strong> Durante o desenvolvimento de programas, os operadores lógicos E e OU são usados para relacionar
+    expressões. O resultado de uma operação lógica será VERDADEIRO ou FALSO. Ao utilizar o operador E, por exemplo, o
+    resultado será VERDADEIRO somente se estiver entre dois operandos também VERDADEIROS.</p>
+<p>Analise, então, as seguintes expressões:</p>
+<p>Expressão 1: FALSO OU VERDADEIRO E FALSO E VERDADEIRO.</p>
+<p>Expressão 2: FALSO E VERDADEIRO E FALSO OU VERDADEIRO.</p>
+<p>Sobre as expressões 1 e 2, é corretor dizer que</p>
+<p><strong>Resposta Correta:</strong> o operador OU resultará VERDADEIRO quando qualquer um dos operandos também for
+    verdadeiro. Logo, o resultado da expressão 2 será VERDADEIRO.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>13.</strong> Em C# e em outras linguagens de programação, para que seja possível manipular dados, uma das necessidades é criar variáveis que armazenem temporariamente valores os quais podem ser numéricos (int ou float), texto (string) ou booleano (bool). Observe o código a seguir escrito em C#:</p>
-    <pre class="code">
+<p><strong>13.</strong> Em C# e em outras linguagens de programação, para que seja possível manipular dados, uma das
+    necessidades é criar variáveis que armazenem temporariamente valores os quais podem ser numéricos (int ou float),
+    texto (string) ou booleano (bool). Observe o código a seguir escrito em C#:</p>
+<pre class="code">
 a = 5.95681545;
 b = Console.ReadLine();
 c = 7 % 2;
 d = 3.5 * c;</pre>
-    <p>Marque a alternativa que apresenta corretamente os tipos das variáveis a, b, c e d, respectivamente.</p>
-    <p><strong>Resposta Correta:</strong> a: float; b: string; c: int; d: float.</p>
+<p>Marque a alternativa que apresenta corretamente os tipos das variáveis a, b, c e d, respectivamente.</p>
+<p><strong>Resposta Correta:</strong> a: float; b: string; c: int; d: float.</p>
 
-    <hr>
+<hr>
 
-    <p><strong>14.</strong> No código a seguir, temos duas estruturas de repetição for. A externa, na linha 1, será executada 10 vezes. Ou seja, o for irá de 1 até 10. No escopo desse for, temos uma estrutura condicional if, a qual também possui internamente uma estrutura de repetição for, que é executada de 1 até 5.</p>
-    <pre class="code">
+<p><strong>14.</strong> No código a seguir, temos duas estruturas de repetição for. A externa, na linha 1, será
+    executada 10 vezes. Ou seja, o for irá de 1 até 10. No escopo desse for, temos uma estrutura condicional if, a qual
+    também possui internamente uma estrutura de repetição for, que é executada de 1 até 5.</p>
+<pre class="code">
 for(int x = 1; x<10; x++)
     if(x % 4 != 0 && x % 2 == 0)
         for(int y = 1; y<5; y++)
             Console.WriteLine(y);</pre>
-    <p>Considerando as informações apresentadas, assinale a opção correta.</p>
-    <ol type="I">
-        <li>a. No total, a linha 4 será executada 8 vezes, apresentando a sequência 12341234.</li>
-        <li>b. A expressão da linha 2 só será verdadeira quando o número for par e divisível por 4.</li>
-        <li>c. A linha 4 será executada 10 vezes, apresentando a sequência 1234512345.</li>
-        <li>d. A linha 2 será executada quando o valor de x for par e divisível por 4.</li>
-        <li>e. A linha 4 apresentará o valor de y na tela quando o resto da divisão de x por 4 for diferente de zero ou quando o resto for igual 2.</li>
-    </ol>
-    <p><strong>Resposta Correta:</strong> No total, a linha 4 será executada 8 vezes, apresentando a sequência 12341234.</p>
-    
-    <hr>
+<p>Considerando as informações apresentadas, assinale a opção correta.</p>
+<ol type="I">
+    <li>a. No total, a linha 4 será executada 8 vezes, apresentando a sequência 12341234.</li>
+    <li>b. A expressão da linha 2 só será verdadeira quando o número for par e divisível por 4.</li>
+    <li>c. A linha 4 será executada 10 vezes, apresentando a sequência 1234512345.</li>
+    <li>d. A linha 2 será executada quando o valor de x for par e divisível por 4.</li>
+    <li>e. A linha 4 apresentará o valor de y na tela quando o resto da divisão de x por 4 for diferente de zero ou
+        quando o resto for igual 2.</li>
+</ol>
+<p><strong>Resposta Correta:</strong> No total, a linha 4 será executada 8 vezes, apresentando a sequência 12341234.</p>
 
-    <p><strong>15.</strong> Leia o texto a seguir:</p>
-    <p>Uma variável possui papel fundamental em um código: guardar dados. Elas podem armazenar apenas um dado por vez, logo, se uma variável chamada nome possui o conteúdo “João”, ao receber o valor “Maria”, a palavra “João” é perdida. Por outro lado, temos as estruturas condicionais, cuja principal característica é modificar o fluxo de um código de acordo com uma condição e, consequentemente, modificar o conteúdo de uma variável. Veja um exemplo de código fonte em C# que manipula uma única variável chamada txt e possui uma condicional.</p>
-    <pre class="code">
+<hr>
+
+<p><strong>15.</strong> Leia o texto a seguir:</p>
+<p>Uma variável possui papel fundamental em um código: guardar dados. Elas podem armazenar apenas um dado por vez, logo,
+    se uma variável chamada nome possui o conteúdo “João”, ao receber o valor “Maria”, a palavra “João” é perdida. Por
+    outro lado, temos as estruturas condicionais, cuja principal característica é modificar o fluxo de um código de
+    acordo com uma condição e, consequentemente, modificar o conteúdo de uma variável. Veja um exemplo de código fonte
+    em C# que manipula uma única variável chamada txt e possui uma condicional.</p>
+<pre class="code">
 string txt;
 
 Console.WriteLine(“Digite seu nome”);
@@ -223,36 +232,46 @@ if(txt != “Maria”){
     Console.WriteLine(txt + “seu acesso foi autorizado”);
     Console.WriteLine(“bem vindo!”);
 }</pre>
-    <p>Marque a alternativa que explica corretamente a execução deste código:</p>
-    <p><strong>Resposta Correta:</strong> O valor digitado pelo usuário na linha 3 será armazenado na variável txt e apresentado na linha 6 ou na linha 8.</p>
-    
-    <hr>
+<p>Marque a alternativa que explica corretamente a execução deste código:</p>
+<p><strong>Resposta Correta:</strong> O valor digitado pelo usuário na linha 3 será armazenado na variável txt e
+    apresentado na linha 6 ou na linha 8.</p>
 
-    <p><strong>16.</strong> Sobre variáveis em programação, podemos afirmar que:</p>
-    <ol type="I">
-        <li>Uma variável pode iniciar-se com letras, com underscore ( _ ) ou com traço (-) e deve ser evitado o uso de caracteres especiais.</li>
-        <li>Se criarmos uma variável chamada aluno1 e outra chamada aluno2, teremos dois espaços na memória para guardar valores.</li>
-        <li>Uma variável chamada nota pode armazenar, ao mesmo tempo, o nome de um aluno e sua respectiva nota em uma avaliação.</li>
-        <li>Uma variável não pode ter caracteres especiais ou traços, afinal, o computador pode não compreender estes sinais.</li>
-    </ol>
-    <p>As alternativas verdadeiras são:</p>
-    <p><strong>Resposta Correta:</strong> II e IV, apenas.</p>
-    
-    <hr>
+<hr>
 
-    <p><strong>17.</strong> Leia com atenção o texto a seguir:</p>
+<p><strong>16.</strong> Sobre variáveis em programação, podemos afirmar que:</p>
+<ol type="I">
+    <li>Uma variável pode iniciar-se com letras, com underscore ( _ ) ou com traço (-) e deve ser evitado o uso de
+        caracteres especiais.</li>
+    <li>Se criarmos uma variável chamada aluno1 e outra chamada aluno2, teremos dois espaços na memória para guardar
+        valores.</li>
+    <li>Uma variável chamada nota pode armazenar, ao mesmo tempo, o nome de um aluno e sua respectiva nota em uma
+        avaliação.</li>
+    <li>Uma variável não pode ter caracteres especiais ou traços, afinal, o computador pode não compreender estes
+        sinais.</li>
+</ol>
+<p>As alternativas verdadeiras são:</p>
+<p><strong>Resposta Correta:</strong> II e IV, apenas.</p>
 
-    <p>Muitos problemas quantitativos e centrados em dados podem ser resolvidos usando o pensamento computacional e uma compreensão do pensamento computacional lhe dará uma base para resolver diversos tipos de problemas.</p>
-    
-    <p>Dentre as habilidades do pensamento computacional, o componente principal que permite um programador criar um conjunto de etapas para desenvolver um programa de computador responsável por resolver problemas que têm impacto social no mundo real é a(o)</p>
-    
-    <p><strong>Resposta Correta:</strong> algoritmo.</p>
-    
-    <hr>
+<hr>
 
-    <p><strong>18.</strong> As estruturas de decisão, ou estruturas condicionais, são utilizadas nos códigos para dividir um fluxo de processos em dois ou fluxos. Todo algoritmo que precisa de tomada de decisão necessita utilizar uma estrutura de controle como esta. Veja um exemplo de código a seguir:</p>
-    
-    <pre class="code">
+<p><strong>17.</strong> Leia com atenção o texto a seguir:</p>
+
+<p>Muitos problemas quantitativos e centrados em dados podem ser resolvidos usando o pensamento computacional e uma
+    compreensão do pensamento computacional lhe dará uma base para resolver diversos tipos de problemas.</p>
+
+<p>Dentre as habilidades do pensamento computacional, o componente principal que permite um programador criar um
+    conjunto de etapas para desenvolver um programa de computador responsável por resolver problemas que têm impacto
+    social no mundo real é a(o)</p>
+
+<p><strong>Resposta Correta:</strong> algoritmo.</p>
+
+<hr>
+
+<p><strong>18.</strong> As estruturas de decisão, ou estruturas condicionais, são utilizadas nos códigos para dividir um
+    fluxo de processos em dois ou fluxos. Todo algoritmo que precisa de tomada de decisão necessita utilizar uma
+    estrutura de controle como esta. Veja um exemplo de código a seguir:</p>
+
+<pre class="code">
 int a = 4;
 int b = 5;
 
@@ -261,24 +280,31 @@ if(a>1) {
         Console.WriteLine("Valor de a " + a + " valor de b " + b);
     }
 }</pre>
-    
-    <p>De posse dessas informações e do conteúdo estudado sobre estruturas condicionais, analise as asserções a seguir e a relação proposta entre elas.</p>
-    
-    <ol type="I">
-        <li>No caso de usar IFs aninhados como no código, podemos substituir os dois IFs por uma única instrução com o operador lógico E (&&), ficando assim: if(a>1 && b>1):</li>
-        <p>Porque</p>
-        <li>Para mostrar na tela o conteúdo da linha 6, a instrução da linha 4 precisa ser verdadeira e a instrução da linha 5 também precisa ser verdadeira.</li>
-    </ol>
 
-    <p>A seguir, assinale a alternativa correta:</p>
-    
-    <p><strong>Resposta Correta:</strong> As asserções I e II são proposições verdadeiras e a II é uma justificativa correta da I.</p>
-    
-    <hr>
+<p>De posse dessas informações e do conteúdo estudado sobre estruturas condicionais, analise as asserções a seguir e a
+    relação proposta entre elas.</p>
 
-    <p><strong>19.</strong> O código a seguir realiza a validação se um dado ano é bissexto ou não. Para calcularmos se um ano é bissexto ou não, temos, necessariamente, que considerar os seguintes fatores: o ano deve ser divisível por quatro, o resto da divisão do ano por 100 tem que ser maior que zero ou a divisão do ano por 400 precisa ser igual a zero. Analise o código com atenção.</p>
-    
-    <pre class="code">
+<ol type="I">
+    <li>No caso de usar IFs aninhados como no código, podemos substituir os dois IFs por uma única instrução com o
+        operador lógico E (&&), ficando assim: if(a>1 && b>1):</li>
+    <p>Porque</p>
+    <li>Para mostrar na tela o conteúdo da linha 6, a instrução da linha 4 precisa ser verdadeira e a instrução da linha
+        5 também precisa ser verdadeira.</li>
+</ol>
+
+<p>A seguir, assinale a alternativa correta:</p>
+
+<p><strong>Resposta Correta:</strong> As asserções I e II são proposições verdadeiras e a II é uma justificativa correta
+    da I.</p>
+
+<hr>
+
+<p><strong>19.</strong> O código a seguir realiza a validação se um dado ano é bissexto ou não. Para calcularmos se um
+    ano é bissexto ou não, temos, necessariamente, que considerar os seguintes fatores: o ano deve ser divisível por
+    quatro, o resto da divisão do ano por 100 tem que ser maior que zero ou a divisão do ano por 400 precisa ser igual a
+    zero. Analise o código com atenção.</p>
+
+<pre class="code">
 double ano;
 
 ano = Console.ReadLine();
@@ -288,25 +314,30 @@ if((ano % 4 == 0) && (ano % 100 > 0) || (ano % 400 == 0)){
 } else {
     Console.WriteLine("Ano não é bissexto");
 }</pre>
-    
-    <p>Considerando as informações apresentadas, avalie as afirmações a seguir:</p>
-    
-    <ol type="I">
-        <li>Na linha 3, quando o usuário inserir um valor de ano, resultará em um erro na linha 5, pois a entrada é do tipo string e há uma operação aritmética de módulo.</li>
-        <li>Se um valor é divisível por 4 e divisível por 100, logo, é divisível por 400 também, o que torna dispensável a expressão ano % 400 == 0.</li>
-        <li>Na linha 5, o valor da expressão será true para qualquer ano maior que 1500, uma vez que temos um operador || (ou), tornando a linha 6 inalcançável.</li>
-        <li>A variável ano é declarada como double, o que pode ser desnecessário, pois anos são tradicionalmente representados por números inteiros. Utilizar o tipo int para a variável ano seria mais apropriado.</li>
-    </ol>
 
-    <p>É correto o que se afirma em:</p>
-    
-    <p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
-    
-    <hr>
+<p>Considerando as informações apresentadas, avalie as afirmações a seguir:</p>
 
-    <p><strong>20.</strong> Analise com atenção o código a seguir que utiliza função com passagem de parâmetros, com três argumentos.</p>
-    
-    <pre class="code">
+<ol type="I">
+    <li>Na linha 3, quando o usuário inserir um valor de ano, resultará em um erro na linha 5, pois a entrada é do tipo
+        string e há uma operação aritmética de módulo.</li>
+    <li>Se um valor é divisível por 4 e divisível por 100, logo, é divisível por 400 também, o que torna dispensável a
+        expressão ano % 400 == 0.</li>
+    <li>Na linha 5, o valor da expressão será true para qualquer ano maior que 1500, uma vez que temos um operador ||
+        (ou), tornando a linha 6 inalcançável.</li>
+    <li>A variável ano é declarada como double, o que pode ser desnecessário, pois anos são tradicionalmente
+        representados por números inteiros. Utilizar o tipo int para a variável ano seria mais apropriado.</li>
+</ol>
+
+<p>É correto o que se afirma em:</p>
+
+<p><strong>Resposta Correta:</strong> I e IV, apenas.</p>
+
+<hr>
+
+<p><strong>20.</strong> Analise com atenção o código a seguir que utiliza função com passagem de parâmetros, com três
+    argumentos.</p>
+
+<pre class="code">
 public int calcular(int x, ref int y, ref int z){
     x = x + 10;
     y = y + 10;
@@ -326,37 +357,42 @@ public static void Main (string[] args) {
     Console.WriteLine(a + " - " + b + " - " + c);
 }</pre>
 
-    <p>Os valores impressos na instrução da linha 17 serão:</p>
-    
-    <p><strong>Resposta Correta:</strong> 4 - 13 - 12</p>
-    
-    <hr>
+<p>Os valores impressos na instrução da linha 17 serão:</p>
 
-    <p><strong>21.</strong> Observe com atenção os blocos da figura a seguir:</p>
-    
-    <img src="../../../imagens/quizzes/aep1/pergunta21aep1.jpeg" alt="" class="imagens" id="imagemmenor">
-    
-    <p>Analisando os blocos, é correto afirmar que:</p>
-    
-    <p><strong>Resposta Correta:</strong> a operação aritmética realizada nos blocos laranja (altera) e azul claro (anda) terá o mesmo resultado, porém com comportamentos diferentes.</p>
+<p><strong>Resposta Correta:</strong> 4 - 13 - 12</p>
 
-    <hr>
-    
-    <p><strong>22.</strong> Leia com atenção o texto a seguir:</p>
-    
-    <p>O pensamento computacional requer a compreensão das capacidades dos computadores, a formulação de problemas a serem tratados por um computador e o projeto de algoritmos que um computador pode executar. O contexto e a abordagem mais eficazes para desenvolver o pensamento computacional é aprender ciência da computação; eles estão intrinsecamente conectados.</p>
-    
-    <p>Fonte: K12 COMPUTER SCIENCE. K12 Computer Science Framework. Disponível em: https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf.</p>
-    
-    <p>Sobre o pensamento computacional, assinale a alternativa que apresenta uma de suas práticas.</p>
-    
-    <p><strong>Resposta Correta:</strong> Desenvolver e usar abstrações.</p>
+<hr>
 
-    <hr>
-    
-    <p><strong>23.</strong> Observe com atenção o pseudocódigo a seguir:</p>
+<p><strong>21.</strong> Observe com atenção os blocos da figura a seguir:</p>
 
-    <pre class="code">
+<img src="../../../imagens/quizzes/aep1/pergunta21aep1.jpeg" alt="" class="imagens" id="imagemmenor">
+
+<p>Analisando os blocos, é correto afirmar que:</p>
+
+<p><strong>Resposta Correta:</strong> a operação aritmética realizada nos blocos laranja (altera) e azul claro (anda)
+    terá o mesmo resultado, porém com comportamentos diferentes.</p>
+
+<hr>
+
+<p><strong>22.</strong> Leia com atenção o texto a seguir:</p>
+
+<p>O pensamento computacional requer a compreensão das capacidades dos computadores, a formulação de problemas a serem
+    tratados por um computador e o projeto de algoritmos que um computador pode executar. O contexto e a abordagem mais
+    eficazes para desenvolver o pensamento computacional é aprender ciência da computação; eles estão intrinsecamente
+    conectados.</p>
+
+<p>Fonte: K12 COMPUTER SCIENCE. K12 Computer Science Framework. Disponível em:
+    https://k12cs.org/wp-content/uploads/2016/09/K%E2%80%9312-Computer-Science-Framework.pdf.</p>
+
+<p>Sobre o pensamento computacional, assinale a alternativa que apresenta uma de suas práticas.</p>
+
+<p><strong>Resposta Correta:</strong> Desenvolver e usar abstrações.</p>
+
+<hr>
+
+<p><strong>23.</strong> Observe com atenção o pseudocódigo a seguir:</p>
+
+<pre class="code">
 início
 
     se temperatura == “40”
@@ -368,35 +404,39 @@ início
     fim-se
 
 fim</pre>
-    
-    <p>Sobre algoritmos, assinale a alternativa correta.</p>
-    
-    <p><strong>Resposta Correta:</strong> O pseudocódigo é utilizado para acelerar o ciclo de desenvolvimento de um código.</p>
 
-    <hr>
+<p>Sobre algoritmos, assinale a alternativa correta.</p>
 
-    <p><strong>24.</strong> Leia com atenção o texto a seguir.</p>
+<p><strong>Resposta Correta:</strong> O pseudocódigo é utilizado para acelerar o ciclo de desenvolvimento de um código.
+</p>
 
-    <p>Um algoritmo é um procedimento computacional bem definido que pega algum valor como entrada e gera algum valor como saída. Em palavras simples, é uma sequência de etapas computacionais que converte a entrada em saída.</p>
-    
-    <p>A respeito dos algoritmos e seus tipos de representações, analise as afirmativas a seguir e assinale V para a(s) Verdadeira(s) e F para a(s) Falsa(s).</p>
-    
-    <ol type="I">
-        <li>O algoritmo fornece ao designer uma descrição consistente dos requisitos e objetivos dos problemas.</li>
-        <li>O pseudocódigo, um método para representar algoritmos, resume o fluxo de um programa, apresentando os detalhes subjacentes.</li>
-        <li>A detecção de erros ou o fluxo de programa incorreto no estágio de pseudocódigo é benéfica para o desenvolvimento.</li>
-        <li>Os fluxogramas melhoram a condição e a eficiência do trabalho, possuindo quatro símbolos básicos que são o início, o fim, o processo e a decisão.</li>
-    </ol>
-    
-    <p>Assinale a alternativa que possui a sequência correta.</p>
-    
-    <p><strong>Resposta Correta:</strong> V-F-V-V.</p>
+<hr>
 
-    <hr>    
+<p><strong>24.</strong> Leia com atenção o texto a seguir.</p>
 
-    <nav class="navlink">
-        <a href="../mainquizzes.html" target="_self" rel="prev">Voltar para os quizzes</a>
-    </nav>
-</body>
+<p>Um algoritmo é um procedimento computacional bem definido que pega algum valor como entrada e gera algum valor como
+    saída. Em palavras simples, é uma sequência de etapas computacionais que converte a entrada em saída.</p>
 
-</html>
+<p>A respeito dos algoritmos e seus tipos de representações, analise as afirmativas a seguir e assinale V para a(s)
+    Verdadeira(s) e F para a(s) Falsa(s).</p>
+
+<ol type="I">
+    <li>O algoritmo fornece ao designer uma descrição consistente dos requisitos e objetivos dos problemas.</li>
+    <li>O pseudocódigo, um método para representar algoritmos, resume o fluxo de um programa, apresentando os detalhes
+        subjacentes.</li>
+    <li>A detecção de erros ou o fluxo de programa incorreto no estágio de pseudocódigo é benéfica para o
+        desenvolvimento.</li>
+    <li>Os fluxogramas melhoram a condição e a eficiência do trabalho, possuindo quatro símbolos básicos que são o
+        início, o fim, o processo e a decisão.</li>
+</ol>
+
+<p>Assinale a alternativa que possui a sequência correta.</p>
+
+<p><strong>Resposta Correta:</strong> V-F-V-V.</p>
+
+<hr>
+
+<nav class="navlink">
+    <a href="../mainquizzes.html" target="_self" rel="prev">Voltar para os quizzes</a>
+</nav>
+{% include footer.html %}

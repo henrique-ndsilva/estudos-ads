@@ -1,121 +1,131 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 3 - AeP</title>
-</head>
+{% include head-aula.html page-title="Aula 3 - AeP" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Variáveis e Programação por Blocos." %}
 
-    <h1>Variáveis e Programação por Blocos.</h1>
-    
-    <hr>
+<h2>1. Arquitetura e Entrada de Dados</h2>
+<p>Os computadores funcionam com base em uma lógica binária, ou seja, só entendem sinais elétricos de dois tipos:
+    ligados (1) e desligados (0). Esses sinais são processados por milhões de transistores presentes nos componentes
+    eletrônicos. Isso significa que todo tipo de informação — texto, imagem, áudio — precisa ser convertida em
+    números binários para que o computador possa processá-los.</p>
+<p>Para organizar esse processo, foi desenvolvida uma estrutura chamada <strong>Arquitetura de von Neumann</strong>,
+    usada até hoje. Essa arquitetura define que o computador é composto por três unidades principais:</p>
+<ul>
+    <li><strong>Unidade Lógica e Aritmética (ULA):</strong> realiza cálculos e comparações;</li>
+    <li><strong>Unidade de Controle:</strong> controla o fluxo das instruções;</li>
+    <li><strong>Memória:</strong> armazena os dados e instruções;</li>
+</ul>
+<p>
+    Além disso, há os dispositivos de entrada (como teclado e mouse) e de saída (como monitor e impressora), que
+    completam o sistema.
+</p>
+<img src="../../imagens/algoritmoseprogramacao/aula3/arquiteturaneumann.png" alt="Arquitetura de von Neumann"
+    class="imagens">
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+<p>A arquitetura permite que um programa seja carregado na memória, interpretado e executado, gerando respostas.
+    Esse ciclo básico é representado pelo modelo:</p>
+<p style="text-align: center;"><strong>Entrada → Processamento → Saída</strong></p>
 
-    <h2>1. Arquitetura e Entrada de Dados</h2>
-    <p>Os computadores funcionam com base em uma lógica binária, ou seja, só entendem sinais elétricos de dois tipos: ligados (1) e desligados (0). Esses sinais são processados por milhões de transistores presentes nos componentes eletrônicos. Isso significa que todo tipo de informação — texto, imagem, áudio — precisa ser convertido em números binários para que o computador possa processá-los.</p>
-    <p>Para organizar esse processo, foi desenvolvida uma estrutura chamada <strong>Arquitetura de von Neumann</strong>, usada até hoje. Essa arquitetura define que o computador é composto por três unidades principais:</p>
-    <ul>
-        <li><strong>Unidade Lógica e Aritmética (ULA):</strong> realiza cálculos e comparações;</li>
-        <li><strong>Unidade de Controle:</strong> controla o fluxo das instruções;</li>
-        <li><strong>Memória:</strong> armazena os dados e instruções;</li>
-    </ul>
-    <p>
-        Além disso, há os dispositivos de entrada (como teclado e mouse) e de saída (como monitor e impressora), que completam o sistema.
-    </p>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/arquiteturaneumann.png" alt="Arquitetura de von Neumann" class="imagens">
-    
-    <p>A arquitetura permite que um programa seja carregado na memória, interpretado e executado, gerando respostas. Esse ciclo básico é representado pelo modelo:</p>
-    <p style="text-align: center;"><strong>Entrada → Processamento → Saída</strong></p>
+<hr>
 
-    <hr>
-    
-    <h2>2. Scratch e Programação por Blocos</h2>
-    <p>O Scratch é uma linguagem de programação visual que permite criar histórias, jogos e animações através de blocos gráficos que se encaixam como peças de LEGO. Esses blocos estão organizados por categorias que ajudam o programador a encontrar o que precisa.</p>
-    <p><em>Figura aqui (interface do Scratch com áreas destacadas)</em></p>
-    
-    <h3>Principais categorias de blocos:</h3>
-    <ul>
-        <li><strong>Movimento (motion):</strong> movimenta o ator no palco;</li>
-        <li><strong>Aparência (looks):</strong> altera aparência, cor, falas, visibilidade etc.;</li>
-        <li><strong>Som (sound):</strong> reproduz efeitos sonoros e gravações;</li>
-        <li><strong>Eventos (events):</strong> inicia o código (por exemplo, ao clicar na bandeira verde);</li>
-        <li><strong>Controle (control):</strong> permite usar repetições (loops) e decisões (if/else);</li>
-        <li><strong>Sensores (sensing):</strong> detecta interações com o teclado, mouse ou outros objetos;</li>
-        <li><strong>Operadores (operators):</strong> realiza operações matemáticas, comparações e expressões lógicas;</li>
-        <li><strong>Variáveis (variables):</strong> cria e gerencia valores armazenados temporariamente.</li>
-    </ul>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/scratch1.png" alt="Interface de movimento do Scratch" class="imagens">
-    
-    <p>No Scratch, toda programação começa com um evento, geralmente o bloco “quando a bandeira verde for clicada (when green flag clicked)”. A partir disso, o usuário pode adicionar blocos de ação que se conectam em sequência.</p>
+<h2>2. Scratch e Programação por Blocos</h2>
+<p>O Scratch é uma linguagem de programação visual que permite criar histórias, jogos e animações através de blocos
+    gráficos que se encaixam como peças de LEGO. Esses blocos estão organizados por categorias que ajudam o
+    programador a encontrar o que precisa.</p>
+<p><em>Figura aqui (interface do Scratch com áreas destacadas)</em></p>
 
-    <hr>
-    
-    <h2>3. Conceito de Variável</h2>
-    <p>Variável é um espaço reservado na memória para armazenar dados temporários. Podemos pensar em uma variável como uma "caixa com etiqueta", onde a etiqueta é o nome da variável, e o conteúdo da caixa é o valor armazenado.</p>
-    <p>Uma variável pode conter diferentes tipos de dados, como números e textos. No Scratch, podemos criar variáveis através da aba <strong>Variáveis (variables)</strong>, clicando em “Criar uma variável (Make a variable)”. Depois de criada, ela aparece na lista de blocos e pode ser usada em diferentes partes do código.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/scratch2.png" alt="Interface de criação de variáveis no Scratch" class="imagens">
-    
-    <h3>Regras para nomear variáveis:</h3>
-    <ul>
-        <li>O nome deve começar com uma letra ou <code>_</code> (underscore);</li>
-        <li>Não pode conter espaços nem caracteres especiais;</li>
-        <li>Deve representar claramente o valor que armazena (ex: <code>nomeUsuario</code>, <code>idade</code>).</li>
-    </ul>
+<h3>Principais categorias de blocos:</h3>
+<ul>
+    <li><strong>Movimento (motion):</strong> movimenta o ator no palco;</li>
+    <li><strong>Aparência (looks):</strong> altera aparência, cor, falas, visibilidade etc.;</li>
+    <li><strong>Som (sound):</strong> reproduz efeitos sonoros e gravações;</li>
+    <li><strong>Eventos (events):</strong> inicia o código (por exemplo, ao clicar na bandeira verde);</li>
+    <li><strong>Controle (control):</strong> permite usar repetições (loops) e decisões (if/else);</li>
+    <li><strong>Sensores (sensing):</strong> detecta interações com o teclado, mouse ou outros objetos;</li>
+    <li><strong>Operadores (operators):</strong> realiza operações matemáticas, comparações e expressões lógicas;
+    </li>
+    <li><strong>Variáveis (variables):</strong> cria e gerencia valores armazenados temporariamente.</li>
+</ul>
+<img src="../../imagens/algoritmoseprogramacao/aula3/scratch1.png" alt="Interface de movimento do Scratch"
+    class="imagens">
 
-    <hr>
-    
-    <h2>4. Recebendo dados do usuário</h2>
-    <p>Para interagir com o usuário, o Scratch possui o bloco <strong>pergunte [] e espere (ask [] and wait)</strong>, que exibe uma pergunta na tela e aguarda o usuário digitar uma resposta. O valor digitado é armazenado temporariamente no bloco <strong>resposta (answer)</strong>.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/scratch3.png" alt="Uso do bloco ask com resposta" class="imagens">
-    
-    <p>Se quisermos utilizar esse valor mais de uma vez, devemos transferi-lo para uma variável usando o bloco <strong>defina [variável] para [resposta] (set [variable] to [answer])</strong>. Caso contrário, o conteúdo será sobrescrito ao realizar uma nova pergunta.</p>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/scratch4.png" alt="Bloco set com resposta sendo atribuída a uma variável" class="imagens">
+<p>No Scratch, toda programação começa com um evento, geralmente o bloco “quando a bandeira verde for clicada (when
+    green flag clicked)”. A partir disso, o usuário pode adicionar blocos de ação que se conectam em sequência.</p>
 
-    <hr>
-    
-    <h2>5. Operações Aritméticas</h2>
-    <p>As operações matemáticas são feitas com os blocos da categoria <strong>Operadores (operators)</strong>. Esses blocos são ovais e podem ser encaixados dentro de outros blocos. As principais operações disponíveis são:</p>
-    <ul>
-        <li>Adição <code>(+)</code></li>
-        <li>Subtração <code>(-)</code></li>
-        <li>Multiplicação <code>(×)</code></li>
-        <li>Divisão <code>(÷)</code></li>
-    </ul>
-    <img src="../../imagens/algoritmoseprogramacao/aula3/scratch5.png" alt="Exemplo de uso de operadores aritméticos e variáveis" class="imagens">
-    
-    <p>Um exemplo prático seria somar dois números digitados pelo usuário. Para isso:</p>
-    <ul>
-        <li>Usa-se o bloco <strong>pergunte (ask)</strong> para receber o primeiro número e salvá-lo em uma variável (ex: <code>num1</code>);</li>
-        <li>Repete-se o processo para o segundo número (ex: <code>num2</code>);</li>
-        <li>Utiliza-se o bloco de adição para somar <code>num1</code> + <code>num2</code>;</li>
-        <li>Armazena-se o resultado em uma nova variável (ex: <code>resultado</code>) e o exibe usando o bloco <strong>diga (say)</strong>.</li>
-    </ul>
-    
-    <p>Esse mesmo fluxo pode ser adaptado para outras operações matemáticas, bastando trocar o operador.</p>
+<hr>
 
-    <p>Veja o seguinte vídeo e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/L8_fW8jn9-g" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+<h2>3. Conceito de Variável</h2>
+<p>Variável é um espaço reservado na memória para armazenar dados temporários. Podemos pensar em uma variável como
+    uma "caixa com etiqueta", onde a etiqueta é o nome da variável, e o conteúdo da caixa é o valor armazenado.</p>
+<p>Uma variável pode conter diferentes tipos de dados, como números e textos. No Scratch, podemos criar variáveis
+    através da aba <strong>Variáveis (variables)</strong>, clicando em “Criar uma variável (Make a variable)”.
+    Depois de criada, ela aparece na lista de blocos e pode ser usada em diferentes partes do código.</p>
+<img src="../../imagens/algoritmoseprogramacao/aula3/scratch2.png" alt="Interface de criação de variáveis no Scratch"
+    class="imagens">
 
-    <hr>
-    
-    <h2>6. Conclusão</h2>
-    <p>Neste capítulo, foram apresentados os fundamentos das variáveis e operações aritméticas dentro do ambiente Scratch, sempre respeitando a lógica de entrada, processamento e saída conforme o modelo de von Neumann.</p>
-    <p>Aprendemos que variáveis são essenciais para guardar dados temporários, e que as operações matemáticas permitem transformar esses dados em novos resultados. Com a prática contínua, esses conceitos se tornam a base para resolver problemas cada vez mais complexos por meio da programação.</p>
+<h3>Regras para nomear variáveis:</h3>
+<ul>
+    <li>O nome deve começar com uma letra ou <code>_</code> (underscore);</li>
+    <li>Não pode conter espaços nem caracteres especiais;</li>
+    <li>Deve representar claramente o valor que armazena (ex: <code>nomeUsuario</code>, <code>idade</code>).</li>
+</ul>
 
-    <hr>
+<hr>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="algoritmoseprogramacao1aula4.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<h2>4. Recebendo dados do usuário</h2>
+<p>Para interagir com o usuário, o Scratch possui o bloco <strong>pergunte [] e espere (ask [] and wait)</strong>,
+    que exibe uma pergunta na tela e aguarda o usuário digitar uma resposta. O valor digitado é armazenado
+    temporariamente no bloco <strong>resposta (answer)</strong>.</p>
+<img src="../../imagens/algoritmoseprogramacao/aula3/scratch3.png" alt="Uso do bloco ask com resposta" class="imagens">
 
-</html>
+<p>Se quisermos utilizar esse valor mais de uma vez, devemos transferi-lo para uma variável usando o bloco
+    <strong>defina [variável] para [resposta] (set [variable] to [answer])</strong>. Caso contrário, o conteúdo será
+    sobrescrito ao realizar uma nova pergunta.
+</p>
+<img src="../../imagens/algoritmoseprogramacao/aula3/scratch4.png"
+    alt="Bloco set com resposta sendo atribuída a uma variável" class="imagens">
+
+<hr>
+
+<h2>5. Operações Aritméticas</h2>
+<p>As operações matemáticas são feitas com os blocos da categoria <strong>Operadores (operators)</strong>. Esses
+    blocos são ovais e podem ser encaixados dentro de outros blocos. As principais operações disponíveis são:</p>
+<ul>
+    <li>Adição <code>(+)</code></li>
+    <li>Subtração <code>(-)</code></li>
+    <li>Multiplicação <code>(×)</code></li>
+    <li>Divisão <code>(÷)</code></li>
+</ul>
+<img src="../../imagens/algoritmoseprogramacao/aula3/scratch5.png"
+    alt="Exemplo de uso de operadores aritméticos e variáveis" class="imagens">
+
+<p>Um exemplo prático seria somar dois números digitados pelo usuário. Para isso:</p>
+<ul>
+    <li>Usa-se o bloco <strong>pergunte (ask)</strong> para receber o primeiro número e salvá-lo em uma variável
+        (ex: <code>num1</code>);</li>
+    <li>Repete-se o processo para o segundo número (ex: <code>num2</code>);</li>
+    <li>Utiliza-se o bloco de adição para somar <code>num1</code> + <code>num2</code>;</li>
+    <li>Armazena-se o resultado em uma nova variável (ex: <code>resultado</code>) e o exibe usando o bloco
+        <strong>diga (say)</strong>.
+    </li>
+</ul>
+
+<p>Esse mesmo fluxo pode ser adaptado para outras operações matemáticas, bastando trocar o operador.</p>
+
+<p>Veja o seguinte vídeo e acompanhe no seu computador para melhor entendimento: <a href="https://youtu.be/L8_fW8jn9-g"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a>
+</p>
+
+<hr>
+
+<h2>6. Conclusão</h2>
+<p>Neste capítulo, foram apresentados os fundamentos das variáveis e operações aritméticas dentro do ambiente
+    Scratch, sempre respeitando a lógica de entrada, processamento e saída conforme o modelo de von Neumann.</p>
+<p>Aprendemos que variáveis são essenciais para guardar dados temporários, e que as operações matemáticas permitem
+    transformar esses dados em novos resultados. Com a prática contínua, esses conceitos se tornam a base para
+    resolver problemas cada vez mais complexos por meio da programação.</p>
+
+{% include nav-aula.html materia="algoritmoseprogramacao1" aula="4" %}
+{% include footer.html %}

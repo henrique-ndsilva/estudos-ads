@@ -12,11 +12,24 @@ h1 {
     text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #C8C3BC;
 }
 
-h2, h3, h4, h5, h6, p, ul, ol, li {
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
     text-align: justify;
 }
 
@@ -26,6 +39,7 @@ hr {
 
 .navlink {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .navlink a {
@@ -58,7 +72,8 @@ hr {
     background-color: #383838;
 }
 
-code, .code {
+code,
+.code {
     background: #292929;
 }
 
@@ -82,11 +97,14 @@ table {
     overflow-x: auto;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ccc;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: center;
 }
@@ -114,35 +132,93 @@ th, td {
 /* Media Queries */
 
 @media (min-width: 650px) {
-    .imagens { width: 70%; }
-    .algoritmosequencial { width: 35%; }
-    #imagemmenor2 { width: 40%; }
+    .imagens {
+        width: 70%;
+    }
+
+    .algoritmosequencial {
+        width: 35%;
+    }
+
+    #imagemmenor2 {
+        width: 40%;
+    }
 }
 
 @media (min-width: 700px) {
-    .imagens { width: 55%; }
-    .algoritmosequencial { width: 30%; }
-    #imagemmenor2 { width: 35%; }
+    .imagens {
+        width: 55%;
+    }
+
+    .algoritmosequencial {
+        width: 30%;
+    }
+
+    #imagemmenor2 {
+        width: 35%;
+    }
 }
 
 @media (min-width: 750px) {
-    table, .niveisorganizacionais { width: 70%; }
+
+    table,
+    .niveisorganizacionais {
+        width: 70%;
+    }
 }
 
 @media (min-width: 800px) {
-    .imagens { width: 50%; }
-    .algoritmosequencial { width: 25%; }
-    #imagemmenor2 { width: 30%; }
+    .imagens {
+        width: 50%;
+    }
+
+    .algoritmosequencial {
+        width: 25%;
+    }
+
+    #imagemmenor2 {
+        width: 30%;
+    }
 }
 
 @media (min-width: 900px) {
-    .imagens { width: inherit; }
-    .algoritmosequencial { width: 20%; }
-    #imagemmenor { width: 45%; }
-    #imagemmenor2 { width: 25%; }
+    .imagens {
+        width: inherit;
+    }
+
+    .algoritmosequencial {
+        width: 20%;
+    }
+
+    #imagemmenor {
+        width: 45%;
+    }
+
+    #imagemmenor2 {
+        width: 25%;
+    }
 }
 
 @media (min-width: 1000px) {
-    .algoritmosequencial { width: 15%; }
-    #imagemmenor2 { width: 20%; }
+    .algoritmosequencial {
+        width: 15%;
+    }
+
+    #imagemmenor2 {
+        width: 20%;
+    }
+}
+
+.rodape {
+    padding: 3px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.rodape p {
+    text-align: center;
 }

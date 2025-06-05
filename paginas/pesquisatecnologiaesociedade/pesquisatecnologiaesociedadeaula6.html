@@ -1,188 +1,212 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 6 - P.T.S.</title>
-</head>
+{% include head-aula.html page-title="Aula 6 - PTS" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Projeto de pesquisa e sua estrutura." %}
 
-    <h1>Projeto de pesquisa e sua estrutura.</h1>
-    
-    <hr>
+<p>
+  Este capítulo enfatiza a importância de estruturar de forma organizada um projeto de pesquisa acadêmica, que serve
+  para comunicar de maneira clara e precisa os objetivos, métodos e intenções do pesquisador. A elaboração do projeto
+  é fruto de um processo que parte do interesse pessoal e da experiência do sujeito cognoscente, transformando um tema
+  de curiosidade em um problema de pesquisa a ser investigado de maneira sistemática.
+</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+<hr>
 
-    <p>
-      Este capítulo enfatiza a importância de estruturar de forma organizada um projeto de pesquisa acadêmica, que serve para comunicar de maneira clara e precisa os objetivos, métodos e intenções do pesquisador. A elaboração do projeto é fruto de um processo que parte do interesse pessoal e da experiência do sujeito cognoscente, transformando um tema de curiosidade em um problema de pesquisa a ser investigado de maneira sistemática.
-    </p>
-    
-    <h2>1. Projeto de Pesquisa e o Papel do Sujeito Cognoscente</h2>
-    <p>O projeto de pesquisa nasce do interesse do sujeito cognoscente, que, através de sua experiência e reflexão crítica, identifica um tema e delimita um problema a ser investigado. Esse processo envolve a definição dos objetivos, a formulação de hipóteses e a escolha dos métodos e recursos necessários para a investigação.</p>
-    <p>
-      A estrutura do projeto segue uma cronologia sistemática, conforme apresentada no material, que pode ser representada da seguinte forma:
-    </p>
-    <p>Definir o problema → Realizar um levantamento bibliográfico → Formular uma hipótese → Estabelecer a metodologia de trabalho → Determinar o material a ser analisado → Analisar os resultados → Delinear as conclusões</p>
+<h2>1. Projeto de Pesquisa e o Papel do Sujeito Cognoscente</h2>
+<p>O projeto de pesquisa nasce do interesse do sujeito cognoscente, que, através de sua experiência e reflexão
+  crítica, identifica um tema e delimita um problema a ser investigado. Esse processo envolve a definição dos
+  objetivos, a formulação de hipóteses e a escolha dos métodos e recursos necessários para a investigação.</p>
+<p>
+  A estrutura do projeto segue uma cronologia sistemática, conforme apresentada no material, que pode ser representada
+  da seguinte forma:
+</p>
+<p>Definir o problema → Realizar um levantamento bibliográfico → Formular uma hipótese → Estabelecer a metodologia de
+  trabalho → Determinar o material a ser analisado → Analisar os resultados → Delinear as conclusões</p>
 
-    <hr>
-    
-    <h2>2. Elementos Constitutivos de um Projeto de Pesquisa</h2>
-    
-    <h3>2.1 Elementos Teóricos</h3>
-    <p>Os elementos teóricos formam a base para a proposição da pesquisa e envolvem:</p>
+<hr>
+
+<h2>2. Elementos Constitutivos de um Projeto de Pesquisa</h2>
+
+<h3>2.1 Elementos Teóricos</h3>
+<p>Os elementos teóricos formam a base para a proposição da pesquisa e envolvem:</p>
+<ul>
+  <li><strong>Tema e Problema:</strong> Delimitar o objeto de estudo e identificar um problema específico (por
+    exemplo, no caso de Ana Tereza, investigar estímulos cognitivos para amenizar os danos do Alzheimer e melhorar os
+    vínculos familiares).</li>
+  <li><strong>Objetivos:</strong> Estabelecer um objetivo geral que sintetize o propósito da pesquisa, complementado
+    por objetivos específicos que desmembram o problema em partes manejáveis.</li>
+  <li><strong>Justificativa:</strong> Apresentar as razões para a escolha do tema, evidenciando lacunas na literatura
+    ou a relevância prática do assunto para a sociedade.</li>
+  <li><strong>Hipótese:</strong> Formular uma solução provisória que orientará a investigação e será testada ao longo
+    do estudo.</li>
+</ul>
+
+<h3>2.2 Elementos Metodológicos</h3>
+<p>Os elementos metodológicos definem como a pesquisa será realizada, respondendo à pergunta “Como pesquisar?”. Esta
+  seção inclui:</p>
+<ul>
+  <li>
+    <strong>Definição da Metodologia:</strong> Escolha do método adequado – qualitativo, quantitativo ou misto – que
+    se alinhe com os objetivos do estudo.
+  </li>
+  <li>
+    <strong>Coleta de Dados:</strong> Seleção dos instrumentos e procedimentos para obtenção das informações, tais
+    como entrevistas, questionários, observações ou experimentos.
+  </li>
+  <li>
+    <strong>Amostragem:</strong> A seleção dos participantes é feita por meio de dois grandes métodos:
     <ul>
-      <li><strong>Tema e Problema:</strong> Delimitar o objeto de estudo e identificar um problema específico (por exemplo, no caso de Ana Tereza, investigar estímulos cognitivos para amenizar os danos do Alzheimer e melhorar os vínculos familiares).</li>
-      <li><strong>Objetivos:</strong> Estabelecer um objetivo geral que sintetize o propósito da pesquisa, complementado por objetivos específicos que desmembram o problema em partes manejáveis.</li>
-      <li><strong>Justificativa:</strong> Apresentar as razões para a escolha do tema, evidenciando lacunas na literatura ou a relevância prática do assunto para a sociedade.</li>
-      <li><strong>Hipótese:</strong> Formular uma solução provisória que orientará a investigação e será testada ao longo do estudo.</li>
-    </ul>
-    
-    <h3>2.2 Elementos Metodológicos</h3>
-    <p>Os elementos metodológicos definem como a pesquisa será realizada, respondendo à pergunta “Como pesquisar?”. Esta seção inclui:</p>
-    <ul>
       <li>
-        <strong>Definição da Metodologia:</strong> Escolha do método adequado – qualitativo, quantitativo ou misto – que se alinhe com os objetivos do estudo.
-      </li>
-      <li>
-        <strong>Coleta de Dados:</strong> Seleção dos instrumentos e procedimentos para obtenção das informações, tais como entrevistas, questionários, observações ou experimentos.
-      </li>
-      <li>
-        <strong>Amostragem:</strong> A seleção dos participantes é feita por meio de dois grandes métodos:
+        <strong>Amostragem Probabilística:</strong> Onde todos os indivíduos têm a mesma chance de serem selecionados.
+        Suas subdivisões incluem:
         <ul>
-          <li>
-            <strong>Amostragem Probabilística:</strong> Onde todos os indivíduos têm a mesma chance de serem selecionados. Suas subdivisões incluem:
-            <ul>
-              <li><strong>Aleatória Simples:</strong> Seleção totalmente ao acaso.</li>
-              <li><strong>Sistemática:</strong> Escolha com base em um padrão pré-estabelecido (por exemplo, selecionar cada 5º nome de uma lista).</li>
-              <li><strong>Estratificada:</strong> Divisão da população em grupos (estratos) e seleção aleatória dentro de cada grupo para garantir representatividade.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Amostragem Não Probabilística:</strong> Onde a seleção depende de critérios definidos pelo pesquisador, de modo que nem todos os indivíduos têm a mesma chance de participar. As principais subdivisões são:
-            <ul>
-              <li><strong>Por Conveniência:</strong> Seleção baseada na facilidade de acesso aos participantes.</li>
-              <li><strong>Por Cotas:</strong> Escolha deliberada de indivíduos que representem determinados segmentos da população conforme características pré-definidas.</li>
-            </ul>
-          </li>
+          <li><strong>Aleatória Simples:</strong> Seleção totalmente ao acaso.</li>
+          <li><strong>Sistemática:</strong> Escolha com base em um padrão pré-estabelecido (por exemplo, selecionar
+            cada 5º nome de uma lista).</li>
+          <li><strong>Estratificada:</strong> Divisão da população em grupos (estratos) e seleção aleatória dentro de
+            cada grupo para garantir representatividade.</li>
         </ul>
       </li>
       <li>
-        <strong>Recursos e Orçamento:</strong> Estimativa dos recursos financeiros, humanos e materiais necessários para a realização da pesquisa, incluindo deslocamentos, equipamentos e infraestrutura.
+        <strong>Amostragem Não Probabilística:</strong> Onde a seleção depende de critérios definidos pelo
+        pesquisador, de modo que nem todos os indivíduos têm a mesma chance de participar. As principais subdivisões
+        são:
+        <ul>
+          <li><strong>Por Conveniência:</strong> Seleção baseada na facilidade de acesso aos participantes.</li>
+          <li><strong>Por Cotas:</strong> Escolha deliberada de indivíduos que representem determinados segmentos da
+            população conforme características pré-definidas.</li>
+        </ul>
       </li>
-      <li>
-        <strong>Cronograma:</strong> Planejamento temporal detalhado que organiza as etapas do projeto, permitindo o acompanhamento do progresso e o cumprimento dos prazos estabelecidos.
-      </li>
     </ul>
-    
-    <h3>2.3 Elementos Complementares</h3>
-    <p>Além dos elementos teóricos e metodológicos, um projeto de pesquisa deve incluir:</p>
-    <ul>
-      <li><strong>Bibliografia:</strong> Lista preliminar de referências e obras que fundamentarão o estudo, a qual pode ser atualizada conforme a pesquisa avança.</li>
-      <li><strong>Recursos Complementares:</strong> Descrição dos materiais, equipamentos e apoio logístico necessário para a execução da pesquisa.</li>
-      <li><strong>Cronograma e Orçamento Detalhado:</strong> Um plano que descreva todas as etapas da pesquisa e estime os custos envolvidos, garantindo o planejamento financeiro do projeto.</li>
-    </ul>
+  </li>
+  <li>
+    <strong>Recursos e Orçamento:</strong> Estimativa dos recursos financeiros, humanos e materiais necessários para a
+    realização da pesquisa, incluindo deslocamentos, equipamentos e infraestrutura.
+  </li>
+  <li>
+    <strong>Cronograma:</strong> Planejamento temporal detalhado que organiza as etapas do projeto, permitindo o
+    acompanhamento do progresso e o cumprimento dos prazos estabelecidos.
+  </li>
+</ul>
 
-    <hr>
-    
-    <h2>3. Cronograma do Projeto de Pesquisa</h2>
-    <p>O cronograma é uma ferramenta indispensável para organizar as etapas do projeto ao longo do tempo. Um exemplo de cronograma para uma pesquisa ao longo de um ano é apresentado na tabela a seguir:</p>
-    <table>
-      <tr>
-        <th>Etapa</th>
-        <th>1º Trimestre</th>
-        <th>2º Trimestre</th>
-        <th>3º Trimestre</th>
-        <th>4º Trimestre</th>
-      </tr>
-      <tr>
-        <td>Levantamento Bibliográfico</td>
-        <td>X</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Fichamento dos Textos</td>
-        <td>X</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Coleta de Dados</td>
-        <td>X</td>
-        <td>X</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Análise dos Dados</td>
-        <td></td>
-        <td>X</td>
-        <td>X</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Pesquisa de Campo/Entrevistas</td>
-        <td></td>
-        <td>X</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Produção Escrita da Pesquisa</td>
-        <td></td>
-        <td></td>
-        <td>X</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Revisão e Redação Final</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>X</td>
-      </tr>
-    </table>
+<h3>2.3 Elementos Complementares</h3>
+<p>Além dos elementos teóricos e metodológicos, um projeto de pesquisa deve incluir:</p>
+<ul>
+  <li><strong>Bibliografia:</strong> Lista preliminar de referências e obras que fundamentarão o estudo, a qual pode
+    ser atualizada conforme a pesquisa avança.</li>
+  <li><strong>Recursos Complementares:</strong> Descrição dos materiais, equipamentos e apoio logístico necessário
+    para a execução da pesquisa.</li>
+  <li><strong>Cronograma e Orçamento Detalhado:</strong> Um plano que descreva todas as etapas da pesquisa e estime os
+    custos envolvidos, garantindo o planejamento financeiro do projeto.</li>
+</ul>
 
-    <hr>
-    
-    <h2>4. Referências Complementares e Exemplos Práticos</h2>
-    <p>Esta seção apresenta exemplos práticos que ilustram como os elementos de um projeto de pesquisa se aplicam na prática. Um exemplo citado é o estudo do perfil do escritor brasileiro:</p>
-    <p>Nesse projeto, os pesquisadores analisaram 692 romances escritos por 383 autores ao longo de três períodos (1965–1979, 1990–2004 e 2005–2014) para identificar características como etnia, gênero, escolaridade, profissão e localização geográfica dos autores. Os resultados indicaram que:</p>
-    <ul>
-      <li>72,7% dos autores são homens;</li>
-      <li>93,9% são brancos;</li>
-      <li>78,8% possuem ensino superior;</li>
-      <li>36,4% são jornalistas;</li>
-      <li>A maioria dos autores reside no eixo Rio-São Paulo;</li>
-      <li>A média de idade dos autores é de 50 anos.</li>
-    </ul>
-    <p>Esses dados permitiram compreender não só o perfil do romancista, mas também como tais características influenciam a representação de personagens nos romances, reforçando a importância de uma análise estatística e qualitativa para a compreensão de fenômenos culturais.</p>
-    <p>
-      Outro exemplo prático envolve a definição e a análise de uma amostra para pesquisas eleitorais, onde os pesquisadores utilizam critérios como distribuição por gênero, faixa etária e região para garantir que a amostra seja representativa da população. A utilização de métodos probabilísticos – como a amostragem aleatória simples ou estratificada – e não probabilísticos – como a amostragem por conveniência ou por cotas – é fundamental para obter resultados confiáveis, mesmo considerando a margem de erro inerente a esse tipo de estudo.
-    </p>
-    <p>Esses exemplos demonstram como a integração de dados brutos, a análise crítica e a metodologia adequada são essenciais para transformar informações isoladas em conhecimento que possa orientar decisões e práticas em diversas áreas.</p>
+<hr>
 
-    <hr>
-    
-    <h2>5. Considerações Finais</h2>
-    <p>O projeto de pesquisa é a base para a produção do conhecimento acadêmico, organizando de forma clara os objetivos, hipóteses, métodos, recursos e cronograma necessários para investigar um problema. A experiência e a curiosidade do pesquisador são convertidas em um problema de pesquisa, que, através de um levantamento teórico e da coleta e análise de dados, se transforma em conhecimento fundamentado.</p>
-    <p>Uma estrutura bem definida, que abrange elementos teóricos, metodológicos e complementares, é crucial para a realização de uma pesquisa robusta e organizada. Essa abordagem integrada permite ao pesquisador não apenas planejar e executar sua investigação de forma sistemática, mas também aplicar os resultados para promover avanços na área estudada e contribuir para o desenvolvimento da sociedade.</p>
+<h2>3. Cronograma do Projeto de Pesquisa</h2>
+<p>O cronograma é uma ferramenta indispensável para organizar as etapas do projeto ao longo do tempo. Um exemplo de
+  cronograma para uma pesquisa ao longo de um ano é apresentado na tabela a seguir:</p>
+<table>
+  <tr>
+    <th>Etapa</th>
+    <th>1º Trimestre</th>
+    <th>2º Trimestre</th>
+    <th>3º Trimestre</th>
+    <th>4º Trimestre</th>
+  </tr>
+  <tr>
+    <td>Levantamento Bibliográfico</td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Fichamento dos Textos</td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Coleta de Dados</td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Análise dos Dados</td>
+    <td></td>
+    <td>X</td>
+    <td>X</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Pesquisa de Campo/Entrevistas</td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Produção Escrita da Pesquisa</td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Revisão e Redação Final</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>X</td>
+  </tr>
+</table>
 
-    <hr>
+<hr>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="pesquisatecnologiaesociedadeaula7.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<h2>4. Referências Complementares e Exemplos Práticos</h2>
+<p>Esta seção apresenta exemplos práticos que ilustram como os elementos de um projeto de pesquisa se aplicam na
+  prática. Um exemplo citado é o estudo do perfil do escritor brasileiro:</p>
+<p>Nesse projeto, os pesquisadores analisaram 692 romances escritos por 383 autores ao longo de três períodos
+  (1965–1979, 1990–2004 e 2005–2014) para identificar características como etnia, gênero, escolaridade, profissão e
+  localização geográfica dos autores. Os resultados indicaram que:</p>
+<ul>
+  <li>72,7% dos autores são homens;</li>
+  <li>93,9% são brancos;</li>
+  <li>78,8% possuem ensino superior;</li>
+  <li>36,4% são jornalistas;</li>
+  <li>A maioria dos autores reside no eixo Rio-São Paulo;</li>
+  <li>A média de idade dos autores é de 50 anos.</li>
+</ul>
+<p>Esses dados permitiram compreender não só o perfil do romancista, mas também como tais características influenciam
+  a representação de personagens nos romances, reforçando a importância de uma análise estatística e qualitativa para
+  a compreensão de fenômenos culturais.</p>
+<p>
+  Outro exemplo prático envolve a definição e a análise de uma amostra para pesquisas eleitorais, onde os
+  pesquisadores utilizam critérios como distribuição por gênero, faixa etária e região para garantir que a amostra
+  seja representativa da população. A utilização de métodos probabilísticos – como a amostragem aleatória simples ou
+  estratificada – e não probabilísticos – como a amostragem por conveniência ou por cotas – é fundamental para obter
+  resultados confiáveis, mesmo considerando a margem de erro inerente a esse tipo de estudo.
+</p>
+<p>Esses exemplos demonstram como a integração de dados brutos, a análise crítica e a metodologia adequada são
+  essenciais para transformar informações isoladas em conhecimento que possa orientar decisões e práticas em diversas
+  áreas.</p>
 
-</html>
+<hr>
+
+<h2>5. Considerações Finais</h2>
+<p>O projeto de pesquisa é a base para a produção do conhecimento acadêmico, organizando de forma clara os objetivos,
+  hipóteses, métodos, recursos e cronograma necessários para investigar um problema. A experiência e a curiosidade do
+  pesquisador são convertidas em um problema de pesquisa, que, através de um levantamento teórico e da coleta e
+  análise de dados, se transforma em conhecimento fundamentado.</p>
+<p>Uma estrutura bem definida, que abrange elementos teóricos, metodológicos e complementares, é crucial para a
+  realização de uma pesquisa robusta e organizada. Essa abordagem integrada permite ao pesquisador não apenas planejar
+  e executar sua investigação de forma sistemática, mas também aplicar os resultados para promover avanços na área
+  estudada e contribuir para o desenvolvimento da sociedade.</p>
+
+{% include nav-aula.html materia="pesquisatecnologiaesociedade" aula="7" %}
+{% include footer.html %}

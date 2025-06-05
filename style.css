@@ -29,83 +29,123 @@ body {
 }
 
 @media (min-width: 1370px) {
-    .divmain { max-width: 90%; }
+    .divmain {
+        max-width: 90%;
+    }
 }
 
 @media (min-width: 1520px) {
-    .divmain { max-width: 85%; }
+    .divmain {
+        max-width: 85%;
+    }
 }
 
 @media (min-width: 1608px) {
-    .divmain { max-width: 80%; }
+    .divmain {
+        max-width: 80%;
+    }
 }
 
 @media (min-width: 1708px) {
-    .divmain { max-width: 75%; }
+    .divmain {
+        max-width: 75%;
+    }
 }
 
 @media (min-width: 1821px) {
-    .divmain { max-width: 70%; }
+    .divmain {
+        max-width: 70%;
+    }
 }
 
 @media (min-width: 1950px) {
-    .divmain { max-width: 65%; }
+    .divmain {
+        max-width: 65%;
+    }
 }
 
 @media (min-width: 2099px) {
-    .divmain { max-width: 60%; }
+    .divmain {
+        max-width: 60%;
+    }
 }
 
 @media (max-width: 1218px) {
-    .divmain { max-width: 62%; }
+    .divmain {
+        max-width: 62%;
+    }
 }
 
 @media (max-width: 979px) {
-    .divmain { max-width: 70%; }
+    .divmain {
+        max-width: 70%;
+    }
 }
 
 @media (max-width: 869px) {
-    .divmain { max-width: 80%; }
+    .divmain {
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 764px) {
-    .divmain { max-width: inherit; }
+    .divmain {
+        max-width: inherit;
+    }
 }
 
 @media (max-width: 650px) {
-    .divmain img { height: 70px; }
+    .divmain img {
+        height: 70px;
+    }
 }
 
 @media (max-width: 574px) {
-    .divmain img { height: 65px; }
+    .divmain img {
+        height: 65px;
+    }
 }
 
 @media (max-width: 536px) {
-    .divmain img { height: 60px; }
+    .divmain img {
+        height: 60px;
+    }
 }
 
 @media (max-width: 498px) {
-    .divmain img { height: 55px; }
+    .divmain img {
+        height: 55px;
+    }
 }
 
 @media (max-width: 460px) {
-    .divmain img { height: 50px; }
+    .divmain img {
+        height: 50px;
+    }
 }
 
 @media (max-width: 422px) {
-    .divmain img { height: 45px; }
+    .divmain img {
+        height: 45px;
+    }
 }
 
 @media (max-width: 383px) {
-    .divmain img { height: 40px; }
+    .divmain img {
+        height: 40px;
+    }
 }
 
 @media (max-width: 345px) {
-    .divmain img { height: 35px; }
+    .divmain img {
+        height: 35px;
+    }
 }
 
 @media (max-width: 308px) {
-    .divmain img { height: 34px; }
+    .divmain img {
+        height: 34px;
+    }
 }
 
 .divmain img.conteudo-disponivel {
@@ -124,7 +164,8 @@ hr {
     border-color: #14141485;
 }
 
-.buttonnav, .button-trimestres {
+.buttonnav,
+.button-trimestres {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -132,7 +173,9 @@ hr {
     margin: 10px auto;
 }
 
-.buttonmain, #btn-trimestre1, #btn-trimestre2 {
+.buttonmain,
+#btn-trimestre1,
+#btn-trimestre2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,37 +196,60 @@ hr {
 }
 
 @media (max-width: 365px) {
-    .buttonmain { min-width: 75px; }
+    .buttonmain {
+        min-width: 75px;
+    }
 }
 
 @media (max-width: 350px) {
-    .buttonmain { min-width: 70px; }
+    .buttonmain {
+        min-width: 70px;
+    }
 }
 
 @media (max-width: 335px) {
-    .buttonmain { min-width: 65px; }
+    .buttonmain {
+        min-width: 65px;
+    }
 }
 
 @media (max-width: 320px) {
-    .buttonmain { min-width: 60px; }
+    .buttonmain {
+        min-width: 60px;
+    }
 }
 
 @media (max-width: 305px) {
-    .buttonmain { min-width: 55px; }
+    .buttonmain {
+        min-width: 55px;
+    }
 }
 
-#btn-trimestre1, #btn-trimestre2 {
+#btn-trimestre1,
+#btn-trimestre2 {
     min-width: 150px;
     font-size: 12px;
     padding: 5px 15px;
     border-radius: 20px;
 }
 
-.buttonmain:hover, #btn-trimestre1:hover, #btn-trimestre2:hover {
+.buttonmain:hover,
+#btn-trimestre1:hover,
+#btn-trimestre2:hover {
     background-color: #383838;
     cursor: pointer;
 }
 
 .activebutton {
     color: white;
+}
+
+.rodape {
+    padding: 3px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

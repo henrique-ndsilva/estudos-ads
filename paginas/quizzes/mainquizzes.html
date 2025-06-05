@@ -1,81 +1,77 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Quizzes</title>
-</head>
+{% include head-main.html base-path="../../" page-title="Quizzes" %}
 
-<body>
+{% include nav.html %}
+
+<hr> <!-- Início do 1º Trimestre -->
+
+<div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button>
+</div>
+
+<section id="trimestre1" aria-label="Avaliações do 1º Trimestre">
+    <h1>Conceitos da Computação I</h1>
+    <nav aria-label="Quiz e Prova do 1º Trimestre">
+        <div class="divmain">
+            <a href="paginas/cdc1quiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png"
+                    alt="Quiz de Conceitos da Computação I" title="Ver quiz" class="conteudo-disponivel"></a>
+            <a href="paginas/cdc1prova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png"
+                    alt="Prova de Conceitos da Computação I" title="Ver prova" class="conteudo-disponivel"></a>
+        </div>
+    </nav>
     <hr>
 
-    <nav class="buttonnav">
-        <a href="mainquizzes.html" class="buttonmain activebutton" target="_self" title="Ver quizzes">Quizzes</a>
-        <a href="../../index.html" class="buttonmain" target="_self" title="Ir para as aulas">Aulas</a>
-        <a href="../ptis/mainptis.html" class="buttonmain" target="_self" title="Ver PTIs">PTIs</a>
+    <h1>Fundamentos da Administração</h1>
+    <nav aria-label="Quiz e Prova do 1º Trimestre">
+        <div class="divmain">
+            <a href="paginas/fdaquiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png"
+                    alt="Quiz de Fundamentos da Administração" title="Ver quiz" class="conteudo-disponivel"></a>
+            <a href="paginas/fdaprova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png"
+                    alt="Prova de Fundamentos da Administração" title="Ver prova" class="conteudo-disponivel"></a>
+        </div>
     </nav>
+    <hr>
 
-    <hr> <!-- Início do 1º Trimestre -->
+    <h1>Pesquisa, Tecnologia e Sociedade</h1>
+    <nav aria-label="Quiz e Prova do 1º Trimestre">
+        <div class="divmain">
+            <a href="paginas/ptsquiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png"
+                    alt="Quiz de Pesquisa, Tecnologia e Sociedade" title="Ver quiz" class="conteudo-disponivel"></a>
+            <a href="paginas/ptsprova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png"
+                    alt="Prova de Pesquisa, Tecnologia e Sociedade" title="Ver prova" class="conteudo-disponivel"></a>
+        </div>
+    </nav>
+</section>
 
-    <div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button></div>
-    
-    <section id="trimestre1" aria-label="Avaliações do 1º Trimestre">
-        <h1>Conceitos da Computação I</h1>
-        <nav aria-label="Quiz e Prova do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/cdc1quiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png" alt="Quiz de Conceitos da Computação I" title="Ver quiz" class="conteudo-disponivel"></a>
-                <a href="paginas/cdc1prova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png" alt="Prova de Conceitos da Computação I" title="Ver prova" class="conteudo-disponivel"></a>
-            </div>
-        </nav>
-        <hr>
-        
-        <h1>Fundamentos da Administração</h1>
-        <nav aria-label="Quiz e Prova do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/fdaquiz.html" target="_self" ><img src="../../imagens/menu/buttons/quiz.png" alt="Quiz de Fundamentos da Administração" title="Ver quiz" class="conteudo-disponivel"></a>
-                <a href="paginas/fdaprova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png" alt="Prova de Fundamentos da Administração" title="Ver prova" class="conteudo-disponivel"></a>
-            </div>
-        </nav>
-        <hr>
-        
-        <h1>Pesquisa, Tecnologia e Sociedade</h1>
-        <nav aria-label="Quiz e Prova do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/ptsquiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png" alt="Quiz de Pesquisa, Tecnologia e Sociedade" title="Ver quiz" class="conteudo-disponivel"></a>
-                <a href="paginas/ptsprova.html" target="_self"><img src="../../imagens/menu/buttons/prova.png" alt="Prova de Pesquisa, Tecnologia e Sociedade" title="Ver prova" class="conteudo-disponivel"></a>
-            </div>
-        </nav>
-    </section>
+<hr> <!-- Fim do 1º Trimestre e Início do 2º Trimestre -->
 
-    <hr> <!-- Fim do 1º Trimestre e Início do 2º Trimestre -->
+<div class="button-trimestres"><button id="btn-trimestre2" data-label="2º Trimestre">Mostrar 2º Trimestre</button>
+</div>
 
-    <div class="button-trimestres"><button id="btn-trimestre2" data-label="2º Trimestre">Mostrar 2º Trimestre</button></div>
+<section id="trimestre2" aria-label="Avaliações do 2º Trimestre">
+    <h1>Algoritmos e Programação I</h1>
+    <nav aria-label="Quiz e Prova do 2º Trimestre">
+        <div class="divmain">
+            <a href="paginas/aep1quiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png"
+                    alt="Quiz de Algoritmos e Programação I" title="Ver quiz" class="conteudo-disponivel"></a>
+            <img src="../../imagens/menu/buttons/prova.png" alt="Prova de Algoritmos e Programação I" title="Ver prova"
+                class="conteudo-indisponivel">
+        </div>
+    </nav>
+    <hr>
 
-    <section id="trimestre2" aria-label="Avaliações do 2º Trimestre">
-        <h1>Algoritmos e Programação I</h1>
-        <nav aria-label="Quiz e Prova do 2º Trimestre">
-            <div class="divmain">
-                <a href="paginas/aep1quiz.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png" alt="Quiz de Algoritmos e Programação I" title="Ver quiz" class="conteudo-disponivel"></a>
-                <img src="../../imagens/menu/buttons/prova.png" alt="Prova de Algoritmos e Programação I" title="Ver prova" class="conteudo-indisponivel">
-            </div>
-        </nav>
-        <hr>
-        
-        <h1>Infraestrutura de Tecnologia da Informação</h1>
-        <nav aria-label="Quiz e Prova do 2º Trimestre">
-            <div class="divmain">
-                <a href="paginas/infraTI.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png" alt="Quiz de Infraestrutura de Tecnologia da Informação" title="Ver quiz" class="conteudo-disponivel"></a>
-                <img src="../../imagens/menu/buttons/prova.png" alt="Prova de Infraestrutura de Tecnologia da Informação" title="Ver prova" class="conteudo-indisponivel">
-            </div>
-        </nav>
-    </section>
+    <h1>Infraestrutura de Tecnologia da Informação</h1>
+    <nav aria-label="Quiz e Prova do 2º Trimestre">
+        <div class="divmain">
+            <a href="paginas/infraTI.html" target="_self"><img src="../../imagens/menu/buttons/quiz.png"
+                    alt="Quiz de Infraestrutura de Tecnologia da Informação" title="Ver quiz"
+                    class="conteudo-disponivel"></a>
+            <img src="../../imagens/menu/buttons/prova.png" alt="Prova de Infraestrutura de Tecnologia da Informação"
+                title="Ver prova" class="conteudo-indisponivel">
+        </div>
+    </nav>
+</section>
 
-    <script src="../../js/toggleTrimestres.js"></script>
-
-    <hr> <!-- Fim do 2º Trimestre -->
-</body>
-
-</html>
+<hr> <!-- Fim do 2º Trimestre -->
+{% include footer.html %}

@@ -1,114 +1,118 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 2 - InfraTI</title>
-</head>
+{% include head-aula.html page-title="Aula 2 - InfraTI" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Evolução das plataformas de computação" %}
 
-    <h1>Evolução das plataformas de computação</h1>
-    
-    <hr>
+<h2>1. Mainframe – Primeira Plataforma</h2>
+<p>A evolução dos semicondutores e da microeletrônica permitiu o surgimento dos mainframes: computadores robustos
+    capazes de processar grandes volumes de dados e atender milhares de usuários simultaneamente.</p>
+<p>O primeiro mainframe surgiu em 1964, com o lançamento do <strong>IBM System/360</strong>, marcando uma revolução
+    na história da computação organizacional.</p>
 
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
+<img src="../../imagens/infradeTI/aula2/modelomainframe.png" alt="Modelo de Mainframe" class="imagens">
 
-    <h2>1. Mainframe – Primeira Plataforma</h2>
-    <p>A evolução dos semicondutores e da microeletrônica permitiu o surgimento dos mainframes: computadores robustos capazes de processar grandes volumes de dados e atender milhares de usuários simultaneamente.</p>
-    <p>O primeiro mainframe surgiu em 1964, com o lançamento do <strong>IBM System/360</strong>, marcando uma revolução na história da computação organizacional.</p>
-    
-    <img src="../../imagens/infradeTI/aula2/modelomainframe.png" alt="Modelo de Mainframe" class="imagens">
-    
-    <p>O ambiente de mainframe utilizava diversos terminais conectados, onde os dados eram inseridos via teclado e exibidos em vídeo ou impressora, enquanto todo o processamento ocorria centralmente no mainframe. Esses terminais eram \"burros\", sem capacidade própria de processamento.</p>
-    
-    <p><strong>Componentes dos primeiros mainframes:</strong></p>
-    <ul>
-        <li><strong>Processadores:</strong> modulares, podendo ser substituídos sem desligar o equipamento.</li>
-        <li><strong>Discos:</strong> utilizavam tecnologia RAID para garantir a segurança dos dados.</li>
-        <li><strong>Fitas:</strong> utilizadas inicialmente para armazenamento de dados antes da popularização dos discos rígidos.</li>
-        <li><strong>Sistemas operacionais:</strong> especializados para processar textos, bancos de dados e cálculos.</li>
-    </ul>
-    
-    <p><strong>Principais características dos mainframes:</strong></p>
-    <ul>
-        <li>Capacidade de processamento de um enorme volume de transações por segundo.</li>
-        <li>Altos níveis de segurança, disponibilidade e eficiência energética.</li>
-        <li>Servem como servidores de missão crítica para milhões de usuários.</li>
-        <li>Ambiente virtualizado consolidado há mais de 40 anos.</li>
-    </ul>
+<p>O ambiente de mainframe utilizava diversos terminais conectados, onde os dados eram inseridos via teclado e
+    exibidos em vídeo ou impressora, enquanto todo o processamento ocorria centralmente no mainframe. Esses
+    terminais eram \"burros\", sem capacidade própria de processamento.</p>
 
-    <hr>
-    
-    <h2>2. Cliente-Servidor – Segunda Plataforma</h2>
-    <p>Com a evolução da microeletrônica, surgiram computadores pessoais mais acessíveis, dando origem ao conceito de desktop e espalhando as informações por toda a organização, o que demandou uma nova arquitetura de TI: o modelo cliente-servidor.</p>
-    
-    <p>A arquitetura cliente-servidor divide o processamento entre o servidor (armazenamento e processamento central) e o cliente (interface amigável para o usuário).</p>
-    
-    <img src="../../imagens/infradeTI/aula2/clientserver.png" alt="Arquitetura Cliente-servidor" class="imagens">
-    
-    <p>No modelo cliente-servidor:</p>
-    <ul>
-        <li>O cliente solicita serviços ao servidor, enquanto executa outras tarefas localmente.</li>
-        <li>O servidor gerencia múltiplas solicitações e oferece serviços como banco de dados, impressão e hospedagem de páginas web.</li>
-    </ul>
-    
-    <img src="../../imagens/infradeTI/aula2/camadasclientserver.png" alt="Estrutura de camadas da arquitetura cliente-servidor" class="imagens">
-    
-    <h3>2.1 Modelos de camadas</h3>
-    <ul>
-        <li><strong>Two-tier (duas camadas):</strong> o cliente se comunica diretamente com o servidor. As alterações nas aplicações exigem atualizações no cliente e no banco de dados.</li>
-        <li><strong>Three-tier (três camadas):</strong> existe uma camada intermediária que centraliza as regras de negócios e a lógica da aplicação, facilitando a manutenção e escalabilidade.</li>
-    </ul>
-    
-    <p>Embora apresente vantagens, a arquitetura cliente-servidor também traz desafios, como o aumento do custo de hardware e software.</p>
-    
-    <h3>Na prática</h3>
-    <p>Exemplos de utilização da arquitetura cliente-servidor:</p>
-    <ul>
-        <li>Acesso a páginas web, em que o navegador (cliente) solicita páginas hospedadas em servidores web.</li>
-        <li>Aplicativos móveis que consultam servidores para buscar dados como previsão do tempo.</li>
-    </ul>
+<p><strong>Componentes dos primeiros mainframes:</strong></p>
+<ul>
+    <li><strong>Processadores:</strong> modulares, podendo ser substituídos sem desligar o equipamento.</li>
+    <li><strong>Discos:</strong> utilizavam tecnologia RAID para garantir a segurança dos dados.</li>
+    <li><strong>Fitas:</strong> utilizadas inicialmente para armazenamento de dados antes da popularização dos
+        discos rígidos.</li>
+    <li><strong>Sistemas operacionais:</strong> especializados para processar textos, bancos de dados e cálculos.
+    </li>
+</ul>
 
-    <hr>
-    
-    <h2>3. Combinação de Tecnologias – Terceira Plataforma</h2>
-    <p>Com o aumento exponencial da geração de dados (Big Data) e o surgimento da <strong>Internet das Coisas (IoT – Internet of Things)</strong>, a combinação de tecnologias tornou-se indispensável para atender às demandas modernas.</p>
-    
-    <p><strong>Novas tecnologias surgidas:</strong></p>
-    <ul>
-        <li><strong>Supercomputadores</strong> e <strong>computação em grade:</strong> usados para resolver cálculos complexos de pesquisa científica.</li>
-        <li><strong>Virtualização:</strong> permite múltiplos servidores lógicos operarem em um único servidor físico, reduzindo custos.</li>
-        <li><strong>Computação em nuvem:</strong> oferece hardware e software como serviço com escalabilidade, segurança e custo reduzido.</li>
-    </ul>
-    
-    <img src="../../imagens/infradeTI/aula2/cenarioorganizacao.png" alt="Cenário de uma organização e suas áreas de negócios" class="imagens">
-    
-    <p>A infraestrutura moderna de TI envolve mainframes poderosos, servidores cliente-servidor, redes de comunicação avançadas, serviços em nuvem e integração com dispositivos de usuários locais ou remotos.</p>
-    
-    <img src="../../imagens/infradeTI/aula2/infrahibrida.png" alt="Cenário de uma infraestrutura de TI híbrida" class="imagens">
+<p><strong>Principais características dos mainframes:</strong></p>
+<ul>
+    <li>Capacidade de processamento de um enorme volume de transações por segundo.</li>
+    <li>Altos níveis de segurança, disponibilidade e eficiência energética.</li>
+    <li>Servem como servidores de missão crítica para milhões de usuários.</li>
+    <li>Ambiente virtualizado consolidado há mais de 40 anos.</li>
+</ul>
 
-    <p><mark>Recomenda-se que veja a aula narrada na aula 2 da unidade 1.</mark></p>
+<hr>
 
-    <hr>
-    
-    <h2>4. Considerações Finais</h2>
-    <p>A construção da infraestrutura de TI deve ser baseada em uma análise criteriosa das necessidades do negócio.</p>
-    <p>O mainframe continua sendo uma solução estável e confiável para aplicações de missão crítica, como em bancos. Já ambientes que exigem maior flexibilidade e atualização constante podem optar por servidores baseados em sistemas operacionais abertos, como Linux.</p>
-    <p>A tendência atual é a formação de infraestruturas híbridas, onde coexistem mainframes, servidores cliente-servidor, virtualização e computação em nuvem, oferecendo o equilíbrio ideal entre segurança, flexibilidade, escalabilidade e redução de custos.</p>
+<h2>2. Cliente-Servidor – Segunda Plataforma</h2>
+<p>Com a evolução da microeletrônica, surgiram computadores pessoais mais acessíveis, dando origem ao conceito de
+    desktop e espalhando as informações por toda a organização, o que demandou uma nova arquitetura de TI: o modelo
+    cliente-servidor.</p>
 
-    <hr>
+<p>A arquitetura cliente-servidor divide o processamento entre o servidor (armazenamento e processamento central) e
+    o cliente (interface amigável para o usuário).</p>
 
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="infraestruturadetiaula3.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<img src="../../imagens/infradeTI/aula2/clientserver.png" alt="Arquitetura Cliente-servidor" class="imagens">
 
-</html>
+<p>No modelo cliente-servidor:</p>
+<ul>
+    <li>O cliente solicita serviços ao servidor, enquanto executa outras tarefas localmente.</li>
+    <li>O servidor gerencia múltiplas solicitações e oferece serviços como banco de dados, impressão e hospedagem de
+        páginas web.</li>
+</ul>
+
+<img src="../../imagens/infradeTI/aula2/camadasclientserver.png"
+    alt="Estrutura de camadas da arquitetura cliente-servidor" class="imagens">
+
+<h3>2.1 Modelos de camadas</h3>
+<ul>
+    <li><strong>Two-tier (duas camadas):</strong> o cliente se comunica diretamente com o servidor. As alterações
+        nas aplicações exigem atualizações no cliente e no banco de dados.</li>
+    <li><strong>Three-tier (três camadas):</strong> existe uma camada intermediária que centraliza as regras de
+        negócios e a lógica da aplicação, facilitando a manutenção e escalabilidade.</li>
+</ul>
+
+<p>Embora apresente vantagens, a arquitetura cliente-servidor também traz desafios, como o aumento do custo de
+    hardware e software.</p>
+
+<h3>Na prática</h3>
+<p>Exemplos de utilização da arquitetura cliente-servidor:</p>
+<ul>
+    <li>Acesso a páginas web, em que o navegador (cliente) solicita páginas hospedadas em servidores web.</li>
+    <li>Aplicativos móveis que consultam servidores para buscar dados como previsão do tempo.</li>
+</ul>
+
+<hr>
+
+<h2>3. Combinação de Tecnologias – Terceira Plataforma</h2>
+<p>Com o aumento exponencial da geração de dados (Big Data) e o surgimento da <strong>Internet das Coisas (IoT –
+        Internet of Things)</strong>, a combinação de tecnologias tornou-se indispensável para atender às demandas
+    modernas.</p>
+
+<p><strong>Novas tecnologias surgidas:</strong></p>
+<ul>
+    <li><strong>Supercomputadores</strong> e <strong>computação em grade:</strong> usados para resolver cálculos
+        complexos de pesquisa científica.</li>
+    <li><strong>Virtualização:</strong> permite múltiplos servidores lógicos operarem em um único servidor físico,
+        reduzindo custos.</li>
+    <li><strong>Computação em nuvem:</strong> oferece hardware e software como serviço com escalabilidade, segurança
+        e custo reduzido.</li>
+</ul>
+
+<img src="../../imagens/infradeTI/aula2/cenarioorganizacao.png"
+    alt="Cenário de uma organização e suas áreas de negócios" class="imagens">
+
+<p>A infraestrutura moderna de TI envolve mainframes poderosos, servidores cliente-servidor, redes de comunicação
+    avançadas, serviços em nuvem e integração com dispositivos de usuários locais ou remotos.</p>
+
+<img src="../../imagens/infradeTI/aula2/infrahibrida.png" alt="Cenário de uma infraestrutura de TI híbrida"
+    class="imagens">
+
+<p><mark>Recomenda-se que veja a aula narrada na aula 2 da unidade 1.</mark></p>
+
+<hr>
+
+<h2>4. Considerações Finais</h2>
+<p>A construção da infraestrutura de TI deve ser baseada em uma análise criteriosa das necessidades do negócio.</p>
+<p>O mainframe continua sendo uma solução estável e confiável para aplicações de missão crítica, como em bancos. Já
+    ambientes que exigem maior flexibilidade e atualização constante podem optar por servidores baseados em sistemas
+    operacionais abertos, como Linux.</p>
+<p>A tendência atual é a formação de infraestruturas híbridas, onde coexistem mainframes, servidores
+    cliente-servidor, virtualização e computação em nuvem, oferecendo o equilíbrio ideal entre segurança,
+    flexibilidade, escalabilidade e redução de custos.</p>
+
+{% include nav-aula.html materia="infraestruturadeti" aula="3" %}
+{% include footer.html %}

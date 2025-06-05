@@ -1,154 +1,168 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 2 - CdC</title>
-</head>
+{% include head-aula.html page-title="Aula 2 - CdC" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Do Dado ao Conhecimento." %}
 
-    <h1>Do Dado ao Conhecimento.</h1>
+<h2>1. Introdução</h2>
+<p>Este capítulo aborda os conceitos fundamentais de <strong>dado, informação e conhecimento</strong>, destacando sua
+    importância na gestão organizacional e na tomada de decisões estratégicas. Também são discutidos a <strong>evolução
+        da gestão de dados</strong> e as <strong>plataformas modernas utilizadas por empresas</strong> para otimizar
+    processos e melhorar a competitividade.</p>
+<hr>
 
-    <hr>
-
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
-
-    <h2>1. Introdução</h2>
-    <p>Este capítulo aborda os conceitos fundamentais de <strong>dado, informação e conhecimento</strong>, destacando sua importância na gestão organizacional e na tomada de decisões estratégicas. Também são discutidos a <strong>evolução da gestão de dados</strong> e as <strong>plataformas modernas utilizadas por empresas</strong> para otimizar processos e melhorar a competitividade.</p>
-
-    <hr>
-
-    <h2>2. Conceitos Fundamentais</h2>
-    <h3>2.1. Dado</h3>
+<h2>2. Conceitos Fundamentais</h2>
+<h3>2.1. Dado</h3>
+<ul>
+    <li>Representação bruta de fatos, números ou estatísticas sem um significado específico.</li>
+    <li>Exemplo: nome de um bairro, idade de uma pessoa, quantidade vendida de um produto.</li>
+    <li>Classificação dos dados:</li>
     <ul>
-        <li>Representação bruta de fatos, números ou estatísticas sem um significado específico.</li>
-        <li>Exemplo: nome de um bairro, idade de uma pessoa, quantidade vendida de um produto.</li>
-        <li>Classificação dos dados:</li>
-        <ul>
-            <li><strong>Por tipo</strong>: Numérico (inteiros ou decimais) e Texto (alfanumérico).</li>
-            <li><strong>Por natureza</strong>:</li>
+        <li><strong>Por tipo</strong>: Numérico (inteiros ou decimais) e Texto (alfanumérico).</li>
+        <li><strong>Por natureza</strong>:
             <ul>
                 <li><strong>Qualitativos</strong>: Descrevem características (ex.: “bom”, “ruim”).</li>
                 <li><strong>Quantitativos</strong>: Medem quantidades (ex.: “50 unidades vendidas”).</li>
             </ul>
-            <li><strong>Por formato</strong>:</li>
+        </li>
+        <li><strong>Por formato</strong>:
             <ul>
                 <li><strong>Contínuos</strong>: Intervalos numéricos (ex.: peso, tempo).</li>
                 <li><strong>De contagem</strong>: Valores inteiros (ex.: número de produtos com defeito).</li>
                 <li><strong>De classificação</strong>: Categorizam elementos (ex.: tipo A ou B).</li>
             </ul>
-        </ul>
+        </li>
     </ul>
-    <h3>2.2. Informação</h3>
+</ul>
+<h3>2.2. Informação</h3>
+<ul>
+    <li>Conjunto de dados processados e organizados para um contexto específico.</li>
+    <li>Características:</li>
     <ul>
-        <li>Conjunto de dados processados e organizados para um contexto específico.</li>
-        <li>Características:</li>
-        <ul>
-            <li>Responsável por organização, interpretação e disseminação de conhecimento.</li>
-            <li>Exemplo: uma tabela com vendas de um produto ao longo do tempo.</li>
-            <li>Obs: é importante ressaltar, que um dado, é apenas um punhado de bytes e bits, e que precisa ser devidamente organizado para se tornar uma informação. Se eu disser "5" você não entende nada, pois é apenas um dado, agora, se eu disser "João tem 5 anos", ele já se torna uma informação, pois estou te informando, usando o dado, que João possui 5 anos.</li>
-        </ul>
-        <li>O <strong>processo de transformação de dado em informação</strong> envolve a aplicação de conhecimento para selecionar, organizar e manipular os dados.</li>
-        <li><strong>Dado</strong> &rarr; <strong>Processo de Transformação</strong> &rarr; <strong>Informação.</strong></li>
+        <li>Responsável por organização, interpretação e disseminação de conhecimento.</li>
+        <li>Exemplo: uma tabela com vendas de um produto ao longo do tempo.</li>
+        <li>Obs: é importante ressaltar, que um dado, é apenas um punhado de bytes e bits, e que precisa ser devidamente
+            organizado para se tornar uma informação. Se eu disser "5" você não entende nada, pois é apenas um dado,
+            agora, se eu disser "João tem 5 anos", ele já se torna uma informação, pois estou te informando, usando o
+            dado, que João possui 5 anos.</li>
     </ul>
-    <h3>2.3. Conhecimento</h3>
-    <ul>
-        <li>Informação contextualizada e relevante para tomada de decisões.</li>
-        <li><strong>Tipos de conhecimento</strong>:</li>
+    <li>O <strong>processo de transformação de dado em informação</strong> envolve a aplicação de conhecimento para
+        selecionar, organizar e manipular os dados.</li>
+    <li><strong>Dado</strong> &rarr; <strong>Processo de Transformação</strong> &rarr; <strong>Informação.</strong></li>
+</ul>
+<h3>2.3. Conhecimento</h3>
+<ul>
+    <li>Informação contextualizada e relevante para tomada de decisões.</li>
+    <li><strong>Tipos de conhecimento</strong>:
         <ul>
             <li><strong>Tácito</strong>: Baseado em experiência e difícil de ser formalizado.</li>
             <li><strong>Explícito</strong>: Formalizado e documentado, podendo ser facilmente transmitido.</li>
         </ul>
-        <li>A <strong>ciência da informação</strong> evoluiu da <strong>biblioteconomia</strong>, passando pela documentação até chegar à era digital, onde a informação é acessada rapidamente.</li>
-    </ul>
-
-    <hr>
-
-    <h2>3. Evolução da Gestão de Dados e Plataformas Modernas</h2>
-    <h3>3.1 Importância da Gestão de Dados</h3>
-    <ul>
-        <li>O grande volume de dados exige ferramentas para armazenamento, análise e interpretação.</li>
-        <li>A evolução da tecnologia resultou em novas formas de gerenciamento, como o <strong>Big Data</strong>.</li>
-        <li><strong>Big Data</strong>: Conjunto de dados complexos e volumosos que não podem ser processados por sistemas tradicionais.</li>
-    </ul>
-
-    <h4>3.1.1. Os 3V's do Big Data</h2>
-<p>
-    O conceito de <strong>Big Data</strong> é fundamentado em três características principais, conhecidas como os <strong>3V's</strong>:
-</p>
-<ul>
-    <li><strong>Volume:</strong> Refere-se à enorme quantidade de dados gerados diariamente, provenientes de diversas fontes, como redes sociais, sensores, dispositivos móveis e transações online.</li>
-    <li><strong>Velocidade:</strong> Representa a rapidez com que os dados são gerados, processados e analisados em tempo real para tomada de decisões ágeis.</li>
-    <li><strong>Variedade:</strong> Abrange os diferentes tipos de dados coletados, que podem ser estruturados (bancos de dados), semiestruturados (XML, JSON) ou não estruturados (imagens, vídeos, textos).</li>
+    </li>
+    <li>A <strong>ciência da informação</strong> evoluiu da <strong>biblioteconomia</strong>, passando pela documentação
+        até chegar à era digital, onde a informação é acessada rapidamente.</li>
 </ul>
-    <p>Esses três aspectos são essenciais para definir Big Data e sua aplicabilidade em diversas áreas, como inteligência artificial, marketing, saúde e segurança da informação.</p>
+
+<hr>
+
+<h2>3. Evolução da Gestão de Dados e Plataformas Modernas</h2>
+<h3>3.1 Importância da Gestão de Dados</h3>
+<ul>
+    <li>O grande volume de dados exige ferramentas para armazenamento, análise e interpretação.</li>
+    <li>A evolução da tecnologia resultou em novas formas de gerenciamento, como o <strong>Big Data</strong>.</li>
+    <li><strong>Big Data</strong>: Conjunto de dados complexos e volumosos que não podem ser processados por sistemas
+        tradicionais.</li>
+</ul>
+
+<h4>3.1.1. Os 3V's do Big Data</h2>
+    <p>
+        O conceito de <strong>Big Data</strong> é fundamentado em três características principais, conhecidas como os
+        <strong>3V's</strong>:
+    </p>
+    <ul>
+        <li><strong>Volume:</strong> Refere-se à enorme quantidade de dados gerados diariamente, provenientes de
+            diversas fontes, como redes sociais, sensores, dispositivos móveis e transações online.</li>
+        <li><strong>Velocidade:</strong> Representa a rapidez com que os dados são gerados, processados e analisados em
+            tempo real para tomada de decisões ágeis.</li>
+        <li><strong>Variedade:</strong> Abrange os diferentes tipos de dados coletados, que podem ser estruturados
+            (bancos de dados), semiestruturados (XML, JSON) ou não estruturados (imagens, vídeos, textos).</li>
+    </ul>
+    <p>Esses três aspectos são essenciais para definir Big Data e sua aplicabilidade em diversas áreas, como
+        inteligência artificial, marketing, saúde e segurança da informação.</p>
     <h3>3.2. Inteligência Competitiva</h3>
     <ul>
         <li>Processos internos utilizados pelas empresas para coletar e analisar dados estratégicos.</li>
-        <li>Benefícios da inteligência competitiva:</li>
-        <ul>
-            <li><strong>Aumento da agilidade e eficiência na gestão</strong>.</li>
-            <li><strong>Identificação de oportunidades de mercado</strong>.</li>
-            <li><strong>Previsão de riscos e antecipação de problemas</strong>.</li>
-        </ul>
+        <li>Benefícios da inteligência competitiva:
+            <ul>
+                <li><strong>Aumento da agilidade e eficiência na gestão</strong>.</li>
+                <li><strong>Identificação de oportunidades de mercado</strong>.</li>
+                <li><strong>Previsão de riscos e antecipação de problemas</strong>.</li>
+            </ul>
+        </li>
     </ul>
-    <p>Saiba mais sobre <strong>Big Data</strong> aqui: <a href="https://www.youtube.com/watch?v=LW081QSjJNo" target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+    <p>Saiba mais sobre <strong>Big Data</strong> aqui: <a href="https://www.youtube.com/watch?v=LW081QSjJNo"
+            target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
 
     <hr>
 
     <h2>4. Estudos de Casos</h2>
     <h3>4.1. Caso eCourier (Empresa de Entrega)</h3>
     <ul>
-        <li>A empresa utilizou <strong>tecnologia de geolocalização (GPS)</strong> para rastrear entregas e distribuir pedidos de forma eficiente.</li>
-        <li>Estratégias:</li>
-        <ul>
-            <li>Treinamento técnico de funcionários.</li>
-            <li>Integração eletrônica entre setores.</li>
-            <li>Uso de algoritmos para prever rotas com base no tráfego e clima.</li>
-        </ul>
+        <li>A empresa utilizou <strong>tecnologia de geolocalização (GPS)</strong> para rastrear entregas e distribuir
+            pedidos de forma eficiente.</li>
+        <li>Estratégias:
+            <ul>
+                <li>Treinamento técnico de funcionários.</li>
+                <li>Integração eletrônica entre setores.</li>
+                <li>Uso de algoritmos para prever rotas com base no tráfego e clima.</li>
+            </ul>
+        </li>
         <li>Resultado: Redução de custos operacionais e aumento da eficiência das entregas.</li>
     </ul>
     <h3>4.2. Caso Lands’ End (Moda e Varejo)</h3>
     <ul>
-        <li>Implementação de <strong>customização em massa</strong>, permitindo que clientes personalizem produtos online.</li>
-        <li>Processo:</li>
-        <ol>
-            <li>O cliente informa suas medidas no site.</li>
-            <li>O sistema cria um <strong>molde digital personalizado</strong>.</li>
-            <li>A fábrica utiliza esses moldes para produção sob demanda.</li>
-        </ol>
+        <li>Implementação de <strong>customização em massa</strong>, permitindo que clientes personalizem produtos
+            online.</li>
+        <li>Processo:
+            <ol>
+                <li>O cliente informa suas medidas no site.</li>
+                <li>O sistema cria um <strong>molde digital personalizado</strong>.</li>
+                <li>A fábrica utiliza esses moldes para produção sob demanda.</li>
+            </ol>
+        </li>
         <li>Benefícios: Redução de estoques e desperdícios, além de maior satisfação do cliente.</li>
     </ul>
     <h3>4.3. Caso Dell Computer Corporation</h3>
     <ul>
         <li>Uso de produção sob demanda: computadores são montados somente após a compra.</li>
-        <li>O sistema de informação permite que a Dell:</li>
-        <ul>
-            <li>Analise os padrões de compra dos clientes.</li>
-            <li>Personalize as ofertas e campanhas de marketing.</li>
-            <li>Otimize a gestão do estoque e produção.</li>
-        </ul>
+        <li>O sistema de informação permite que a Dell:
+            <ul>
+                <li>Analise os padrões de compra dos clientes.</li>
+                <li>Personalize as ofertas e campanhas de marketing.</li>
+                <li>Otimize a gestão do estoque e produção.</li>
+            </ul>
+        </li>
     </ul>
 
     <hr>
 
     <h2>5. Plataformas Atuais de Gestão de Informação</h2>
-    <p>As empresas utilizam <strong>sistemas de informação baseados em computadores (CBIS)</strong>, que combinam <strong>hardware, software, bancos de dados e telecomunicações</strong> para processar informações.</p>
+    <p>As empresas utilizam <strong>sistemas de informação baseados em computadores (CBIS)</strong>, que combinam
+        <strong>hardware, software, bancos de dados e telecomunicações</strong> para processar informações.
+    </p>
     <ul>
-        <li><strong>Banco de Dados (DBMS - Database Management System)</strong>: Armazena e gerencia grandes volumes de dados.</li>
-        <li><strong>Sistemas de Modelagem (MMS - Model Management System)</strong>: Permite a análise e a interpretação dos dados.</li>
+        <li><strong>Banco de Dados (DBMS - Database Management System)</strong>: Armazena e gerencia grandes volumes de
+            dados.</li>
+        <li><strong>Sistemas de Modelagem (MMS - Model Management System)</strong>: Permite a análise e a interpretação
+            dos dados.</li>
         <li><strong>Computação em Nuvem</strong>: Reduz custos operacionais e aumenta a flexibilidade das empresas.</li>
-        <li><strong>Softwares Colaborativos</strong>:</li>
-        <ul>
-            <li><strong>Trello</strong>: Gerenciamento de projetos e tarefas.</li>
-            <li><strong>Microsoft Teams</strong>: Plataforma de comunicação integrada para equipes.</li>
-        </ul>
+        <li><strong>Softwares Colaborativos</strong>:
+            <ul>
+                <li><strong>Trello</strong>: Gerenciamento de projetos e tarefas.</li>
+                <li><strong>Microsoft Teams</strong>: Plataforma de comunicação integrada para equipes.</li>
+            </ul>
+        </li>
     </ul>
 
     <hr>
@@ -160,15 +174,9 @@
         <li>Aumentem a <strong>eficiência e produtividade.</strong></li>
         <li>Se tornem mais <strong>competitivas no mercado</strong>.</li>
     </ul>
-    <p>A adoção de tecnologias avançadas, como <strong>Big Data, computação em nuvem e inteligência artificial</strong>, está revolucionando a forma como empresas lidam com informações, tornando o conhecimento um dos <strong>recursos mais valiosos da atualidade</strong>.</p>
+    <p>A adoção de tecnologias avançadas, como <strong>Big Data, computação em nuvem e inteligência artificial</strong>,
+        está revolucionando a forma como empresas lidam com informações, tornando o conhecimento um dos <strong>recursos
+            mais valiosos da atualidade</strong>.</p>
 
-    <hr>
-
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="conceitosdacomputacao1aula3.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
-
-</html>
+    {% include nav-aula.html materia="conceitosdacomputacao1" aula="3" %}
+    {% include footer.html %}

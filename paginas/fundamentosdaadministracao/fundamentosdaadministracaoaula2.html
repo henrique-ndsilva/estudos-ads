@@ -1,206 +1,244 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style.css">
-    <title>Aula 2 - FdA</title>
-</head>
+{% include head-aula.html page-title="Aula 2 - FdA" %}
 
-<body>
-    <hr>
+{% include banner-aula.html heading="Estrutura Organizacional." %}
 
-    <h1>Estrutura Organizacional.</h1>
-
-    <hr>
-
-    <button onclick="toggleFontSize()" id="fontbutton">Aumentar Fonte</button>
-    <script src="../../js/toggleFontSize.js"></script>
-
-    <h2>1. Funções Administrativas</h2>
-    <p>A administração de uma organização exige a aplicação das quatro funções administrativas para coordenar atividades e otimizar recursos. Essas funções são interdependentes e essenciais para transformar os objetivos organizacionais em resultados concretos.</p>
-    <h3>1.1. As quatro funções administrativas:</h3>
+<h2>1. Funções Administrativas</h2>
+<p>A administração de uma organização exige a aplicação das quatro funções administrativas para coordenar atividades
+    e otimizar recursos. Essas funções são interdependentes e essenciais para transformar os objetivos
+    organizacionais em resultados concretos.</p>
+<h3>1.1. As quatro funções administrativas:</h3>
+<ul>
+    <li><strong>Planejamento</strong>:</li>
     <ul>
-        <li><strong>Planejamento</strong>:</li>
-        <ul>
-            <li>Primeira função administrativa, define o<strong> que deve ser feito, quando, como e por quem</strong>.</li>
-            <li>Envolve a definição de <strong>objetivos organizacionais e estratégias</strong> para alcançá-los.</li>
-            <li>É um processo contínuo de <strong>análise, tomada de decisões e solução de problemas</strong>.</li>
-            <li>Exemplo: Determinar <strong>metas de crescimento anual, alocação de orçamento e prioridades estratégicas</strong>.</li>
-        </ul>
-        <li><strong>Organização</strong>:</li>
-        <ul>
-            <li>Responsável por estruturar <strong>recursos, equipes e processos</strong> para implementar o planejamento.</li>
-            <li>Inclui a distribuição de tarefas, a criação de departamentos e a <strong>definição de autoridade e responsabilidades</strong>.</li>
-            <li>Exemplo: Criar <strong>setores específicos para marketing, finanças e operações</strong> e alocar recursos para cada um.</li>
-        </ul>
-        <li>Direção:</li>
-        <ul>
-            <li>Garante que o planejamento e a organização sejam <strong>traduzidos em ação</strong>.</li>
-            <li>Envolve liderança, <strong>motivação dos colaboradores e comunicação eficaz</strong>.</li>
-            <li>Exemplo: Um líder que motiva sua equipe a cumprir prazos e incentiva a inovação.</li>
-        </ul>
-        <li>Controle:</li>
-        <ul>
-            <li>Acompanha e <strong>avalia o desempenho organizacional</strong>, garantindo que as ações estejam alinhadas com os objetivos.</li>
-            <li>Permite a correção de desvios e a <strong>tomada de decisões baseadas em dados</strong>.</li>
-            <li>Exemplo: Monitoramento de <strong>indicadores de desempenho (KPIs)</strong> para avaliar a eficiência das operações.</li>
-        </ul>
+        <li>Primeira função administrativa, define o<strong> que deve ser feito, quando, como e por quem</strong>.
+        </li>
+        <li>Envolve a definição de <strong>objetivos organizacionais e estratégias</strong> para alcançá-los.</li>
+        <li>É um processo contínuo de <strong>análise, tomada de decisões e solução de problemas</strong>.</li>
+        <li>Exemplo: Determinar <strong>metas de crescimento anual, alocação de orçamento e prioridades
+                estratégicas</strong>.</li>
     </ul>
-    <h3>1.2. Os três níveis organizacionais e suas funções administrativas</h3>
-    <p>Cada nível organizacional exige um enfoque diferente das funções administrativas. Conforme o <strong>quadro abaixo</strong>, os gestores desempenham atividades distintas de acordo com sua posição na hierarquia:</p>
-    <img src="../../imagens/fundamentosdaADM/aula2/niveisorganizacionais.png" alt="imagem dos niveis organizacionais" class="niveisorganizacionais">
-
-    <hr>
-
-    <h2>2. Cultura Organizacional</h2>
-    <p>A <strong>cultura organizacional</strong> representa o conjunto de valores, crenças e normas que moldam o comportamento dos funcionários dentro da empresa.</p>
-    <h3>2.1. Principais elementos da cultura organizacional:</h3>
+    <li><strong>Organização</strong>:</li>
     <ul>
-        <li><strong>Artefatos visíveis</strong>: Elementos externos como <strong>uniformes, layout do escritório e símbolos corporativos</strong>.</li>
-        <li><strong>Valores organizacionais</strong>: Princípios que guiam a tomada de decisões e a conduta dentro da empresa.</li>
-        <li><strong>Pressupostos básicos</strong>: Ideias enraizadas que influenciam a mentalidade dos funcionários.</li>
+        <li>Responsável por estruturar <strong>recursos, equipes e processos</strong> para implementar o
+            planejamento.</li>
+        <li>Inclui a distribuição de tarefas, a criação de departamentos e a <strong>definição de autoridade e
+                responsabilidades</strong>.</li>
+        <li>Exemplo: Criar <strong>setores específicos para marketing, finanças e operações</strong> e alocar
+            recursos para cada um.</li>
     </ul>
-    <h3>2.2. Importância da cultura organizacional:</h3>
+    <li>Direção:</li>
     <ul>
-        <li>Impacta a <strong>motivação dos colaboradores, o desempenho e a inovação</strong>.</li>
-        <li>Define o <strong>clima organizacional</strong> e afeta diretamente a <strong>comunicação interna</strong>.</li>
-        <li>Influencia <strong>como a empresa se adapta a mudanças e crises</strong>.</li>
+        <li>Garante que o planejamento e a organização sejam <strong>traduzidos em ação</strong>.</li>
+        <li>Envolve liderança, <strong>motivação dos colaboradores e comunicação eficaz</strong>.</li>
+        <li>Exemplo: Um líder que motiva sua equipe a cumprir prazos e incentiva a inovação.</li>
     </ul>
-
-    <hr>
-
-    <h2>3. Níveis Hierárquicos e Estrutura Organizacional</h2>
-    <p>Os níveis hierárquicos organizam a empresa em diferentes camadas de autoridade e responsabilidade. Essa estrutura permite uma comunicação eficiente e um fluxo de decisões bem definido.</p>
-    <h3>3.1 Principais critérios de estruturação organizacional:</h3>
+    <li>Controle:</li>
     <ul>
-        <li><strong>Por Função</strong>: Departamentos especializados em áreas como marketing, finanças e produção.</li>
-        <li><strong>Por Produto</strong>: Empresas divididas conforme diferentes produtos ou serviços oferecidos.</li>
-        <li><strong>Por Cliente</strong>: Estrutura voltada para atender segmentos específicos de clientes.</li>
-        <li><strong>Por Região Geográfica</strong>: Organização baseada na localização das operações.</li>
+        <li>Acompanha e <strong>avalia o desempenho organizacional</strong>, garantindo que as ações estejam
+            alinhadas com os objetivos.</li>
+        <li>Permite a correção de desvios e a <strong>tomada de decisões baseadas em dados</strong>.</li>
+        <li>Exemplo: Monitoramento de <strong>indicadores de desempenho (KPIs)</strong> para avaliar a eficiência
+            das operações.</li>
     </ul>
-    <h3>3.2. Representação da Estrutura Organizacional – Organograma Funcional</h3>
-    <p>Abaixo temos um exemplo de organograma funcional, que mostra a relação entre diferentes setores dentro de uma empresa:</p>
-    <pre>
-    Presidência  
-    │  
-    ├── Conselho Estratégico  
-    │  
-    ├── Comercial  
-    │   ├── Marketing  
-    │   ├── Vendas  
-    │   ├── Atendimento ao Cliente  
-    │  
-    ├── Operações  
-    │   ├── Produção  
-    │   ├── Logística  
-    │   ├── Tecnologia da Informação  
-    │  
-    ├── Administrativo  
-        ├── Jurídico  
-        ├── Finanças  
-        │   ├── Contabilidade  
-        │   ├── Contas a pagar/receber  
-        │
-        ├── Gestão de Pessoas  
-            ├── Recursos Humanos  
-            ├── Departamento Pessoal  
-    </pre>
-    <p>Esse modelo demonstra como as empresas organizam seus setores para garantir uma operação eficiente e bem coordenada.</p>
+</ul>
+<h3>1.2. Os três níveis organizacionais e suas funções administrativas</h3>
+<p>Cada nível organizacional exige um enfoque diferente das funções administrativas. Conforme o <strong>quadro
+        abaixo</strong>, os gestores desempenham atividades distintas de acordo com sua posição na hierarquia:</p>
+<img src="../../imagens/fundamentosdaADM/aula2/niveisorganizacionais.png" alt="imagem dos niveis organizacionais"
+    class="niveisorganizacionais">
 
-    <hr>
+<hr>
 
-    <h2>4. Compreendendo os Tipos de Estruturas Organizacionais</h2>
-    <p>
-        As estruturas organizacionais determinam como as funções, responsabilidades e hierarquias são distribuídas dentro de uma empresa. A escolha do modelo ideal depende de fatores como tamanho da organização, tipo de mercado e complexidade dos projetos. A seguir, são apresentadas quatro das principais estruturas organizacionais, destacando suas vantagens e desvantagens.
-    </p>
-    <h3>4.1. Organização Funcional Clássica</h3>
-    <p>A <strong>organização funcional clássica</strong> é uma das mais tradicionais e amplamente utilizadas. Nesse modelo, a empresa é dividida em <strong>departamentos especializados</strong>, como marketing, finanças, produção e recursos humanos, cada um liderado por um gestor funcional.</p>
+<h2>2. Cultura Organizacional</h2>
+<p>A <strong>cultura organizacional</strong> representa o conjunto de valores, crenças e normas que moldam o
+    comportamento dos funcionários dentro da empresa.</p>
+<h3>2.1. Principais elementos da cultura organizacional:</h3>
+<ul>
+    <li><strong>Artefatos visíveis</strong>: Elementos externos como <strong>uniformes, layout do escritório e
+            símbolos corporativos</strong>.</li>
+    <li><strong>Valores organizacionais</strong>: Princípios que guiam a tomada de decisões e a conduta dentro da
+        empresa.</li>
+    <li><strong>Pressupostos básicos</strong>: Ideias enraizadas que influenciam a mentalidade dos funcionários.
+    </li>
+</ul>
+<h3>2.2. Importância da cultura organizacional:</h3>
+<ul>
+    <li>Impacta a <strong>motivação dos colaboradores, o desempenho e a inovação</strong>.</li>
+    <li>Define o <strong>clima organizacional</strong> e afeta diretamente a <strong>comunicação interna</strong>.
+    </li>
+    <li>Influencia <strong>como a empresa se adapta a mudanças e crises</strong>.</li>
+</ul>
+
+<hr>
+
+<h2>3. Níveis Hierárquicos e Estrutura Organizacional</h2>
+<p>Os níveis hierárquicos organizam a empresa em diferentes camadas de autoridade e responsabilidade. Essa estrutura
+    permite uma comunicação eficiente e um fluxo de decisões bem definido.</p>
+<h3>3.1 Principais critérios de estruturação organizacional:</h3>
+<ul>
+    <li><strong>Por Função</strong>: Departamentos especializados em áreas como marketing, finanças e produção.</li>
+    <li><strong>Por Produto</strong>: Empresas divididas conforme diferentes produtos ou serviços oferecidos.</li>
+    <li><strong>Por Cliente</strong>: Estrutura voltada para atender segmentos específicos de clientes.</li>
+    <li><strong>Por Região Geográfica</strong>: Organização baseada na localização das operações.</li>
+</ul>
+<h3>3.2. Representação da Estrutura Organizacional – Organograma Funcional</h3>
+<p>Abaixo temos um exemplo de organograma funcional, que mostra a relação entre diferentes setores dentro de uma
+    empresa:</p>
+<pre>
+Presidência  
+│  
+├── Conselho Estratégico  
+│  
+├── Comercial  
+│   ├── Marketing  
+│   ├── Vendas  
+│   ├── Atendimento ao Cliente  
+│  
+├── Operações  
+│   ├── Produção  
+│   ├── Logística  
+│   ├── Tecnologia da Informação  
+│  
+├── Administrativo  
+    ├── Jurídico  
+    ├── Finanças  
+    │   ├── Contabilidade  
+    │   ├── Contas a pagar/receber  
+    │
+    ├── Gestão de Pessoas  
+        ├── Recursos Humanos  
+        ├── Departamento Pessoal  
+</pre>
+<p>Esse modelo demonstra como as empresas organizam seus setores para garantir uma operação eficiente e bem
+    coordenada.</p>
+
+<hr>
+
+<h2>4. Compreendendo os Tipos de Estruturas Organizacionais</h2>
+<p>
+    As estruturas organizacionais determinam como as funções, responsabilidades e hierarquias são distribuídas
+    dentro de uma empresa. A escolha do modelo ideal depende de fatores como tamanho da organização, tipo de mercado
+    e complexidade dos projetos. A seguir, são apresentadas quatro das principais estruturas organizacionais,
+    destacando suas vantagens e desvantagens.
+</p>
+<h3>4.1. Organização Funcional Clássica</h3>
+<p>A <strong>organização funcional clássica</strong> é uma das mais tradicionais e amplamente utilizadas. Nesse
+    modelo, a empresa é dividida em <strong>departamentos especializados</strong>, como marketing, finanças,
+    produção e recursos humanos, cada um liderado por um gestor funcional.</p>
+<ul>
+    <li><strong>Vantagens</strong>:</li>
     <ul>
-        <li><strong>Vantagens</strong>:</li>
-        <ul>
-            <li><strong>Especialização e eficiência</strong>: Profissionais trabalham em áreas específicas, desenvolvendo maior expertise.</li>
-            <li><strong>Clareza na hierarquia</strong>: A estrutura bem definida facilita a comunicação interna e a delegação de responsabilidades.</li>
-            <li><strong>Maior controle e supervisão</strong>: Cada departamento tem um líder especializado, garantindo foco nos processos internos.</li>
-        </ul>
-        <li><strong>Desvantagens</strong>:</li>
-        <ul>
-            <li><strong>Falta de integração entre áreas</strong>: A comunicação entre departamentos pode ser lenta e burocrática.</li>
-            <li><strong>Resistência à inovação</strong>: Departamentos podem operar de forma isolada, dificultando mudanças organizacionais.</li>
-            <li><strong>Menos flexibilidade</strong>: Profissionais têm pouca exposição a outras funções, o que pode limitar o aprendizado e a adaptabilidade.</li>
-        </ul>
+        <li><strong>Especialização e eficiência</strong>: Profissionais trabalham em áreas específicas,
+            desenvolvendo maior expertise.</li>
+        <li><strong>Clareza na hierarquia</strong>: A estrutura bem definida facilita a comunicação interna e a
+            delegação de responsabilidades.</li>
+        <li><strong>Maior controle e supervisão</strong>: Cada departamento tem um líder especializado, garantindo
+            foco nos processos internos.</li>
     </ul>
-    <h3>4.2. Organização Funcional Projetizada</h3>
-    <p>Na organização projetizada, o foco principal está na execução de projetos temporários, em que equipes são montadas para trabalhar em objetivos específicos, sendo dissolvidas após a conclusão do projeto.</p>
+    <li><strong>Desvantagens</strong>:</li>
     <ul>
-        <li>Vantagens:</li>
-        <ul>
-            <li><strong>Alta flexibilidade</strong>: A estrutura se adapta rapidamente às demandas dos projetos.</li>
-            <li><strong>Foco nos resultados</strong>: Toda a equipe trabalha para alcançar os objetivos do projeto, sem distrações com tarefas operacionais rotineiras.</li>
-            <li><strong>Tomada de decisão rápida</strong>: Os gestores de projeto têm autonomia para implementar mudanças conforme necessário.</li>
-        </ul>
-        <li>Desvantagens:</li>
-        <ul>
-            <li><strong>Possível falta de estabilidade</strong>: Os colaboradores podem ter incertezas sobre sua posição após o término do projeto.</li>
-            <li><strong>Uso ineficiente de recursos</strong>: Sem um planejamento adequado, pode haver desperdício de mão de obra e capital.</li>
-            <li><strong>Conflitos entre projetos</strong>: Se a empresa gerencia vários projetos ao mesmo tempo, pode haver disputa por recursos.</li>
-        </ul>
+        <li><strong>Falta de integração entre áreas</strong>: A comunicação entre departamentos pode ser lenta e
+            burocrática.</li>
+        <li><strong>Resistência à inovação</strong>: Departamentos podem operar de forma isolada, dificultando
+            mudanças organizacionais.</li>
+        <li><strong>Menos flexibilidade</strong>: Profissionais têm pouca exposição a outras funções, o que pode
+            limitar o aprendizado e a adaptabilidade.</li>
     </ul>
-    <h3>4.3. Organização Matricial Fraca</h3>
-    <p>A <strong>estrutura matricial fraca</strong> é uma combinação da estrutura funcional com a projetizada, porém mantendo a predominância do modelo funcional. Os gerentes de projeto possuem <strong>pouca autoridade</strong> e dependem dos gestores funcionais para alocação de recursos.</p>
+</ul>
+<h3>4.2. Organização Funcional Projetizada</h3>
+<p>Na organização projetizada, o foco principal está na execução de projetos temporários, em que equipes são
+    montadas para trabalhar em objetivos específicos, sendo dissolvidas após a conclusão do projeto.</p>
+<ul>
+    <li>Vantagens:</li>
     <ul>
-        <li>Vantagens:</li>
-        <ul>
-            <li><strong>Melhor comunicação entre departamentos</strong>: Favorece a colaboração entre áreas sem comprometer a estrutura funcional.</li>
-            <li><strong>Otimização de recursos</strong>: Profissionais podem trabalhar em múltiplos projetos sem comprometer suas funções principais.</li>
-            <li><strong>Maior flexibilidade em relação à funcional clássica</strong>: Equipes podem se adaptar melhor a demandas pontuais.</li>
-        </ul>
-        <li>Desvantagens:</li>
-        <ul>
-            <li><strong>Baixa autoridade do gerente de projeto</strong>: Ele precisa negociar constantemente com os gestores funcionais, o que pode atrasar decisões.</li>
-            <li><strong>Possíveis conflitos de prioridade</strong>: Funcionários podem ter dificuldades em balancear tarefas do projeto e obrigações departamentais.</li>
-            <li>Falta de comprometimento com projetos: Como os funcionários não estão totalmente dedicados aos projetos, pode haver menor engajamento.</li>
-        </ul>
+        <li><strong>Alta flexibilidade</strong>: A estrutura se adapta rapidamente às demandas dos projetos.</li>
+        <li><strong>Foco nos resultados</strong>: Toda a equipe trabalha para alcançar os objetivos do projeto, sem
+            distrações com tarefas operacionais rotineiras.</li>
+        <li><strong>Tomada de decisão rápida</strong>: Os gestores de projeto têm autonomia para implementar
+            mudanças conforme necessário.</li>
     </ul>
-    <h3>4.4. Organização Matricial Forte</h3>
-    <p>A <strong>estrutura matricial forte</strong> é semelhante à anterior, mas com <strong>maior autoridade concedida ao gerente de projetos</strong>, que tem mais controle sobre os recursos e decisões do projeto.</p>
+    <li>Desvantagens:</li>
     <ul>
-        <li>Vantagens:</li>
-        <ul>
-            <li><strong>Maior equilíbrio entre funcional e projetizado</strong>: Mantém a estabilidade da organização funcional, mas garante flexibilidade para projetos.</li>
-            <li><strong>Maior comprometimento com os projetos</strong>: Equipes são mais dedicadas e trabalham com foco nas entregas.</li>
-            <li><strong>Tomada de decisões mais ágil</strong>: O gerente de projetos tem mais autonomia, acelerando a execução das atividades.</li>
-        </ul>
-        <li>Desvantagens:</li>
-        <ul>
-            <li><strong>Conflitos de autoridade</strong>: Pode haver disputas entre gestores funcionais e gerentes de projeto pelo controle de recursos.</li>
-            <li><strong>Maior complexidade gerencial</strong>: Exige uma estrutura bem definida para evitar sobrecarga de demandas e desorganização.</li>
-            <li><strong>Carga de trabalho intensa</strong>: Profissionais podem ser designados para múltiplos projetos ao mesmo tempo, gerando sobrecarga.</li>
-        </ul>
+        <li><strong>Possível falta de estabilidade</strong>: Os colaboradores podem ter incertezas sobre sua posição
+            após o término do projeto.</li>
+        <li><strong>Uso ineficiente de recursos</strong>: Sem um planejamento adequado, pode haver desperdício de
+            mão de obra e capital.</li>
+        <li><strong>Conflitos entre projetos</strong>: Se a empresa gerencia vários projetos ao mesmo tempo, pode
+            haver disputa por recursos.</li>
     </ul>
-    <p>
-        A escolha do <strong>modelo de estrutura organizacional</strong> adequado depende das <strong>necessidades estratégicas e operacionais</strong> da empresa. <strong>Organizações funcionais</strong> são mais estáveis e eficientes, mas menos flexíveis. <strong>Estruturas projetizadas</strong> permitem maior inovação e rapidez, mas podem ser instáveis. Já as <strong>estruturas matriciais</strong> buscam um equilíbrio entre estabilidade e flexibilidade, mas exigem um <strong>bom gerenciamento de recursos e autoridade</strong> para evitar conflitos internos.
-    </p>
-
-    <hr>
-
-    <h2>5. Considerações Finais</h2>
+</ul>
+<h3>4.3. Organização Matricial Fraca</h3>
+<p>A <strong>estrutura matricial fraca</strong> é uma combinação da estrutura funcional com a projetizada, porém
+    mantendo a predominância do modelo funcional. Os gerentes de projeto possuem <strong>pouca autoridade</strong> e
+    dependem dos gestores funcionais para alocação de recursos.</p>
+<ul>
+    <li>Vantagens:</li>
     <ul>
-        <li>Uma <strong>boa estrutura organizacional</strong> garante <strong>clareza nas responsabilidades e eficiência na execução das estratégias</strong>.</li>
-        <li>A <strong>cultura organizacional</strong> impacta diretamente o desempenho, a inovação e a satisfação dos funcionários.</li>
-        <li>A administração eficaz depende da aplicação equilibrada das <strong>funções de planejamento, organização, direção e controle</strong>.</li>
-        <li>O <strong>uso de organogramas e critérios de departamentalização</strong> facilita a <strong>comunicação e a tomada de decisões</strong> dentro da empresa.</li>
+        <li><strong>Melhor comunicação entre departamentos</strong>: Favorece a colaboração entre áreas sem
+            comprometer a estrutura funcional.</li>
+        <li><strong>Otimização de recursos</strong>: Profissionais podem trabalhar em múltiplos projetos sem
+            comprometer suas funções principais.</li>
+        <li><strong>Maior flexibilidade em relação à funcional clássica</strong>: Equipes podem se adaptar melhor a
+            demandas pontuais.</li>
     </ul>
+    <li>Desvantagens:</li>
+    <ul>
+        <li><strong>Baixa autoridade do gerente de projeto</strong>: Ele precisa negociar constantemente com os
+            gestores funcionais, o que pode atrasar decisões.</li>
+        <li><strong>Possíveis conflitos de prioridade</strong>: Funcionários podem ter dificuldades em balancear
+            tarefas do projeto e obrigações departamentais.</li>
+        <li>Falta de comprometimento com projetos: Como os funcionários não estão totalmente dedicados aos projetos,
+            pode haver menor engajamento.</li>
+    </ul>
+</ul>
+<h3>4.4. Organização Matricial Forte</h3>
+<p>A <strong>estrutura matricial forte</strong> é semelhante à anterior, mas com <strong>maior autoridade concedida
+        ao gerente de projetos</strong>, que tem mais controle sobre os recursos e decisões do projeto.</p>
+<ul>
+    <li>Vantagens:</li>
+    <ul>
+        <li><strong>Maior equilíbrio entre funcional e projetizado</strong>: Mantém a estabilidade da organização
+            funcional, mas garante flexibilidade para projetos.</li>
+        <li><strong>Maior comprometimento com os projetos</strong>: Equipes são mais dedicadas e trabalham com foco
+            nas entregas.</li>
+        <li><strong>Tomada de decisões mais ágil</strong>: O gerente de projetos tem mais autonomia, acelerando a
+            execução das atividades.</li>
+    </ul>
+    <li>Desvantagens:</li>
+    <ul>
+        <li><strong>Conflitos de autoridade</strong>: Pode haver disputas entre gestores funcionais e gerentes de
+            projeto pelo controle de recursos.</li>
+        <li><strong>Maior complexidade gerencial</strong>: Exige uma estrutura bem definida para evitar sobrecarga
+            de demandas e desorganização.</li>
+        <li><strong>Carga de trabalho intensa</strong>: Profissionais podem ser designados para múltiplos projetos
+            ao mesmo tempo, gerando sobrecarga.</li>
+    </ul>
+</ul>
+<p>
+    A escolha do <strong>modelo de estrutura organizacional</strong> adequado depende das <strong>necessidades
+        estratégicas e operacionais</strong> da empresa. <strong>Organizações funcionais</strong> são mais estáveis
+    e eficientes, mas menos flexíveis. <strong>Estruturas projetizadas</strong> permitem maior inovação e rapidez,
+    mas podem ser instáveis. Já as <strong>estruturas matriciais</strong> buscam um equilíbrio entre estabilidade e
+    flexibilidade, mas exigem um <strong>bom gerenciamento de recursos e autoridade</strong> para evitar conflitos
+    internos.
+</p>
 
-    <hr>
-    
-    <nav class="navlink">
-        <a href="../../index.html" target="_self" rel="prev">Voltar para o menu</a>
-        <span>|</span>
-        <a href="fundamentosdaadministracaoaula3.html" target="_self" rel="next">Próxima aula</a>
-    </nav>
-</body>
+<hr>
 
-</html>
+<h2>5. Considerações Finais</h2>
+<ul>
+    <li>Uma <strong>boa estrutura organizacional</strong> garante <strong>clareza nas responsabilidades e eficiência
+            na execução das estratégias</strong>.</li>
+    <li>A <strong>cultura organizacional</strong> impacta diretamente o desempenho, a inovação e a satisfação dos
+        funcionários.</li>
+    <li>A administração eficaz depende da aplicação equilibrada das <strong>funções de planejamento, organização,
+            direção e controle</strong>.</li>
+    <li>O <strong>uso de organogramas e critérios de departamentalização</strong> facilita a <strong>comunicação e a
+            tomada de decisões</strong> dentro da empresa.</li>
+</ul>
+
+{% include nav-aula.html materia="fundamentosdaadministracao" aula="3" %}
+{% include footer.html %}

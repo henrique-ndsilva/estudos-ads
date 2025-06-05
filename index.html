@@ -1,118 +1,201 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+---
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Aulas</title>
-</head>
+{% include head-main.html base-path="" page-title="Aulas" %}
 
-<body>
-    <hr>
+{% include nav.html %}
 
-    <nav class="buttonnav">
-        <a href="paginas/quizzes/mainquizzes.html" class="buttonmain" target="_self" title="Ver quizzes">Quizzes</a>
-        <a href="index.html" class="buttonmain activebutton" target="_self" title="Ir para as aulas">Aulas</a>
-        <a href="paginas/ptis/mainptis.html" class="buttonmain" target="_self" title="Ver PTIs">PTIs</a>
-    </nav>
+<hr> <!-- Início do 1º Trimestre -->
 
-    <hr> <!-- Início do 1º Trimestre -->
+<div class="button-trimestres">
+        <button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button>
+</div>
 
-    <div class="button-trimestres"><button id="btn-trimestre1" data-label="1º Trimestre">Mostrar 1º Trimestre</button></div>
-
-    <section id="trimestre1" aria-label="Conteúdo do 1º Trimestre">
+<section id="trimestre1" aria-label="Conteúdo do 1º Trimestre">
         <h1>Conceitos da Computação I</h1>
         <nav aria-label="Aulas do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula1.html" target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula2.html" target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula3.html" target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula4.html" target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula5.html" target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula6.html" target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula7.html" target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7" class="conteudo-disponivel"></a>
-                <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula8.html" target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8" class="conteudo-disponivel"></a>
-            </div>
+                <div class="divmain">
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula1.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula2.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula3.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula4.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula5.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula6.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula7.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/conceitosdacomputacao1/conceitosdacomputacao1aula8.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8"
+                                        class="conteudo-disponivel"></a>
+                </div>
         </nav>
         <hr>
-        
+
         <h1>Fundamentos da Administração</h1>
         <nav aria-label="Aulas do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula1.html" target="_self" ><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula2.html" target="_self" ><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula3.html" target="_self" ><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula4.html" target="_self" ><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula5.html" target="_self" ><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula6.html" target="_self" ><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula7.html" target="_self" ><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7" class="conteudo-disponivel"></a>
-                <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula8.html" target="_self" ><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8" class="conteudo-disponivel"></a>
-            </div>
+                <div class="divmain">
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula1.html"
+                                target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula2.html"
+                                target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula3.html"
+                                target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula4.html"
+                                target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula5.html"
+                                target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula6.html"
+                                target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula7.html"
+                                target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/fundamentosdaadministracao/fundamentosdaadministracaoaula8.html"
+                                target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8"
+                                        class="conteudo-disponivel"></a>
+                </div>
         </nav>
         <hr>
-        
+
         <h1>Pesquisa, Tecnologia e Sociedade</h1>
         <nav aria-label="Aulas do 1º Trimestre">
-            <div class="divmain">
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula1.html" target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula2.html" target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula3.html" target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula4.html" target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula5.html" target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula6.html" target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula7.html" target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7" class="conteudo-disponivel"></a>
-                <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula8.html" target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8" class="conteudo-disponivel"></a>
-            </div>
+                <div class="divmain">
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula1.html"
+                                target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula2.html"
+                                target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula3.html"
+                                target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula4.html"
+                                target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula5.html"
+                                target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula6.html"
+                                target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula7.html"
+                                target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/pesquisatecnologiaesociedade/pesquisatecnologiaesociedadeaula8.html"
+                                target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8"
+                                        class="conteudo-disponivel"></a>
+                </div>
         </nav>
-    </section>
+</section>
 
-    <hr> <!-- Fim do 1º Trimestre e Início do 2º Trimestre -->
+<hr> <!-- Fim do 1º Trimestre e Início do 2º Trimestre -->
 
-    <div class="button-trimestres"><button id="btn-trimestre2" data-label="2º Trimestre">Mostrar 2º Trimestre</button></div>
+<div class="button-trimestres">
+        <button id="btn-trimestre2" data-label="2º Trimestre">Mostrar 2º Trimestre</button>
+</div>
 
-    <section id="trimestre2" aria-label="Conteúdo do 2º Trimestre">
+<section id="trimestre2" aria-label="Conteúdo do 2º Trimestre">
         <h1>Algoritmos e Programação I</h1>
         <nav aria-label="Aulas do 2º Trimestre">
-            <div class="divmain">
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula1.html" target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula2.html" target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula3.html" target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula4.html" target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula5.html" target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula6.html" target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula7.html" target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7" class="conteudo-disponivel"></a>
-                <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula8.html" target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8" class="conteudo-disponivel"></a>
-            </div>
+                <div class="divmain">
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula1.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula2.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula3.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula4.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula5.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula6.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula7.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/algoritmoseprogramacao1/algoritmoseprogramacao1aula8.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8"
+                                        class="conteudo-disponivel"></a>
+                </div>
         </nav>
         <hr>
         <h1>Infraestrutura de Tecnologia da Informação</h1>
         <nav aria-label="Aulas do 2º Trimestre">
-            <div class="divmain">
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula1.html" target="_self"><img src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula2.html" target="_self"><img src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula3.html" target="_self"><img src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula4.html" target="_self"><img src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula5.html" target="_self"><img src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula6.html" target="_self"><img src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula7.html" target="_self"><img src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula8.html" target="_self"><img src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula9.html" target="_self"><img src="imagens/menu/buttons/aula9.png" alt="Ir para a aula 9" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula10.html" target="_self"><img src="imagens/menu/buttons/aula10.png" alt="Ir para a aula 10" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula11.html" target="_self"><img src="imagens/menu/buttons/aula11.png" alt="Ir para a aula 11" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula12.html" target="_self"><img src="imagens/menu/buttons/aula12.png" alt="Ir para a aula 12" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula13.html" target="_self"><img src="imagens/menu/buttons/aula13.png" alt="Ir para a aula 13" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula14.html" target="_self"><img src="imagens/menu/buttons/aula14.png" alt="Ir para a aula 14" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula15.html" target="_self"><img src="imagens/menu/buttons/aula15.png" alt="Ir para a aula 15" class="conteudo-disponivel"></a>
-                <a href="paginas/infraestruturadeti/infraestruturadetiaula16.html" target="_self"><img src="imagens/menu/buttons/aula16.png" alt="Ir para a aula 16" class="conteudo-disponivel"></a>
-            </div>
+                <div class="divmain">
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula1.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula1.png" alt="Ir para a aula 1"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula2.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula2.png" alt="Ir para a aula 2"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula3.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula3.png" alt="Ir para a aula 3"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula4.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula4.png" alt="Ir para a aula 4"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula5.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula5.png" alt="Ir para a aula 5"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula6.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula6.png" alt="Ir para a aula 6"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula7.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula7.png" alt="Ir para a aula 7"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula8.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula8.png" alt="Ir para a aula 8"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula9.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula9.png" alt="Ir para a aula 9"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula10.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula10.png" alt="Ir para a aula 10"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula11.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula11.png" alt="Ir para a aula 11"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula12.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula12.png" alt="Ir para a aula 12"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula13.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula13.png" alt="Ir para a aula 13"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula14.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula14.png" alt="Ir para a aula 14"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula15.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula15.png" alt="Ir para a aula 15"
+                                        class="conteudo-disponivel"></a>
+                        <a href="paginas/infraestruturadeti/infraestruturadetiaula16.html" target="_self"><img
+                                        src="imagens/menu/buttons/aula16.png" alt="Ir para a aula 16"
+                                        class="conteudo-disponivel"></a>
+                </div>
         </nav>
-    </section>
+</section>
 
-    <script src="js/toggleTrimestres.js"></script>
-
-    <hr> <!-- Fim do 2º Trimestre -->
-</body>
-
-</html>
+<hr> <!-- Fim do 2º Trimestre -->
+{% include footer.html %}
