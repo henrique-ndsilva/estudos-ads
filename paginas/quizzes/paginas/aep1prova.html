@@ -1,0 +1,199 @@
+---
+---
+
+{% include head-quiz-prova.html page-title="Prova - AeP1" %}
+{% include heading-aula.html heading="Questões da Prova de Algoritmos e Programação I" %}
+
+<p><strong>Esta página contém questões que caíram em provas passadas e recentes, visando facilitar o estudo. No final da
+        página haverá o gabarito. Caso a questão tenha ".1" pra cima na numeração, se trata de uma possível variante
+        dessa questão.</strong></p>
+
+<p><strong>1.</strong> Observe o código fonte a seguir:</p>
+<pre class="code">
+Console.Write("Digite a hora: ");
+int hora = int.Parse(Console.ReadLine());
+
+if(hora >= 8 && hora<23) {
+    Console.WriteLine("Estamos abertos!");
+}
+else {
+    Console.WriteLine("Estamos fechados!");
+}
+</pre>
+<p>O valor de entrada que deve ser digitado quando a mensagem "Digite a hora:" for exibida de maneira a gerar a
+    saída
+    "Estamos Abertos!" é:</p>
+<ol type="a">
+    <li>7</li>
+    <li>6</li>
+    <li>24</li>
+    <li>23</li>
+    <li>22</li>
+</ol>
+
+<hr>
+
+<p><strong>2.</strong> Observe o programa a seguir que tem por objetivo informar sobre sua idade para participar de
+    um processo de eleições:</p>
+<pre class="code">
+Console.Write("Informe sua idade: ");
+int idade = int.Parse(Console.ReadLine());
+
+if (idade >= 70) {
+    Console.WriteLine("Você é idoso e seu voto é facultativo");
+}
+else if (idade >= 18) {
+    Console.WriteLine("Seu voto é obrigatório!");
+}
+else if (idade >= 16) {
+    Console.WriteLine("Você é adolescente e seu voto é facultativo");
+}
+else {
+    Console.WriteLine("Você ainda não pode votar");
+}
+</pre>
+<p>Analisando o código-fonte acima podemos afirmar que:</p>
+<ol type="a">
+    <li>O programa pode gerar a saída que adultos de 18 anos devem obrigatoriamente votar</li>
+    <li>O programa pode gerar a saída que adolescentes com 15 anos de idade podem votar</li>
+    <li>O programa está restringindo entradas com números negativos</li>
+    <li>O programa pode gerar a saída que adolescentes de 17 anos devem obrigatoriamente votar</li>
+    <li>O programa pode gerar a saída que adultos de 71 anos devem obrigatoriamente votar</li>
+</ol>
+
+<hr>
+
+<p><strong>3.</strong> Referente à estrutura de repetição while, observe o código a seguir:</p>
+<pre class="code">
+Console.Write("Informe um número: ");
+int numero = int.Parse(Console.ReadLine());
+int i = 0;
+
+while (i < numero * 3) {
+    i = i + numero * 2;
+}
+
+Console.WriteLine("i = " + i);
+</pre>
+<p>Quando informado como entrada o número 20, a saída esperada é:</p>
+<ol type="a">
+    <li>i = 60</li>
+    <li>i = 10</li>
+    <li>i = 0</li>
+    <li>i = 80</li>
+    <li>i = 20</li>
+</ol>
+
+<hr>
+
+<p><strong>4.</strong> No que diz respeito ao uso da estrutura de repetição for, segue o código abaixo para análise:</p>
+<pre class="code">
+Console.Write("Informe um número: ");
+int numero = int.Parse(Console.ReadLine());
+
+for(int i = numero; i > 0; i = i - numero / 5) {
+    Console.Write(" " + i);
+}
+</pre>
+<p>A saída esperada para o código-fonte apresentado, quando a entrada fornecida é 200, é:</p>
+<ol type="a">
+    <li>200 160 120 80 40</li>
+    <li>200 50 100 25</li>
+    <li>180 90 45 20 10</li>
+    <li>200 30 10 5 0</li>
+    <li>180 90 45 10</li>
+</ol>
+
+<hr>
+
+<p><strong>5.</strong> A seguir é apresentada uma função desenvolvida em linguagem C#:</p>
+<pre class="code">
+void calculaAreaRetangulo(ladoA, ladoB) {
+    Console.WriteLine("A área do retângulo é " + ladoA * ladoB);
+}
+</pre>
+<p>Referente à implementação da função acima pode-se afirmar que:</p>
+<ol type="a">
+    <li>A função precisa especificar os tipos de dados nos parâmetros de entrada.</li>
+    <li>É necessário a palavra return ao final da implementação para a devida execução.</li>
+    <li>É necessário a remoção do tipo de dado de saída da função.</li>
+    <li>A função está desenvolvida corretamente.</li>
+    <li>A função precisa especificar os tipos de dados nos parâmetros de saída.</li>
+</ol>
+
+<hr>
+
+<p><strong>6.</strong> Em uma aula de matemática básica, a professora ensinou aos alunos sobre o
+    cálculo do perímetro de polígonos:</p>
+<p>A alternativa que apresenta a função implementada corretamente pelo aluno, em linguagem de
+    programação C#, é:</p>
+<ol type="a">
+    <li>
+        <pre class="code">double calculaPerimetro(a, b, c) {
+    return a+b+c;
+}</pre>
+    </li>
+    <li>
+        <pre class="code">double calculaPerimetro(double a, double b, double c) {
+    return perimetro;
+}</pre>
+    </li>
+    <li>
+        <pre class="code">double calculaPerimetro() {
+    return a+b+c;
+}</pre>
+    </li>
+    <li>
+        <pre class="code">calculaPerimetro(double a, double b, double c) {
+    return a+b+c;
+}</pre>
+    </li>
+    <li>
+        <pre class="code">double calculaPerimetro(double a, double b, double c) {
+    return a+b+c;
+}</pre>
+    </li>
+</ol>
+
+<hr>
+
+<p><strong>7.</strong> Elabore um programa em linguagem de programação C# que informa o maior
+    número inteiro dentre 10 números inteiros
+    informados pelo usuário:</p>
+<pre class="code">
+using System;
+
+int num, numMaior;
+
+Console.WriteLine("Digite um número: ");
+numMaior = int.Parse (Console.ReadLine());
+
+for (int i = 1; i < 10; i++) {
+    Console.WriteLine("Digite um número: ");
+    num = int.Parse (Console.ReadLine());
+
+    if (num > numMaior)
+        numMaior = num;
+}
+
+Console.WriteLine("Numero maior é: " + numMaior);
+</pre>
+
+<p><strong>Explicação:</strong> O algoritmo lê 10 números inteiros digitados pelo usuário e determina qual deles é o
+    maior. O primeiro número é armazenado como o maior inicialmente. Em seguida, os próximos 9 números são comparados
+    com esse valor, e, se algum for maior, ele substitui o anterior. Ao final, o maior número informado é exibido na
+    tela.</p>
+<hr>
+
+<p><strong>Abaixo encontra-se as respostas das questões anteriores:</strong></p>
+<ul>
+    <li>1. e</li>
+    <li>2. a</li>
+    <li>3. d</li>
+    <li>4. a</li>
+    <li>5. a</li>
+    <li>6. e</li>
+</ul>
+
+{% include nav-aula.html next="false" url="paginas/quizzes/mainquizzes.html" %}
+{% include footer.html %}

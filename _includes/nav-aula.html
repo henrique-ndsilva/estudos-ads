@@ -1,10 +1,17 @@
 <hr>
 
 <nav class="navlink">
-    <a href="{{ site.baseurl }}/" target="_self" rel="prev">Voltar para o menu</a>
+    {% if include.menu != "false" %}
+    <a href="{{ site.baseurl }}/{{ include.url }}" target="_self" rel="prev">Voltar para
+        o menu</a>
+    {% endif %}
+    {% if include.menu != "false" and include.next != "false" %}
     <span>|</span>
+    {% endif %}
+    {% if include.next != "false" %}
     <a href="{{ site.baseurl }}/paginas/{{ include.materia }}/{{ include.materia }}aula{{ include.aula }}.html"
         target="_self" rel="next">
-        Próxima aula
+        {{ include.next-title | default: "Próxima Aula"}}
     </a>
+    {% endif %}
 </nav>
