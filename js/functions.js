@@ -32,3 +32,4 @@ function toggleTrimestre(btnId, divId) {
 
 toggleTrimestre("btn-trimestre1", "trimestre1");
 toggleTrimestre("btn-trimestre2", "trimestre2");
+toggleTrimestre("btn-trimestre3", "trimestre3");

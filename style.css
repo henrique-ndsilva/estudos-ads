@@ -175,7 +175,8 @@ hr {
 
 .buttonmain,
 #btn-trimestre1,
-#btn-trimestre2 {
+#btn-trimestre2,
+#btn-trimestre3 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,7 +227,8 @@ hr {
 }
 
 #btn-trimestre1,
-#btn-trimestre2 {
+#btn-trimestre2,
+#btn-trimestre3 {
     min-width: 150px;
     font-size: 12px;
     padding: 5px 15px;
@@ -235,7 +237,8 @@ hr {
 
 .buttonmain:hover,
 #btn-trimestre1:hover,
-#btn-trimestre2:hover {
+#btn-trimestre2:hover,
+#btn-trimestre3:hover {
     background-color: #383838;
     cursor: pointer;
 }
