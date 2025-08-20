@@ -1,0 +1,312 @@
+---
+---
+
+{% include head-aula.html page-title="Aula 2 - AeP2" %}
+
+{% include heading-aula.html heading="Estrutura de Dados Bidimensional (Matriz)" %}
+
+<p>As matrizes expandem o conceito de vetores, que são estruturas unidimensionais (como uma lista). Uma matriz funciona
+    como uma "tabela" bidimensional, com linhas e colunas, sendo ideal para representar problemas que dependem de uma
+    disposição em duas dimensões, como coordenadas em um mapa, peças em um tabuleiro ou até mesmo os pixels de uma
+    imagem.</p>
+
+<h3>1. Declaração e Criação de Matrizes</h3>
+
+<p>Enquanto um vetor precisa de apenas um índice para acessar uma posição, uma matriz necessita de dois: um para a linha
+    e outro para a coluna. A indexação também começa em 0, então a primeira posição de uma matriz é (0,0). A principal
+    diferença na declaração em C# é o uso de uma vírgula dentro dos colchetes (<code>[,]</code>) para indicar as duas
+    dimensões.</p>
+
+<img src="../../imagens/algoritmoseprogramacao2/aula2/figura1.png" alt="Exemplo de vetor e matriz">
+
+<h4>1.1 Declaração com atribuição direta</h4>
+<p>É possível definir os valores da matriz diretamente em sua criação. A formatação com múltiplas linhas ajuda a
+    visualizar a estrutura, mas não é obrigatória.</p>
+<pre class="code">
+double[,] notas = { 
+    { 8.7, 5.4, 6.2 },
+    { 3.8, 2.7, 8.5 },
+    { 9.1, 0.9, 4.2 },
+    { 7.1, 1.8, 8.8 } 
+};</pre>
+
+<h4>1.2 Acessando e alterando valores</h4>
+<p>Para acessar ou alterar um valor, você deve sempre informar os dois índices (linha e coluna).</p>
+<pre class="code">
+// Altera o valor na primeira linha, segunda coluna
+notas[0, 1] = 6.4;
+
+// Copia o valor da última linha e última coluna para uma variável
+double nota_do_antonio = notas[3, 2];</pre>
+
+<h4>1.3 Declaração com tamanho definido</h4>
+<p>Você pode declarar uma matriz especificando o número de linhas e colunas, para depois preencher os valores.</p>
+<pre class="code">
+double[,] notas = new double[4, 3];</pre>
+
+<h4>1.4 Declaração sem tamanho pré-definido</h4>
+<p>Também é possível declarar a matriz e inicializá-la em outro ponto do código.</p>
+<pre class="code">
+double[,] notas;
+notas = new double[4, 3];</pre>
+
+<hr>
+
+<h2>2. Resolução de Problemas Utilizando Matrizes</h2>
+
+<p>Matrizes são perfeitas para jogos de tabuleiro como xadrez, damas ou, como no exemplo a seguir, Campo Minado.</p>
+
+<h3>Exemplo: Lógica do Jogo Campo Minado</h3>
+<p>Vamos usar uma matriz 10x10 para o campo, onde `0` é uma posição vazia, `1` é uma bomba e `2` é a bandeira. Outra
+    matriz, `jogo`, registrará as ações do jogador.</p>
+
+<p><b>Criação e inicialização do campo:</b></p>
+<pre class="code">
+int[,] campo = new int[10, 10]; // Matriz com posições dos elementos do campo
+int[,] jogo = new int[10, 10];  // Matriz que registra ações do jogador
+
+int qtdLinhas = campo.GetLength(0);
+int qtdColunas = campo.GetLength(1);
+
+// Preenche a matriz 'campo' com 0 e a matriz 'jogo' com -1
+for (int l = 0; l < qtdLinhas; l++)
+{
+    for (int c = 0; c < qtdColunas; c++)
+    {
+        campo[l, c] = 0;
+        jogo[l, c] = -1;
+    }
+}</pre>
+<p>Para percorrer ou preencher uma matriz, a forma padrão é utilizar duas estruturas <code>for</code>, uma dentro da
+    outra. O laço externo percorre as linhas, e o interno percorre as colunas.</p>
+
+<img src="../../imagens/algoritmoseprogramacao2/aula2/figura2.png" alt="Sequência para percorrer uma matriz">
+
+<p><b>Posicionamento aleatório dos elementos:</b></p>
+<pre class="code">
+// Posicionamento aleatório da bandeira
+Random gerador = new Random();
+int linha = gerador.Next(qtdLinhas);
+int coluna = gerador.Next(qtdColunas);
+campo[linha, coluna] = 2;
+
+// Posicionamento aleatório das 5 bombas
+int bombasPosicionadas = 0;
+do
+{
+    linha = gerador.Next(qtdLinhas);
+    coluna = gerador.Next(qtdColunas);
+    if (campo[linha, coluna] == 0)
+    {
+        campo[linha, coluna] = 1;
+        bombasPosicionadas++;
+    }
+} while (bombasPosicionadas < 5);</pre>
+
+<p><b>Loop principal de interação com o jogador:</b></p>
+<pre class="code">
+bool fimJogo = false;
+do
+{
+    // Imprime o tabuleiro do jogador
+    for (int l = 0; l < qtdLinhas; l++)
+    {
+        for (int c = 0; c < qtdColunas; c++)
+        {
+            Console.Write(string.Format("{0} ", jogo[l, c]));
+        }
+        Console.Write(Environment.NewLine + Environment.NewLine);
+    }
+
+    Console.Write("Selecione uma linha [1-10]: ");
+    linha = Convert.ToInt32(Console.ReadLine()) - 1;
+    Console.Write("Selecione uma coluna [1-10]: ");
+    coluna = Convert.ToInt32(Console.ReadLine()) - 1;
+
+    switch (campo[linha, coluna])
+    {
+        case 0:
+            jogo[linha, coluna] = 0;
+            Console.Write("Continue tentando.\n\n");
+            break;
+        case 1:
+            jogo[linha, coluna] = 1;
+            Console.Write("BOOOM. Você perdeu.\n\n");
+            fimJogo = true;
+            break;
+        default:
+            jogo[linha, coluna] = 2;
+            Console.Write("Parabéns. Você ganhou!\n\n");
+            fimJogo = true;
+            break;
+    }
+} while (!fimJogo);</pre>
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula2/figura3.png" alt="Interação com o campo minado">
+
+<hr>
+
+<h2>3. Utilização de Funções com Matrizes</h2>
+<p>Matrizes podem ser passadas como argumentos para funções, assim como os vetores. Uma observação importante é que
+    matrizes (e vetores) são passadas por <strong>referência</strong>. Isso significa que qualquer alteração feita na
+    matriz dentro da função se refletirá na matriz original, fora da função.</p>
+
+<h3>Exemplo: Lógica do Jogo da Velha</h3>
+<p><b>Código principal do jogo:</b></p>
+<pre class="code">
+char[,] tabuleiro = new char[3, 3];
+int linha, coluna;
+bool fimJogo = false;
+int jogador = 1;
+int jogada = 0;
+
+// Preenchimento da matriz com espaços em branco
+for (int l = 0; l < 3; l++)
+    for (int c = 0; c < 3; c++)
+        tabuleiro[l, c] = ' ';
+
+do
+{
+    imprimirTabuleiro(tabuleiro);
+    if (jogador == 1)
+        Console.Write("JOGADOR 1:\n");
+    else
+        Console.Write("JOGADOR 2:\n");
+
+    Console.Write("Selecione uma linha [1-3]: ");
+    linha = Convert.ToInt32(Console.ReadLine()) - 1;
+    Console.Write("Selecione uma coluna [1-3]: ");
+    coluna = Convert.ToInt32(Console.ReadLine()) - 1;
+    
+    jogada++;
+    fimJogo = conferirJogada(tabuleiro, linha, coluna, jogador, jogada);
+
+    // Troca de jogador
+    if (jogador == 1)
+        jogador = 2;
+    else
+        jogador = 1;
+} while (!fimJogo);</pre>
+
+<h4>Função <code>imprimirTabuleiro</code></h4>
+<p>Esta função apenas lê a matriz e a exibe no console com formatação.</p>
+<pre class="code">
+static void imprimirTabuleiro(char[,] tabuleiro)
+{
+    for (int l = 0; l < 3; l++)
+    {
+        for (int c = 0; c < 3; c++)
+        {
+            Console.Write(string.Format("{0}", tabuleiro[l, c]));
+            if (c < 2)
+                Console.Write("|");
+        }
+        Console.Write(Environment.NewLine);
+        if (l < 2)
+            Console.Write("-----\n");
+    }
+}</pre>
+
+<h4>Função <code>conferirJogada</code></h4>
+<p>Esta função recebe a jogada, altera o tabuleiro (marcando 'X' ou 'O') e verifica se houve um vencedor ou empate.</p>
+<pre class="code">
+static bool conferirJogada(char[,] tabuleiro, int linha, int coluna, int jogador, int jogada)
+{
+    bool trinca = false;
+    if (jogador == 1)
+        tabuleiro[linha, coluna] = 'X';
+    else
+        tabuleiro[linha, coluna] = 'O';
+
+    // Verificar na mesma linha
+    for (int c = 0; c < 3; c++)
+    {
+        if (tabuleiro[linha, c] != tabuleiro[linha, coluna])
+            break;
+        if (c == 2)
+            trinca = true;
+    }
+
+    // Verificar na mesma coluna
+    if (!trinca)
+    {
+        for (int l = 0; l < 3; l++)
+        {
+            if (tabuleiro[l, coluna] != tabuleiro[linha, coluna])
+                break;
+            if (l == 2)
+                trinca = true;
+        }
+    }
+
+    // Verificar na diagonal principal
+    if (!trinca)
+    {
+        if (linha == coluna)
+        {
+            for (int cont = 0; cont < 3; cont++)
+            {
+                if (tabuleiro[cont, cont] != tabuleiro[linha, coluna])
+                    break;
+                if (cont == 2)
+                    trinca = true;
+            }
+        }
+    }
+
+    // Verificar na diagonal secundária
+    if (!trinca)
+    {
+        if (linha + coluna == 2)
+        {
+            for (int cont = 0; cont < 3; cont++)
+            {
+                if (tabuleiro[cont, 2 - cont] != tabuleiro[linha, coluna])
+                    break;
+                if (cont == 2)
+                    trinca = true;
+            }
+        }
+    }
+
+    if (trinca)
+    {
+        Console.WriteLine();
+        imprimirTabuleiro(tabuleiro);
+        Console.Write("JOGADOR " + jogador + " VENCEU!\n\n");
+        return true;
+    }
+
+    if (jogada == 9)
+    {
+        Console.WriteLine();
+        imprimirTabuleiro(tabuleiro);
+        Console.Write("EMPATE!\n\n");
+        return true;
+    }
+    else
+    {
+        Console.Write("\nPRÓXIMO JOGADOR...\n\n");
+        return false;
+    }
+}</pre>
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula2/figura4.png" alt="Interação com o jogo da velha">
+
+<p>Veja o seguinte conteúdo para melhor entendimento sobre matrizes multidimensionais: <a
+        href="https://learn.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/arrays#multidimensional-arrays"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+<hr>
+
+<h2>Considerações Finais</h2>
+<ul>
+    <li>Matrizes são estruturas ideais para armazenar dados em posições bidimensionais, como em jogos de tabuleiro.</li>
+    <li>Elas compartilham regras com vetores: declaração semelhante, armazenamento de um único tipo de dado e índices
+        que começam em zero.</li>
+    <li>A forma mais comum de percorrer todos os elementos de uma matriz é usando um laço <code>for</code> aninhado
+        dentro de outro.</li>
+</ul>
+
+{% include nav-aula.html materia="algoritmoseprogramacao2" aula="3" %}
+{% include footer.html %}

@@ -1,0 +1,207 @@
+---
+---
+
+{% include head-aula.html page-title="Aula 1 - AeP2" %}
+
+{% include heading-aula.html heading="Estrutura de Dados Linear (Vetor)" %}
+
+<p>Quando precisamos armazenar dados temporários em programas, usamos variáveis. No entanto, quando há muitos
+    valores
+    relacionados (como notas de vários alunos), criar várias variáveis individuais se torna trabalhoso e sujeito a
+    erros. Para resolver isso, utilizamos os <strong>vetores</strong>, que permitem armazenar diversos valores do
+    mesmo
+    tipo em uma única estrutura.</p>
+
+<hr>
+
+<h3>1. Preparação do Ambiente</h3>
+<p>O desenvolvimento será feito na linguagem <strong>C#</strong>, utilizando um <em>IDE</em> (Ambiente de
+    Desenvolvimento Integrado). A recomendação é o <strong>Microsoft Visual Studio Community</strong>, que pode ser
+    baixado gratuitamente.</p>
+
+<p>Para cada programa, cria-se um novo projeto em: <em>Arquivo &gt; Novo &gt; Projeto...</em></p>
+
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura1.png" alt="Página inicial do Microsoft Visual Studio">
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura2.png" alt="Janela de novo projeto">
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura3.png" alt="Código padrão de um projeto recém-criado">
+
+<p>A estrutura inicial do código não deve ser alterada. Todos os programas devem ser escritos entre as chaves do
+    método
+    <code>Main</code>. A linha padrão <code>Console.WriteLine("Hello World!");</code> pode ser apagada.
+</p>
+
+<p>Para rodar o código, basta usar a tecla de atalho Ctrl + F5.</p>
+<p>Veja o seguinte vídeo para melhor entendimento sobre vetores: <a href="https://youtu.be/9tArL_vXaoE" target="_blank"
+        rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+<p>Também é possível usar IDEs online, como <a href="https://replit.com/">Replit</a> e <a
+        href="https://dotnetfiddle.net/">.NET Fiddle</a>.</p>
+
+<hr>
+
+<h3>2. Declaração e Criação de Vetores</h3>
+<p>Uma variável pode ser comparada a uma gaveta que armazena um valor específico. Já um vetor é como um gaveteiro,
+    com
+    várias gavetas do mesmo tipo, onde cada posição é identificada por um <strong>índice</strong> (que começa em 0).
+</p>
+
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura5.png" alt="Representação de variável como gaveta">
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura6.png" alt="Representação de vetor como gaveteiro">
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura7.png" alt="Comparação entre variáveis e vetor">
+
+<h4>2.1 Tipos de dados em C#</h4>
+<p>Os valores armazenados em variáveis e vetores dependem do tipo de dado definido. Alguns dos principais tipos
+    primitivos em C# são mostrados na tabela abaixo:</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Descrição</th>
+            <th>Representação em C#</th>
+            <th>Valores possíveis</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Inteiro</td>
+            <td><code>int</code></td>
+            <td>-2.147.483.648 até 2.147.483.647</td>
+        </tr>
+        <tr>
+            <td>Inteiro longo</td>
+            <td><code>long</code></td>
+            <td>-9.223.372.036.854.775.808 até 9.223.372.036.854.775.807</td>
+        </tr>
+        <tr>
+            <td>Decimal</td>
+            <td><code>double</code></td>
+            <td>±5.0 × 10<sup>-324</sup> até ±1.7 × 10<sup>308</sup></td>
+        </tr>
+        <tr>
+            <td>Caractere</td>
+            <td><code>char</code></td>
+            <td>Unicode UTF-16 (U+0000 até U+FFFF)</td>
+        </tr>
+        <tr>
+            <td>Lógico</td>
+            <td><code>bool</code></td>
+            <td>true ou false</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>2.2 Declaração e atribuição direta</h4>
+<p>No momento da criação, já é possível atribuir todos os valores:</p>
+<pre class="code">
+double[] notas = {8.7, 5.4, 6.2};</pre>
+
+<h4>2.3 Declaração com tamanho definido</h4>
+<p>Primeiro define-se o tamanho, depois os valores são atribuídos:</p>
+<pre class="code">
+double[] notas = new double[3];</pre>
+
+<h4>2.4 Declaração sem tamanho pré-definido</h4>
+<p>Primeiro declara-se o vetor, depois define-se o tamanho em outro ponto do código:</p>
+<pre class="code">
+double[] notas;
+notas = new double[3];</pre>
+
+<p>O tamanho também pode ser definido dinamicamente com base em valores fornecidos pelo usuário.</p>
+
+<hr>
+
+<h3>3. Resolução de Problemas com Vetores</h3>
+<p>Vetores são úteis para realizar operações sobre todos os elementos. Exemplo: cálculo da média de notas.</p>
+
+<p>Versão inicial (cálculo direto com índices fixos):</p>
+<pre class="code">
+double[] notas = {8.7, 5.4, 6.2};
+double media = (notas[0] + notas[1] + notas[2]) / 3;</pre>
+
+<p>Versão com laço <code>for</code>, permitindo percorrer qualquer vetor:</p>
+<pre class="code">
+double soma = 0;
+for (int i = 0; i < notas.Length; i++)
+    soma += notas[i];
+double media = soma / notas.Length;</pre>
+
+<p>Exemplo completo: leitura das notas digitadas pelo usuário e cálculo da média.</p>
+<pre class="code">
+Console.WriteLine("Defina quantos alunos há na turma:");
+int tamanho = int.Parse(Console.ReadLine());
+double[] notas = new double[tamanho];
+
+// Armazenando as notas
+for (int i = 0; i < notas.Length; i++) {
+    Console.WriteLine("Digite a nota do aluno " + (i + 1) + ":");
+    notas[i] = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+}
+
+// Recuperando as notas para calcular a média
+double soma = 0;
+for (int i = 0; i < notas.Length; i++) {
+    Console.WriteLine("Nota do aluno " + (i + 1) + ": " + notas[i]);
+    soma += notas[i];
+}
+
+double media = soma / notas.Length;
+Console.WriteLine("Média das notas na turma é: " + media);</pre>
+<br>
+<img src="../../imagens/algoritmoseprogramacao2/aula1/figura8.png" alt="Execução do programa de cálculo de média">
+
+<p>O uso de laços <code>for</code> é fundamental para percorrer vetores, seja para preenchê-los, seja para recuperar
+    seus valores.</p>
+
+<hr>
+
+<h3>4. Utilização de Funções com Vetores</h3>
+<p>Vetores podem ser usados como parâmetros e também como retorno de funções.</p>
+
+<h4>Função que calcula a média:</h4>
+<pre class="code">
+static double calcularMedia(double[] notas) {
+    double soma = 0;
+    for (int i = 0; i < notas.Length; i++)
+        soma += notas[i];
+    return soma / notas.Length;
+}</pre>
+
+<h4>Função que inverte um vetor:</h4>
+<pre class="code">
+static void inverterVetor(double[] vetor) {
+    double temp;
+    for (int i = 0; i < vetor.Length/2; i++) {
+        temp = vetor[i];
+        vetor[i] = vetor[vetor.Length - 1 - i];
+        vetor[vetor.Length - 1 - i] = temp;
+    }
+}</pre>
+
+<p>Atenção: em C#, quando copiamos um vetor, copiamos apenas a referência na memória. Se quisermos criar uma cópia
+    independente, precisamos copiar valor a valor:</p>
+<pre class="code">
+double[] notas = { 8.7, 5.4, 6.2 };
+double[] n = new double[notas.Length];
+for (int i = 0; i < notas.Length; i++)
+    n[i] = notas[i];</pre>
+
+<hr>
+
+<h3>Considerações Finais</h3>
+<ul>
+    <li>Vetores simplificam o armazenamento de dados relacionados.</li>
+    <li>O índice do vetor começa em <strong>0</strong>.</li>
+    <li>É comum usar <code>for</code> junto de vetores para preencher ou percorrer seus elementos.</li>
+    <li>Vetores podem ser passados como parâmetros e retornados por funções.</li>
+    <li>É necessário copiar valor a valor quando se deseja criar uma cópia independente de um vetor.</li>
+</ul>
+
+<p>Pratique criando vetores de diferentes tipos, manipulando-os com funções e testando cópias, para reforçar sua
+    habilidade em programação.</p>
+
+{% include nav-aula.html materia="algoritmoseprogramacao2" aula="2" %}
+{% include footer.html %}
