@@ -1,11 +1,246 @@
 ---
 ---
 
-{% include head-aula.html page-title="Aula 5 - AeP" %}
+{% include head-aula.html page-title="Aula 5 - AeP2" %}
 
-{% include heading-aula.html heading="Linguagem de Programação Imperativa." %}
+{% include heading-aula.html heading="Algoritmos de Ordenação Elementares" %}
 
+<p>No capítulo anterior, vimos que a Busca Binária é super eficiente, mas exige um vetor ordenado. Mas como ordenar um
+    vetor? Imagine que você recebe um baralho de cartas totalmente embaralhado. Você provavelmente usaria um "algoritmo"
+    mental para colocá-lo em ordem sem nem perceber. Esta aula apresenta três métodos fundamentais que um computador usa
+    para fazer exatamente isso: <strong>Bubble Sort</strong>, <strong>Selection Sort</strong> e <strong>Insertion
+        Sort</strong>. Todos eles possuem uma complexidade de tempo semelhante, O(n<sup>2</sup>), mas usam estratégias
+    completamente diferentes para resolver o mesmo problema.</p>
 
+<hr>
 
-{% include nav-aula.html materia="algoritmoseprogramacao1" aula="6" %}
+<h2>1. Ordenação Bolha (Bubble Sort)</h2>
+
+<h3>Como Funciona?</h3>
+<p>O Bubble Sort é o método mais famoso por sua simplicidade. Ele funciona como um organizador de fila muito metódico:
+    ele passa pela fila comparando as pessoas <strong>duas a duas (vizinhas)</strong> e, se a da frente for maior que a
+    de trás, ele as troca de lugar. Ele faz isso do início ao fim da fila. Ao final da primeira "passada", o maior
+    elemento de todos ("a pessoa mais alta") naturalmente "borbulha" para a última posição. O processo se repete, a cada
+    vez ignorando os elementos que já estão no lugar certo, até que em uma passada inteira, nenhuma troca seja feita.
+</p>
+
+<h3>Pseudocódigo e a Estratégia</h3>
+<p>O pseudocódigo abaixo mostra a lógica fundamental. O laço de fora (`para i`) representa as múltiplas 'passadas' pela
+    lista, garantindo que o processo seja repetido o suficiente para ordenar todos os elementos. O laço de dentro (`para
+    j`) é onde a ação acontece: ele faz as comparações entre os elementos vizinhos (`vetor[j]` e `vetor[j+1]`) e realiza
+    a troca se o elemento da esquerda for maior que o da direita.</p>
+<pre class="code">
+para i = 1 até n faça
+    para j = 0 até n - 2 faça
+        se vetor[j] > vetor[j + 1] então
+            trocar(vetor[j], vetor[j + 1])
+        fim-se
+    fim-para
+fim-para
+</pre>
+
+<h3>Implementação em C# Comentada</h3>
+<p>A implementação em C# a seguir é uma versão <strong>otimizada</strong> da lógica do pseudocódigo. Ela é mais
+    inteligente porque inclui formas de parar o processo mais cedo se o vetor já estiver ordenado, economizando tempo.
+    Vamos primeiro declarar as variáveis que controlam essas otimizações e o vetor desordenado.</p>
+<pre class="code">
+int[] vetor = { 99, 82, 50, 67, 90, 20, 71, 8, 21, 18 };
+bool mudou = true;
+int ultimo = vetor.Length - 1;
+int ultimo_temp = vetor.Length - 1;
+
+while (mudou)
+{
+    int pos = 0;
+    mudou = false; // Assume que está ordenado até que uma troca prove o contrário
+    int temp = 0;
+
+    while (pos < ultimo)
+    {
+        if (vetor[pos] > vetor[pos + 1])
+        {
+            // Lógica de troca de posição
+            temp = vetor[pos];
+            vetor[pos] = vetor[pos + 1];
+            vetor[pos + 1] = temp;
+            
+            mudou = true; // Uma troca ocorreu, então o vetor ainda não está ordenado
+            ultimo_temp = pos;
+        }
+        pos++;
+    }
+    ultimo = ultimo_temp; // Reduz o limite da próxima passada
+}</pre>
+<h4>Analisando o Código C# Linha a Linha</h4>
+<ul>
+    <li><code>mudou</code>: É a nossa "bandeira" de controle (otimização 1). Se em uma passada inteira pelo vetor, essa
+        variável continuar <code>false</code>, significa que nenhuma troca foi feita, o vetor já está ordenado e podemos
+        parar o algoritmo.</li>
+    <li><code>ultimo</code>: Controla a segunda otimização. Como os maiores números "borbulham" para o final a cada
+        passada, não precisamos verificar o vetor inteiro sempre. Essa variável diminui o "teto" da nossa verificação a
+        cada ciclo completo.</li>
+    <li><code>while (mudou)</code>: É o cérebro da operação. Ele diz: "Continue passando pelo vetor enquanto trocas
+        ainda estiverem acontecendo".</li>
+    <li><code>while (pos < ultimo)</code>: Esta é a "passada" de fato, onde percorremos o vetor da posição 0 até o
+        último elemento que ainda não está garantidamente ordenado.</li>
+    <li><code>if (vetor[pos] > vetor[pos + 1])</code>: A comparação entre vizinhos.</li>
+    <li><code>temp = vetor[pos]...</code>: A clássica "dança das cadeiras" com uma variável temporária para realizar a
+        troca sem perder nenhum valor.</li>
+</ul>
+
+<hr>
+
+<h2>2. Ordenação por Seleção (Selection Sort)</h2>
+
+<h3>Como Funciona?</h3>
+<p>O Selection Sort age como um selecionador de time. Para preencher a primeira posição, ele olha para <strong>toda a
+        lista</strong>, encontra o menor de todos e o move para o início, trocando de lugar com quem estava lá. Depois,
+    para preencher a segunda posição, ele olha para todos os candidatos <strong>restantes</strong> (do segundo em
+    diante), pega o menor deles e o coloca no segundo lugar. Ele repete esse processo, a cada passo "selecionando" o
+    menor elemento disponível e colocando-o em sua posição final.</p>
+
+<h3>Pseudocódigo e a Estratégia</h3>
+<p>A lógica é representada por dois laços aninhados. O laço externo (`para i`) avança a fronteira da parte ordenada do
+    vetor (uma posição por vez). O laço interno (`para j`) é o "caçador": ele percorre todo o resto do vetor para
+    encontrar o índice (`minimo`) do menor valor. Ao final de cada passada do laço externo, a troca é realizada,
+    colocando o menor valor encontrado na posição correta.</p>
+<pre class="code">
+para i = 0 até n - 1 faça
+    minimo := i
+    para j = i + 1 até n faça
+        se vetor[j] < vetor[minimo] então
+            minimo := j
+        fim-se
+    fim-para
+    trocar(vetor[i], vetor[minimo])
+fim-para
+</pre>
+
+<h3>Implementação em C# Comentada</h3>
+<p>O código em C# segue diretamente a lógica do pseudocódigo. Usamos um laço `for` para controlar a posição que estamos
+    querendo preencher (`i`) e um laço `for` aninhado para encontrar o menor valor no restante do vetor.</p>
+<pre class="code">
+int[] vetor = { 99, 82, 50, 67, 90, 20, 71, 8, 21, 18 };
+int min, temp;
+
+for (int i = 0; i < vetor.Length - 1; i++)
+{
+    min = i; // Assume que o menor é o primeiro elemento da parte não ordenada
+
+    // Encontra o índice do menor elemento no resto do vetor
+    for (int pos = i + 1; pos < vetor.Length; pos++)
+    {
+        if (vetor[pos] < vetor[min])
+        {
+            min = pos;
+        }
+    }
+
+    // Se um menor foi encontrado, troca com a posição atual
+    if (vetor[i] != vetor[min])
+    {
+        temp = vetor[i];
+        vetor[i] = vetor[min];
+        vetor[min] = temp;
+    }
+}</pre>
+<h4>Analisando o Código C# Linha a Linha</h4>
+<ul>
+    <li><code>for (int i = 0; ...)</code>: Este é o laço principal que avança a fronteira entre a parte ordenada (à
+        esquerda de `i`) e a desordenada (de `i` em diante). A variável `i` marca a posição que estamos tentando
+        preencher com o valor correto a cada ciclo.</li>
+    <li><code>min = i</code>: No início de cada busca, assumimos temporariamente que o menor elemento é o primeiro da
+        seção desordenada.</li>
+    <li><code>for (int pos = i + 1; ...)</code>: Este é o "caçador". Ele varre todo o resto do vetor para encontrar o
+        verdadeiro índice do menor elemento, atualizando a variável `min` sempre que encontra um candidato menor.</li>
+    <li><code>if (vetor[i] != vetor[min])</code>: Após o caçador terminar sua busca, esta verificação simples evita uma
+        troca desnecessária se o menor elemento já estiver na posição correta. Se um novo mínimo foi encontrado, a troca
+        é realizada.</li>
+</ul>
+
+<hr>
+
+<h2>3. Ordenação por Inserção (Insertion Sort)</h2>
+
+<h3>Como Funciona?</h3>
+<p>Este método é o mais parecido com a forma que organizamos cartas de baralho na mão. Ele divide o vetor em duas
+    partes: uma ordenada (no início) e uma desordenada. Ele então pega o primeiro elemento da parte desordenada e o
+    "insere" no lugar correto dentro da parte ordenada. Para fazer isso, ele compara esse elemento com os valores
+    anteriores (da direita para a esquerda), empurrando os maiores para a direita para "abrir espaço", até encontrar o
+    local certo para encaixá-lo.</p>
+
+<h3>Pseudocódigo e a Estratégia</h3>
+<p>O laço principal (`para i`) seleciona o próximo elemento a ser inserido. Guardamos o valor desse elemento para não o
+    perdermos. O laço `enquanto` é a parte crucial: ele compara o valor guardado com os elementos da parte já ordenada e
+    "empurra" os maiores para a direita (`vetor[j + 1] := vetor[j]`) para criar um espaço. Quando o `enquanto` termina,
+    encontramos a posição correta e inserimos o valor guardado nesse espaço.</p>
+<pre class="code">
+para i = 1 até n - 1 faça
+    valor := vetor[i]
+    j := i - 1
+    enquanto j >= 0 e valor < vetor[j] faça
+        vetor[j + 1] := vetor[j]
+        j := j - 1
+    fim-enquanto
+    vetor[j + 1] := valor
+fim-para
+</pre>
+
+<h3>Implementação em C# Comentada</h3>
+<p>A implementação em C# traduz a lógica de "pegar uma carta" e "abrir espaço" de forma bem direta. O laço `for`
+    seleciona a "carta" e o laço `while` aninhado faz o trabalho de deslocar os elementos para encontrar o ponto de
+    inserção.</p>
+<pre class="code">
+int[] vetor = { 99, 82, 50, 67, 90, 20, 71, 8, 21, 18 };
+int num, pos_verificada;
+
+for (int pos = 1; pos < vetor.Length; pos++)
+{
+    num = vetor[pos]; // "Carta" que vamos inserir na parte ordenada
+    pos_verificada = pos - 1;
+
+    // Enquanto houver elementos para comparar e a "carta" for menor
+    while (pos_verificada >= 0 && num < vetor[pos_verificada])
+    {
+        // Empurra o elemento maior para a direita para abrir espaço
+        vetor[pos_verificada + 1] = vetor[pos_verificada];
+        pos_verificada--;
+    }
+    // Insere a "carta" no espaço que foi aberto
+    vetor[pos_verificada + 1] = num;
+}</pre>
+<h4>Analisando o Código C# Linha a Linha</h4>
+<ul>
+    <li><code>for (int pos = 1; ...)</code>: Este laço percorre o vetor a partir do segundo elemento, pois consideramos
+        o primeiro elemento (índice 0) como a nossa "parte ordenada" inicial, que contém apenas um item.</li>
+    <li><code>num = vetor[pos]</code>: Guardamos o valor do elemento que queremos inserir em sua posição correta. É a
+        nossa "carta da vez".</li>
+    <li><code>pos_verificada = pos - 1</code>: Iniciamos a verificação comparando nossa "carta" com o elemento
+        imediatamente anterior.</li>
+    <li><code>while (...)</code>: Esta é a mágica do algoritmo. Enquanto não chegamos ao início do vetor
+        (`pos_verificada >= 0`) e a nossa "carta" (`num`) for menor que o elemento que estamos olhando na parte ordenada
+        (`vetor[pos_verificada]`), ele executa o deslocamento.</li>
+    <li><code>vetor[pos_verificada + 1] = vetor[pos_verificada]</code>: Esta linha "empurra" o elemento maior para a
+        direita, abrindo espaço.</li>
+    <li><code>vetor[pos_verificada + 1] = num</code>: Quando o `while` termina, encontramos o lugar certo.
+        `pos_verificada + 1` é a posição correta (o "buraco" que abrimos), e inserimos nossa "carta" (`num`) ali.</li>
+</ul>
+
+<p>Veja o seguinte conteúdo para melhor entendimento sobre ordenação por seleção: <a
+        href="https://pt.khanacademy.org/computing/computer-science/algorithms/sorting-algorithms/a/sorting"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+<p>Veja o seguinte conteúdo para melhor entendimento sobre ordenação por inserção: <a
+        href="https://pt.khanacademy.org/computing/computer-science/algorithms/insertion-sort/a/insertion-sort"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+<hr>
+
+<h2>Considerações Finais</h2>
+<p>Bubble, Selection e Insertion Sort são os "blocos de montar" dos algoritmos de ordenação. Embora todos tenham uma
+    performance considerada lenta para grandes volumes de dados ($O(n^2)$), entender suas diferentes estratégias
+    (comparar vizinhos, caçar o menor, organizar como cartas) é fundamental para evoluir como programador. Eles nos
+    ensinam que um mesmo problema pode ser resolvido de várias maneiras. No próximo capítulo, conheceremos a recursão,
+    uma técnica que abre portas para algoritmos de ordenação muito mais eficientes.</p>
+
+{% include nav-aula.html materia="algoritmoseprogramacao2" aula="6" %}
 {% include footer.html %}

@@ -1,11 +1,156 @@
 ---
 ---
 
-{% include head-aula.html page-title="Aula 4 - AeP" %}
+{% include head-aula.html page-title="Aula 4 - AeP2" %}
 
-{% include heading-aula.html heading="Tomando decisões e repetindo instruções." %}
+{% include heading-aula.html heading="Algoritmos de Busca em Vetores" %}
 
+<p>Uma das tarefas mais comuns em programação é encontrar uma informação específica dentro de um grande conjunto de
+    dados. Imagine procurar uma palavra em um dicionário: você abriria na primeira página e leria palavra por palavra?
+    Ou abriria no meio e decidiria para que lado ir? Esta aula apresenta duas estratégias para um computador fazer
+    exatamente isso: a busca linear (o método sequencial) e a busca binária (o método inteligente).</p>
 
+<hr>
 
-{% include nav-aula.html materia="algoritmoseprogramacao1" aula="5" %}
+<h2>1. Busca Linear: A Força Bruta</h2>
+
+<h3>Como Funciona?</h3>
+<p>Este é o método mais simples e intuitivo. Ele funciona como um detetive que verifica cada casa de uma rua, uma por
+    uma, começando do número 1, até encontrar o que procura. Em um vetor, o programa começa no índice 0 e avança posição
+    por posição, comparando cada elemento com o valor buscado.</p>
+
+<h3>Código C#</h3>
+<pre class="code">
+int[] dados = { 52, 17, 69, 84, 3, 26, 83, 54, 19, 50 };
+int valor_procurado = 54;
+bool valor_encontrado = false;
+
+for (int i = 0; i < dados.Length; i++)
+{
+    if (dados[i] == valor_procurado)
+    {
+        Console.WriteLine("Valor encontrado no indice " + i);
+        valor_encontrado = true;
+        break; // Encerra o loop, pois já achamos o valor
+    }
+}
+
+if (!valor_encontrado)
+{
+    Console.WriteLine("Valor não encontrado");
+}</pre>
+
+<h3>Análise Rápida</h3>
+<ul>
+    <li><b>Melhor Caso:</b> Sorte! O valor está na primeira posição (índice 0). A busca acaba na primeira tentativa.
+    </li>
+    <li><b>Pior Caso:</b> Azar! O valor está na última posição ou nem existe no vetor. O programa precisa olhar TODAS as
+        posições.</li>
+    <li><b>Conclusão:</b> É um algoritmo simples de implementar e que funciona em qualquer vetor (ordenado ou não), mas
+        pode ser muito lento se o vetor for grande.</li>
+</ul>
+
+<hr>
+
+<h2>2. Busca Binária: A Estratégia Inteligente</h2>
+
+<h3>A Regra de Ouro</h3>
+<p>Para a Busca Binária funcionar, há uma condição <strong>OBRIGATÓRIA</strong>: o vetor precisa estar
+    <strong>ordenado</strong> (do menor para o maior). Se o vetor estiver desordenado, o algoritmo não funcionará e dará
+    resultados incorretos.
+</p>
+
+<h3>Como Funciona?</h3>
+<p>Este método usa a estratégia de "divisão e conquista", como ao procurar no dicionário:</p>
+<ol>
+    <li>Olhe para o elemento que está exatamente no <strong>meio</strong> do vetor.</li>
+    <li>Se o valor que você procura for <strong>maior</strong> que o do meio, você pode ignorar toda a primeira metade
+        do vetor e repetir o processo apenas na metade da direita.</li>
+    <li>Se for <strong>menor</strong>, ignore toda a segunda metade e repita o processo na metade da esquerda.</li>
+    <li>Continue dividindo o problema pela metade a cada passo, até encontrar o valor ou não sobrar mais elementos para
+        verificar.</li>
+</ol>
+
+<h3>Exemplo Visual</h3>
+<img src="../../imagens/algoritmoseprogramacao2/aula4/figura1.png" alt="Exemplo de passo a passo da busca binária">
+<br>
+
+<h3>Código C#</h3>
+<pre class="code">
+int[] dados = { 3, 17, 19, 26, 50, 52, 54, 69, 83, 84 }; // Vetor OBRIGATORIAMENTE ordenado
+int valor_procurado = 54;
+bool valor_encontrado = false;
+
+int inicio = 0;
+int fim = dados.Length - 1;
+int meio;
+
+do
+{
+    meio = inicio + (fim - inicio) / 2; // Calcula o índice do meio
+    if (dados[meio] == valor_procurado)
+    {
+        Console.WriteLine("Valor encontrado no índice " + meio);
+        valor_encontrado = true;
+        break;
+    }
+    else if (dados[meio] > valor_procurado)
+    {
+        fim = meio - 1; // Descarta a segunda metade
+    }
+    else
+    {
+        inicio = meio + 1; // Descarta a primeira metade
+    }
+} while (inicio <= fim);
+
+if (!valor_encontrado)
+{
+    Console.WriteLine("Valor não encontrado");
+}</pre>
+
+<hr>
+
+<h2>3. Análise de Algoritmos: Medindo a Eficiência</h2>
+
+<h3>O que é a Notação "Big O"?</h3>
+<p>Como podemos provar que um algoritmo é "melhor" que outro de forma objetiva? Usamos uma ferramenta matemática chamada
+    <strong>Notação Grande O (Big O)</strong>. Ela não mede o tempo em segundos, mas sim como a quantidade de operações
+    (a "demora") de um algoritmo cresce à medida que a quantidade de dados de entrada (que chamamos de 'n') aumenta.
+</p>
+
+<h3>Complexidade da Busca Linear: O(n)</h3>
+<p>Lê-se "O de n". Isso significa que, no pior caso, o número de passos é <strong>diretamente proporcional</strong> ao
+    número de elementos (`n`). Se o vetor tem 10 elementos, pode levar até 10 verificações. Se tiver 1 milhão de
+    elementos, pode levar até 1 milhão de verificações. O crescimento é linear.</p>
+
+<h3>Complexidade da Busca Binária: O(log n)</h3>
+<p>Lê-se "O de log de n". Esta é a grande vantagem. Significa que o número de passos cresce de forma muito lenta. Mesmo
+    que você <strong>dobre</strong> o número de elementos, o número de passos no pior caso aumenta em apenas
+    <strong>um</strong>. Para encontrar um item em um vetor com 1 milhão de elementos, a busca binária leva no máximo 20
+    passos!
+</p>
+
+<h3>Gráfico Comparativo</h3>
+<p>O gráfico abaixo mostra a diferença: a linha da busca linear (função `n`) sobe de forma íngreme e constante, enquanto
+    a linha da busca binária (função `log n`) fica quase plana, mostrando como ela é mais "escalável" para grandes
+    volumes de dados.</p>
+<img src="../../imagens/algoritmoseprogramacao2/aula4/figura2.png"
+    alt="Gráfico comparando a função linear e a logarítmica">
+
+<p>Veja o seguinte vídeo para melhor entendimento sobre análise de algoritmos: <a href="https://youtu.be/ojCAnD7vrOY"
+        target="_blank" rel="external" style="color: rgb(0, 204, 255);">link</a></p>
+
+<hr>
+
+<h2>Considerações Finais</h2>
+<p>A escolha entre os algoritmos depende do seu problema:</p>
+<ul>
+    <li><b>Busca Linear:</b> Use se o vetor for pequeno ou se ele <strong>não estiver ordenado</strong>. É simples e
+        direto.</li>
+    <li><b>Busca Binária:</b> Use se o vetor for grande e <strong>estiver ordenado</strong> (ou se o custo de ordená-lo
+        primeiro compensar). É drasticamente mais rápido e eficiente.</li>
+</ul>
+
+{% include nav-aula.html materia="algoritmoseprogramacao2" aula="5" %}
 {% include footer.html %}
