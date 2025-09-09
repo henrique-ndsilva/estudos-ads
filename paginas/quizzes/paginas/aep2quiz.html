@@ -149,5 +149,71 @@ public Pessoa(String n, int i, double a, String e)
     estrutura que controla e mantém a ordem de execução de cada chamada. Essa estrutura é conhecida por:</p>
 <p><strong>Resposta Correta:</strong> Pilha de execução.</p>
 
+<hr>
+
+<p><strong>17.</strong> Observe o código abaixo:</p>
+<pre class="code">
+double[] notas = {5.0, 6.0, 8.0};
+double[] notas_com_bonus = bonus(notas);
+</pre>
+<p>E a função:</p>
+<pre class="code">
+double[] bonus(double[] vetor)
+{
+    for(int i = 0; i < vetor.Length; i++)
+    {
+        vetor[i] = vetor[i] * 1.2;
+    }
+    return vetor;
+}
+</pre>
+<p>Após a execução do código, qual o valor dos elementos armazenados nos vetores <code>notas</code> e
+    <code>notas_com_bonus</code>?
+</p>
+<p><strong>Resposta Correta:</strong>
+<pre class="code">
+notas = {6.0, 7.2, 9.6}
+notas_com_bonus = {6.0, 7.2, 9.6}</pre>
+</p>
+
+<hr>
+
+<p><strong>18.</strong> Considerando um vetor já ordenado, qual dos algoritmos de ordenação, conforme implementação
+    abordada em aula, executaria mais rápido?</p>
+<p><strong>Resposta Correta:</strong> Método bolha.</p>
+
+<hr>
+
+<p><strong>19.</strong> Qual o tipo de dado utilizado para iniciar a escrita de um arquivo e o método utilizado para
+    escrever em cada linha do arquivo?</p>
+<p><strong>Resposta Correta:</strong> <code>StreamWriter</code> e <code>WriteLine</code>.</p>
+
+<hr>
+
+<p><strong>20.</strong> Observe a seguinte matriz:</p>
+{% raw %}
+<pre class="code">int[,] valores = {{0, 3, 5}, {6, 0, 4}, {7, 8, 0}};</pre>
+{% endraw %}
+<p>É necessário somar os valores de uma linha, onde não sejam zero, e armazenar o resultado na posição dessa linha onde
+    esteja o valor zero (preenchendo assim a diagonal principal). Quais seriam as instruções que resolveriam esse
+    problema?</p>
+<p><strong>Resposta Correta:</strong></p>
+<pre class="code">
+valores[0,0] = valores[0,1] + valores[0,2];
+valores[1,1] = valores[1,0] + valores[1,2];
+valores[2,2] = valores[2,0] + valores[2,1];
+</pre>
+
+<hr>
+
+<p><strong>21.</strong> Qual o tipo de dado utilizado para iniciar a leitura de um arquivo e o método utilizado para ler
+    cada linha do arquivo?</p>
+<p><strong>Resposta Correta:</strong> <code>StreamReader</code> e <code>ReadLine</code>.</p>
+
+<hr>
+
+<p><strong>22.</strong> Quantas chamadas recursivas são realizadas em cada instância do MergeSort e QuickSort?</p>
+<p><strong>Resposta Correta:</strong> 2.</p>
+
 {% include nav-aula.html next="false" url="paginas/quizzes/mainavaliacoes.html" %}
 {% include footer.html %}
