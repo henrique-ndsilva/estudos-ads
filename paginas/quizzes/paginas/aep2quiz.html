@@ -215,5 +215,61 @@ valores[2,2] = valores[2,0] + valores[2,1];
 <p><strong>22.</strong> Quantas chamadas recursivas são realizadas em cada instância do MergeSort e QuickSort?</p>
 <p><strong>Resposta Correta:</strong> 2.</p>
 
+<p><strong>23.</strong> Considere a função a seguir como uma solução recursiva para calcular o resto de uma divisão.
+    Qual deve ser o critério de parada, e o retorno desse caso base?</p>
+<pre class="code">
+public static int restoRecursivo (int a, int b)
+{
+    if (critério de parada)
+    {
+        return caso base;
+    }
+    else
+    {
+        return código;
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> <code>b > a ; return a</code></p>
+
+<hr>
+
+<p><strong>24.</strong> Utilizando o algoritmo de ordenação pelo método bolha, como ficaria ordenado o vetor a seguir
+    logo após a primeira passada?</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> <code>{3, 5, 6, 2, 7}</code></p>
+
+<hr>
+
+<p><strong>25.</strong> Utilizando o algoritmo de ordenação por seleção, como ficaria ordenado o vetor a seguir logo
+    após a primeira passada?</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> <code>{2, 3, 7, 6, 5}</code></p>
+
+<hr>
+
+<p><strong>26.</strong> Observe o código abaixo. O que será impresso pela sua execução?</p>
+<pre class="code">
+{% raw %}int[,] valores = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};{% endraw %}
+
+for (int l = 0; l < 3; l++)
+{
+    for (int c = 0; c < 3; c++)
+    {
+        if (l >= c)
+        {
+            Console.Write(valores[l,c] + " ");
+        }
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> <code>1 4 5 7 8 9</code></p>
+
+<hr>
+
+<p><strong>27.</strong> Em qual dos vetores abaixo a execução da busca binária encontraria o elemento 26 no quarto
+    passo?</p>
+<p><strong>Resposta Correta:</strong> <code>{3, 8, 15, 26, 31, 38, 42, 61, 65, 70}</code></p>
+
 {% include nav-aula.html next="false" url="paginas/quizzes/mainavaliacoes.html" %}
 {% include footer.html %}
