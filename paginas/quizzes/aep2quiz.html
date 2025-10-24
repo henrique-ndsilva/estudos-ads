@@ -1,0 +1,275 @@
+---
+---
+
+{% include head-quiz-prova.html page-title="Quiz - AeP2" %}
+{% include heading-quiz-prova.html heading="Quiz de Algoritmos e Programação II" %}
+
+<p><strong>1.</strong> Utilizando o algoritmo de ordenação por inserção, como ficaria ordenado o vetor a seguir logo
+    após a primeira passada?</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> {3, 5, 7, 6, 2}</p>
+
+<hr>
+
+<p><strong>2.</strong> Como é conhecido o erro causado em uma função recursiva quando ela foi mal projetada e sua
+    execução não alcança um critério de parada?</p>
+<p><strong>Resposta Correta:</strong> Loop infinito.</p>
+
+<hr>
+
+<p><strong>3.</strong> Aponte o valor no índice (2,1) da seguinte matriz:</p>
+{% raw %}
+<pre class="code">int[,] valores = {{5, 3, 7, 6}, {8, 9, 0, 1}, {4, 2, 3, 9}};</pre>
+{% endraw %}
+<p><strong>Resposta Correta:</strong> 2</p>
+
+<hr>
+
+<p><strong>4.</strong> Considere a função a seguir como uma solução recursiva para calcular o resto de uma divisão. Qual
+    deve ser o retorno dentro do bloco else?</p>
+<pre class="code">
+public static int restoRecursivo (int a, int b)
+{
+    if (critério de parada)
+    {
+        return caso base;
+    }
+    else
+    {
+        return código;
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> return restoRecursivo(a - b, b)</p>
+
+<hr>
+
+<p><strong>5.</strong> Como são conhecidos os métodos auxiliares, não recursivos, do MergeSort e do QuickSort,
+    respectivamente?</p>
+<p><strong>Resposta Correta:</strong> Intercalar e Particionar.</p>
+
+<hr>
+
+<p><strong>6.</strong> Qual um termo que seja sinônimo para escrita de arquivos?</p>
+<p><strong>Resposta Correta:</strong> Salvamento.</p>
+
+<hr>
+
+<p><strong>7.</strong> Qual o índice, no vetor a seguir, do primeiro elemento utilizado para divisão do vetor,
+    utilizando o MergeSort para ordenação dos elementos?</p>
+<pre class="code">Vetor = {8, 10, 22, 5, 7, 11}</pre>
+<p><strong>Resposta Correta:</strong> 2</p>
+
+<hr>
+
+<p><strong>8.</strong> Suponha que exista o vetor valores com tamanho 5. Na primeira posição ele possui o valor 1. Qual
+    o valor armazenado no índice 2 após a execução do código abaixo?</p>
+<pre class="code">
+for(int i = 1; i < valores.Length; i++)
+{
+    valores[i] = valores[i-1] + 2;
+}
+</pre>
+<p><strong>Resposta Correta:</strong> 5</p>
+
+<hr>
+
+<p><strong>9.</strong> Quantos passos são executados pela busca linear e pela busca binária, respectivamente, até
+    encontrar o valor 98 no vetor abaixo?</p>
+<pre class="code">Vetor = {5, 10, 12, 38, 45, 61, 65, 69, 81, 89, 98, 100}</pre>
+<p><strong>Resposta Correta:</strong> 11 e 3.</p>
+
+<hr>
+
+<p><strong>10.</strong> Suponha que exista a matriz valores com tamanho 3x3. Em cada posição, ela armazena o valor
+    correspondente à soma de seus índices naquela posição. Qual o valor armazenado na última coluna da primeira linha da
+    matriz após a execução do código abaixo?</p>
+<pre class="code">
+for (int l = 0; l < valores.GetLength(0); l++)
+{
+    for (int c = 0; c < valores.GetLength(1); c++)
+    {
+        valores[l,c] = valores[l,c] + valores[c,l];
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> 4</p>
+
+<hr>
+
+<p><strong>11.</strong> Observe o seguinte vetor:</p>
+<pre class="code">int[] valores = {5, 3, 0, 7, 2, 0};</pre>
+<p>É necessário, a cada dois valores, somá-los e inserir o resultado dessa soma na posição seguinte, onde consta o valor
+    zero. Quais seriam as instruções que resolveriam esse problema?</p>
+<p><strong>Resposta Correta:</strong></p>
+<pre class="code">
+valores[2] = valores[1] + valores[0];
+valores[5] = valores[4] + valores[3];
+</pre>
+
+<hr>
+
+<p><strong>12.</strong> Qual o nome do paradigma de programação que permite modularizar o código em classes, que possuem
+    atributos e métodos, permitindo a criação de instâncias dessas classes, que possuem valores e são utilizadas pelo
+    programa?</p>
+<p><strong>Resposta Correta:</strong> Orientação a Objetos.</p>
+
+<hr>
+
+<p><strong>13.</strong> Qual a função que representa a complexidade da busca binária?</p>
+<p><strong>Resposta Correta:</strong> Logarítmica.</p>
+
+<hr>
+
+<p><strong>14.</strong> Aponte o valor no índice 3 do seguinte vetor:</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> 6</p>
+
+<hr>
+
+<p><strong>15.</strong> A classe Pessoa possui quatro atributos: <code>int idade;</code>, <code>String nome;</code>,
+    <code>String estado;</code> e <code>double altura;</code>. O construtor foi definido conforme a seguir. Qual a forma
+    correta de se criar um objeto do tipo Pessoa?
+</p>
+<pre class="code">
+public Pessoa(String n, int i, double a, String e)
+{
+    this.nome = n;
+    this.idade = i;
+    this.altura = a;
+    this.estado = e;
+}
+</pre>
+<p><strong>Resposta Correta:</strong></p>
+<pre class="code">Pessoa joao = new Pessoa("João", 20, 1.75, "São Paulo");</pre>
+
+<hr>
+
+<p><strong>16.</strong> Conforme novas chamadas recursivas são executadas, cada uma dessas instâncias é inserida em uma
+    estrutura que controla e mantém a ordem de execução de cada chamada. Essa estrutura é conhecida por:</p>
+<p><strong>Resposta Correta:</strong> Pilha de execução.</p>
+
+<hr>
+
+<p><strong>17.</strong> Observe o código abaixo:</p>
+<pre class="code">
+double[] notas = {5.0, 6.0, 8.0};
+double[] notas_com_bonus = bonus(notas);
+</pre>
+<p>E a função:</p>
+<pre class="code">
+double[] bonus(double[] vetor)
+{
+    for(int i = 0; i < vetor.Length; i++)
+    {
+        vetor[i] = vetor[i] * 1.2;
+    }
+    return vetor;
+}
+</pre>
+<p>Após a execução do código, qual o valor dos elementos armazenados nos vetores <code>notas</code> e
+    <code>notas_com_bonus</code>?
+</p>
+<p><strong>Resposta Correta:</strong>
+<pre class="code">
+notas = {6.0, 7.2, 9.6}
+notas_com_bonus = {6.0, 7.2, 9.6}</pre>
+</p>
+
+<hr>
+
+<p><strong>18.</strong> Considerando um vetor já ordenado, qual dos algoritmos de ordenação, conforme implementação
+    abordada em aula, executaria mais rápido?</p>
+<p><strong>Resposta Correta:</strong> Método bolha.</p>
+
+<hr>
+
+<p><strong>19.</strong> Qual o tipo de dado utilizado para iniciar a escrita de um arquivo e o método utilizado para
+    escrever em cada linha do arquivo?</p>
+<p><strong>Resposta Correta:</strong> <code>StreamWriter</code> e <code>WriteLine</code>.</p>
+
+<hr>
+
+<p><strong>20.</strong> Observe a seguinte matriz:</p>
+{% raw %}
+<pre class="code">int[,] valores = {{0, 3, 5}, {6, 0, 4}, {7, 8, 0}};</pre>
+{% endraw %}
+<p>É necessário somar os valores de uma linha, onde não sejam zero, e armazenar o resultado na posição dessa linha onde
+    esteja o valor zero (preenchendo assim a diagonal principal). Quais seriam as instruções que resolveriam esse
+    problema?</p>
+<p><strong>Resposta Correta:</strong></p>
+<pre class="code">
+valores[0,0] = valores[0,1] + valores[0,2];
+valores[1,1] = valores[1,0] + valores[1,2];
+valores[2,2] = valores[2,0] + valores[2,1];
+</pre>
+
+<hr>
+
+<p><strong>21.</strong> Qual o tipo de dado utilizado para iniciar a leitura de um arquivo e o método utilizado para ler
+    cada linha do arquivo?</p>
+<p><strong>Resposta Correta:</strong> <code>StreamReader</code> e <code>ReadLine</code>.</p>
+
+<hr>
+
+<p><strong>22.</strong> Quantas chamadas recursivas são realizadas em cada instância do MergeSort e QuickSort?</p>
+<p><strong>Resposta Correta:</strong> 2.</p>
+
+<p><strong>23.</strong> Considere a função a seguir como uma solução recursiva para calcular o resto de uma divisão.
+    Qual deve ser o critério de parada, e o retorno desse caso base?</p>
+<pre class="code">
+public static int restoRecursivo (int a, int b)
+{
+    if (critério de parada)
+    {
+        return caso base;
+    }
+    else
+    {
+        return código;
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> <code>b > a ; return a</code></p>
+
+<hr>
+
+<p><strong>24.</strong> Utilizando o algoritmo de ordenação pelo método bolha, como ficaria ordenado o vetor a seguir
+    logo após a primeira passada?</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> <code>{3, 5, 6, 2, 7}</code></p>
+
+<hr>
+
+<p><strong>25.</strong> Utilizando o algoritmo de ordenação por seleção, como ficaria ordenado o vetor a seguir logo
+    após a primeira passada?</p>
+<pre class="code">int[] valores = {5, 3, 7, 6, 2};</pre>
+<p><strong>Resposta Correta:</strong> <code>{2, 3, 7, 6, 5}</code></p>
+
+<hr>
+
+<p><strong>26.</strong> Observe o código abaixo. O que será impresso pela sua execução?</p>
+<pre class="code">
+{% raw %}int[,] valores = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};{% endraw %}
+
+for (int l = 0; l < 3; l++)
+{
+    for (int c = 0; c < 3; c++)
+    {
+        if (l >= c)
+        {
+            Console.Write(valores[l,c] + " ");
+        }
+    }
+}
+</pre>
+<p><strong>Resposta Correta:</strong> <code>1 4 5 7 8 9</code></p>
+
+<hr>
+
+<p><strong>27.</strong> Em qual dos vetores abaixo a execução da busca binária encontraria o elemento 26 no quarto
+    passo?</p>
+<p><strong>Resposta Correta:</strong> <code>{3, 8, 15, 26, 31, 38, 42, 61, 65, 70}</code></p>
+
+{% include nav-quiz-prova.html next="false" url="paginas/quizzes/mainavaliacoes.html" %}
+{% include footer.html %}
