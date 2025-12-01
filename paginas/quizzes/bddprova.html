@@ -1,0 +1,245 @@
+---
+---
+
+{% include head-quiz-prova.html page-title="Prova - BdD" %} {% include
+heading-quiz-prova.html heading="Questões da Prova de Banco de Dados" %}
+
+<p>
+  <strong>1.</strong> Identifique as entidades no modelo entidade-relacionamento
+  abaixo:
+</p>
+<img
+  src="../../imagens/quizzes/bdd/prova_pergunta1.png"
+  alt="Modelo Entidade-Relacionamento com Clientes, Cartões, Contas, Talões e Linhas de empréstimo."
+  class="imagens"
+/>
+<ol type="a">
+  <li>Modelo, Tipo, Titular</li>
+  <li>Número Cartão, Número Conta, CPF, Nome</li>
+  <li>Emissão C, Emissão T, Posse, Empréstimo.</li>
+  <li>Cartões, Clientes, Contas, Linhas de empréstimo, Talões (cheque)</li>
+  <li>Corrente, Poupança, Individual, Conjunta, S, N.</li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>2.</strong> Pedro foi contratado como desenvolvedor de software de uma
+  empresa. Em seu primeiro dia de trabalho ele se deparou com o MER (Modelo
+  Entidade-Relacionamento), que representa os dados de um sistema de controle de
+  malotes. Foi solicitado a Pedro relatório para o sistema contendo APENAS os
+  seguintes dados: a matrícula de todos os funcionários que enviaram os malotes,
+  o código dos malotes enviados, a data de envio do malote e a situação dos
+  malotes. Para a geração do relatório, Pedro tem que fazer uma consulta
+  utilizando o comando SELECT da linguagem SQL.
+</p>
+<img
+  src="../../imagens/quizzes/bdd/prova_pergunta2.png"
+  alt="Diagrama relacional com tabelas Funcionarios, Malotes e Conteudos."
+  class="imagens"
+/>
+<ol type="a">
+  <li>SELECT Matricula, Nome FROM FUNCIONARIOS</li>
+  <li>SELECT * FROM FUNCIONARIOS AND * FROM MALOTES</li>
+  <li>
+    SELECT Matricula, Data_Envio, Situacao_Malote, Codigo_Malote FROM MALOTES
+  </li>
+  <li>NDA</li>
+  <li>SELECT * FROM FUNCIONARIOS, MALOTES, CONTEUDOS</li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>3.</strong> Sobre os passos do processo de desenvolvimento de um banco
+  de dados, assinale a alternativa correta
+</p>
+<ol type="a">
+  <li>O projeto lógico é independente da modelagem conceitual</li>
+  <li>
+    Primeiro é elaborada a modelagem conceitual, depois o projeto lógico e por
+    último o projeto físico, que está diretamente associado ao SGBD
+  </li>
+  <li>
+    O projeto físico é elaborado antes da seleção do Sistema Gerenciador de
+    Banco de Dados
+  </li>
+  <li>
+    O processo de desenvolvimento de um banco de dados independe totalmente de
+    Sistema Gerenciador de Banco de Dados
+  </li>
+  <li>
+    A modelagem conceitual depende do Sistema Gerenciador de Banco de Dados
+    selecionado
+  </li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>4.</strong> Você começou um novo desafio em uma equipe de projetos em
+  banco de dados e nesse desafio você se deu conta que a principal base de dados
+  da empresa está passando por problemas. <br /><br />
+  Nesse momento você entende que a normalização seja uma boa solução para muitos
+  dos problemas, todavia você precisa justificar essa abordagem para a gerência
+  da sua área.
+  <br /><br />
+  Com relação a normalização, qual é o argumento mais correto?
+</p>
+<ol type="a">
+  <li>
+    Todo modelo que segue as condições de um modelo relacional deve estar, pelo
+    menos, na primeira forma normal (1FN)
+  </li>
+  <li>Todos os argumentos apresentados estão corretos</li>
+  <li>
+    Um dos objetivos da normalização é diminuir redundância e evitar
+    inconsistência no banco de dados
+  </li>
+  <li>
+    Caso o modelo de dados não esteja normalizado podem acontecer anomalias de
+    atualização
+  </li>
+  <li>
+    Não é obrigatório manter um modelo de dados normalizado até a terceira forma
+    normal, porém é indicado, pois facilita a manutenção do banco de dados
+  </li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>5.</strong> Pedro foi contratado como desenvolvedor de software de uma
+  empresa. Em seu primeiro dia de trabalho ele se deparou com o MER (Modelo
+  Entidade-Relacionamento), que representa os dados de um sistema de controle de
+  malotes. <br /><br />
+  Foi solicitado a Pedro relatório para o sistema contendo os seguintes dados:
+  matrícula do funcionário, nome do funcionário, data de envio e de conferencia
+  do malote e descrição do conteúdo do malote, ordenada alfabeticamente pela
+  descrição do conteúdo malote. Para a geração do relatório, Pedro tem que fazer
+  uma consulta utilizando o comando SELECT da linguagem SQL
+</p>
+<img
+  src="../../imagens/quizzes/bdd/prova_pergunta5.png"
+  alt="Diagrama relacional com tabelas Funcionarios, Malotes e Conteudos e relacionamentos."
+  class="imagens"
+/>
+<ol type="a">
+  <li>SELECT * FROM FUNCIONARIOS, MALOTES, CONTEUDOS ORDER BY *</li>
+  <li>
+    SELECT F.MATRICULA, F.NOME, M.DATA_ENVIO, M.DATA_CONFERENCIA, C.DESCRICAO
+    FROM FUNCIONARIO F LEFT JOIN MALOTE M ON F.MATRICULA = M.MATRICULA RIGHT
+    JOIN CONTEUDOS CONTEUDOS C ON C.CODIGO_CONTEUDO = M.CODIGO_CONTEUDO ORDER BY
+    C.DESCRICAO
+  </li>
+  <li>
+    SELECT F.MATRICULA, F.NOME, M.DATA_ENVIO, M.DATA_CONFERENCIA, C.DESCRICAO
+    FROM FUNCIONARIO F INNER JOIN MALOTE M ON F.MATRICULA = M.MATRICULA INNER
+    JOIN CONTEUDOS CONTEUDOS C ON C.CODIGO_CONTEUDO = M.CODIGO_CONTEUDO ORDER BY
+    C.DESCRICAO DESC
+  </li>
+  <li>
+    SELECT F.MATRICULA, F.NOME, M.DATA_ENVIO, M.DATA_CONFERENCIA, C.DESCRICAO
+    FROM FUNCIONARIO F INNER JOIN MALOTE M ON F.MATRICULA = M.MATRICULA INNER
+    JOIN CONTEUDOS CONTEUDOS C ON C.CODIGO_CONTEUDO = M.CODIGO_CONTEUDO
+  </li>
+  <li>
+    SELECT F.MATRICULA, F.NOME, M.DATA_ENVIO, M.DATA_CONFERENCIA, C.DESCRICAO
+    FROM FUNCIONARIO F INNER JOIN MALOTE M ON F.MATRICULA = M.MATRICULA INNER
+    JOIN CONTEUDOS CONTEUDOS C ON C.CODIGO_CONTEUDO = M.CODIGO_CONTEUDO ORDER BY
+    C.DESCRICAO ASC
+  </li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>6.</strong> Você necessita contratar um profissional para
+  administração de Banco de Dados.
+  <br />
+  Você precisa fazer algumas perguntas técnicas e medir as respostas dos
+  candidatos.
+  <br />
+  Um dos candidatos colocou as seguintes afirmações:
+  <br /><br />
+  I. Controle de concorrência é quando, em um banco de dados, usuários distintos
+  tentam acessar a mesma informação e então é feito um controle entre essas
+  transações
+  <br />
+  II. Atomicidade, Consistência, Isolamento e Durabilidade são conceitos
+  fundamentais quando falamos em controle de concorrência.
+  <br />
+  III. Bloqueio exclusivo é o único tipo de bloqueio possível quando falamos
+  sobre controle transacional.
+  <br /><br />
+  Fazendo uma análise, na resposta do candidato:
+</p>
+<ol type="a">
+  <li>Todas as afirmativas do candidato estão incorretas</li>
+  <li>Todas as afirmações do candidato estão corretas</li>
+  <li>Apenas as afirmações I e III estão corretas</li>
+  <li>Apenas a afirmaçao I está correta</li>
+  <li>Apenas as afirmações I e II estão corretas</li>
+</ol>
+
+<hr />
+
+<p>
+  <strong>7.</strong> Você foi contratado para projetar um banco de dados de
+  administração de um campeonato de futebol. <br /><br />
+  Um jogador de futebol possui número e nome e pode jogar em apenas um time, ou,
+  em caso de desemprego, não jogar em nenhum time. Um jogador é identificado
+  unicamente pelo seu CPF e pela sua data de nascimento. <br /><br />
+  Um time é composto de vários jogadores e possui nome, ano de fundação e
+  mascote e endereço da sede do clube. O clube é identificado unicamente pelo
+  número de registro na confederação
+  <br /><br />
+  Sabemos que um endereço é composto por logradouro, número, complemento, CEP,
+  cidade e estado.
+  <br /><br />
+  Pede-se
+  <br />
+  1. Identifique as entidades, seus atributos e seus atributos chave;
+  <br />
+  2. Descreva os relacionamentos entre as entidades (de forma literal, exemplo,
+  um cliente possui no mínimo um e no máximo N carros)
+</p>
+
+<p>
+  <strong>Resposta Correta (Sugestão):</strong>
+</p>
+
+<pre class="code">
+Jogador (CPF, Data_Nascimento)<br />
+Time (Registro, Nome, Ano_Fundacao, Endereco, Jogadores)<br />
+Endereco (logradouro, numero, complemento, CEP, cidade, estado)<br />
+Emprego (Time_Jogador)<br />
+<br />
+Entidades:<br />
+* Jogador. Atributos: CPF (chave), Data de nascimento (chave) Nome e numero<br />
+* Clube: Numero de registro na confederação (chave) , Complemento (chave), CPF
+(chave), Cidade e Estado<br />
+<br />
+Relacionamentos:<br />
+* Um jogador JOGA no mínimo zero e no máximo e no máximo um clube<br />
+* Um clube POSSUI no mínimo zero e no máximo N jogadores<br />
+* Um clube POSSUI no mínimo um e no máximo um endereço
+</pre>
+
+<hr />
+
+<p>
+  <strong
+    >Abaixo encontra-se as respostas das questões de múltipla escolha:</strong
+  >
+</p>
+<ul>
+  <li>1. &nbsp;&nbsp;d</li>
+  <li>2. &nbsp;&nbsp;c</li>
+  <li>3. &nbsp;&nbsp;b</li>
+  <li>4. &nbsp;&nbsp;b</li>
+  <li>5. &nbsp;&nbsp;e</li>
+  <li>6. &nbsp;&nbsp;e</li>
+</ul>
+
+{% include nav-quiz-prova.html next="false" %} {% include footer.html %}
