@@ -1,0 +1,370 @@
+---
+---
+
+{% include head-quiz-prova.html page-title="Quiz - BdD" %} {% include
+heading-quiz-prova.html heading="Quiz de Banco de Dados" %}
+
+<p>
+  <strong>1.</strong> Considere a notícia acima e a existência de diversos
+  bancos de dados no Brasil que armazenam veículos em seus registros. Considere
+  que cada um desses bancos de dados tenha uma tabela de veículos, cuja chave
+  primária é a <strong>placa</strong>. Considere ainda que em cada banco de
+  dados há outras tabelas que apontam para a tabela de veículos por meio de
+  chaves estrangeiras.
+</p>
+<p>Dadas essas considerações, assinale a alternativa correta.</p>
+<p>
+  <strong>Resposta Correta:</strong> Mesmo com essas mudanças, é possível manter
+  a placa como chave primária. Quando um veículo trocar de placa, será preciso
+  atualizar a chave primária na tabela de veículos e atualizar os valores das
+  chaves estrangeiras nas outras tabelas. Como cada uma dessas operações pode
+  violar as restrições do banco de dados, pode ser necessário algum subterfúgio
+  como por exemplo a desabilitação das chaves estrangeiras durante a operação.
+</p>
+
+<hr />
+
+<p><strong>2.</strong> Considere as seguintes tabelas:</p>
+<pre class="code">
+CREATE TABLE paciente (id int primary key, nome text);
+CREATE TABLE medico (id int primary key, nome text);
+CREATE TABLE consulta (data date, id_paciente int, id_medico int);
+</pre>
+<p>
+  Assinale a alternativa que indica uma consulta válida para identificarmos os
+  <strong>médicos que não possuem consulta marcada na data de hoje</strong>.
+</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+SELECT DISTINCT m.nome as nome_medico FROM medico m LEFT JOIN consulta c ON c.id_medico = m.id WHERE data != curdate() or data is null;
+</pre>
+
+<hr />
+
+<p>
+  <strong>3.</strong> "Infodeck introdutório aos bancos de dados NoSQL: Este
+  texto fornece uma breve introdução aos bancos de dados NoSQL. Nossa intenção é
+  explicar ao público técnico-gerencial por que os bancos de dados NoSQL são
+  importantes. Descrevemos por que os bancos de dados relacionais têm sido tão
+  dominantes e quais forças levaram o NoSQL a quebrar esse domínio. Discutimos
+  os principais benefícios de uma abordagem NoSQL, mas enfatizamos que os bancos
+  de dados relacionais ainda têm um grande papel a desempenhar, por isso nossa
+  ênfase na persistência poliglota." (FOWLER, M.; SADALAGE, P. Infodeck
+  introdutório aos bancos de dados NoSQL. 2012).
+</p>
+<p>
+  Assinale a alternativa que melhor explica o que os autores do texto citado
+  querem dizer com <strong>"persistência poliglota"</strong>.
+</p>
+<p>
+  <strong>Resposta Correta:</strong> Novos sistemas continuarão usando os SGBDs
+  relacionais, mas ao mesmo tempo utilizarão outros bancos NoSQL para propósitos
+  específicos.
+</p>
+
+<hr />
+
+<p>
+  <strong>4.</strong> Considere uma tabela de solicitações feitas por cidadãos à
+  Prefeitura de São Paulo criada com o seguinte comando:
+</p>
+<pre class="code">
+CREATE TABLE solicitacoes (
+data_abertura text,
+hora_abertura text,
+prefeitura_regional text,
+distrito text,
+orgao text,
+tema text,
+assunto text,
+servico text,
+status_solicitacao text,
+data_parecer text,
+hora_parecer text
+);
+</pre>
+<p>
+  Considere ainda que uma certa consulta SQL produziu a seguinte saída (ordenada
+  por <code>qtd</code> de forma decrescente, limitada a 5):
+</p>
+<pre class="code">
+| tema          | qtd      |
+|---------------|----------|
+| Rua e bairro  | 526934   |
+| Lixo e limpeza| 261443   |
+| Transporte    | 249783   |
+| Animais       | 195256   |
+| Meio Ambiente | 185472   |
+</pre>
+<p>
+  Qual das opções exibe uma consulta que poderia ter produzido a saída acima?
+</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+SELECT tema, count(*) as qtd FROM solicitacoes GROUP BY tema ORDER BY qtd DESC LIMIT 5;
+</pre>
+
+<hr />
+
+<p><strong>5.</strong> Considere a seguinte consulta:</p>
+<pre class="code">
+SELECT nome FROM funcionario WHERE not(idade > 65 AND sexo = 'M' OR idade > 60 AND sexo = 'F');
+</pre>
+<p>
+  Assinale a alternativa que indica um par válido de entrada e saída para essa
+  consulta.
+</p>
+<p>
+  <strong>Entrada:</strong>
+</p>
+<pre class="code">
+| nome     | idade | sexo |
+|----------|-------|------|
+| Moacir   | 70    | M    |
+| Geraldo  | 67    | M    |
+| Enzo     | 23    | M    |
+| Karolyne | 23    | F    |
+| Josefina | 63    | F    |
+| Ivone    | 70    | F    |
+</pre>
+<p>
+  <strong>Saída:</strong>
+</p>
+<pre class="code">
+| nome     |
+|----------|
+| Enzo     |
+| Karolyne |
+</pre>
+<p>
+  <strong>Resposta Correta:</strong> A alternativa que apresenta a Entrada e
+  Saída acima.
+</p>
+
+<hr />
+
+<p>
+  <strong>6.</strong> Considere a tabela <code>pratos</code> criada com:
+  <code
+    >CREATE TABLE pratos (nome text, pais_origem text, vegetariano boolean,
+    preco float);</code
+  >.
+</p>
+<p>
+  Qual alternativa seleciona somente os pratos vegetarianos, mostrando a
+  <strong
+    >diferença entre o preço médio do prato e o preço do prato vegetariano mais
+    caro de seu país de origem</strong
+  >?
+</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+SELECT nome, (SELECT max(preco) FROM pratos p2 WHERE p1.pais_origem = p2.pais_origem and vegetariano) - preco as diferenca_pro_vegetariano_mais_caro FROM pratos p1 WHERE vegetariano;
+</pre>
+
+<hr />
+
+<p>
+  <strong>7.</strong> Considere a uma tabela <code>voos</code> contendo um
+  registro por voo e a coluna <code>orig_estado_abrv</code>, que representa o
+  estado da federação de origem do voo.
+</p>
+<p>Qual será o resultado da consulta abaixo?</p>
+<pre class="code">
+SELECT count(*) FROM voos WHERE orig_estado_abrv = 'SP' AND orig_estado_abrv = 'RJ';
+</pre>
+<p><strong>Resposta Correta:</strong> Zero.</p>
+
+<hr />
+
+<p>
+  <strong>8.</strong> Considere a execução de uma sequência de comandos, mas com
+  uma parte dos comandos executados em uma sessão, e a outra parte executada em
+  outra sessão (Transações e Permissões).
+</p>
+<p>
+  Associe corretamente a lista de comandos (I, II, III, IV) à lista de trechos
+  das saídas produzidas (Acesso negado, Erro de sintaxe, Query OK, SELECT
+  command denied to user).
+</p>
+<p>
+  <strong>Lista de comandos:</strong>
+</p>
+<ol type="I">
+  <li><code>$ mysql -u u1 db2 -psenha</code></li>
+  <li><code>$ mysql -u u2 db1 -psenha &gt; DROP tb2;</code></li>
+  <li>
+    <code>$ mysql -u u3 db1 -psenha &gt; UPDATE tb1 SET x=2*x WHERE x>10;</code>
+  </li>
+  <li>
+    <code>$ mysql -u u3 db2 -psenha &gt; UPDATE tb1 SET x=2*x WHERE x>10;</code>
+  </li>
+</ol>
+<p>
+  <strong>Lista de saídas esperadas:</strong>
+</p>
+<ol>
+  <li>
+    <code>SELECT command denied to user</code> (Erro no comando III: u3 não tem
+    SELECT para WHERE)
+  </li>
+  <li>
+    <code>Access denied for user</code> (Erro no comando I: u1 não tem
+    privilégio sobre db2)
+  </li>
+  <li>
+    <code>Query OK</code> (Sucesso no comando IV: u3 tem ALL em db2 via r1)
+  </li>
+  <li>
+    <code>You have an error in your SQL syntax</code> (Erro no comando II: falta
+    TABLE no DROP)
+  </li>
+</ol>
+<p><strong>Resposta Correta:</strong> (III) (I) (IV) (II)</p>
+
+<hr />
+
+<p>
+  <strong>9.</strong> Considere agora a existência da tabela <code>voos</code>,
+  com um voo por registro e com a coluna <code>data</code>, representando a data
+  do voo.
+</p>
+<p>
+  Qual dos seguintes comandos exibe corretamente
+  <strong
+    >todos os dados dos voos ocorridos na data do voo mais antigo
+    registrado</strong
+  >?
+</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+SELECT * FROM voos WHERE data = (SELECT min(data) FROM voos);
+</pre>
+
+<hr />
+
+<p>
+  <strong>10.</strong> Considere um banco de dados para um sistema de controle
+  de estacionamentos. Assinale a alternativa que corresponda a uma modelagem
+  para esse problema que esteja na <strong>BCFN</strong> (Boyce-Codd Normal
+  Form).
+</p>
+<p>
+  <strong>Requisitos:</strong> Armazenar horário de início e fim da estadia de
+  cada veículo, o veículo estacionado, e o dono desse veículo.
+</p>
+<p>
+  <strong>Modelagem Correta (BCFN):</strong>
+</p>
+<p>
+  <strong>Tabelas:</strong>
+</p>
+<p>
+  - <strong>estadia</strong> (<u>inicio</u>, <u>fim</u>, placa_veiculo) -
+  <strong>veiculo</strong> (<u>placa</u>, marca, modelo, cor, cpf_dono) -
+  <strong>dono</strong> (<u>cpf</u>, nome)
+</p>
+<p>
+  <strong>Chaves Estrangeiras:</strong>
+</p>
+<p>
+  - <code>estadia.placa_veiculo</code> referencia <code>veiculo.placa</code> -
+  <code>veiculo.cpf_dono</code> referencia <code>dono.cpf</code>
+</p>
+<p>
+  <strong>Resposta Correta:</strong> A modelagem com as três tabelas:
+  <strong>estadia</strong> (inicio, fim, placa_veiculo),
+  <strong>veiculo</strong> (placa, marca, modelo, cor, cpf_dono) e
+  <strong>dono</strong> (cpf, nome).
+</p>
+
+<hr />
+
+<p>
+  <strong>11.</strong> Sobre <strong>índices</strong> é correto afirmar que:
+</p>
+<p>
+  <strong>Resposta Correta:</strong> Considere uma base de dados construída para
+  análises científicas que é montada uma vez e depois não é mais atualizada, e
+  que possui muitos dados. Nesse caso compensa construir diversos índices que
+  serão úteis para as consultas dos cientistas, pois mesmo que o tempo de
+  criação dos índices seja grande, a alta velocidade das leituras subsequentes
+  compensará o tempo de criação dos índices.
+</p>
+
+<hr />
+
+<p>
+  <strong>12.</strong> Assinale a alternativa que indica qual saída o comando
+  abaixo pode produzir, considerando a tabela <code>doacoes</code> que registra
+  doações para partidos políticos.
+</p>
+<pre class="code">
+SELECT SiglaPartido, sum(Valor) as total_recebido FROM doacoes GROUP BY SiglaPartido ORDER BY total_recebido DESC LIMIT 5;
+</pre>
+<p>
+  <strong>Resposta Correta:</strong> Uma tabela com duas colunas (<code
+    >SiglaPartido</code
+  >
+  e <code>total_recebido</code>) contendo 5 linhas, ordenadas de forma
+  decrescente pelo <code>total_recebido</code> (exemplo: PSDB, PT, SD, PSD, PMDB
+  com seus respectivos totais).
+</p>
+
+<hr />
+
+<p>
+  <strong>13.</strong> Considere a tabela <code>municipio</code> criada com a
+  chave primária <code>id</code> com a opção <code>auto_increment</code>.
+  Considere a execução do comando:
+  <code>INSERT INTO municipio (nome, uf) VALUES ('Salvador', 'BA');</code>.
+</p>
+<p>Considere agora as seguintes afirmações:</p>
+<ol type="I">
+  <li>A execução do comando acima incorrerá em erro.</li>
+  <li>A chave primária deve ser especificada no comando INSERT.</li>
+</ol>
+<p>Assinale agora a opção correta.</p>
+<p><strong>Resposta Correta:</strong> As sentenças I e II são falsas.</p>
+
+<hr />
+
+<p>
+  <strong>14.</strong> Considere essas três formas de se utilizar o computador
+  para se obter a previsão do tempo:
+</p>
+<pre class="code">
+I - SELECT temperatura, precipitacao FROM previsao WHERE data = CURDATE();
+II - Computador, por favor, me dê a previsão do tempo de hoje.
+III - (Código Python/similar com inicialização de variáveis e loop FOR para buscar o dado)
+</pre>
+<p>
+  Assinale a alternativa que corretamente
+  <strong>ordena os itens acima em ordem crescente de abstração</strong>.
+</p>
+<p>
+  <strong>Resposta Correta:</strong> III, I, II. (Onde III é o código mais
+  detalhado/menos abstrato, I é a consulta SQL, e II é a linguagem natural/mais
+  abstrata).
+</p>
+
+<hr />
+
+<p>
+  <strong>15.</strong> Considerando a tabela de municípios (com campos: nome,
+  uf, populacao, area), é correto afirmar que essa tabela:
+</p>
+<p>
+  <strong>Resposta Correta:</strong> Possui os campos "nome", "uf", "populacao"
+  e "area".
+</p>
+
+{% include nav-quiz-prova.html next="false" %} {% include footer.html %}
