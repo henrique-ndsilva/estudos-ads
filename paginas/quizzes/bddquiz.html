@@ -119,9 +119,10 @@ SELECT nome FROM funcionario WHERE not(idade > 65 AND sexo = 'M' OR idade > 60 A
   consulta.
 </p>
 <p>
-  <strong>Entrada:</strong>
+  <strong>Resposta Correta:</strong>
 </p>
 <pre class="code">
+Entrada:
 | nome     | idade | sexo |
 |----------|-------|------|
 | Moacir   | 70    | M    |
@@ -130,20 +131,13 @@ SELECT nome FROM funcionario WHERE not(idade > 65 AND sexo = 'M' OR idade > 60 A
 | Karolyne | 23    | F    |
 | Josefina | 63    | F    |
 | Ivone    | 70    | F    |
-</pre>
-<p>
-  <strong>Saída:</strong>
-</p>
-<pre class="code">
+
+Saída:
 | nome     |
 |----------|
 | Enzo     |
 | Karolyne |
 </pre>
-<p>
-  <strong>Resposta Correta:</strong> A alternativa que apresenta a Entrada e
-  Saída acima.
-</p>
 
 <hr />
 
@@ -156,10 +150,8 @@ SELECT nome FROM funcionario WHERE not(idade > 65 AND sexo = 'M' OR idade > 60 A
 </p>
 <p>
   Qual alternativa seleciona somente os pratos vegetarianos, mostrando a
-  <strong
-    >diferença entre o preço médio do prato e o preço do prato vegetariano mais
-    caro de seu país de origem</strong
-  >?
+  diferença entre o preço médio do prato e o preço do prato vegetariano mais
+  caro de seu país de origem?
 </p>
 <p>
   <strong>Resposta Correta:</strong>
@@ -206,26 +198,6 @@ SELECT count(*) FROM voos WHERE orig_estado_abrv = 'SP' AND orig_estado_abrv = '
     <code>$ mysql -u u3 db2 -psenha &gt; UPDATE tb1 SET x=2*x WHERE x>10;</code>
   </li>
 </ol>
-<p>
-  <strong>Lista de saídas esperadas:</strong>
-</p>
-<ol>
-  <li>
-    <code>SELECT command denied to user</code> (Erro no comando III: u3 não tem
-    SELECT para WHERE)
-  </li>
-  <li>
-    <code>Access denied for user</code> (Erro no comando I: u1 não tem
-    privilégio sobre db2)
-  </li>
-  <li>
-    <code>Query OK</code> (Sucesso no comando IV: u3 tem ALL em db2 via r1)
-  </li>
-  <li>
-    <code>You have an error in your SQL syntax</code> (Erro no comando II: falta
-    TABLE no DROP)
-  </li>
-</ol>
 <p><strong>Resposta Correta:</strong> (III) (I) (IV) (II)</p>
 
 <hr />
@@ -260,24 +232,6 @@ SELECT * FROM voos WHERE data = (SELECT min(data) FROM voos);
 <p>
   <strong>Requisitos:</strong> Armazenar horário de início e fim da estadia de
   cada veículo, o veículo estacionado, e o dono desse veículo.
-</p>
-<p>
-  <strong>Modelagem Correta (BCFN):</strong>
-</p>
-<p>
-  <strong>Tabelas:</strong>
-</p>
-<p>
-  - <strong>estadia</strong> (<u>inicio</u>, <u>fim</u>, placa_veiculo) -
-  <strong>veiculo</strong> (<u>placa</u>, marca, modelo, cor, cpf_dono) -
-  <strong>dono</strong> (<u>cpf</u>, nome)
-</p>
-<p>
-  <strong>Chaves Estrangeiras:</strong>
-</p>
-<p>
-  - <code>estadia.placa_veiculo</code> referencia <code>veiculo.placa</code> -
-  <code>veiculo.cpf_dono</code> referencia <code>dono.cpf</code>
 </p>
 <p>
   <strong>Resposta Correta:</strong> A modelagem com as três tabelas:
@@ -350,21 +304,292 @@ III - (Código Python/similar com inicialização de variáveis e loop FOR para 
   Assinale a alternativa que corretamente
   <strong>ordena os itens acima em ordem crescente de abstração</strong>.
 </p>
+<p><strong>Resposta Correta:</strong> III, I, II.</p>
+
+<hr />
+
+<p><strong>15.</strong> Considere a seguinte tabela:</p>
+
+<p>Tabela de municípios:</p>
 <p>
-  <strong>Resposta Correta:</strong> III, I, II. (Onde III é o código mais
-  detalhado/menos abstrato, I é a consulta SQL, e II é a linguagem natural/mais
-  abstrata).
+  <strong><small>Não vou botar essa tabela no site nem ferrando</small></strong>
+</p>
+
+<p>É correto afirmar que essa tabela:</p>
+<p>
+  <strong>Resposta Correta:</strong> Possui os campos "nome", "uf", "populacao"
+  e "area".
 </p>
 
 <hr />
 
 <p>
-  <strong>15.</strong> Considerando a tabela de municípios (com campos: nome,
-  uf, populacao, area), é correto afirmar que essa tabela:
+  <strong>16.</strong> Imagine o site de uma grande loja global de livros. Há
+  sempre muitos clientes comprando livros na loja, e de vários lugares do mundo.
+  Considere que o site da loja armazene seus dados (livros no estoque, vendas,
+  etc.) em um banco de dados MySQL. Considere ainda que essa loja estabeleceu
+  uma política de backup on-line e incremental para o banco MySQL, sendo o
+  backup executado de hora em hora.
+</p>
+<p>Considere agora as afirmações:</p>
+<ol type="I">
+  <li>
+    Sendo uma loja global, não há horário sem usuários ativos, o que inviabiliza
+    o backup off-line.
+  </li>
+  <li>
+    Havendo um grande volume de dados, o backup completo periódico exigiria
+    muito espaço em disco, o que sairia muito caro.
+  </li>
+  <li>
+    Um backup on-line deve ser feito o mais rápido possível, e o backup completo
+    poderia demorar muito.
+  </li>
+</ol>
+<p>Sobre essas afirmações, assinale a alternativa correta.</p>
+<p>
+  <strong>Resposta Correta:</strong> As afirmações I, II e III fazem sentido e
+  justificam a política de backup escolhida.
+</p>
+
+<hr />
+
+<p>
+  <strong>17.</strong> Considere a execução de uma sequência de comando, mas com
+  uma parte dos comandos executados em uma sessão, e a outra parte executada em
+  outra sessão. Os comandos estão listados abaixo, de forma que 1> indica o
+  prompt da sessão 1, enquanto 2> indica o prompt da sessão 2.
+</p>
+<pre class="code">
+1> CREATE TABLE pessoa (id int, nome text);
+1> INSERT INTO pessoa VALUES (1, 'Fulano');
+1> BEGIN;
+1> INSERT INTO pessoa VALUES (2, 'Ciclano');
+2> BEGIN;
+2> INSERT INTO pessoa VALUES (3, 'Beltrano');
+2> ROLLBACK;
+2> SELECT * FROM pessoa;
+</pre>
+<p>
+  Assinale a alternativa que indica a saída obtida para a execução do último
+  comando da sequência.
 </p>
 <p>
-  <strong>Resposta Correta:</strong> Possui os campos "nome", "uf", "populacao"
-  e "area".
+  <strong>Resposta Correta:</strong>
 </p>
+<pre class="code">
++------+--------+
+| id   | nome   |
++------+--------+
+| 1    | Fulano |
++------+--------+
+</pre>
+
+<hr />
+
+<p>
+  <strong>18.</strong> Considere um banco de dados com uma tabela voos, contendo
+  a coluna companhia, com a sigla da companhia aérea que operou o voo. Considere
+  também que esse banco possui uma tabela companhias, com um cadastro de todas
+  as companhias aéreas existentes. O que representa a seguinte consulta?
+</p>
+<pre class="code">
+SELECT (SELECT count(distinct companhia) FROM voos) / (SELECT count(*) FROM companhias);
+</pre>
+<p>
+  <strong>Resposta Correta:</strong> A proporção de companhias cadastradas que
+  operaram voos registrados na tabela voos.
+</p>
+
+<hr />
+
+<p>
+  <strong>19.</strong> Considere as seguintes tabelas:
+  <code>CREATE TABLE bares (nome text, preco float);</code>,
+  <code>CREATE TABLE restaurantes (nome text, preco float);</code>,
+  <code>CREATE TABLE cafes (nome text, preco float);</code>. Assinale a
+  alternativa que forneça um significado plausível para o seguinte comando:
+</p>
+<pre class="code">
+SELECT nome, preco FROM (
+  SELECT nome, preco FROM bares WHERE preco = (SELECT min(preco) FROM bares)
+  UNION
+  SELECT nome, preco FROM restaurantes WHERE preco = (SELECT min(preco) FROM restaurantes)
+  UNION
+  SELECT nome, preco FROM cafes WHERE preco = (SELECT min(preco) FROM cafes)
+) as lazer WHERE preco < 100;
+</pre>
+<p>
+  <strong>Resposta Correta:</strong> Um rapaz está procurando um lugar para
+  marcar um encontro. Ele está em dúvida entre um restaurante, um bar ou um
+  café. Como o rapaz está com pouco dinheiro, ele vai considerar somente as
+  opções mais baratas de cada categoria, e desde que o preço da diversão não
+  saia mais que 100 reais.
+</p>
+
+<hr />
+
+<p>
+  <strong>20.</strong> Considere a seguinte modelagem feita para o banco de
+  dados de um sistema de estacionamento:
+</p>
+
+<img
+  src="../../imagens/quizzes/bdd/pergunta20bdd.png"
+  alt="Modelagem ER de estacionamento com tabelas estadia e veículo"
+  class="imagens"
+/>
+
+<p>
+  Assinale a alternativa que indica em que forma normal se encontra essa
+  modelagem.
+</p>
+<p><strong>Resposta Correta:</strong> 2FN.</p>
+
+<hr />
+
+<p>
+  <strong>21.</strong> Considere ainda a existência de uma tabela
+  <code>acidentes_aereos</code>, em que cada registro representa um acidente
+  aéreo e que possui as colunas <code>quantidade_passageiros</code> e
+  <code>quantidade_vitimas_fatais</code>. Assinale a alternativa que
+  corretamente consulta a porcentagem de vítimas fatais (em relação ao total de
+  passageiros) de cada acidente na tabela <code>acidentes_aereos</code>.
+</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+SELECT quantidade_vitimas_fatais / quantidade_passageiros * 100 as porcentagem_sobreviventes FROM acidentes_aereos;
+</pre>
+
+<hr />
+
+<p>
+  <strong>22.</strong> Considere o seguinte texto, que faz parte de uma
+  descrição comercial na home page de uma suíte de produtos: "Pentaho Business
+  Analytics: Empodere consumidores de dados com análises interativas,
+  visualizações em tempo real e modelagens preditivas, com mínimo suporte de
+  TI."
+</p>
+<p>Assinale a alternativa que melhor esclarece o texto acima.</p>
+<p>
+  <strong>Resposta Correta:</strong> Os "consumidores de dados" são pessoas
+  (analistas, gerentes, etc.) que querem explorar diretamente os dados sem a
+  necessidade de depender de pessoas especialistas em TI ("com mínimo suporte de
+  TI").
+</p>
+
+<hr />
+
+<p><strong>23.</strong> Considere a seguinte sequência de comandos:</p>
+<pre class="code">
+> SELECT id, saldo FROM conta_corrente WHERE id in (1324, 7634);
+(Saída: 1324 - 5000.0 | 7634 - 40000.0)
+> BEGIN;
+> UPDATE conta_corrente SET saldo = saldo - 100 WHERE id = 1324;
+> UPDATE conta_corrente SET saldo = saldo + 200 WEHRE id = 7634;  (Erro de sintaxe proposital no WHERE)
+> COMMIT;
+> SELECT id, saldo FROM conta_corrente WHERE id in (1324, 7634);
+</pre>
+<p>Qual é a saída produzida pelo último comando?</p>
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+id      saldo
+1324    5000.0
+7634    40000.0
+</pre>
+
+<hr />
+
+<p>
+  <strong>24.</strong> Considere as seguintes consultas realizadas sobre as
+  tabelas <code>paciente</code>, <code>medico</code> e <code>consulta</code>:
+  <br />I) SELECT ... FROM paciente p, consulta c, medico m WHERE ... <br />II)
+  SELECT ... FROM paciente p JOIN consulta c ... JOIN medico m ... <br />III)
+  SELECT ... FROM paciente p JOIN consulta c JOIN medico m ON ... <br />IV)
+  SELECT ... FROM paciente p INNER JOIN consulta c INNER JOIN medico m ...
+  <br />Assinale a opção que identifica corretamente os resultados obtidos para
+  essas consultas.
+</p>
+<p>
+  <strong>Resposta Correta:</strong> As consultas I, II, III e IV terão o mesmo
+  resultado, independentemente do conteúdo das tabelas.
+</p>
+
+<hr />
+
+<p>
+  <strong>25.</strong> O diagrama a seguir representa uma modelagem ER para
+  bandas de rock.
+</p>
+
+<img
+  src="../../imagens/quizzes/bdd/pergunta25bdd.png"
+  alt="Diagrama ER Bandas de Rock"
+  class="imagens"
+/>
+
+<p>
+  Considere as seguintes afirmações:
+  <br />I - Uma banda de rock pode ter vários guitarristas. <br />II - Uma banda
+  de rock deve possuir exatamente quatro músicos. <br />III - Uma banda de rock
+  não pode possuir mais que um baterista. <br />IV - Uma banda de rock é
+  obrigada a ter um baixista. <br />V - Uma banda de rock não pode possuir um
+  flautista. <br />VI - Um músico pode pertencer a várias bandas.
+</p>
+<p>
+  Para um banco de dados que utilize a modelagem apresentada no diagrama,
+  assinale a alternativa que apresente todas as afirmações verdadeiras.
+</p>
+<p><strong>Resposta Correta:</strong> I, III, IV e V.</p>
+
+<hr />
+
+<p>
+  <strong>26.</strong> O trecho do manual do MySQL (6.1.2.1) alerta que usar a
+  senha na linha de comando (`mysql -u user -psenha`) é inseguro. Indique qual
+  seria uma alternativa segura ao método discutido.
+</p>
+<p>
+  <strong>Resposta Correta:</strong> Logar com a opção -p sem passar o parâmetro
+  (senha) no comando, o que fará com que a senha seja lida a partir de um prompt
+  seguro do terminal.
+</p>
+
+<hr />
+
+<p>
+  <strong>27.</strong> Considere a seguinte tabela de pratos disponíveis em um
+  restaurante:
+  <code
+    >CREATE TABLE pratos (nome text, pais_origem text, vegetariano boolean,
+    preco float);</code
+  >
+</p>
+<p>
+  Considerando essa tabela, assinale a alternativa com o comando que torna
+  possível a execução da seguinte consulta:
+</p>
+<pre class="code">
+SELECT pais_origem as pais, count(*) as qtd_pratos_vegetarianos FROM pratos_vegetarianos GROUP BY pais_origem;
+
++--------+-------------------------+
+| pais | qtd_pratos_vegetarianos |
++--------+-------------------------+
+| Índia | 10 |
+| Itália | 7 |
+| Brasil | 4 |
++--------+-------------------------+
+</pre>
+
+<p>
+  <strong>Resposta Correta:</strong>
+</p>
+<pre class="code">
+CREATE VIEW pratos_vegetarianos AS SELECT nome, pais_origem FROM pratos WHERE vegetariano;
+</pre>
 
 {% include nav-quiz-prova.html next="false" %} {% include footer.html %}
