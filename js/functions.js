@@ -34,3 +34,4 @@ toggleTrimestre("btn-trimestre1", "trimestre1");
 toggleTrimestre("btn-trimestre2", "trimestre2");
 toggleTrimestre("btn-trimestre3", "trimestre3");
 toggleTrimestre("btn-trimestre4", "trimestre4");
+toggleTrimestre("btn-trimestre5", "trimestre5");
